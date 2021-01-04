@@ -1,13 +1,13 @@
 ---
-slug: /post1
+slug: /test
 date: 2021-01-04
 title: This is the title
-headers: '[{"depth":1,"name":"header-1"},{"depth":2,"name":"this-is-a-header"}]'
+headers: '[{"depth":1,"name":"header-1"},{"depth":2,"name":"this-is-a-header"}]]'
 ---
-# header 1
+
 hello this is some random $ c = \sqrt{a + b} $ text. Even more expressions $\int_{a}^{b} x^2 dx $.
 
-
+# header 1
 $$
  \iint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw
 $$

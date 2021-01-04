@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Titillium+Web:wght@300&display=swap");
 
 html,
 body {
   font-family: "Titillium Web", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.float {
+  display: flex;
 }
 
 .katex-html {
@@ -47,13 +53,13 @@ table {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
+  width: 100%;
+  padding: 20px;
 }
 
-.multiline-math {
-  text-align: center;
-  font-size: 20pt;
+.katex-display {
+  font-size: 16pt;
 }
 .template-directories a,
 .template-files a {
@@ -65,4 +71,177 @@ table {
 }
 .template-files {
   margin-top: 40px;
+}
+
+input.search {
+  font-family: "Abel", sans-serif;
+  border-color: #ddd;
+  border: 0px;
+  border-bottom: 1px solid;
+  text-align: center;
+  text-transform: none;
+  cursor: text;
+  margin: 0px;
+  padding-top: 10px;
+  height: 48px;
+}
+
+.content-tree {
+  min-width: 250px;
+  background-color: #1e2026;
+  padding: 5px 10px 5px 10px;
+}
+
+.content-ul {
+  background-color: #1e2026;
+  font-family: "Abel", sans-serif;
+  box-sizing: border-box;
+}
+
+ul.content-ul,
+ul.content-ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.content-ul ul {
+  margin-left: 10px;
+}
+ul.content-ul li > a {
+  color: white;
+  text-decoration: none;
+}
+
+ul.content-ul li > a > span {
+  background-color: #282c34;
+  height: 32px;
+  border-radius: 5px;
+  margin-left: -15px;
+  margin-bottom: 4px;
+}
+
+ul.content-ul li {
+  margin: 0;
+  margin-left: 10px;
+  line-height: 20px;
+  border-left: 3px solid #303843;
+  position: relative;
+}
+
+ul.content-ul .node {
+  cursor: pointer;
+  display: flex;
+}
+
+ul.content-ul .node .test {
+  position: absolute;
+  top: 15px;
+  width: 11px;
+  border-top: 3px solid #303843;
+  margin-left: -11px;
+}
+
+ul.content-ul .node.last .test {
+  position: absolute;
+  top: 15px;
+  width: 11px;
+  border-top: 3px solid #303843;
+  background-color: #1e2026;
+  margin-left: -11px;
+}
+
+ul.content-ul .node.root .test {
+  border-top: 0px;
+}
+
+/* ul.content-ul .node:before {
+  position: relative;
+  top: 0.9em;
+  height: 1em;
+  width: 11px;
+  color: white;
+  border-top: 3px solid #303843;
+  content: "";
+  margin-left: -11px;
+}
+
+ul.content-ul .node.last:before {
+  position: relative;
+  top: 0.9em;
+  height: 50%;
+  width: 11px;
+  color: white;
+  border-top: 3px solid #303843;
+  background-color: #1e2026;
+  content: "";
+  margin-left: -11px;
+} */
+
+ul.content-ul .node.root:before {
+  border-top: 0px;
+}
+
+ul.content-ul .node p {
+  margin: auto 0px;
+  flex: 2 1 100px;
+}
+
+ul.content-ul .status {
+  background-color: inherit;
+  position: relative;
+  height: inherit;
+  width: 5px;
+}
+
+ul.content-ul .node .visibility-box {
+  width: 40px;
+  height: inherit;
+  background-color: #303843;
+  border-radius: inherit;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  text-align: center;
+}
+
+ul.content-ul .node .visibility-box p {
+  font-size: 10pt;
+  margin-top: 5px;
+}
+
+ul.content-ul .node > i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+ul.content-ul .close {
+  color: transparent;
+  visibility: hidden;
+  transition-property: color, transform;
+  transition-duration: 0.5s, 0.5s;
+}
+
+ul.content-ul .node:focus-within > .close {
+  color: #db5454;
+  transform: rotate(90deg);
+  visibility: visible;
+}
+
+ul.content-ul .node:focus-within .status {
+  background-color: #ffb57e;
+}
+
+ul.content-ul .node:hover {
+  background-color: #2e313b;
+}
+
+ul.content-ul .node:hover .visibility-box {
+  background-color: #2a313b;
+}
+
+ul.content-ul .nested {
+  display: none;
+}
+
+ul.content-ul .active {
+  display: block;
 }

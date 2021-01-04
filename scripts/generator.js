@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { resolve } = require("path");
 const path = require("path");
 
 const folderPath = "src/pages";
@@ -15,12 +14,13 @@ const getFiles = (url, func) =>
     .map((name) => path.join(url, name))
     .filter(func);
 
-const createFrontmatter = (slug) =>
+const createFrontmatter = (slug, headers) =>
   [
     "---",
     `slug: ${slug}`,
     `date: ${new Date().toISOString().split("T")[0]}`,
     "title: This is the title",
+    `headers: '${JSON.stringify(headers)}'`,
     "---",
     "\n",
   ].join("\n");
@@ -30,20 +30,35 @@ const resolveFile = (file) => {
   const parsedUrl = path.parse(url);
   const resolvedPath = path.join(parsedUrl.dir, parsedUrl.name);
   const fileContent = fs.readFileSync(file, { encoding: "utf8" });
+  const headers = fileContent
+    .split("\n")
+    .filter((line) => line.startsWith("#"))
+    .map((line) => {
+      return {
+        depth: line.lastIndexOf("#") - line.indexOf("#") + 1,
+        name: line
+          .substring(line.lastIndexOf("#") + 1, line.length)
+          .trim()
+          .split(" ")
+          .join("-"),
+      };
+    });
+
   if (!fileContent.startsWith("---")) {
-    fs.writeFileSync(file, `${createFrontmatter(resolvedPath)}${fileContent}`);
+    fs.writeFileSync(
+      file,
+      `${createFrontmatter(resolvedPath, headers)}${fileContent}`
+    );
   }
 };
 
 const generate = (url, dirs, files) => {
+  const excludedRootUrl = url.replace(folderPath, "");
   const template = fs
     .readFileSync(templatePath, { encoding: "utf8" })
     .replace(
       'const { url, dirs, files } = { url: "", dirs: [], files: [] };',
-      `const { url, dirs, files } = { url: "${url.replace(
-        folderPath,
-        ""
-      )}", dirs: [${dirs}], files: [${files}] };`
+      `const { url, dirs, files } = { url: "${excludedRootUrl}", dirs: [${dirs}], files: [${files}] };`
     );
 
   fs.writeFileSync(`${url}/index.js`, template);

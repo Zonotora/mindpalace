@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "components/layout";
 import Header from "components/header";
@@ -18,9 +18,9 @@ const TreeHeader = ({ className = "", name, height = "calc(50% + 1px)" }) => (
   </a>
 );
 
-const ContentTree = ({ headers }) => (
+const ContentTree = ({ posX, headers }) => (
   <>
-    <div className="content-tree">
+    <div className="content-tree" style={{ width: `${posX}%` }}>
       <ul className="content-ul">
         {headers.map((header) => (
           <li key={header.name}>
@@ -32,21 +32,53 @@ const ContentTree = ({ headers }) => (
   </>
 );
 
+const Slider = ({ posX, setPosX }) => {
+  const onMouseUp = (e) => {
+    document.removeEventListener("mouseup", onMouseUp);
+    document.removeEventListener("mousemove", onMouseMove);
+  };
+
+  const onMouseDown = (e) => {
+    if (e.button === 0) {
+      e.preventDefault();
+      document.addEventListener("mouseup", onMouseUp);
+      document.addEventListener("mousemove", onMouseMove);
+    }
+  };
+
+  const onMouseMove = (e) => {
+    e.preventDefault();
+    setPosX((e.pageX / window.innerWidth) * 100);
+  };
+
+  return (
+    <div
+      className="slider"
+      onMouseDown={onMouseDown}
+      style={{ left: `${posX}%` }}
+    />
+  );
+};
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
+  const [posX, setPosX] = useState(20);
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const headers = JSON.parse(frontmatter.headers);
-  console.log(frontmatter.slug.substring(0, frontmatter.slug.lastIndexOf("/")));
 
   return (
     <Layout>
       <div className="">
-        <ContentTree headers={headers} />
-        <div className="content-container">
+        <ContentTree posX={posX} headers={headers} />
+        <Slider posX={posX} setPosX={setPosX} />
+        <div
+          className="content-container"
+          style={{ width: `calc(${100 - posX}% - 2px)` }}
+        >
           <Header
-            siteTitle={frontmatter.slug}
+            siteTitle={frontmatter.title}
             parent={frontmatter.slug.substring(
               0,
               frontmatter.slug.lastIndexOf("/")

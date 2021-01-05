@@ -10,7 +10,7 @@ body {
   font-family: "Titillium Web", sans-serif;
   margin: 0px;
   padding: 0px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 header {
@@ -93,18 +93,30 @@ input.search {
   position: fixed;
   right: 0px;
   margin: 0 auto;
-  width: 80%;
+  width: calc(80% - 2px);
 }
 .content {
   padding: 20px;
+  background-color: white;
   max-height: calc(100vh - var(--header-height));
   overflow-y: auto;
+}
+
+.slider {
+  position: fixed;
+  width: 2px;
+  height: 100vh;
+  background-color: #1e2026;
+  border-right: black solid 1px;
+  left: 20%;
+  cursor: ew-resize;
 }
 
 .content-tree {
   position: fixed;
   left: 0px;
   height: 100vh;
+  min-width: 200px;
   width: 20%;
   background-color: #1e2026;
   padding: 5px 10px 5px 10px;

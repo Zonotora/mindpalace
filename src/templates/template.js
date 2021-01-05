@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
+import Layout from "components/layout";
+import Header from "components/header";
 import "./template.css";
 import "./syntax.css";
 
@@ -37,16 +38,21 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const headers = JSON.parse(frontmatter.headers);
+  console.log(frontmatter.slug.substring(0, frontmatter.slug.lastIndexOf("/")));
 
   return (
     <Layout>
       <div className="">
-        <div className="float">
-          <ContentTree headers={headers} />
-          <div
-            className="container"
-            dangerouslySetInnerHTML={{ __html: html }}
+        <ContentTree headers={headers} />
+        <div className="content-container">
+          <Header
+            siteTitle={frontmatter.slug}
+            parent={frontmatter.slug.substring(
+              0,
+              frontmatter.slug.lastIndexOf("/")
+            )}
           />
+          <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
     </Layout>

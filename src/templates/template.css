@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Titillium+Web:wght@300&display=swap");
 
+:root {
+  --header-height: 50px;
+  --main-color: #21262d;
+}
+
 html,
 body {
   font-family: "Titillium Web", sans-serif;
   margin: 0px;
   padding: 0px;
+  /* overflow: hidden; */
 }
 
-.float {
-  display: flex;
+header {
+  font-family: "Abel", sans-serif;
+  background-color: var(--main-color);
+  height: var(--header-height);
+  text-align: center;
 }
 
 .katex-html {
@@ -52,12 +61,6 @@ table {
   border-radius: 20px;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  padding: 20px;
-}
-
 .katex-display {
   font-size: 16pt;
 }
@@ -86,8 +89,23 @@ input.search {
   height: 48px;
 }
 
+.content-container {
+  position: fixed;
+  right: 0px;
+  margin: 0 auto;
+  width: 80%;
+}
+.content {
+  padding: 20px;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+}
+
 .content-tree {
-  min-width: 250px;
+  position: fixed;
+  left: 0px;
+  height: 100vh;
+  width: 20%;
   background-color: #1e2026;
   padding: 5px 10px 5px 10px;
 }
@@ -151,33 +169,6 @@ ul.content-ul .node.last .test {
 }
 
 ul.content-ul .node.root .test {
-  border-top: 0px;
-}
-
-/* ul.content-ul .node:before {
-  position: relative;
-  top: 0.9em;
-  height: 1em;
-  width: 11px;
-  color: white;
-  border-top: 3px solid #303843;
-  content: "";
-  margin-left: -11px;
-}
-
-ul.content-ul .node.last:before {
-  position: relative;
-  top: 0.9em;
-  height: 50%;
-  width: 11px;
-  color: white;
-  border-top: 3px solid #303843;
-  background-color: #1e2026;
-  content: "";
-  margin-left: -11px;
-} */
-
-ul.content-ul .node.root:before {
   border-top: 0px;
 }
 

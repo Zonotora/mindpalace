@@ -14,13 +14,13 @@ const getFiles = (url, func) =>
     .map((name) => path.join(url, name))
     .filter(func);
 
-const createFrontmatter = (slug, headers) =>
+const createFrontmatter = (slug, header) =>
   [
     "---",
     `slug: ${slug}`,
     `date: ${new Date().toISOString().split("T")[0]}`,
     "title: This is the title",
-    `headers: '${JSON.stringify(headers)}'`,
+    `header: ${JSON.stringify(header)}`,
     "---",
     "\n",
   ].join("\n");
@@ -30,13 +30,14 @@ const resolveFile = (file) => {
   const parsedUrl = path.parse(url);
   const resolvedPath = path.join(parsedUrl.dir, parsedUrl.name);
   const fileContent = fs.readFileSync(file, { encoding: "utf8" });
-  const headers = fileContent
+  const header = fileContent
     .split("\n")
     .filter((line) => line.startsWith("#"))
     .map((line) => {
       return {
         depth: line.lastIndexOf("#") - line.indexOf("#") + 1,
-        name: line
+        name: line.substring(line.lastIndexOf("#") + 1, line.length).trim(),
+        link: line
           .substring(line.lastIndexOf("#") + 1, line.length)
           .trim()
           .split(" ")
@@ -47,7 +48,7 @@ const resolveFile = (file) => {
   if (!fileContent.startsWith("---")) {
     fs.writeFileSync(
       file,
-      `${createFrontmatter(resolvedPath, headers)}${fileContent}`
+      `${createFrontmatter(resolvedPath, header)}${fileContent}`
     );
   }
 };

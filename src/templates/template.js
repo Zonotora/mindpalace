@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Layout from "components/layout";
 import Header from "components/header";
+import "katex/dist/katex.min.css";
 import "./template.css";
 import "./syntax.css";
 

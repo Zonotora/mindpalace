@@ -6,22 +6,6 @@ import "katex/dist/katex.min.css";
 import "./template.css";
 import "./syntax.css";
 
-const TreeHeader = ({ className = "", name, link, section, children = [] }) => (
-  <li>
-    <a href={`#${link}`}>
-      <span className={`node ${className}`.trim()}>
-        <div className="node-bar" />
-        <div className="visibility-box">
-          <p>{section}</p>
-        </div>
-        <div className="status"> </div>
-        <p>{name}</p>
-      </span>
-    </a>
-    {children.length > 0 ? <ul>{children}</ul> : <></>}
-  </li>
-);
-
 const generateTree = (header, depth = 1, sectionText = "") => {
   const elements = [];
   const text = depth !== 1 ? `${sectionText}.` : "";
@@ -104,6 +88,22 @@ const generateTree = (header, depth = 1, sectionText = "") => {
   return elements;
 };
 
+const TreeHeader = ({ className = "", name, link, section, children = [] }) => (
+  <li>
+    <a href={`#${link}`}>
+      <span className={`node ${className}`.trim()}>
+        <div className="node-bar" />
+        <div className="visibility-box">
+          <p>{section}</p>
+        </div>
+        <div className="status"> </div>
+        <p>{name}</p>
+      </span>
+    </a>
+    {children.length > 0 ? <ul>{children}</ul> : <></>}
+  </li>
+);
+
 const ContentTree = ({ header, style }) => (
   <>
     <div className="content-tree" style={style}>
@@ -170,7 +170,14 @@ export default function Template({
           )}
           onTreeViewClick={(e) => onTreeViewClick(e, posX, setPosX)}
         />
-        <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="content">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <footer
+            style={{
+              height: "50px",
+            }}
+          />
+        </div>
       </div>
     </Layout>
   );

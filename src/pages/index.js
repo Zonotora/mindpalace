@@ -6,7 +6,7 @@ import SEO from "components/seo";
 import "templates/template.css";
 
 const IndexPage = () => {
-  const { url, dirs, files } = { url: "", dirs: ["rust","typescript"], files: ["post1","test"] };
+  const { url, dirs, files } = { url: "", dirs: ["rust","typescript"], files: ["post1"] };
 
   return (
     <Layout>

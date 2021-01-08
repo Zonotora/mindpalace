@@ -24,12 +24,10 @@ const generateTree = (header, depth = 1, sectionText = "") => {
 
     // if there are no items left check if it is root (depth==1)
     if (header.length === 0) {
-      const isLast =
-        header.length > 0 && header[0].depth < root.depth ? "last" : "";
       elements.push(
         <TreeHeader
           key={root.link}
-          className={`${isLast} ${isRoot}`}
+          className={`last ${isRoot}`}
           name={root.name}
           link={root.link}
           section={`${text}${section}`}

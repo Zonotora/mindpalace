@@ -14,12 +14,12 @@ const getFiles = (url, func) =>
     .map((name) => path.join(url, name))
     .filter(func);
 
-const createFrontmatter = (slug, header) =>
+const createFrontmatter = (slug, title, header) =>
   [
     "---",
     `slug: ${slug}`,
     `date: ${new Date().toISOString().split("T")[0]}`,
-    "title: This is the title",
+    `title: ${title}`,
     `header: ${JSON.stringify(header)}`,
     "---",
     "\n",
@@ -40,15 +40,26 @@ const resolveFile = (file) => {
         link: line
           .substring(line.lastIndexOf("#") + 1, line.length)
           .trim()
+          .replace(/å/g, "a")
+          .replace(/Å/g, "A")
+          .replace(/ä/g, "a")
+          .replace(/Ä/g, "A")
+          .replace(/ö/g, "o")
+          .replace(/Ö/g, "O")
           .split(" ")
           .join("-"),
       };
     });
 
+  const title = parsedUrl.name
+    .split("-")
+    .map((s) => `${s.charAt(0).toUpperCase()}${s.substring(1, s.length)}`)
+    .join(" ");
+
   if (!fileContent.startsWith("---")) {
     fs.writeFileSync(
       file,
-      `${createFrontmatter(resolvedPath, header)}${fileContent}`
+      `${createFrontmatter(resolvedPath, title, header)}${fileContent}`
     );
   }
 };

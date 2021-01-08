@@ -58,8 +58,9 @@ table {
 }
 
 .katex-display {
-  font-size: 16pt;
+  /* font-size: 16pt; */
 }
+
 .template-directories a,
 .template-files a {
   color: white;
@@ -161,7 +162,7 @@ ul.content-ul li {
 ul.content-ul .node {
   cursor: pointer;
   display: flex;
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 ul.content-ul .node .node-bar {
@@ -200,6 +201,7 @@ ul.content-ul .status {
 
 ul.content-ul .node .visibility-box {
   width: 40px;
+  min-width: 40px;
   height: inherit;
   background-color: #303843;
   border-radius: inherit;

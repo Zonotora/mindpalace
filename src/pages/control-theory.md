@@ -2,7 +2,7 @@
 slug: /control-theory
 date: 2021-01-09
 title: Control Theory
-header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"}]
+header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"}]
 ---
 
 # Dynamiska modeller
@@ -211,6 +211,56 @@ $$
 &T_{63\%} = e^{-\frac{\pi a}{w_d} } \\
 \end{aligned}
 $$
+
+## Bodediagram
+En överföringsfunktion på ***Bodeform*** ser ut
+$$
+G(s) = \frac{K}{S^m} \frac{C_1(s)C_2(s)\cdots C_k(s)}{D_1(s)D_2(s)\cdots D_\ell(s)}
+$$
+
+$ C_i(s) $ och $ D_i(s) $ kan anta
+
+$$
+\begin{aligned}
+1 + \frac{s}{w_i} &\qquad första \space ordningen \\
+1 + 2\zeta \frac{s}{w_i} + (\frac{s}{w_i})^2 &\qquad komplexkonjugerande \space polpar \\
+e^{-\frac{s}{w_i}} &\qquad dödtid
+\end{aligned}
+$$
+
+Genom att logaritmera $ G $ fås följande
+
+$$
+\begin{aligned}
+\log_{10} | G | &= \log_{10} K - m\log_{10} \omega + \log_{10} | C_1 | + \cdots + \log_{10} | C_k | \\
+&- \log_{10} | D_1 | - \cdots - \log_{10} | D_\ell |
+\end{aligned}
+$$
+
+Faserna kan också adders enligt
+
+$$
+\begin{aligned}
+\angle G = \angle K - m \cdot 90\degree + \angle C_1 + \cdots + \angle C_k - \angle D_1 - \cdots - \angle D_\ell
+\end{aligned}
+$$
+
+### Arbetsgång
+
+1. Skriv överföringsfunktionen på ***Bodeform***
+2. Rita lågfrekvensasymptoten $ \frac{K}{s^m} $
+3. Asymptoten kommer därefter att ändras (pol ger negativt $ m_i $ medan nollställe ger positivt $ m_i $) vid varje brytfrekvens $ w_i $ enligt
+    * $ (1 + \frac{s}{w_i})^{\pm m_i} $ ger en riktningsändring på $ \pm m_i \cdot 20 $ dB/dekad
+    * $ (1 + 2\zeta \frac{s}{w_i} + (\frac{s}{w_i})^2)^{\pm m_i} $ ger en riktningsändring på $ \pm 2m_i \cdot 20 $ dB/dekad
+4. Korrigering av kurvan enligt
+
+    |Faktor| $ \frac{w_i}{2} $| $ w_i $ | $ 2w_i $ |
+    | -    | -                | -       | -        |
+    | $ (1 + \frac{s}{w_i})^{\pm m_i} $  | $ \pm 1m_i $ dB | $ \pm 3m_i $ dB | $ \pm 1m_i $ dB |
+    | $ (1 + 2\zeta \frac{s}{w_i} + (\frac{s}{w_i})^2)^{\pm m_i} $ | $ \zeta $ beroende| $ \zeta $ beroende | $ \zeta $ beroende |
+    För den $ \zeta $ beroende faktorn ovan kommer det att uppstå en allt mer markant "topp" vid brytfrekvensen ju mindre $ \zeta $ är.
+5. Rita faskurvan genom att addera de ingående faktorernas fasbidrag.
+
 
 # Stabilitet
 ---

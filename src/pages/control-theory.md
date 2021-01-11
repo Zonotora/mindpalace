@@ -1,8 +1,8 @@
 ---
 slug: /control-theory
-date: 2021-01-09
+date: 2021-01-11
 title: Control Theory
-header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"}]
+header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":2,"name":"Lågfrekvensförstärkning","link":"Lagfrekvensforstarkning"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"}]
 ---
 
 # Dynamiska modeller
@@ -34,6 +34,10 @@ $$
 Om vi använder ***slutvärdessatsen*** kommer den statiska förstärkningen därför bli
 
 $$
+y_\infty = \lim_{t \to \infty} y(t) = \lim_{s \to 0} sY(s) = \lim_{s \to 0} sG(0) \frac{u_0}{s} = G(0)u_0
+$$
+
+$$
 \boxed{K = \frac{y_{\infty}}{u_0} = G(0)}
 $$
 
@@ -61,6 +65,12 @@ G(s) = \frac{K}{1 + Ts}
 $$
 
 ## Generell överföringsfunktion av andra ordningen
+Vi inför dessa beteckningar
+* $ w_n $ ***odämpad svängningsfrekvens*** Ökat $ w_n $ ger ett större avstånd från origo och därmed snabbare stegsvar.
+* $ \zeta $ ***dämpningskonstant*** Stegsvarets översväng minskar då dämpningen $ \zeta $ ökar.
+* $ K $ ***statisk förstärkning***.
+
+Vi kan då beskriva en generell överföringsfunktion av andra ordningen enligt
 
 $$
 G(s) = \frac{Kw_n^2}{s^2 + 2\zeta w_ns + w_n^2} = \frac{K}{1 + \frac{2\zeta s}{w_n} + (\frac{s}{w_n})^2}
@@ -245,6 +255,9 @@ $$
 \end{aligned}
 $$
 
+### Geometrisk tolkning
+
+
 ### Arbetsgång
 
 1. Skriv överföringsfunktionen på ***Bodeform***
@@ -264,9 +277,63 @@ $$
 
 # Stabilitet
 ---
+Ett linjärt system är stabilt när alla rötter till den ***karakteristiska ekvationen*** är negativa, d.v.s. när alla rötter för nämnaren ligger i vänstra halvplanet. Vi kan beteckna detta polynom $ A(s) $ enligt
+
+$$
+G(s) = \frac{b_1s^{n-1}+\cdots+b_n}{s^n+a_1s^{n-1}+\cdots+a_n} = \frac{B(s)}{A(s)}
+$$
+
+För ett återkopplat system ges kretsöverföringen av $ L(s) = G(s)F(s) $ och överföringsfunktionen från $ r $ till $ y $ kan uttryckas
+
+$$
+G_{ry} = \frac{L(s)}{1 + L(S)}
+$$
+
+Således bestäms polerna till denna överföringsfunktion av $ 1 + L(s) $. För att ett återkopplat system ska vara stabilt krävs det också att man beakar kancellation av poler. Ett återkopplat system sägs därför vara stabilt om
+* instabila poler och nollställen i processen inte kancelleras bort av regulatorn, d.v.s. ingen kancellation för ske i kretsöverföringen. De uppkommer i andra kombinationer t.ex. $ G_{vy} $ och $ G_{ru} $ vilka då får instabila poler eller nollställen.
+* samtliga överföringsfunktioner är stabila oavsett kombination, systemet kallas då ***internt stabilt***, vilket endast är möjligt att poler och nollställen som kancelleras i kretsöverföringen är stabila.
+
+## Routh-Hurwitz
+Denna teknik är bara att använda om inte $ 1 + L(s) $ lätt kan faktoriseras eller om polynomet innehåller fria variabler.
+Om den karakteristiska ekvationen ges av
+
+$$
+a_0s^n + a_1s^{n-1} + a_2s^{n-2} + \cdots = 0
+$$
+
+kan koefficienterna införas i denna tablå
+
+ | $ s^n $ | $ a_0 $ | $ a_2 $ | $ a_4 $ | $ a_6 $ | $ \cdots $ |
+ | -    | -                | -       | -        | - | - |
+ | $ s^{n-1} $ | $ a_1 $ | $ a_3 $ | $ a_5 $ | $ a_7 $ | $ \cdots $ |
+ | $ s^{n-2} $ | $ c_0 $ | $ c_1 $ | $ c_2 $ | $ c_3 $ | $ \cdots $ |
+ | $ s^{n-3} $ | $ d_0 $ | $ d_1 $ | $ d_2 $ | $ d_3 $ | $ \cdots $ |
+ | $ \vdots $ | $ \vdots $ | $ \vdots $ | $ \vdots $ | $ \vdots $ | |
+ | $ s_0 $ | | | | | |
+
+ där
+
+ $$
+ c_0 = \frac{a_1a_2 - a_3a_0}{a_1} \qquad c_1 = \frac{a_1a_4 - a_5a_0}{a_1} \qquad d_0 = \frac{c_0a_3 - c_1a_1}{c_0}
+ $$
+
+Nödvändiga villkor för stabilitet är
+* Alla koefficienter måste vara positiva. (Dock inte tillräckligt villkor)
+* Alla koefficienter i första kolumnen måste vara positiva. (Tillräckligt villkor)
+
+## Rotort
+[Rotorten](https://sv.wikipedia.org/wiki/Reglerteknik#Rotortanalys) visar om system blir instablit för olika värden på $ K $, men visar också systemets karaktär, d.v.s. om systemet är snabbt, långsamt, oscillerande eller dämpat.
+
+## Nyquist förenklade kriterium
+Stabiliteten för kretsöverföring med dödtid kan inte bestämmas med Routh-Hurwitz eller med rotort utan det krävs att man använder ***Nyquists förenklade kriterium***.
 
 # Principer för dimensionering
 ---
+Dimensionering av regulatorer kan sammanfattas enligt följande punkter
+* hög grad av återkoppling (hög förstärkning) i kretsöverföringen $ L $ ger god följning av referenssignaler samt effektiv kompensering av processtörningar. Mätstörningar kompenseras ej.
+* låg grad av återkoppling (låg förstärkning) i kretsöverföringen $ L $ kompenserar mätstörningen väl. Referenssignaler följs ej och processtörningar kompenseras inte.
+* Mätstörningar är högfrekventa och bör reduceras där efter.
+* Kompensering av processtörningar och följning av referenssignaler är viktigare för lägre frekvenser, då det inte är lika intressant att kompensera för högfrekventa snabba störningar eftersom det skulle leda till ett ryckigt system. Det är däremot viktigt att hålla nere högfrekvensförstärkningen $ ( K_\infty = K_p, s \to \infty ) $ så att styrsignalsaktiviteten begränsas för högfrekventa mätstörningar för att undvika slitage.
 
 ## Känslighetsfunktionen
 $$

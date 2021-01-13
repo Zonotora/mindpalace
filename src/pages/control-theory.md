@@ -1,8 +1,8 @@
 ---
 slug: /control-theory
-date: 2021-01-11
+date: 2021-01-13
 title: Control Theory
-header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":2,"name":"Lågfrekvensförstärkning","link":"Lagfrekvensforstarkning"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"}]
+header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"},{"depth":1,"name":"Filter","link":"Filter"},{"depth":2,"name":"Frekvensselektiva filter","link":"Frekvensselektiva-filter"}]
 ---
 
 # Dynamiska modeller
@@ -153,6 +153,21 @@ $$
 \varDelta y(t) = y(t) - y_0
 $$
 
+Vi kan sedan sätt in det i $ \dot x(t) $ och $ y(t) $ vilket ger oss
+
+$$
+\begin{aligned}
+\dot x(t) &= f(x_0 + \varDelta x(t), u_0 + \varDelta u(t)) \\
+&= f(x_0, u_0) + \frac{\partial f}{\partial x} |_{(x_0, u_0)} \cdot \varDelta x(t)
++\frac{\partial f}{\partial u} |_{(x_0, u_0)} \cdot \varDelta u(t) \\
+\\
+y_0 + \varDelta y(t) &= g(x_0 + \varDelta x(t), u_0 + \varDelta u(t)) \\
+&= g(x_0, u_0) + \frac{\partial g}{\partial x} |_{(x_0, u_0)} \cdot \varDelta x(t)
++\frac{\partial g}{\partial u} |_{(x_0, u_0)} \cdot \varDelta u(t)
+\end{aligned}
+$$
+
+De partiella derivatorna ges av dessa matrisnotationer
 $$
 A = \frac{\partial f}{\partial x} |_{(x_0, u_0)}
 \qquad\qquad
@@ -181,6 +196,89 @@ $$
     \frac{\partial f_n}{\partial x_1} & \dots & \frac{\partial f_n}{\partial x_n} \\
 \end{bmatrix}
 $$
+
+och följande linjära tillståndsmodeller erhålls
+
+$$
+\begin{aligned}
+\varDelta \dot x(t) &= A \varDelta x(t) + B \varDelta u(t) \\
+\varDelta y(t) &= C \varDelta x(t) + D \varDelta u(t) \\
+\end{aligned}
+$$
+
+### Arbetsgång
+
+Betrakta följande tillståndsmodell på olinjär matrisform
+
+$$
+\begin{bmatrix}
+    \dot x_1(t) \\
+    \dot x_2(t) \\
+    \dot x_3(t) \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x_2(t) \\
+    - \frac{k}{x_1^2(t)} + x_1(t)x_3^2(t)+u_1(t) \\
+    - \frac{2x_2(t)x_3(t)}{x_1(t)} + \frac{u_2(t)}{x_1(t)} \\
+\end{bmatrix}
+$$
+
+Linjärisering ger
+$$
+\varDelta \dot x(t) = A \varDelta x(t) + B \varDelta u(t)
+$$
+$$
+\varDelta x(t) = x(t) - x_0
+\qquad\qquad
+\varDelta u(t) = u(t) - u_0 \\
+\\
+A = \frac{\partial f}{\partial x} |_{(x_0, u_0)}
+\qquad\qquad
+B = \frac{\partial f}{\partial u} |_{(x_0, u_0)}
+$$
+
+Beräkning av $ A $ och $ B $ ger
+$$
+A = \begin{bmatrix}
+    0 & 1 & 0 \\
+    \frac{2k}{x_{10}^3} + x_{30}^2 & 0 & 2x_{10}x_{30} \\
+    \frac{2x_{20}x_{30}}{x_{10}^2} - \frac{u_{20}}{x_{10}^2} & - \frac{2x_{30}}{x_{10}} & -\frac{2x_{20}}{x_{10}}\\
+\end{bmatrix}
+$$
+
+$$
+B = \begin{bmatrix}
+    0 & 0 \\
+    1 & 0 \\
+    0 & \frac{1}{x_{10}}
+\end{bmatrix}
+$$
+
+Vid arbetspunkten antas jämvikt råda vilket ger
+$$
+f(x_0, u_0) = 0
+$$
+Uppgiften ger även $ u_{10} = u_{20} = 0 $ och $ x_{30} = 5 $. Vi får
+
+$$
+\begin{aligned}
+x_{20} &= 0 \\
+-\frac{k}{x_{10}^2} + x_{10}x_{30}^2 + u_{10} &= 0 \\
+-\frac{2x_{20}x_{30}}{x_{10}} + \frac{u_{20}}{x_{10}} &= 0 \\
+\end{aligned}
+$$
+vilket ger
+
+$$
+\begin{aligned}
+x_{10} &= (\frac{k}{5^2})^\frac{1}{3} \\
+x_{20} &= 0 \\
+x_{30} &= 5 \\
+\end{aligned}
+$$
+
+Sätt in detta i matriserna $ A $ och $ B $. Räkna ut $ C $ och $ D $ på liknande sätt och använd ekvationerna under sektionen [Tillståndsmodeller](#Tillstandsmodeller).
 
 # Tids- och frekvensplanet
 ---
@@ -435,3 +533,11 @@ $$
 
 # Tidsdiskreta regulatorer
 ---
+
+# Filter
+---
+* Frekvensselektiva filter - ändrar frekvensinnehållet i en signal.
+* Prediktering - förutsäger kommande värden hos en signal.
+* Glättning (smoothing) - minskar brusstörningar.
+
+## Frekvensselektiva filter

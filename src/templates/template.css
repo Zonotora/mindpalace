@@ -117,13 +117,68 @@ input.search {
 .content-tree {
   position: fixed;
   left: 0px;
-  height: 100vh;
   min-width: 20%;
   width: 20%;
   background-color: #1e2026;
-  padding: 5px 10px 5px 10px;
+}
+
+.content-tree-search {
+  height: var(--header-height);
+  max-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+}
+
+.content-tree-search-icon {
+  height: 34px;
+  width: 10%;
+  background-color: #23252c;
+  border-radius: inherit;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.content-tree-search-container {
+  width: 100%;
+
+  height: 36px;
+  margin: auto 0px;
+  border: 1px solid #4d535c;
+  background-color: #1e2026;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-tree-search-container:hover,
+.content-tree-search-container:focus-within {
+  border: 1px solid #6e7681;
+}
+
+.content-tree-search-container input {
+  font-size: 12pt;
+  width: 90%;
+  background-color: inherit;
+  padding-left: 10px;
+  color: white;
+  height: 34px;
+  display: inline-block;
+  border: none;
+  border-radius: inherit;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  box-sizing: border-box;
+}
+
+.content-tree-container {
+  height: calc(100vh - var(--header-height));
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 5px 10px 5px 10px;
 }
 
 .content-ul {

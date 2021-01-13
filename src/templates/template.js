@@ -105,7 +105,15 @@ const TreeHeader = ({ className = "", name, link, section, children = [] }) => (
 const ContentTree = ({ header, style }) => (
   <>
     <div className="content-tree" style={style}>
-      <ul className="content-ul">{header}</ul>
+      <div className="content-tree-search">
+        <div className="content-tree-search-container">
+          <div className="content-tree-search-icon" />
+          <input placeholder="Search..." />
+        </div>
+      </div>
+      <div className="content-tree-container">
+        <ul className="content-ul">{header}</ul>
+      </div>
     </div>
   </>
 );
@@ -134,7 +142,7 @@ const Slider = ({ setPosX, style }) => {
 
 const onTreeViewClick = (e, posX, setPosX) => {
   if (posX < 5) {
-    setPosX(20);
+    setPosX(25);
   } else {
     setPosX(0);
   }
@@ -143,7 +151,7 @@ const onTreeViewClick = (e, posX, setPosX) => {
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const [posX, setPosX] = useState(20);
+  const [posX, setPosX] = useState(25);
   const [header, setHeader] = useState([]);
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;

@@ -2,7 +2,7 @@
 slug: /control-theory
 date: 2021-01-13
 title: Control Theory
-header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":3,"name":"Arbetsgång - Linjärisering","link":"Arbetsgang---Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång - Bodediagram","link":"Arbetsgang---Bodediagram"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"Dimensionering","link":"Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":3,"name":"Arbetsgång - PI","link":"Arbetsgang---PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Arbetsgång - PD","link":"Arbetsgang---PD"},{"depth":2,"name":"PID","link":"PID"},{"depth":3,"name":"Arbetsgång - PID","link":"Arbetsgang---PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"},{"depth":1,"name":"Filter","link":"Filter"},{"depth":2,"name":"Frekvensselektiva filter","link":"Frekvensselektiva-filter"}]
+header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":3,"name":"Arbetsgång - Linjärisering","link":"Arbetsgang---Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång - Bodediagram","link":"Arbetsgang---Bodediagram"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"Dimensionering","link":"Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":3,"name":"Arbetsgång - PI","link":"Arbetsgang---PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Arbetsgång - PD","link":"Arbetsgang---PD"},{"depth":2,"name":"PID","link":"PID"},{"depth":3,"name":"Arbetsgång - PID","link":"Arbetsgang---PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":2,"name":"Tillståndsåterkoppling","link":"Tillstandsaterkoppling"},{"depth":3,"name":"Överföringsfunktioner","link":"Overforingsfunktioner"},{"depth":3,"name":"Arbetsgång - Tillståndsåterkoppling","link":"Arbetsgang---Tillstandsaterkoppling"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"},{"depth":1,"name":"Filter","link":"Filter"},{"depth":2,"name":"Frekvensselektiva filter","link":"Frekvensselektiva-filter"}]
 ---
 
 # Dynamiska modeller
@@ -572,6 +572,150 @@ Vid handräkning används grafiska lösningar, annars gäller numeriska lösning
 
 # Dimensionering på tillståndsform
 ---
+Följande tillståndsmodell på diagonalform
+$$
+\begin{aligned}
+\begin{bmatrix}
+    \dot x_1 \\
+    \dot x_2 \\
+\end{bmatrix}
+&=
+\begin{bmatrix}
+    -a_1 & 0 \\
+    0 & -a_2 \\
+\end{bmatrix}
+\begin{bmatrix}
+    x_1 \\
+    x_2 \\
+\end{bmatrix}
++
+\begin{bmatrix}
+    b_1 \\
+    b_2 \\
+\end{bmatrix}
+u \\
+\\
+y &= \begin{bmatrix}
+    c_1 & c_2 \\
+\end{bmatrix}
+\begin{bmatrix}
+    x_1 \\
+    x_2 \\
+\end{bmatrix}
+\end{aligned}
+$$
+är styrbart och observerbart då konstanterna $ b_1, b_2, c_1 $ och $ c_2 $ är skilda från noll samt $ a_1 $ och $ a_2 $ är unika.
+
+## Tillståndsåterkoppling
+Ett viktigt krav för tillståndsåterkoppling är att systemet är styrbart för att erhålla önskad polplacering. Ett system på tillståndsform är givet enligt
+
+$$
+\begin{aligned}
+\dot x(t) &= Ax(t) + Bu(t) + B_vv(t) \\
+y(t) &= Cx(t)
+\end{aligned}
+$$
+Störsignalen $ v $ adderas till insignalen $ u $ vilket gör att styrsignalen blir $ B_v = B $. En styrlag införs
+$$
+u(t) = -L_ux(t) + K_rr(t)
+$$
+där
+$$
+L_u = \begin{bmatrix}
+    \ell_1 & \ell_2 & \cdots & \ell_n \\
+\end{bmatrix}
+$$
+
+Det slutna systemets poler ges av
+$$
+\alpha_c(s) = \det (sI - A + BL_u)
+$$
+
+### Överföringsfunktioner
+
+Överföringsfunktionen från referenssignalen $ r $ till utsignalen $ y $ bestäms enligt
+$$
+G_{ry}(s) = C(sI - A + BL_u)^{-1} BK_r
+$$
+
+Förstärkningskonstanten $ K_r $ bestäms så att $ G_{ry}(0) = 1 $, d.v.s. så att lågfrekvensförstärkningen blir 1, enligt
+$$
+K_r = \frac{1}{C(- A + BL_u)^{-1} B}
+$$
+
+Överföringsfunktionen från störsignalen $ v $ till utsignalen $ y $ bestäms enligt
+$$
+G_{vy}(s) = C(sI - A + BL_u)^{-1} B_v
+$$
+
+Överföringsfunktionen från referenssignalen $ r $ till styrsignalen $ u $ bestäms enligt
+$$
+G_{ru}(s) = -L_u (sI - A + BL_u)^{-1} BK_r + K_r
+$$
+
+Kretsöverföringen $ L(s) $ erhålls genom att bryta upp återkopplingsslingan vid styrsignalen $ u $ enligt
+$$
+L(s) = L_u(sI - A)^{-1} B
+$$
+
+### Arbetsgång - Tillståndsåterkoppling
+Följande återkopplade system med matriserna
+$$
+A = \begin{bmatrix}
+    0 & 1 \\
+    -2 & -1 \\
+\end{bmatrix}
+\qquad
+B = \begin{bmatrix}
+    -1 \\
+    2  \\
+\end{bmatrix}
+\qquad
+C = \begin{bmatrix}
+    4 & 0 \\
+\end{bmatrix}
+$$
+är givet. För att dimensionerna det återkopplade systemet så att poler i $ s = -1 $ och $ s = -2 $ erhålls, söker vi
+$$
+\alpha_c(s) = (s + 1)(s + 2) = \det (sI - A + BL_u)
+$$
+Vi får
+$$
+\begin{aligned}
+\det (sI - A + BL_u) &=
+\det (
+\begin{bmatrix}
+    s & 0 \\
+    0 & s \\
+\end{bmatrix}
+- \begin{bmatrix}
+    0 & 1 \\
+    -2 & -1 \\
+\end{bmatrix}
++ \begin{bmatrix}
+    -1 \\
+    2  \\
+\end{bmatrix}
+\begin{bmatrix}
+    \ell_1 & \ell_2 \\
+\end{bmatrix} ) \\
+&=
+\det (
+\begin{bmatrix}
+    s - \ell_1 & -1-\ell_2 \\
+    2+2\ell_1 & s+1+2\ell_2 \\
+\end{bmatrix} \\
+&=
+(s - \ell_1)(s + 1 + 2\ell_2) + (1 + \ell_2)(2 + 2\ell_1)
+\end{aligned}
+$$
+
+Lös därefter ut $ \ell_1 $ och $ \ell_2 $ genom att sätta
+
+$$
+\alpha_c(s) = (s - \ell_1)(s + 1 + 2\ell_2) + (1 + \ell_2)(2 + 2\ell_1)
+$$
+
 
 # Tidsdiskreta regulatorer
 ---
@@ -581,5 +725,3 @@ Vid handräkning används grafiska lösningar, annars gäller numeriska lösning
 * Frekvensselektiva filter - ändrar frekvensinnehållet i en signal.
 * Prediktering - förutsäger kommande värden hos en signal.
 * Glättning (smoothing) - minskar brusstörningar.
-
-## Frekvensselektiva filter

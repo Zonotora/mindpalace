@@ -2,7 +2,7 @@
 slug: /control-theory
 date: 2021-01-13
 title: Control Theory
-header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång","link":"Arbetsgang"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"PID - Dimensionering","link":"PID---Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Maximalt faslyft","link":"Maximalt-faslyft"},{"depth":2,"name":"PID","link":"PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"},{"depth":1,"name":"Filter","link":"Filter"},{"depth":2,"name":"Frekvensselektiva filter","link":"Frekvensselektiva-filter"}]
+header: [{"depth":1,"name":"Dynamiska modeller","link":"Dynamiska-modeller"},{"depth":2,"name":"Begynnelsevärdessatsen","link":"Begynnelsevardessatsen"},{"depth":2,"name":"Slutvärdessatsen","link":"Slutvardessatsen"},{"depth":2,"name":"Statisk förstärkning","link":"Statisk-forstarkning"},{"depth":2,"name":"Kvarstående fel","link":"Kvarstaende-fel"},{"depth":2,"name":"Generell överföringsfunktion av första ordningen","link":"Generell-overforingsfunktion-av-forsta-ordningen"},{"depth":2,"name":"Generell överföringsfunktion av andra ordningen","link":"Generell-overforingsfunktion-av-andra-ordningen"},{"depth":2,"name":"Generell överföringsfunktion för återkopplat system","link":"Generell-overforingsfunktion-for-aterkopplat-system"},{"depth":1,"name":"Tillståndsmodeller","link":"Tillstandsmodeller"},{"depth":2,"name":"Linjärisering","link":"Linjarisering"},{"depth":3,"name":"Arbetsgång - Linjärisering","link":"Arbetsgang---Linjarisering"},{"depth":1,"name":"Tids- och frekvensplanet","link":"Tids--och-frekvensplanet"},{"depth":2,"name":"Första ordningens system","link":"Forsta-ordningens-system"},{"depth":2,"name":"Andra ordningens system","link":"Andra-ordningens-system"},{"depth":2,"name":"Bodediagram","link":"Bodediagram"},{"depth":3,"name":"Geometrisk tolkning","link":"Geometrisk-tolkning"},{"depth":3,"name":"Arbetsgång - Bodediagram","link":"Arbetsgang---Bodediagram"},{"depth":1,"name":"Stabilitet","link":"Stabilitet"},{"depth":2,"name":"Routh-Hurwitz","link":"Routh-Hurwitz"},{"depth":2,"name":"Rotort","link":"Rotort"},{"depth":2,"name":"Nyquist förenklade kriterium","link":"Nyquist-forenklade-kriterium"},{"depth":1,"name":"Principer för dimensionering","link":"Principer-for-dimensionering"},{"depth":2,"name":"Känslighetsfunktionen","link":"Kanslighetsfunktionen"},{"depth":2,"name":"Komplementära känslighetsfunktionen","link":"Komplementara-kanslighetsfunktionen"},{"depth":2,"name":"Störkänslighetsfunktionen","link":"Storkanslighetsfunktionen"},{"depth":2,"name":"Styrkänslighetsfunktionen","link":"Styrkanslighetsfunktionen"},{"depth":1,"name":"Dimensionering","link":"Dimensionering"},{"depth":2,"name":"P","link":"P"},{"depth":2,"name":"PI","link":"PI"},{"depth":3,"name":"Arbetsgång - PI","link":"Arbetsgang---PI"},{"depth":2,"name":"PD","link":"PD"},{"depth":3,"name":"Arbetsgång - PD","link":"Arbetsgang---PD"},{"depth":2,"name":"PID","link":"PID"},{"depth":3,"name":"Arbetsgång - PID","link":"Arbetsgang---PID"},{"depth":1,"name":"Alternativa designprinciper","link":"Alternativa-designprinciper"},{"depth":1,"name":"Dimensionering på tillståndsform","link":"Dimensionering-pa-tillstandsform"},{"depth":1,"name":"Tidsdiskreta regulatorer","link":"Tidsdiskreta-regulatorer"},{"depth":1,"name":"Filter","link":"Filter"},{"depth":2,"name":"Frekvensselektiva filter","link":"Frekvensselektiva-filter"}]
 ---
 
 # Dynamiska modeller
@@ -66,14 +66,14 @@ $$
 
 ## Generell överföringsfunktion av andra ordningen
 Vi inför dessa beteckningar
-* $ w_n $ ***odämpad svängningsfrekvens*** Ökat $ w_n $ ger ett större avstånd från origo och därmed snabbare stegsvar.
+* $ \omega_n $ ***odämpad svängningsfrekvens*** Ökat $ \omega_n $ ger ett större avstånd från origo och därmed snabbare stegsvar.
 * $ \zeta $ ***dämpningskonstant*** Stegsvarets översväng minskar då dämpningen $ \zeta $ ökar.
 * $ K $ ***statisk förstärkning***.
 
 Vi kan då beskriva en generell överföringsfunktion av andra ordningen enligt
 
 $$
-G(s) = \frac{Kw_n^2}{s^2 + 2\zeta w_ns + w_n^2} = \frac{K}{1 + \frac{2\zeta s}{w_n} + (\frac{s}{w_n})^2}
+G(s) = \frac{K\omega_n^2}{s^2 + 2\zeta \omega_ns + \omega_n^2} = \frac{K}{1 + \frac{2\zeta s}{\omega_n} + (\frac{s}{\omega_n})^2}
 $$
 
 ## Generell överföringsfunktion för återkopplat system
@@ -206,7 +206,7 @@ $$
 \end{aligned}
 $$
 
-### Arbetsgång
+### Arbetsgång - Linjärisering
 
 Betrakta följande tillståndsmodell på olinjär matrisform
 
@@ -314,9 +314,9 @@ $$
 * För ***komplexkonjugerande stabila poler***
 $$
 \begin{aligned}
-&t_r \approx \frac{1}{w_n} (1 + 0.3\zeta +  2\zeta^2) \\
+&t_r \approx \frac{1}{\omega_n} (1 + 0.3\zeta +  2\zeta^2) \\
 &t_{5\%} \approx \frac{3}{a}\\
-&T_{63\%} = e^{-\frac{\pi a}{w_d} } \\
+&T_{63\%} = e^{-\frac{\pi a}{\omega_d} } \\
 \end{aligned}
 $$
 
@@ -330,9 +330,9 @@ $ C_i(s) $ och $ D_i(s) $ kan anta
 
 $$
 \begin{aligned}
-1 + \frac{s}{w_i} &\qquad första \space ordningen \\
-1 + 2\zeta \frac{s}{w_i} + (\frac{s}{w_i})^2 &\qquad komplexkonjugerande \space polpar \\
-e^{-\frac{s}{w_i}} &\qquad dödtid
+1 + \frac{s}{\omega_i} &\qquad första \space ordningen \\
+1 + 2\zeta \frac{s}{\omega_i} + (\frac{s}{\omega_i})^2 &\qquad komplexkonjugerande \space polpar \\
+e^{-\frac{s}{\omega_i}} &\qquad dödtid
 \end{aligned}
 $$
 
@@ -356,19 +356,19 @@ $$
 ### Geometrisk tolkning
 
 
-### Arbetsgång
+### Arbetsgång - Bodediagram
 
 1. Skriv överföringsfunktionen på ***Bodeform***
 2. Rita lågfrekvensasymptoten $ \frac{K}{s^m} $
-3. Asymptoten kommer därefter att ändras (pol ger negativt $ m_i $ medan nollställe ger positivt $ m_i $) vid varje brytfrekvens $ w_i $ enligt
-    * $ (1 + \frac{s}{w_i})^{\pm m_i} $ ger en riktningsändring på $ \pm m_i \cdot 20 $ dB/dekad
-    * $ (1 + 2\zeta \frac{s}{w_i} + (\frac{s}{w_i})^2)^{\pm m_i} $ ger en riktningsändring på $ \pm 2m_i \cdot 20 $ dB/dekad
+3. Asymptoten kommer därefter att ändras (pol ger negativt $ m_i $ medan nollställe ger positivt $ m_i $) vid varje brytfrekvens $ \omega_i $ enligt
+    * $ (1 + \frac{s}{\omega_i})^{\pm m_i} $ ger en riktningsändring på $ \pm m_i \cdot 20 $ dB/dekad
+    * $ (1 + 2\zeta \frac{s}{\omega_i} + (\frac{s}{\omega_i})^2)^{\pm m_i} $ ger en riktningsändring på $ \pm 2m_i \cdot 20 $ dB/dekad
 4. Korrigering av kurvan enligt
 
-    |Faktor| $ \frac{w_i}{2} $| $ w_i $ | $ 2w_i $ |
+    |Faktor| $ \frac{\omega_i}{2} $| $ \omega_i $ | $ 2\omega_i $ |
     | -    | -                | -       | -        |
-    | $ (1 + \frac{s}{w_i})^{\pm m_i} $  | $ \pm 1m_i $ dB | $ \pm 3m_i $ dB | $ \pm 1m_i $ dB |
-    | $ (1 + 2\zeta \frac{s}{w_i} + (\frac{s}{w_i})^2)^{\pm m_i} $ | $ \zeta $ beroende| $ \zeta $ beroende | $ \zeta $ beroende |
+    | $ (1 + \frac{s}{\omega_i})^{\pm m_i} $  | $ \pm 1m_i $ dB | $ \pm 3m_i $ dB | $ \pm 1m_i $ dB |
+    | $ (1 + 2\zeta \frac{s}{\omega_i} + (\frac{s}{\omega_i})^2)^{\pm m_i} $ | $ \zeta $ beroende| $ \zeta $ beroende | $ \zeta $ beroende |
     För den $ \zeta $ beroende faktorn ovan kommer det att uppstå en allt mer markant "topp" vid brytfrekvensen ju mindre $ \zeta $ är.
 5. Rita faskurvan genom att addera de ingående faktorernas fasbidrag.
 
@@ -453,31 +453,39 @@ $$
 F(s)S(s) = \frac{F(s)}{1 + L(s)}
 $$
 
-# PID - Dimensionering
+# Dimensionering
 ---
 Dessa beteckningar införs
 $$
-K_p = proportionell förstärkning \\
-T_i = integraltidskonstant \\
-T_d = derivatatidskonstant \\
-K_i = \frac{K_p}{T_i} \\
-K_d = K_p T_d \\
+\begin{aligned}
+K_p &= proportionell förstärkning \\
+T_i &= integraltidskonstant \\
+T_d &= derivatatidskonstant \\
+K_i &= \frac{K_p}{T_i} \\
+K_d &= K_p T_d \\
+\angle G(j\omega_{G150}) &= -150 \degree
+\end{aligned}
 $$
 
-Vi utgår ifrån önskad överkorsningsfrekvens $ w_c $ vilket ger följande
+Vi utgår ifrån önskad överkorsningsfrekvens $ \omega_c $ vilket ger följande
 
 $$
-| L(jw_c) |  = 1
+| L(j\omega_c) |  = 1
 \qquad\qquad
-\angle L(jw_c) = -180 \degree + \varphi_m
+\angle L(j\omega_c) = -180 \degree + \varphi_m
 $$
 
 Det innebär att
 $$
-| F(jw_c) | = \frac{1}{| G(jw_c) |}
+| F(j\omega_c) | = \frac{1}{| G(j\omega_c) |}
 $$
 $$
-\angle F(jw_c) = -180 \degree + \varphi_m - \angle G(jw_c)
+\angle F(j\omega_c) = -180 \degree + \varphi_m - \angle G(j\omega_c)
+$$
+
+Notis: Om $ G(s) = Ae^{-Bs} $ finns i något av polynomen, var noga med
+$$
+\angle G(j\omega_c) = (- B \omega_c \frac{180}{\pi}) \degree \qquad | G(j\omega_c) | = A
 $$
 
 ## P
@@ -486,12 +494,31 @@ F_{P}(s) = K_p
 $$
 
 ## PI
+Kostnaden som PI-regulatorn måste betala för de positiva statiska egenskaperna är att den negativa fasvridningen $ \angle F_{PI}(j\omega) \approx -90 \degree $ för små $ \omega $. För högre frekvenser är fasvridningen försumbar men kan resultera i stabilitetsproblem för lägre frekvenser.
 $$
 F_{PI}(s) = K_p(1 + \frac{1}{T_is}) = K_p + \frac{K_i}{s} = K_i \frac{1 + T_i}{s}
 $$
 
+### Arbetsgång - PI
+För önskad fasmarginal $ \varphi_m $ och överkorsningsfrekvens $ \omega_c $ och antagandet att
+
+$$
+\angle F_{PI}(j\omega_c) = -180 \degree + \varphi_m - \angle G(j\omega_c)
+$$
+
+är bestämd så följer
+
+$$
+\begin{aligned}
+T_i &= \frac{1}{\omega_c \tan (- \angle F_{PI}(j\omega_c) )} \\
+\\
+K_i &= \frac{\omega_c}{|G(j\omega_c)| \sqrt{1 + (\omega_c T_i)^2}}
+\end{aligned}
+$$
+
 ## PD
-En ideal PD-regulartor ges av följande
+Derivataverkan införs för att öka snabbheten hos det återkopplade systemet. En PD-regulator ger ett positiv fasbidrag vilket används för att lyfta faskurvan tillräckligt för att nå önskad fasmarginal $ \varphi_m $.
+En ideal PD-regulator ges av följande
 $$
 F_{PD}(s) = K_p(1 + T_ds)
 $$
@@ -507,22 +534,37 @@ $$
 
 för att undvika högfrekventa störningar.
 
-### Maximalt faslyft
-$$
-\varphi_{max} = \max \angle F_{PD}(j\omega)
+### Arbetsgång - PD
+För önskad fasmarginal $ \varphi_m $ och överkorsningsfrekvens $ \omega_c $ söker vi parameterkombinationen $ \tau_d $ och $ b $ som ger det önskade faslyftet. Fasvridningen erhålls enligt
 
 $$
+\angle F_{PI}(j\omega_c) = -180 \degree + \varphi_m - \angle G(j\omega_c)
 $$
-\omega_m = \frac{ \sqrt{b} }{ \tau_d}
+
+Maximalt faslyft ges av $ \varphi_{max} = \max \angle F_{PD}(j\omega) $ och inträffar vid $ \omega_m =  \frac{\sqrt b}{t_d} $. Vi får att
 $$
+b = \frac{ 1 + \sin \varphi_{max} }{ 1 - \sin \varphi_{max}}
+$$
+
+För att minimera $ b $ och samtidigt erhålla maximalt faslyft sätts $ \omega_m = \omega_c $. Ett annat val kräver ett högre $ b $ för att erhålla faslyftet $ \angle F_{PD}(j\omega_c) $. Då får vi
+$$
+ \varphi_{max} = \angle F_{PD}(j\omega_c) \qquad \tau_d = \frac{\sqrt b}{\omega_c}
+$$
+
+Genom utnyttjandet av $ | L(j\omega_c) | = 1 $ bestäms $ K_p $ enligt
+
+$$
+K_p = \frac{1}{| G(j\omega_c) | \sqrt b}
+$$
+
 
 ## PID
 $$
 F_{PID}(s) = K_p(1 + \frac{1}{T_is} + T_ds) = K_p + \frac{K_i}{s} + K_ds
 $$
 
-
-
+### Arbetsgång - PID
+Vid handräkning används grafiska lösningar, annars gäller numeriska lösningar via dator.
 
 
 # Alternativa designprinciper

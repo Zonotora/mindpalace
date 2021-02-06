@@ -30,7 +30,12 @@ const resolveFile = (file) => {
   const parsedUrl = path.parse(url);
   const resolvedPath = path.join(parsedUrl.dir, parsedUrl.name);
   const fileContent = fs.readFileSync(file, { encoding: "utf8" });
-  const header = fileContent
+  // filter out code blocks, because some languages have # as a comment token
+  const filteredFileContent = fileContent
+    .split("```")
+    .filter((e, i) => i % 2 == 0)
+    .join("");
+  const header = filteredFileContent
     .split("\n")
     .filter((line) => line.startsWith("#"))
     .map((line) => {

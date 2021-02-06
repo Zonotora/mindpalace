@@ -57,6 +57,10 @@ table {
   border-radius: 20px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .katex-display {
   /* font-size: 16pt; */
 }

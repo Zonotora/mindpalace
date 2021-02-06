@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
+import { useMediaQuery } from "react-responsive";
 import Layout from "components/layout";
 import Header from "components/header";
 import "katex/dist/katex.min.css";
@@ -156,9 +157,15 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
 
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
   useEffect(() => {
     setHeader(generateTree(JSON.parse(JSON.stringify(frontmatter.header))));
   }, [frontmatter.header]);
+
+  useEffect(() => {
+    setPosX(0);
+  }, [isTabletOrMobile]);
 
   return (
     <Layout>

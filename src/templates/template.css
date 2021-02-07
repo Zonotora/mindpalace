@@ -94,6 +94,23 @@ input.search {
   height: 48px;
 }
 
+.header-button {
+  cursor: pointer;
+  position: absolute;
+  color: #6e7681;
+  left: 10px;
+  top: 15px;
+}
+
+.header-button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-button:hover {
+  color: white;
+}
+
 .content-container {
   position: fixed;
   right: 0px;

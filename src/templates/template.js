@@ -197,7 +197,7 @@ export default function Template({ data }) {
         isTabletOrMobile
       )
     );
-  }, [frontmatter.header]);
+  }, [frontmatter.header, isTabletOrMobile]);
 
   useEffect(() => {
     if (isTabletOrMobile) {

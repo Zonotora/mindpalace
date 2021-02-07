@@ -7,7 +7,13 @@ import "katex/dist/katex.min.css";
 import "./template.css";
 import "./syntax.css";
 
-const generateTree = (header, depth = 1, sectionText = "") => {
+const generateTree = (
+  header,
+  setPosX,
+  isTabletOrMobile = false,
+  depth = 1,
+  sectionText = ""
+) => {
   const elements = [];
   const text = depth !== 1 ? `${sectionText}.` : "";
   let section = 1;
@@ -32,6 +38,8 @@ const generateTree = (header, depth = 1, sectionText = "") => {
           name={root.name}
           link={root.link}
           section={`${text}${section}`}
+          setPosX={setPosX}
+          isTabletOrMobile={isTabletOrMobile}
         />
       );
     }
@@ -39,6 +47,8 @@ const generateTree = (header, depth = 1, sectionText = "") => {
     else if (header[0].depth > root.depth) {
       const children = generateTree(
         header,
+        setPosX,
+        isTabletOrMobile,
         header[0].depth,
         `${text}${section}`
       );
@@ -53,6 +63,8 @@ const generateTree = (header, depth = 1, sectionText = "") => {
           link={root.link}
           section={`${text}${section}`}
           children={children}
+          setPosX={setPosX}
+          isTabletOrMobile={isTabletOrMobile}
         />
       );
     }
@@ -65,6 +77,8 @@ const generateTree = (header, depth = 1, sectionText = "") => {
           name={root.name}
           link={root.link}
           section={`${text}${section}`}
+          setPosX={setPosX}
+          isTabletOrMobile={isTabletOrMobile}
         />
       );
     }
@@ -78,6 +92,8 @@ const generateTree = (header, depth = 1, sectionText = "") => {
           name={root.name}
           link={root.link}
           section={`${text}${section}`}
+          setPosX={setPosX}
+          isTabletOrMobile={isTabletOrMobile}
         />
       );
       return elements;
@@ -87,9 +103,25 @@ const generateTree = (header, depth = 1, sectionText = "") => {
   return elements;
 };
 
-const TreeHeader = ({ className = "", name, link, section, children = [] }) => (
+const TreeHeader = ({
+  className = "",
+  name,
+  link,
+  section,
+  children = [],
+  setPosX,
+  isTabletOrMobile = false,
+}) => (
   <li>
-    <a href={`#${link}`}>
+    <a
+      href={`#${link}`}
+      onClick={(e) => {
+        console.log("test");
+        if (isTabletOrMobile) {
+          setPosX(0);
+        }
+      }}
+    >
       <span className={`node ${className}`.trim()}>
         <div className="node-bar" />
         <div className="visibility-box">
@@ -141,30 +173,38 @@ const Slider = ({ setPosX, style }) => {
   return <div className="slider" onMouseDown={onMouseDown} style={style} />;
 };
 
-const onTreeViewClick = (e, posX, setPosX) => {
+const onTreeViewClick = (e, posX, setPosX, isTabletOrMobile) => {
   if (posX < 5) {
-    setPosX(25);
+    setPosX(isTabletOrMobile ? 100 : 25);
   } else {
     setPosX(0);
   }
 };
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+export default function Template({ data }) {
   const [posX, setPosX] = useState(25);
   const [header, setHeader] = useState([]);
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
+  const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   useEffect(() => {
-    setHeader(generateTree(JSON.parse(JSON.stringify(frontmatter.header))));
+    setHeader(
+      generateTree(
+        JSON.parse(JSON.stringify(frontmatter.header)),
+        setPosX,
+        isTabletOrMobile
+      )
+    );
   }, [frontmatter.header]);
 
   useEffect(() => {
-    setPosX(0);
+    if (isTabletOrMobile) {
+      setPosX(0);
+    } else {
+      setPosX(25);
+    }
   }, [isTabletOrMobile]);
 
   return (
@@ -181,7 +221,9 @@ export default function Template({
             0,
             frontmatter.slug.lastIndexOf("/")
           )}
-          onTreeViewClick={(e) => onTreeViewClick(e, posX, setPosX)}
+          onTreeViewClick={(e) =>
+            onTreeViewClick(e, posX, setPosX, isTabletOrMobile)
+          }
         />
         <div className="content">
           <div dangerouslySetInnerHTML={{ __html: html }} />

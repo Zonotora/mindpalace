@@ -6,4 +6,4 @@ header: [{"depth":1,"name":"List to Katex supported","link":"List-to-Katex-suppo
 ---
 
 # List to Katex supported
-https://katex.org/docs/supported.html#sqrt
+https://katex.org/docs/supported.html

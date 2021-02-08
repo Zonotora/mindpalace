@@ -116,7 +116,6 @@ const TreeHeader = ({
     <a
       href={`#${link}`}
       onClick={(e) => {
-        console.log("test");
         if (isTabletOrMobile) {
           setPosX(0);
         }

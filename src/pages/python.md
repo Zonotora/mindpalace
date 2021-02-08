@@ -70,14 +70,23 @@ header: [{"depth":1,"name":"Enumerate","link":"Enumerate"},{"depth":1,"name":"Co
 
 # Slices
 ```python
-a[start:stop]  # items start through stop-1
-a[start:]      # items start through the rest of the array
-a[:stop]       # items from the beginning through stop-1
-a[:]           # a copy of the whole array
-a[::]          # a copy of the whole array
+# items start through stop-1
+a[start:stop]
+# items start through the rest of the array
+a[start:]
+# items from the beginning through stop-1
+a[:stop]
+# a copy of the whole array
+a[:]
+# a copy of the whole array
+a[::]
 
-a[-1]          # last item in the array
-a[-2:]         # last two items in the array
-a[:-2]         # everything except the last two items
-a[::-1]        # all items in the array, reversed
+# last item in the array
+a[-1]
+# last two items in the array
+a[-2:]
+# everything except the last two items
+a[:-2]
+# all items in the array, reversed
+a[::-1]
 ```

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const folderPath = "src/pages";
-const templatePath = "src/templates/indexTemplate.js";
+const templatePath = "src/templates/folder.js";
 
 const isDirectory = (url) => fs.statSync(url).isDirectory();
 const isMarkdownFile = (url) =>

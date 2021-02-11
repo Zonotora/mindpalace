@@ -181,7 +181,7 @@ const onTreeViewClick = (e, posX, setPosX, isTabletOrMobile) => {
 };
 
 export default function Template({ data }) {
-  const [posX, setPosX] = useState(25);
+  const [posX, setPosX] = useState(0);
   const [header, setHeader] = useState([]);
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;

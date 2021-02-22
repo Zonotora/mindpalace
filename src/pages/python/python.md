@@ -1,6 +1,6 @@
 ---
-slug: /python
-date: 2021-02-06
+slug: /python/python
+date: 2021-02-22
 title: Python
 header: [{"depth":1,"name":"Enumerate","link":"Enumerate"},{"depth":1,"name":"Comprehension","link":"Comprehension"},{"depth":1,"name":"Generator","link":"Generator"},{"depth":1,"name":"Unpacking","link":"Unpacking"},{"depth":1,"name":"Swapping","link":"Swapping"},{"depth":1,"name":"Slices","link":"Slices"}]
 ---

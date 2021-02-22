@@ -70,8 +70,8 @@ header: [{"depth":1,"name":"Enumerate","link":"Enumerate"},{"depth":1,"name":"Co
 
 # Slices
 ```python
-# items start through stop-1
-a[start:stop]
+# items start through stop-1 with increment
+a[start:stop:increment]
 # items start through the rest of the array
 a[start:]
 # items from the beginning through stop-1

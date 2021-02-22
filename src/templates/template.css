@@ -74,14 +74,14 @@ input:focus {
   text-decoration: none;
 }
 .template-directories {
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 .template-files {
-  /* margin-top: 40px; */
   margin-bottom: 10px;
 }
 
-input.search {
+/* input.search {
   font-family: "Abel", sans-serif;
   border-color: #ddd;
   border: 0px;
@@ -92,9 +92,33 @@ input.search {
   margin: 0px;
   padding-top: 10px;
   height: 48px;
+} */
+
+.header-container {
+  display: flex;
 }
 
-.header-button {
+.header-icon-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-icon {
+  flex: 1 1 auto;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px #4d535c solid;
+  padding: 17px;
+  margin: auto 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.button-icon:hover {
+  border: 1px #6e7681 solid;
+}
+
+.button-header {
   cursor: pointer;
   position: absolute;
   color: #6e7681;
@@ -102,12 +126,12 @@ input.search {
   top: 15px;
 }
 
-.header-button a {
+.button-header a {
   color: inherit;
   text-decoration: none;
 }
 
-.header-button:hover {
+.button-header:hover {
   color: white;
 }
 
@@ -143,7 +167,7 @@ input.search {
   background-color: #1e2026;
 }
 
-.content-tree-search {
+.search.file {
   height: var(--header-height);
   max-height: var(--header-height);
   display: flex;
@@ -152,18 +176,30 @@ input.search {
   padding: 0 10px 0 10px;
 }
 
-.content-tree-search-icon {
+.search.directory {
+  width: 30%;
+  min-width: 300px;
+  height: var(--header-height);
+  max-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+}
+
+.search-icon {
   height: 34px;
   width: 10%;
+  min-width: 50px;
   background-color: #23252c;
   border-radius: inherit;
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
+  text-align: center;
 }
 
-.content-tree-search-container {
+.search-container {
   width: 100%;
-
   height: 36px;
   margin: auto 0px;
   border: 1px solid #4d535c;
@@ -175,12 +211,12 @@ input.search {
   justify-content: center;
 }
 
-.content-tree-search-container:hover,
-.content-tree-search-container:focus-within {
+.search-container:hover,
+.search-container:focus-within {
   border: 1px solid #6e7681;
 }
 
-.content-tree-search-container input {
+.search-container input {
   font-size: 12pt;
   width: 90%;
   background-color: inherit;

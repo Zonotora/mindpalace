@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import { useMediaQuery } from "react-responsive";
 import Layout from "components/layout";
-import Header from "components/header";
+import { FileHeader } from "components/Header";
+import Searchfield from "../components/Searchfield";
 import "katex/dist/katex.min.css";
 import "./template.css";
 import "./syntax.css";
@@ -137,12 +138,7 @@ const TreeHeader = ({
 const ContentTree = ({ header, style }) => (
   <>
     <div className="content-tree" style={style}>
-      <div className="content-tree-search">
-        <div className="content-tree-search-container">
-          <div className="content-tree-search-icon" />
-          <input placeholder="Search..." />
-        </div>
-      </div>
+      <Searchfield className="file" />
       <div className="content-tree-container">
         <ul className="content-ul">{header}</ul>
       </div>
@@ -214,7 +210,7 @@ export default function Template({ data }) {
         className="content-container"
         style={{ width: `calc(${100 - posX}% - 2px)` }}
       >
-        <Header
+        <FileHeader
           siteTitle={frontmatter.title}
           parent={frontmatter.slug.substring(
             0,

@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import Layout from "components/layout";
 import SEO from "components/seo";
+import { DirectoryHeader } from "components/Header";
 import "templates/template.css";
 
 const IndexPage = () => {
@@ -10,8 +11,11 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <DirectoryHeader
+        parent={url.substring(0, url.lastIndexOf("/"))}
+        siteTitle={url.substring(0, url.lastIndexOf("/"))}
+      />
       <SEO title="Home" />
-      <h1>This is a template</h1>
       <div className="template-directories">
         {dirs.map((dir) => (
           <Link key={dir} to={`${url}/${dir}`}>

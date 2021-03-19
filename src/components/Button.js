@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import { BsList, BsArrowReturnLeft } from "react-icons/bs";
 
-export const TreeViewButton = ({ onTreeviewClick, style }) => {
+export const ListButton = ({ onListClick, style }) => {
   return (
-    <div className="button-header" style={style} onClick={onTreeviewClick}>
+    <div className="button-header" style={style} onClick={onListClick}>
       <BsList size={20} />
     </div>
   );
@@ -20,6 +20,6 @@ export const BackButton = ({ parent, style }) => {
   );
 };
 
-export const IconButton = () => {
-  return <div className="button-icon"></div>;
+export const IconButton = ({ children }) => {
+  return <div className="button-icon">{children}</div>;
 };

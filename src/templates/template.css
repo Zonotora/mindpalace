@@ -96,6 +96,7 @@ input:focus {
 
 .header-container {
   display: flex;
+  justify-content: center;
 }
 
 .header-icon-buttons {

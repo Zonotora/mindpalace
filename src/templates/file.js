@@ -7,6 +7,7 @@ import Searchfield from "../components/Searchfield";
 import "katex/dist/katex.min.css";
 import "./template.css";
 import "./syntax.css";
+import { ListButton } from "../components/Button";
 
 const generateTree = (
   header,
@@ -135,10 +136,30 @@ const TreeHeader = ({
   </li>
 );
 
-const ContentTree = ({ header, style }) => (
+const ContentTree = ({ header, style, posX, setPosX }) => (
   <>
     <div className="content-tree" style={style}>
-      <Searchfield className="file" />
+      <div
+        style={{
+          display: `${posX >= 95 ? "flex" : ""}`,
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Searchfield className="file" style={{ flex: "1 1 auto" }} />
+        {posX >= 95 ? (
+          <ListButton
+            style={{
+              width: "30px",
+              position: "relative",
+              left: "0px",
+            }}
+            onListClick={(e) => onTreeViewClick(e, posX, setPosX, false)}
+          />
+        ) : (
+          <></>
+        )}
+      </div>
+
       <div className="content-tree-container">
         <ul className="content-ul">{header}</ul>
       </div>
@@ -204,7 +225,12 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-      <ContentTree header={header} style={{ width: `${posX}%` }} />
+      <ContentTree
+        header={header}
+        style={{ width: `${posX}%` }}
+        posX={posX}
+        setPosX={setPosX}
+      />
       <Slider setPosX={setPosX} style={{ left: `${posX}%` }} />
       <div
         className="content-container"

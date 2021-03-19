@@ -65,6 +65,11 @@ input:focus {
   /* font-size: 16pt; */
 }
 
+.template-directories,
+.template-files {
+  background-color: #ffb57e;
+}
+
 .template-directories a,
 .template-files a {
   color: white;
@@ -72,11 +77,14 @@ input:focus {
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
+  margin-left: 10px;
 }
+
 .template-directories {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
 .template-files {
   margin-bottom: 10px;
 }

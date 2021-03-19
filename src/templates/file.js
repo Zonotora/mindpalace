@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import { useMediaQuery } from "react-responsive";
-import Layout from "components/layout";
+import Layout from "components/Layout";
 import { FileHeader } from "components/Header";
 import Searchfield from "../components/Searchfield";
 import "katex/dist/katex.min.css";

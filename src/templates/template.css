@@ -68,6 +68,7 @@ input:focus {
 .template-directories,
 .template-files {
   background-color: #ffb57e;
+  white-space: nowrap;
 }
 
 .template-directories a,

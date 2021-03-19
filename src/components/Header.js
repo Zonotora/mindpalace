@@ -34,7 +34,7 @@ export const DirectoryHeader = ({ siteTitle, parent }) => {
       <div>
         <BackButton parent={parent} style={{ left: "10px" }} />
         {isMobile ? (
-          <ListButton style={{ left: "auto", right: "10px" }} />
+          <ListButton style={{ left: "auto", right: "10px", position: "absolute" }} />
         ) : (
           <></>
         )}
@@ -49,7 +49,7 @@ export const DirectoryHeader = ({ siteTitle, parent }) => {
             {siteTitle}
           </Link>
         </h1>
-        <div className="header-container" style={{ marginLeft: "50px" }}>
+        <div className="header-container">
           {!isMobile ? (
             <div className="header-icon-buttons">
               <IconButton />

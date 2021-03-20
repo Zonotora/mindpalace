@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import Searchfield from "./Searchfield";
@@ -27,14 +27,20 @@ export const FileHeader = ({ siteTitle, parent, onTreeViewClick }) => (
 );
 
 export const DirectoryHeader = ({ siteTitle, parent }) => {
+  const [display, setDisplay] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
+
+  useEffect(() => {
+    setDisplay(isMobile);
+  }, [isMobile])
+
 
   return (
     <header>
       <div>
         <BackButton parent={parent} style={{ left: "10px" }} />
-        {isMobile ? (
-          <ListButton style={{ left: "auto", right: "10px", position: "absolute" }} />
+        {display ? (
+          <ListButton style={{ left: "auto", right: "10px" }} />
         ) : (
           <></>
         )}
@@ -50,7 +56,7 @@ export const DirectoryHeader = ({ siteTitle, parent }) => {
           </Link>
         </h1>
         <div className="header-container">
-          {!isMobile ? (
+          {!display ? (
             <div className="header-icon-buttons">
               <IconButton />
               <IconButton />
@@ -62,7 +68,7 @@ export const DirectoryHeader = ({ siteTitle, parent }) => {
 
           <Searchfield className="directory" />
 
-          {!isMobile ? (
+          {!display ? (
             <div className="header-icon-buttons">
               <IconButton />
               <IconButton />

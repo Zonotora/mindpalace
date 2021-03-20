@@ -7,7 +7,7 @@ import { DirectoryHeader } from "components/Header";
 import "templates/template.css";
 
 const IndexPage = () => {
-  const { url, dirs, files } = { url: "", dirs: ["python"], files: ["control-theory","latex","machine-learning"] };
+  const { url, dirs, files } = { url: "", dirs: ["machine-learning","python"], files: ["control-theory","latex"] };
 
   return (
     <Layout>

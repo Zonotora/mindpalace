@@ -64,30 +64,85 @@ input:focus {
 .katex-display {
   /* font-size: 16pt; */
 }
-
-.template-directories,
-.template-files {
-  background-color: #ffb57e;
-  white-space: nowrap;
+.template-structure {
+  display: flex;
 }
 
-.template-directories a,
-.template-files a {
-  color: white;
+.template-display {
+  width: 70%;
+  height: calc(100vh - var(--header-height));
   background-color: black;
+}
+
+.template-filesystem {
+  width: 30%;
+  height: calc(100vh - var(--header-height));
+  background-color: #1e2026;
   padding: 10px;
+  border-top: 1px #4d535c solid;
+  overflow-y: auto;
+}
+
+.template-filesystem-container {
+  border: 1px #4d535c solid;
   border-radius: 5px;
-  text-decoration: none;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.template-filesystem-header {
+  height: 50px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px #4d535c solid;
+}
+
+.template-filesystem-header div {
+  position: relative;
+  top: 15%;
+}
+
+.template-filesystem-item {
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px #4d535c solid;
+}
+
+.template-filesystem-item:hover {
+  background-color: #282a31;
+}
+
+.template-filesystem-files a:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.template-filesystem-files a:last-child .template-filesystem-item {
+  border-radius: inherit;
+  border: 0px;
+}
+
+.template-filesystem-item-icon {
+  color: #6e7681;
+}
+
+.template-filesystem-item-icon,
+.template-filesystem-item-text {
   margin-left: 10px;
 }
 
-.template-directories {
-  margin-top: 20px;
-  margin-bottom: 40px;
+.template-filesystem-directories,
+.template-filesystem-files {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
 }
 
-.template-files {
-  margin-bottom: 10px;
+.template-filesystem-directories a,
+.template-filesystem-files a {
+  color: white;
+  background-color: #1e2026;
+  text-decoration: none;
 }
 
 /* input.search {

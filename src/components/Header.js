@@ -26,14 +26,13 @@ export const FileHeader = ({ siteTitle, parent, onTreeViewClick }) => (
   </header>
 );
 
-export const DirectoryHeader = ({ siteTitle, parent }) => {
+export const DirectoryHeader = ({ parent, siteTitle }) => {
   const [display, setDisplay] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
 
   useEffect(() => {
     setDisplay(isMobile);
-  }, [isMobile])
-
+  }, [isMobile]);
 
   return (
     <header>
@@ -44,17 +43,6 @@ export const DirectoryHeader = ({ siteTitle, parent }) => {
         ) : (
           <></>
         )}
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
         <div className="header-container">
           {!display ? (
             <div className="header-icon-buttons">

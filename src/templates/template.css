@@ -65,17 +65,45 @@ input:focus {
   /* font-size: 16pt; */
 }
 .template-structure {
-  display: flex;
+  height: calc(100vh - var(--header-height));
+}
+
+@media screen and (max-width: 760px) {
+  .template-structure {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .template-filesystem {
+    width: 100%;
+  }
+
+  .template-display {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .template-structure {
+    display: flex;
+    overflow-y: hidden;
+  }
+
+  .template-filesystem {
+    width: 30%;
+  }
+
+  .template-display {
+    width: 70%;
+  }
 }
 
 .template-display {
-  width: 70%;
   height: calc(100vh - var(--header-height));
   background-color: black;
 }
 
 .template-filesystem {
-  width: 30%;
   height: calc(100vh - var(--header-height));
   background-color: #1e2026;
   padding: 10px;

@@ -30,7 +30,7 @@ const IndexPage = () => {
     <Layout>
       <DirectoryHeader
         parent={url.substring(0, url.lastIndexOf("/"))}
-        siteTitle={siteTitle}
+        isRoot={siteTitle === "root"}
       />
 
       <div className="template-structure">

@@ -1,7 +1,10 @@
 ---
 slug: /machine-learning/decision-trees
-date: 2021-03-20
+tags: []
+lastModified: 2021-03-21
+created: 2021-03-21
 title: Decision Trees
 header: []
 ---
 
+Decision tree is a classic model of learning and well suited for binary classification. The decision tree is made up of guesses where each node represents a guess and the path to each node the binary decision. Each non-terminal node has two children which corresponds to answering "no" or "yes". The questions can be seen as **_features_** and the rating is called the **_label_**.

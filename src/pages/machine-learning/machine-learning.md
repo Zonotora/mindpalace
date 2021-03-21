@@ -1,9 +1,29 @@
 ---
 slug: /machine-learning/machine-learning
-date: 2021-03-20
+tags: []
+lastModified: 2021-03-21
+created: 2021-03-20
 title: Machine Learning
 header: []
 ---
+
+- generalization
+- prediction
+- training data
+- induction
+- test set
+- regression
+- classification
+  - binary
+  - multiclass
+- ranking
+- features
+- labels
+- histogram
+- loss function
+  - squared loss
+  - absolute loss
+  - zero/one loss
 
 https://medium.com/cracking-the-data-science-interview/a-gentle-introduction-to-neural-networks-for-machine-learning-d5f3f8987786
 

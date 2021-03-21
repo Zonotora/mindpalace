@@ -1,6 +1,6 @@
 ---
 slug: /control-theory
-tags: []
+tags: ["chalmers"]
 lastModified: 2021-03-21
 created: 2021-01-13
 title: Control Theory

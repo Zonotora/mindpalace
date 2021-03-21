@@ -19,7 +19,7 @@ const FileSystemItem = ({ fileName, fileType }) => {
 
 const IndexPage = () => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["machine-learning","math","python"], files: ["control-theory","latex"] };
+  const { url, dirs, files } = { url: "/math", dirs: [], files: [] };
 
   useEffect(() => {
     const title = url.substring(url.lastIndexOf("/") + 1, url.length);

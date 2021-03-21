@@ -7,6 +7,9 @@ const templatePath = "src/templates/folder.js";
 const isDirectory = (url) => fs.statSync(url).isDirectory();
 const isMarkdownFile = (url) =>
   fs.statSync(url).isFile() && path.extname(url) === ".md";
+const checkIfUpdateFile = (url) =>
+  fs.statSync(url).mtime.toISOString().split("T")[0] ===
+  new Date().toISOString().split("T")[0];
 
 const getFiles = (url, func) =>
   fs

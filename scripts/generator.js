@@ -14,16 +14,52 @@ const getFiles = (url, func) =>
     .map((name) => path.join(url, name))
     .filter(func);
 
-const createFrontmatter = (slug, title, header) =>
+const generateFrontmatter = ({
+  slug,
+  title,
+  header,
+  tags,
+  created,
+  isUpdate = false,
+}) =>
   [
     "---",
     `slug: ${slug}`,
-    `date: ${new Date().toISOString().split("T")[0]}`,
+    `tags: ${tags ? tags : "[]"}`,
+    `lastModified: ${new Date().toISOString().split("T")[0]}`,
+    `created: ${created ? created : new Date().toISOString().split("T")[0]}`,
     `title: ${title}`,
     `header: ${JSON.stringify(header)}`,
     "---",
-    "\n",
-  ].join("\n");
+  ].join("\n") + `${isUpdate ? "" : "\n\n"}`;
+
+const updateFrontmatter = (fileContent, slug, title, header) => {
+  const frontmatter = {};
+
+  // update existing frontmatter
+  if (fileContent.startsWith("---\n")) {
+    const [, frontmatterContent, ...rest] = fileContent.split("---\n");
+
+    const content = `\n${rest
+      .map((e, i) => `${i !== 0 ? "---\n" : ""}${e}`)
+      .join("")}`;
+
+    frontmatterContent.split("\n").forEach((line) => {
+      if (line) {
+        const [key, value] = line.split(":");
+        frontmatter[key] = value.trim();
+      }
+    });
+
+    return `${generateFrontmatter({
+      ...frontmatter,
+      ...{ slug, title, header },
+      isUpdate: true,
+    })}${content}`;
+  }
+  // generate new frontmatter
+  return `${generateFrontmatter({ slug, title, header })}${fileContent}`;
+};
 
 const resolveFile = (file) => {
   const url = file.replace(folderPath, "");
@@ -61,12 +97,9 @@ const resolveFile = (file) => {
     .map((s) => `${s.charAt(0).toUpperCase()}${s.substring(1, s.length)}`)
     .join(" ");
 
-  if (!fileContent.startsWith("---")) {
-    fs.writeFileSync(
-      file,
-      `${createFrontmatter(resolvedPath, title, header)}${fileContent}`
-    );
-  }
+  // update frontmatter for each file
+  const content = updateFrontmatter(fileContent, resolvedPath, title, header);
+  fs.writeFileSync(file, content);
 };
 
 const generate = (url, dirs, files) => {

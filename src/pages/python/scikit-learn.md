@@ -1,6 +1,8 @@
 ---
 slug: /python/scikit-learn
-date: 2021-02-22
+tags: []
+lastModified: 2021-03-21
+created: 2021-02-22
 title: Scikit Learn
 header: []
 ---

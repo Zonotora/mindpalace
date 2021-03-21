@@ -264,8 +264,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "YYYY-MM-DD")
         slug
+        tags
+        lastModified(formatString: "YYYY-MM-DD")
+        created(formatString: "YYYY-MM-DD")
         title
         header {
           depth

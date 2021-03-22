@@ -19,7 +19,7 @@ const FileSystemItem = ({ fileName, fileType }) => {
 
 const IndexPage = () => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning", dirs: [], files: ["decision-trees","machine-learning"] };
+  const { url, dirs, files } = { url: "/machine-learning", dirs: [], files: ["decision-tree","keywords","machine-learning","workflow"] };
 
   useEffect(() => {
     const title = url.substring(url.lastIndexOf("/") + 1, url.length);

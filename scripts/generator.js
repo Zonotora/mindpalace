@@ -1,15 +1,17 @@
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 const folderPath = "src/pages";
 const templatePath = "src/templates/folder.js";
 
+const activeFiles = execSync(
+  `git diff --name-only ${folderPath}; git ls-files --others --exclude-standard`
+).toString();
+
 const isDirectory = (url) => fs.statSync(url).isDirectory();
 const isMarkdownFile = (url) =>
   fs.statSync(url).isFile() && path.extname(url) === ".md";
-const checkIfUpdateFile = (url) =>
-  fs.statSync(url).mtime.toISOString().split("T")[0] ===
-  new Date().toISOString().split("T")[0];
 
 const getFiles = (url, func) =>
   fs
@@ -65,6 +67,9 @@ const updateFrontmatter = (fileContent, slug, title, header) => {
 };
 
 const resolveFile = (file) => {
+  // if file has not any active changes, skip it
+  if (!activeFiles.includes(file)) return;
+
   const url = file.replace(folderPath, "");
   const parsedUrl = path.parse(url);
   const resolvedPath = path.join(parsedUrl.dir, parsedUrl.name);

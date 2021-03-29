@@ -14,6 +14,7 @@ const formatDate = (currentDate, date) => {
 
   if (years > 0) return `${years} year${years > 1 ? "s" : ""} ago`;
   else if (months > 0) return `${months} month${months > 1 ? "s" : ""} ago`;
+  else if (days === 0) return "today";
   return `${days} day${days > 1 ? "s" : ""} ago`;
 };
 
@@ -51,7 +52,7 @@ const IndexPage = ({ data }) => {
       modified[node.slug] = node.date;
     });
 
-    const currentDate = new Date();
+    const currentDate = new Date(new Date().toISOString().split("T")[0]);
 
     for (const key in modified) {
       if (modified.hasOwnProperty(key)) {

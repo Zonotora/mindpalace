@@ -90,11 +90,11 @@ input:focus {
   }
 
   .template-filesystem {
-    width: 30%;
+    width: 40%;
   }
 
   .template-display {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -148,6 +148,12 @@ input:focus {
 .template-filesystem-files a:last-child .template-filesystem-item {
   border-radius: inherit;
   border: 0px;
+}
+
+.template-filesystem-item-last-modified {
+  color: #6e7681;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .template-filesystem-item-icon {

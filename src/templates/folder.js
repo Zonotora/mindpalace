@@ -1,25 +1,76 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { FaRegFile, FaFolder } from "react-icons/fa";
 
 import Layout from "components/Layout";
 import { DirectoryHeader } from "components/Header";
 import "templates/template.css";
 
-const FileSystemItem = ({ fileName, fileType }) => {
+const formatDate = (currentDate, date) => {
+  const time = Math.abs(currentDate - date);
+  const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+  const months = Math.floor(days / 31);
+  const years = Math.floor(days / 365);
+
+  if (years > 0) return `${years} year${years > 1 ? "s" : ""} ago`;
+  else if (months > 0) return `${months} month${months > 1 ? "s" : ""} ago`;
+  return `${days} day${days > 1 ? "s" : ""} ago`;
+};
+
+const FileSystemItem = ({ fileName, fileType, lastModified }) => {
   return (
     <div className="template-filesystem-item">
       <div className="template-filesystem-item-icon">
         {fileType === "file" ? <FaRegFile /> : <FaFolder />}
       </div>
       <div className="template-filesystem-item-text">{fileName}</div>
+      <div className="template-filesystem-item-last-modified">
+        {lastModified[fileName]}
+      </div>
     </div>
   );
 };
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "", dirs: [], files: [] };
+  const [lastModified, setLastModified] = useState({});
+
+  useEffect(() => {
+    const nodes = data.allMarkdownRemark.edges
+      .filter((node) => node.node.frontmatter.slug.startsWith(url))
+      .map((node) => {
+        return {
+          slug: node.node.frontmatter.slug.substring(url.length).split("/")[1],
+          date: node.node.frontmatter.lastModified.split("T")[0],
+        };
+      });
+
+    const modified = {};
+    nodes.forEach((node) => {
+      if (node.slug in modified) {
+        const date1 = new Date(modified[node.slug]);
+        const date2 = new Date(node.date);
+
+        console.log(date2);
+        if (date2.getTime() > date1.getTime()) {
+          modified[node.slug] = node.date;
+        }
+      } else {
+        modified[node.slug] = node.date;
+      }
+    });
+
+    const currentDate = new Date();
+
+    for (const key in modified) {
+      if (modified.hasOwnProperty(key)) {
+        modified[key] = formatDate(currentDate, new Date(modified[key]));
+      }
+    }
+
+    setLastModified(modified);
+  }, [data]);
 
   useEffect(() => {
     const title = url.substring(url.lastIndexOf("/") + 1, url.length);
@@ -43,14 +94,22 @@ const IndexPage = () => {
             <div className="template-filesystem-directories">
               {dirs.map((dir) => (
                 <Link key={dir} to={`${url}/${dir}`}>
-                  <FileSystemItem fileName={dir} fileType="folder" />
+                  <FileSystemItem
+                    fileName={dir}
+                    fileType="folder"
+                    lastModified={lastModified}
+                  />
                 </Link>
               ))}
             </div>
             <div className="template-filesystem-files">
               {files.map((file) => (
                 <Link key={file} to={`${url}/${file}`}>
-                  <FileSystemItem fileName={file} fileType="file" />
+                  <FileSystemItem
+                    fileName={file}
+                    fileType="file"
+                    lastModified={lastModified}
+                  />
                 </Link>
               ))}
             </div>
@@ -62,5 +121,20 @@ const IndexPage = () => {
     </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            lastModified
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

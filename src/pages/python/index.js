@@ -42,23 +42,13 @@ const IndexPage = ({ data }) => {
       .map((node) => {
         return {
           slug: node.node.frontmatter.slug.substring(url.length).split("/")[1],
-          date: node.node.frontmatter.lastModified.split("T")[0],
+          date: node.node.frontmatter.lastModified,
         };
       });
 
     const modified = {};
     nodes.forEach((node) => {
-      if (node.slug in modified) {
-        const date1 = new Date(modified[node.slug]);
-        const date2 = new Date(node.date);
-
-        console.log(date2);
-        if (date2.getTime() > date1.getTime()) {
-          modified[node.slug] = node.date;
-        }
-      } else {
-        modified[node.slug] = node.date;
-      }
+      modified[node.slug] = node.date;
     });
 
     const currentDate = new Date();
@@ -124,11 +114,11 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___lastModified }) {
       edges {
         node {
           frontmatter {
-            lastModified
+            lastModified(formatString: "YYYY-MM-DD")
             slug
           }
         }

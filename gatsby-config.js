@@ -112,6 +112,10 @@ module.exports = {
               output: "html",
             },
           },
+
+          {
+            resolve: `gatsby-remark-mindpalace`,
+          },
         ],
       },
     },

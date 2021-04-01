@@ -1,0 +1,5 @@
+{
+  "bias": "",
+  "inductive-bias": "The preference for one distinction over another. If the inductive bias is too far away from the concept that is being learned, the whole learning might fail.",
+  "cross-validation": "Is sometimes called rotation estimation which by itself describes the behaviour very well."
+}

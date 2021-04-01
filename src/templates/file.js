@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
+import ReactDOM from "react-dom";
 import { graphql } from "gatsby";
 import { useMediaQuery } from "react-responsive";
 import Layout from "components/Layout";
 import { FileHeader } from "components/Header";
-import Searchfield from "../components/Searchfield";
+import Searchfield from "components/Searchfield";
+import { ListButton } from "components/Button";
+import keywords from "keywords.json";
 import "katex/dist/katex.min.css";
 import "./template.css";
 import "./syntax.css";
-import { ListButton } from "../components/Button";
 
 const generateTree = (
   header,
@@ -204,6 +206,32 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
+  useEffect(() => {
+    const elements = document.getElementsByClassName("keyword-link");
+    for (let i = 0; i < elements.length; i++) {
+      const key = elements[i].id.split("-").slice(2).join("-");
+
+      // TODO: use react
+      const outer = document.createElement("div");
+      const inner = document.createElement("div");
+      outer.appendChild(inner);
+      outer.className = "keyword-popup";
+      inner.innerHTML = keywords[key];
+
+      elements[i].addEventListener("mouseenter", () => {
+        const useLeft =
+          elements[i].getBoundingClientRect().x < window.innerWidth / 2;
+        outer.style.left = useLeft ? "0px" : "auto";
+        outer.style.right = !useLeft ? "0px" : "auto";
+
+        elements[i].appendChild(outer);
+      });
+      elements[i].addEventListener("mouseleave", () => {
+        elements[i].removeChild(outer);
+      });
+    }
+  }, []);
 
   useEffect(() => {
     setHeader(

@@ -4,6 +4,7 @@ const { execSync } = require("child_process");
 
 const folderPath = "src/pages";
 const templatePath = "src/templates/folder.js";
+const keywordsPath = "src/keywords.json";
 
 const activeFiles = execSync(
   `git diff --name-only ${folderPath}; git ls-files --others --exclude-standard`
@@ -12,6 +13,7 @@ const activeFiles = execSync(
 const isDirectory = (url) => fs.statSync(url).isDirectory();
 const isMarkdownFile = (url) =>
   fs.statSync(url).isFile() && path.extname(url) === ".md";
+const isKeyWordsFile = (url) => path.basename(url, ".md") === "keywords";
 
 const getFiles = (url, func) =>
   fs
@@ -110,6 +112,34 @@ const resolveFile = (file) => {
   fs.writeFileSync(file, content);
 };
 
+const generateKeywordsDictionary = (file) => {
+  const fileContent = fs.readFileSync(file, { encoding: "utf8" });
+  const lines = fileContent.split("\n");
+
+  const keywords = {};
+  let name = "";
+  let description = "";
+
+  lines.forEach((line, index) => {
+    if (index === lines.length - 1 && name !== "") {
+      keywords[name] = description + line;
+    }
+
+    if (line.startsWith("#")) {
+      if (name !== "") {
+        keywords[name] = description;
+        description = "";
+      }
+      const parts = line.split("#");
+      name = parts[parts.length - 1].trim().split(" ").join("-").toLowerCase();
+    } else if (name !== "") {
+      description += line;
+    }
+  });
+
+  return keywords;
+};
+
 const generate = (url, dirs, files) => {
   const excludedRootUrl = url.replace(folderPath, "");
   const template = fs
@@ -122,7 +152,7 @@ const generate = (url, dirs, files) => {
   fs.writeFileSync(`${url}/index.js`, template);
 };
 
-(function run(url) {
+function resolveAndGenerate(url) {
   const dirs = getFiles(url, isDirectory);
   const files = getFiles(url, isMarkdownFile);
 
@@ -135,6 +165,34 @@ const generate = (url, dirs, files) => {
   );
 
   dirs.forEach((dir) => {
-    run(dir);
+    resolveAndGenerate(dir);
   });
-})(folderPath);
+}
+
+function resolveKeywords(url) {
+  const dirs = getFiles(url, isDirectory);
+  const files = getFiles(url, isMarkdownFile);
+
+  let keywords = {};
+  files.forEach((file) => {
+    if (isKeyWordsFile(file)) {
+      const contents = generateKeywordsDictionary(file);
+      keywords = { ...keywords, ...contents };
+    }
+  });
+
+  dirs.forEach((dir) => {
+    const contents = resolveKeywords(dir);
+    keywords = { ...keywords, ...contents };
+  });
+  return keywords;
+}
+
+(() => {
+  const keywords = resolveKeywords(folderPath);
+  const json = JSON.stringify(keywords);
+  fs.writeFileSync(keywordsPath, json);
+  execSync(`node_modules/prettier/bin-prettier.js --write ${keywordsPath}`);
+
+  resolveAndGenerate(folderPath);
+})();

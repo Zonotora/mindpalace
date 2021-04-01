@@ -64,6 +64,35 @@ input:focus {
 .katex-display {
   /* font-size: 16pt; */
 }
+
+.keyword-link {
+  color: white;
+  background-color: #1e2026;
+  position: relative;
+  cursor: default;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.keyword-popup {
+  color: white;
+  border-radius: 10px;
+  padding-top: 10px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  max-width: 300px;
+  left: 0;
+}
+
+.keyword-popup > div {
+  background-color: #1e2026;
+  height: inherit;
+  border-radius: inherit;
+  padding: 10px;
+}
+
 .template-structure {
   height: calc(100vh - var(--header-height));
 }

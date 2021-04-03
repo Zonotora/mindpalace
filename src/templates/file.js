@@ -1,5 +1,4 @@
-import React, { useState, useEffect, createRef } from "react";
-import ReactDOM from "react-dom";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import { useMediaQuery } from "react-responsive";
 import Layout from "components/Layout";

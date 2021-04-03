@@ -73,6 +73,9 @@ input:focus {
   border-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
 }
 
 .keyword-popup {

@@ -34,7 +34,7 @@ const FileSystemItem = ({ fileName, fileType, lastModified }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning", dirs: [], files: ["decision-tree","keywords","machine-learning","workflow"] };
+  const { url, dirs, files } = { url: "/machine-learning", dirs: [], files: ["decision-tree","ensembles","features","keywords","machine-learning","random-forests","workflow"] };
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

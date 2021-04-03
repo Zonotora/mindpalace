@@ -4,14 +4,14 @@ const toString = require("mdast-util-to-string");
 const keywordLinks = (node) => {
   const value = toString(node);
 
-  if (value.includes("#(")) {
+  if (value.includes("@(")) {
     let start,
       middle = -1,
       end = 0;
     let html = "<p>";
 
     for (let i = 1; i < value.length; i++) {
-      if (value[i] === "(" && value[i - 1] === "#") start = i;
+      if (value[i] === "(" && value[i - 1] === "@") start = i;
       else if (value[i] === "(" && value[i - 1] === ")") middle = i;
       else if (value[i] === ")" && middle !== -1) {
         const identifier = value.substring(start + 1, middle - 1);

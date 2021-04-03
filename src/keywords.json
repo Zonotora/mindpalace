@@ -1,5 +1,9 @@
 {
   "bias": "",
+  "bagging": "Is also called bootstrap aggregation. It is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models.",
   "inductive-bias": "The preference for one distinction over another. If the inductive bias is too far away from the concept that is being learned, the whole learning might fail.",
-  "cross-validation": "Is sometimes called rotation estimation which by itself describes the behaviour very well."
+  "cross-validation": "Is sometimes called rotation estimation which by itself describes the behaviour very well.",
+  "normalization": "Is a good way of keeping the data consistent. There are two basic types of normalization: example and feature normalization.",
+  "feature-normalization": "Go through every feature and apply the same adjustment across all examples. There are two standard techniques to use: centering and scaling. Centering to keep the data set close around the origin. Scaling to make sure each feature has variance 1 across the training data.",
+  "example-normalization": "Go through every feature but adjust them individually. The standard technique is to make sure that each feature vector has the length of one. The advantages of example normalization is that comparisons between data sets are more straightforward."
 }

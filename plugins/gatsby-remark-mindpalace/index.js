@@ -2,6 +2,7 @@ const visit = require("unist-util-visit");
 const toString = require("mdast-util-to-string");
 
 const keywordLinks = (node) => {
+  // @(name)(url)
   const value = toString(node);
 
   if (value.includes("@(")) {
@@ -39,9 +40,54 @@ const keywordLinks = (node) => {
   }
 };
 
+const referenceLinks = (node) => {
+  // !(name)(title)(year)(url)
+
+  const value = toString(node);
+
+  if (value.includes("!(")) {
+    let start,
+      end,
+      index = 0;
+    let values = [];
+    let html = "<p>";
+
+    for (let i = 1; i < value.length; i++) {
+      if (value[i] === "(" && value[i - 1] === "!") {
+        index = i + 1;
+        end = i - 1;
+      } else if (value[i] === "(" && value[i - 1] === ")") {
+        values.push(value.substring(index, i - 1));
+        index = i + 1;
+      } else if (value[i] === ")" && values.length === 3) {
+        values.push(value.substring(index, i));
+      }
+
+      if (values.length === 4) {
+        console.log(values);
+        html += `${value.substring(start, end)}
+          <span class="reference-link" >
+          [${values}]
+          </span>
+          `;
+        start = i;
+
+        values = [];
+      }
+    }
+
+    html += "</p>";
+
+    node.type = "html";
+    node.children = undefined;
+    node.value = html;
+  }
+};
+
 module.exports = ({ markdownAST }, options) => {
   visit(markdownAST, "paragraph", (node) => {
     keywordLinks(node);
+    referenceLinks(node);
   });
 
   return markdownAST;

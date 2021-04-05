@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/keywords
 tags: []
-lastModified: 2021-04-03
+lastModified: 2021-04-05
 created: 2021-03-22
 title: Keywords
-header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":2,"name":"Inductive bias","link":"Inductive-bias"},{"depth":2,"name":"Cross-validation","link":"Cross-validation"},{"depth":2,"name":"Normalization","link":"Normalization"},{"depth":3,"name":"Feature normalization","link":"Feature-normalization"},{"depth":3,"name":"Example normalization","link":"Example-normalization"}]
+header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":2,"name":"Inductive bias","link":"Inductive-bias"},{"depth":2,"name":"Cross-validation","link":"Cross-validation"},{"depth":2,"name":"Normalization","link":"Normalization"},{"depth":3,"name":"Feature normalization","link":"Feature-normalization"},{"depth":3,"name":"Example normalization","link":"Example-normalization"},{"depth":2,"name":"Approximation error","link":"Approximation-error"},{"depth":2,"name":"Estimation error","link":"Estimation-error"},{"depth":2,"name":"Bias and variance trade-off","link":"Bias-and-variance-trade-off"},{"depth":2,"name":"Imbalanced data","link":"Imbalanced-data"}]
 ---
 
 - generalization
@@ -49,6 +49,10 @@ header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","li
 - sensitivity/specificity metric
 - ROC curve
 - AUC
+- development data
+- jack-knifing
+- imbalanced data
+
 
 
 ## Bias
@@ -61,7 +65,7 @@ The preference for one distinction over another. If the inductive bias is too fa
 
 
 ## Cross-validation
-Is sometimes called rotation estimation which by itself describes the behaviour very well.
+Is sometimes called rotation estimation which by itself describes the behaviour very well. For example, if you break up your training data into 10 equally big partitions, you use the learning alogorithm on 9 of them and test on the remaining partition for 10 cycles. Thus, every partition will be the training set once. One disadvantage is that it is computationally expensive.
 
 ## Normalization
 Is a good way of keeping the data consistent. There are two basic types of normalization: example and feature normalization.
@@ -71,3 +75,15 @@ Go through every feature and apply the same adjustment across all examples. Ther
 
 ### Example normalization
 Go through every feature but adjust them individually. The standard technique is to make sure that each feature vector has the length of one. The advantages of example normalization is that comparisons between data sets are more straightforward.
+
+## Approximation error
+Will measure how well the model family is performing.
+
+## Estimation error
+Will measure how far off one classifer is from the optimal classifier of that type.
+
+## Bias and variance trade-off
+The trade-off between approximation and estimation error is usually called the bias/variance trade-off. The bias corresponding to the approximation error and the variance corrsponding to the estimation error.
+
+## Imbalanced data
+The imbalanced data problem refers to the problem where the distribution from which the data is taken has an imbalance. This is not good because machine learning algorithms will try to minimize the error, and thus, predict in favor of the imbalance majority. They can often achieve really good results by doing nothing. Hence, you probably not care about predicting accuracy.

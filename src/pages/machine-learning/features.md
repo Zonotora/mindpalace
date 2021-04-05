@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/features
 tags: []
-lastModified: 2021-04-03
+lastModified: 2021-04-05
 created: 2021-04-02
 title: Features
-header: [{"depth":2,"name":"Feature preprocessing","link":"Feature-preprocessing"},{"depth":3,"name":"Pruning","link":"Pruning"},{"depth":2,"name":"Evaluating","link":"Evaluating"},{"depth":2,"name":"Cross Validation","link":"Cross-Validation"}]
+header: [{"depth":2,"name":"Feature preprocessing","link":"Feature-preprocessing"},{"depth":3,"name":"Pruning","link":"Pruning"},{"depth":2,"name":"Evaluating","link":"Evaluating"},{"depth":1,"name":"Debugging","link":"Debugging"}]
 ---
 
 ## Feature preprocessing
@@ -17,7 +17,9 @@ The principle of pruning is as follows, if you have a binary feature that only a
 ## Evaluating
 It is very fair to say that achieving a high accuracy for a model is you want in most cases, however, in some cases it is better to let a little "bad" data through. For spotting problems (X versus not-X) there are better success with a metrics of precision/recall instead of accuracy for this reason. Thus, having a metric producing confidence is probably better in these cases.
 
-## Cross Validation
-
-
-
+## Debugging
+- Generalization of test data
+- Train/test data mismatch
+- The learning algorithm
+- Adequate representation
+- Enough data

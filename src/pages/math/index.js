@@ -34,7 +34,7 @@ const FileSystemItem = ({ fileName, fileType, lastModified }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/math", dirs: [], files: [] };
+  const { url, dirs, files } = { url: "/math", dirs: [], files: ["keywords","statistics"] };
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

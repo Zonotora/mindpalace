@@ -15,6 +15,7 @@ header: [{"depth":2,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":
 - parametric test
 - gaussian distribution
 - confidence interval
+- chi squared test
 
 
 ## Null Hypothesis

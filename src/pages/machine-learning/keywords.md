@@ -4,7 +4,7 @@ tags: []
 lastModified: 2021-04-05
 created: 2021-03-22
 title: Keywords
-header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":2,"name":"Inductive bias","link":"Inductive-bias"},{"depth":2,"name":"Cross-validation","link":"Cross-validation"},{"depth":2,"name":"Normalization","link":"Normalization"},{"depth":3,"name":"Feature normalization","link":"Feature-normalization"},{"depth":3,"name":"Example normalization","link":"Example-normalization"},{"depth":2,"name":"Approximation error","link":"Approximation-error"},{"depth":2,"name":"Estimation error","link":"Estimation-error"},{"depth":2,"name":"Bias and variance trade-off","link":"Bias-and-variance-trade-off"},{"depth":2,"name":"Imbalanced data","link":"Imbalanced-data"}]
+header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":2,"name":"Inductive bias","link":"Inductive-bias"},{"depth":2,"name":"Cross-validation","link":"Cross-validation"},{"depth":2,"name":"Normalization","link":"Normalization"},{"depth":3,"name":"Feature normalization","link":"Feature-normalization"},{"depth":3,"name":"Example normalization","link":"Example-normalization"},{"depth":2,"name":"Approximation error","link":"Approximation-error"},{"depth":2,"name":"Estimation error","link":"Estimation-error"},{"depth":2,"name":"Bias and variance trade-off","link":"Bias-and-variance-trade-off"},{"depth":2,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":2,"name":"Feature selection","link":"Feature-selection"},{"depth":2,"name":"Embedded methods","link":"Embedded-methods"},{"depth":2,"name":"Regularization methods","link":"Regularization-methods"}]
 ---
 
 - generalization
@@ -52,8 +52,12 @@ header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","li
 - development data
 - jack-knifing
 - imbalanced data
-
-
+- induced distribution
+- feature selection https://en.wikipedia.org/wiki/Feature_selection
+- predictive model
+- LASSO
+- elastic net
+- ridge regression
 
 ## Bias
 
@@ -87,3 +91,12 @@ The trade-off between approximation and estimation error is usually called the b
 
 ## Imbalanced data
 The imbalanced data problem refers to the problem where the distribution from which the data is taken has an imbalance. This is not good because machine learning algorithms will try to minimize the error, and thus, predict in favor of the imbalance majority. They can often achieve really good results by doing nothing. Hence, you probably not care about predicting accuracy.
+
+## Feature selection
+
+
+## Embedded methods
+Embedded methods are used to learn which features best contribute to the learning of a model while it is being created. Common methods are regularization methods.
+
+## Regularization methods
+Regularization methods or penalization methods introduce additional constraints which makes the model bias toward fewer constraints.

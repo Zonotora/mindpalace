@@ -2,8 +2,17 @@
   "bias": "",
   "bagging": "Is also called bootstrap aggregation. It is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models.",
   "inductive-bias": "The preference for one distinction over another. If the inductive bias is too far away from the concept that is being learned, the whole learning might fail.",
-  "cross-validation": "Is sometimes called rotation estimation which by itself describes the behaviour very well.",
+  "cross-validation": "Is sometimes called rotation estimation which by itself describes the behaviour very well. For example, if you break up your training data into 10 equally big partitions, you use the learning alogorithm on 9 of them and test on the remaining partition for 10 cycles. Thus, every partition will be the training set once. One disadvantage is that it is computationally expensive.",
   "normalization": "Is a good way of keeping the data consistent. There are two basic types of normalization: example and feature normalization.",
   "feature-normalization": "Go through every feature and apply the same adjustment across all examples. There are two standard techniques to use: centering and scaling. Centering to keep the data set close around the origin. Scaling to make sure each feature has variance 1 across the training data.",
-  "example-normalization": "Go through every feature but adjust them individually. The standard technique is to make sure that each feature vector has the length of one. The advantages of example normalization is that comparisons between data sets are more straightforward."
+  "example-normalization": "Go through every feature but adjust them individually. The standard technique is to make sure that each feature vector has the length of one. The advantages of example normalization is that comparisons between data sets are more straightforward.",
+  "approximation-error": "Will measure how well the model family is performing.",
+  "estimation-error": "Will measure how far off one classifer is from the optimal classifier of that type.",
+  "bias-and-variance-trade-off": "The trade-off between approximation and estimation error is usually called the bias/variance trade-off. The bias corresponding to the approximation error and the variance corrsponding to the estimation error.",
+  "imbalanced-data": "The imbalanced data problem refers to the problem where the distribution from which the data is taken has an imbalance. This is not good because machine learning algorithms will try to minimize the error, and thus, predict in favor of the imbalance majority. They can often achieve really good results by doing nothing. Hence, you probably not care about predicting accuracy.",
+  "feature-selection": "",
+  "embedded-methods": "Embedded methods are used to learn which features best contribute to the learning of a model while it is being created. Common methods are regularization methods.",
+  "regularization-methods": "Regularization methods or penalization methods introduce additional constraints which makes the model bias toward fewer constraints.",
+  "null-hypothesis": "",
+  "statistically-significant": "The result is probably not due to random luck."
 }

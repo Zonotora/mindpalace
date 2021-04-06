@@ -86,9 +86,9 @@ const insertReferenceLinks = (node, references) => {
         const id = value.substring(end + 1, i);
         const content = id in references ? references[id].order : "UNKNOWN";
         html += `${value.substring(start, end - 1)}
-          <a class="reference-link" href="#reference-link-${
+          <sup><a class="reference-link" href="#reference-link-${
             id in references ? id : "UNKNOWN"
-          }" >[${content}]</a>
+          }">[${content}]</a></sup>
         `;
 
         start = i + 1;

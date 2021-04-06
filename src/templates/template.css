@@ -65,6 +65,10 @@ input:focus {
   /* font-size: 16pt; */
 }
 
+.reference-link {
+  text-decoration: none;
+}
+
 .keyword-link {
   color: white;
   background-color: #1e2026;

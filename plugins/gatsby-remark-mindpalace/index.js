@@ -40,7 +40,7 @@ const keywordLinks = (node) => {
   }
 };
 
-const referenceLinks = (node) => {
+const referenceLinks = (node, references) => {
   // !(name)(title)(year)(url)
 
   const value = toString(node);
@@ -64,14 +64,18 @@ const referenceLinks = (node) => {
       }
 
       if (values.length === 4) {
-        console.log(values);
-        html += `${value.substring(start, end)}
-          <span class="reference-link" >
-          [${values}]
-          </span>
-          `;
-        start = i;
+        const [name, title, year, url] = values;
+        references.push({ name, title, year, url });
 
+        html += `${value.substring(start, end)}
+          <a class="reference-link" href="#reference-link-item${
+            references.length
+          }" >
+          [${references.length}]
+          </a>
+          `;
+
+        start = i;
         values = [];
       }
     }
@@ -84,11 +88,31 @@ const referenceLinks = (node) => {
   }
 };
 
+const createReferences = (markdownAST, references) => {
+  let value = "";
+  references.forEach((reference, index) => {
+    value += `<div id="reference-link-item${index + 1}">[${index + 1}] ${
+      reference.name
+    } (${reference.year}). <i>${reference.title}</i>. ${reference.url}.</div>`;
+  });
+
+  const node = {
+    type: "html",
+    children: undefined,
+    value: `<div classname="references">${value}</div>`,
+  };
+  markdownAST.children.push(node);
+};
+
 module.exports = ({ markdownAST }, options) => {
+  let references = [];
+
   visit(markdownAST, "paragraph", (node) => {
     keywordLinks(node);
-    referenceLinks(node);
+    referenceLinks(node, references);
   });
+
+  createReferences(markdownAST, references);
 
   return markdownAST;
 };

@@ -69,6 +69,22 @@ input:focus {
   text-decoration: none;
 }
 
+.reference-items a {
+  text-decoration: none;
+}
+
+.reference {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.reference-number {
+  min-width: 3em;
+  text-align: right;
+  margin-left: -31px;
+  margin-right: 10px;
+}
+
 .keyword-link {
   color: white;
   background-color: #1e2026;

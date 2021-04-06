@@ -110,7 +110,10 @@ const insertReferenceLinks = (node, references) => {
 const createReferences = (markdownAST, references) => {
   let value = "";
   for (const key in references) {
-    value += `<div id="reference-link-${key}">[${references[key].order}] `;
+    value += `<div class="reference">`;
+    value += `<div class="reference-number"
+      id="reference-link-${key}">[${references[key].order}]</div>`;
+    value += `<div class="reference-content">`;
     if (references[key].author)
       value += `${references[key].author}${references[key].year ? "" : "."} `;
     if (references[key].year) value += `(${references[key].year}). `;
@@ -118,13 +121,13 @@ const createReferences = (markdownAST, references) => {
     if (references[key].url)
       value += `<a href="${references[key].url}">${references[key].url}</a>. `;
 
-    value += "</div>";
+    value += "</div></div>";
   }
 
   const node = {
     type: "html",
     children: undefined,
-    value: `<div classname="references">${value}</div>`,
+    value: `<div class="reference-items">${value}</div>`,
   };
   markdownAST.children.push(node);
 };

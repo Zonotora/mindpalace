@@ -35,6 +35,7 @@ const FileSystemItem = ({ fileName, fileType, lastModified }) => {
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "", dirs: [], files: [] };
+  const [numberOfFiles, numberOfDirs] = [0, 0];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {
@@ -107,7 +108,18 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
 
-        <div className="template-display"></div>
+        <div className="template-display">
+          <div className="template-display-information">
+            <div>
+              <FaFolder />
+              <span>{numberOfDirs}</span>
+            </div>
+            <div>
+              <FaRegFile />
+              <span>{numberOfFiles}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

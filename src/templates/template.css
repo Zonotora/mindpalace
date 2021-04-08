@@ -155,16 +155,12 @@ input:focus {
   }
 }
 
-.template-display {
-  height: calc(100vh - var(--header-height));
-  background-color: black;
-}
-
 .template-filesystem {
   height: calc(100vh - var(--header-height));
   background-color: #1e2026;
   padding: 10px;
   border-top: 1px #4d535c solid;
+  border-right: 1px #4d535c solid;
   overflow-y: auto;
 }
 
@@ -236,6 +232,32 @@ input:focus {
   text-decoration: none;
 }
 
+.template-display {
+  height: calc(100vh - var(--header-height));
+  background-color: black;
+  border-top: 1px #4d535c solid;
+}
+
+.template-display-information {
+  height: 70px;
+  background-color: #1e2026;
+  color: #6e7681;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.template-display-information > div {
+  margin-left: 20px;
+  border-radius: 20px;
+  min-width: 80px;
+  border: solid 1px #c1c7cf;
+  color: #c1c7cf;
+}
+.template-display-information > div > span {
+  margin-left: 10px;
+}
 /* input.search {
   font-family: "Abel", sans-serif;
   border-color: #ddd;

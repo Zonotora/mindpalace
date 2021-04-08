@@ -140,13 +140,17 @@ const generateKeywordsDictionary = (file) => {
   return keywords;
 };
 
-const generate = (url, dirs, files) => {
+const generateDirectory = (url, dirs, files, numberOfFiles, numberOfDirs) => {
   const excludedRootUrl = url.replace(folderPath, "");
   const template = fs
     .readFileSync(templatePath, { encoding: "utf8" })
     .replace(
       'const { url, dirs, files } = { url: "", dirs: [], files: [] };',
       `const { url, dirs, files } = { url: "${excludedRootUrl}", dirs: [${dirs}], files: [${files}] };`
+    )
+    .replace(
+      "const [numberOfFiles, numberOfDirs] = [0, 0];",
+      `const [numberOfFiles, numberOfDirs ] = [${numberOfFiles}, ${numberOfDirs}];`
     );
 
   fs.writeFileSync(`${url}/index.js`, template);
@@ -158,10 +162,14 @@ function resolveAndGenerate(url) {
 
   files.forEach((file) => resolveFile(file));
 
-  generate(
+  const [numberOfFiles, numberOfDirs] = findFileAndDirectoryCount(url);
+
+  generateDirectory(
     url,
     dirs.map((dir) => `"${path.parse(dir).name}"`),
-    files.map((file) => `"${path.parse(file).name}"`)
+    files.map((file) => `"${path.parse(file).name}"`),
+    numberOfFiles,
+    numberOfDirs
   );
 
   dirs.forEach((dir) => {
@@ -186,6 +194,22 @@ function resolveKeywords(url) {
     keywords = { ...keywords, ...contents };
   });
   return keywords;
+}
+
+function findFileAndDirectoryCount(url) {
+  const dirs = getFiles(url, isDirectory);
+  const files = getFiles(url, isMarkdownFile);
+
+  let numberOfFiles = files.length;
+  let numberOfDirs = dirs.length;
+
+  dirs.forEach((dir) => {
+    const [fs, ds] = findFileAndDirectoryCount(dir);
+    numberOfFiles += fs;
+    numberOfDirs += ds;
+  });
+
+  return [numberOfFiles, numberOfDirs];
 }
 
 (() => {

@@ -1,7 +1,7 @@
 ---
-slug: /machine-learning/decision-tree
+slug: /machine-learning/models/decision-tree
 tags: []
-lastModified: 2021-03-22
+lastModified: 2021-04-08
 created: 2021-03-21
 title: Decision Tree
 header: []

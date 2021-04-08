@@ -1,7 +1,7 @@
 ---
-slug: /machine-learning/random-forests
+slug: /machine-learning/models/random-forests
 tags: []
-lastModified: 2021-04-03
+lastModified: 2021-04-08
 created: 2021-04-02
 title: Random Forests
 header: []

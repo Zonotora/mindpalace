@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/keywords
 tags: []
-lastModified: 2021-04-05
+lastModified: 2021-04-08
 created: 2021-03-22
 title: Keywords
-header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":2,"name":"Inductive bias","link":"Inductive-bias"},{"depth":2,"name":"Cross-validation","link":"Cross-validation"},{"depth":2,"name":"Normalization","link":"Normalization"},{"depth":3,"name":"Feature normalization","link":"Feature-normalization"},{"depth":3,"name":"Example normalization","link":"Example-normalization"},{"depth":2,"name":"Approximation error","link":"Approximation-error"},{"depth":2,"name":"Estimation error","link":"Estimation-error"},{"depth":2,"name":"Bias and variance trade-off","link":"Bias-and-variance-trade-off"},{"depth":2,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":2,"name":"Feature selection","link":"Feature-selection"},{"depth":2,"name":"Embedded methods","link":"Embedded-methods"},{"depth":2,"name":"Regularization methods","link":"Regularization-methods"}]
+header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":2,"name":"Inductive bias","link":"Inductive-bias"},{"depth":2,"name":"Cross-validation","link":"Cross-validation"},{"depth":2,"name":"Normalization","link":"Normalization"},{"depth":3,"name":"Feature normalization","link":"Feature-normalization"},{"depth":3,"name":"Example normalization","link":"Example-normalization"},{"depth":2,"name":"Approximation error","link":"Approximation-error"},{"depth":2,"name":"Estimation error","link":"Estimation-error"},{"depth":2,"name":"Bias and variance trade-off","link":"Bias-and-variance-trade-off"},{"depth":2,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":2,"name":"Feature selection","link":"Feature-selection"},{"depth":2,"name":"Embedded methods","link":"Embedded-methods"},{"depth":2,"name":"Regularization methods","link":"Regularization-methods"},{"depth":2,"name":"Feature imputation","link":"Feature-imputation"}]
 ---
 
 - generalization
@@ -58,6 +58,8 @@ header: [{"depth":2,"name":"Bias","link":"Bias"},{"depth":2,"name":"Bagging","li
 - LASSO
 - elastic net
 - ridge regression
+- one-hot encoding
+- TF-IDF
 
 ## Bias
 
@@ -100,3 +102,6 @@ Embedded methods are used to learn which features best contribute to the learnin
 
 ## Regularization methods
 Regularization methods or penalization methods introduce additional constraints which makes the model bias toward fewer constraints.
+
+## Feature imputation
+It will try to fill any missing data. We could replace the missing value with a constant (e.g. the mean value), a random value or a prediction from the other values.

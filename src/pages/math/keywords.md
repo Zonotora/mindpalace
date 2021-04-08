@@ -1,10 +1,10 @@
 ---
 slug: /math/keywords
 tags: []
-lastModified: 2021-04-05
+lastModified: 2021-04-08
 created: 2021-04-05
 title: Keywords
-header: [{"depth":2,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":2,"name":"Statistically Significant","link":"Statistically-Significant"}]
+header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"}]
 ---
 
 - hypothesis testing
@@ -18,7 +18,7 @@ header: [{"depth":2,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":
 - chi squared test
 
 
-## Null Hypothesis
+# Null Hypothesis
 
-## Statistically Significant
+# Statistically Significant
 The result is probably not due to random luck.

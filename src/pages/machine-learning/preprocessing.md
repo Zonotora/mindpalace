@@ -4,7 +4,7 @@ tags: []
 lastModified: 2021-04-08
 created: 2021-04-02
 title: Preprocessing
-header: [{"depth":2,"name":"Feature preprocessing","link":"Feature-preprocessing"},{"depth":3,"name":"Pruning","link":"Pruning"},{"depth":2,"name":"Scaling and normalization","link":"Scaling-and-normalization"},{"depth":4,"name":"Min-Max scaling","link":"Min-Max-scaling"},{"depth":4,"name":"Standard scaling","link":"Standard-scaling"},{"depth":4,"name":"Length normalization","link":"Length-normalization"},{"depth":4,"name":"Other transformations","link":"Other-transformations"},{"depth":2,"name":"Missing values","link":"Missing-values"},{"depth":2,"name":"Evaluating","link":"Evaluating"},{"depth":2,"name":"Debugging","link":"Debugging"}]
+header: [{"depth":1,"name":"Feature preprocessing","link":"Feature-preprocessing"},{"depth":2,"name":"Pruning","link":"Pruning"},{"depth":1,"name":"Scaling and normalization","link":"Scaling-and-normalization"},{"depth":2,"name":"Min-Max scaling","link":"Min-Max-scaling"},{"depth":2,"name":"Standard scaling","link":"Standard-scaling"},{"depth":2,"name":"Length normalization","link":"Length-normalization"},{"depth":2,"name":"Other transformations","link":"Other-transformations"},{"depth":1,"name":"Missing values","link":"Missing-values"},{"depth":1,"name":"Evaluating","link":"Evaluating"},{"depth":1,"name":"Debugging","link":"Debugging"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 # Feature preprocessing

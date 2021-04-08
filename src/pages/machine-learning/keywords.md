@@ -61,6 +61,10 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Bagging","li
 - one-hot encoding
 - TF-IDF
 - mutual information
+- hyperparameters
+- grid search
+- black box optimization
+- automated machine learning (AutoML)
 
 # Bias
 

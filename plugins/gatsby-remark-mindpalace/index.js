@@ -57,9 +57,8 @@ const findReferences = (node, references) => {
       const [key, val, ...rest] = lines[i].split(":");
 
       if (key && val)
-        values[key.trim()] = rest
-          ? [val, ...rest].join(":").trim()
-          : val.trim();
+        values[key.trim()] =
+          rest.length !== 0 ? [val, ...rest].join(":").trim() : val.trim();
     }
     values["order"] = Object.keys(references).length + 1;
 

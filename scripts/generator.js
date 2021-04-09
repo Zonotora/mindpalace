@@ -40,23 +40,33 @@ const generateFrontmatter = ({
     "---",
   ].join("\n") + `${isUpdate ? "" : "\n\n"}`;
 
-const updateFrontmatter = (fileContent, slug, title, header) => {
+const getFrontmatter = (fileContent) => {
   const frontmatter = {};
+  const [, frontmatterContent, ...rest] = fileContent.split("---\n");
 
+  // everything that is not frontmatter
+  // if we have no content than add '---' to the last line
+  const content = `\n${rest
+    .map((e, i) => `${i !== 0 ? "---\n" : ""}${e}`)
+    .join("")}`;
+
+  frontmatterContent.split("\n").forEach((line) => {
+    if (line) {
+      // we dont care if each line has more than one ':'
+      const [key, value, ...rest] = line.split(":");
+      if (rest.length !== 0)
+        frontmatter[key] = [value, ...rest].join(":").trim();
+      else frontmatter[key] = value.trim();
+    }
+  });
+
+  return [frontmatter, content];
+};
+
+const updateFrontmatter = (fileContent, slug, title, header) => {
   // update existing frontmatter
   if (fileContent.startsWith("---\n")) {
-    const [, frontmatterContent, ...rest] = fileContent.split("---\n");
-
-    const content = `\n${rest
-      .map((e, i) => `${i !== 0 ? "---\n" : ""}${e}`)
-      .join("")}`;
-
-    frontmatterContent.split("\n").forEach((line) => {
-      if (line) {
-        const [key, value] = line.split(":");
-        frontmatter[key] = value.trim();
-      }
-    });
+    const [frontmatter, content] = getFrontmatter(fileContent);
 
     return `${generateFrontmatter({
       ...frontmatter,
@@ -140,7 +150,15 @@ const generateKeywordsDictionary = (file) => {
   return keywords;
 };
 
-const generateDirectory = (url, dirs, files, numberOfFiles, numberOfDirs) => {
+const generateDirectory = (
+  url,
+  dirs,
+  files,
+  numberOfFiles,
+  numberOfDirs,
+  tags,
+  tagsInFiles
+) => {
   const excludedRootUrl = url.replace(folderPath, "");
   const template = fs
     .readFileSync(templatePath, { encoding: "utf8" })
@@ -151,6 +169,10 @@ const generateDirectory = (url, dirs, files, numberOfFiles, numberOfDirs) => {
     .replace(
       "const [numberOfFiles, numberOfDirs] = [0, 0];",
       `const [numberOfFiles, numberOfDirs ] = [${numberOfFiles}, ${numberOfDirs}];`
+    )
+    .replace(
+      "const [tags, tagsInFiles] = [{}, {}];",
+      `const [tags, tagsInFiles] = [${tags}, ${tagsInFiles}];`
     );
 
   fs.writeFileSync(`${url}/index.js`, template);
@@ -162,14 +184,18 @@ function resolveAndGenerate(url) {
 
   files.forEach((file) => resolveFile(file));
 
-  const [numberOfFiles, numberOfDirs] = findFileAndDirectoryCount(url);
+  const [numberOfFiles, numberOfDirs, tags, tagsInFiles] = getMetaInformation(
+    url
+  );
 
   generateDirectory(
     url,
     dirs.map((dir) => `"${path.parse(dir).name}"`),
     files.map((file) => `"${path.parse(file).name}"`),
     numberOfFiles,
-    numberOfDirs
+    numberOfDirs,
+    JSON.stringify(tags),
+    JSON.stringify(tagsInFiles)
   );
 
   dirs.forEach((dir) => {
@@ -196,20 +222,57 @@ function resolveKeywords(url) {
   return keywords;
 }
 
-function findFileAndDirectoryCount(url) {
+function getMetaInformation(url) {
   const dirs = getFiles(url, isDirectory);
   const files = getFiles(url, isMarkdownFile);
 
   let numberOfFiles = files.length;
   let numberOfDirs = dirs.length;
+  let tagsInFiles = {};
+  let tags = {};
 
-  dirs.forEach((dir) => {
-    const [fs, ds] = findFileAndDirectoryCount(dir);
-    numberOfFiles += fs;
-    numberOfDirs += ds;
+  files.forEach((file) => {
+    const fileContent = fs.readFileSync(file, { encoding: "utf8" });
+    const [frontmatter] = getFrontmatter(fileContent);
+
+    for (const tag of JSON.parse(frontmatter["tags"])) {
+      if (tag in tags) tags[tag] += 1;
+      else tags[tag] = 1;
+
+      const id = path.basename(file, path.extname(file));
+
+      if (id in tagsInFiles) tagsInFiles[id] = [...tagsInFiles[id], tag];
+      else tagsInFiles[id] = [tag];
+    }
   });
 
-  return [numberOfFiles, numberOfDirs];
+  dirs.forEach((dir) => {
+    const [fs, ds, ts, tis] = getMetaInformation(dir);
+    numberOfFiles += fs;
+    numberOfDirs += ds;
+
+    if (Object.keys(ts).length !== 0) {
+      for (const key in ts) {
+        if (key in tags) tags[key] += ts[key];
+        else tags[key] = ts[key];
+      }
+    }
+
+    if (Object.keys(tis).length !== 0) {
+      const uniqueTags = [];
+      for (const key in tis) {
+        for (const t of tis[key]) {
+          if (!uniqueTags.includes(t)) uniqueTags.push(t);
+        }
+      }
+
+      const id = dir.substring(url.length + 1);
+
+      tagsInFiles[id] = uniqueTags;
+    }
+  });
+
+  return [numberOfFiles, numberOfDirs, tags, tagsInFiles];
 }
 
 (() => {

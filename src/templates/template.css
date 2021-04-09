@@ -218,6 +218,18 @@ input:focus {
   margin-left: 10px;
 }
 
+.template-filesystem-item-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.template-filesystem-item-tags > svg {
+  opacity: 0.8;
+  position: relative;
+}
+
 .template-filesystem-directories,
 .template-filesystem-files {
   white-space: nowrap;
@@ -238,7 +250,8 @@ input:focus {
   border-top: 1px #4d535c solid;
 }
 
-.template-display-information {
+.template-display-information,
+.template-display-tags {
   height: 70px;
   background-color: #1e2026;
   color: #6e7681;
@@ -246,17 +259,34 @@ input:focus {
   display: flex;
   justify-content: left;
   align-items: center;
+  border-bottom: solid 1px #4d535c;
 }
 
 .template-display-information > div {
   margin-left: 20px;
   border-radius: 20px;
   min-width: 80px;
-  border: solid 1px #6e7681;
+  border: solid 1px #4d535c;
   color: #c1c7cf;
 }
 .template-display-information > div > span {
   margin-left: 10px;
+  position: relative;
+  top: -2px;
+}
+
+.template-display-tags > div {
+  margin-left: 20px;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.template-display-tags > div > span {
+  margin-left: 10px;
+  position: relative;
+  background-color: inherit;
+  top: -2px;
 }
 /* input.search {
   font-family: "Abel", sans-serif;

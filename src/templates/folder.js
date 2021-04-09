@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
-import { FaRegFile, FaFolder } from "react-icons/fa";
+import { FaRegFile, FaFolder, FaTag } from "react-icons/fa";
 
 import Layout from "components/Layout";
 import { DirectoryHeader } from "components/Header";
@@ -18,13 +18,66 @@ const formatDate = (currentDate, date) => {
   return `${days} day${days > 1 ? "s" : ""} ago`;
 };
 
-const FileSystemItem = ({ fileName, fileType, lastModified }) => {
+const paletteHash = (tag) => {
+  var hash = 0;
+  if (tag.length === 0) return hash;
+  for (let i = 0; i < tag.length; i++) {
+    let chr = tag.charCodeAt(i);
+    hash = (hash << 5) - hash + chr;
+    hash |= 0;
+  }
+  return Math.abs(hash);
+};
+
+const palette = () => [
+  "#ed5f5f",
+  "#ed8a5f",
+  "#eda85f",
+  "#edd35f",
+  "#e8ed5f",
+  "#c0ed5f",
+  "#9fed5f",
+  "#79ed5f",
+  "#5fed77",
+  "#5fed95",
+  "#5fedb9",
+  "#5fdfed",
+  "#5fb4ed",
+  "#5f95ed",
+  "#5f70ed",
+  "#8a5fed",
+  "#a65fed",
+  "#d55fed",
+  "#ed5fd3",
+  "#ed5f9f",
+];
+
+const paletteColor = (tag) => {
+  const p = palette();
+  return p[paletteHash(tag) % p.length];
+};
+
+const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles }) => {
   return (
     <div className="template-filesystem-item">
       <div className="template-filesystem-item-icon">
         {fileType === "file" ? <FaRegFile /> : <FaFolder />}
       </div>
       <div className="template-filesystem-item-text">{fileName}</div>
+
+      {tagsInFiles[fileName] ? (
+        <div className="template-filesystem-item-tags">
+          {tagsInFiles[fileName].map((tag, i) => (
+            <FaTag
+              key={tag}
+              style={{ color: paletteColor(tag), left: `${i * -6}px` }}
+            />
+          ))}
+        </div>
+      ) : (
+        <></>
+      )}
+
       <div className="template-filesystem-item-last-modified">
         {lastModified[fileName]}
       </div>
@@ -36,6 +89,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "", dirs: [], files: [] };
   const [numberOfFiles, numberOfDirs] = [0, 0];
+  const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {
@@ -90,6 +144,7 @@ const IndexPage = ({ data }) => {
                     fileName={dir}
                     fileType="folder"
                     lastModified={lastModified}
+                    tagsInFiles={tagsInFiles}
                   />
                 </Link>
               ))}
@@ -101,6 +156,7 @@ const IndexPage = ({ data }) => {
                     fileName={file}
                     fileType="file"
                     lastModified={lastModified}
+                    tagsInFiles={tagsInFiles}
                   />
                 </Link>
               ))}
@@ -118,6 +174,21 @@ const IndexPage = ({ data }) => {
               <FaRegFile />
               <span>{numberOfFiles}</span>
             </div>
+          </div>
+          <div className="template-display-tags">
+            {Object.keys(tags).map((key) => (
+              <div
+                key={key}
+                style={{
+                  color: paletteColor(key),
+                  border: `solid 1px ${paletteColor(key)}`,
+                }}
+              >
+                <FaTag />
+                <span>{key}</span>
+                <span>{tags[key]}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

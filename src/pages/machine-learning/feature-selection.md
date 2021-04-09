@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/feature-selection
-tags: []
-lastModified: 2021-04-08
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-04-09
 created: 2021-04-08
 title: Feature Selection
-header: [{"depth":1,"name":"Large feature sets","link":"Large-feature-sets"},{"depth":1,"name":"Types of selection","link":"Types-of-selection"},{"depth":2,"name":"Filter","link":"Filter"},{"depth":3,"name":"Drawbacks","link":"Drawbacks"},{"depth":2,"name":"Wrapper","link":"Wrapper"},{"depth":3,"name":"Drawbacks","link":"Drawbacks"},{"depth":2,"name":"Embedded","link":"Embedded"},{"depth":1,"name":"References","link":"References"}]
+header: [{"depth":1,"name":"Large feature sets","link":"Large-feature-sets"},{"depth":1,"name":"Types of selection","link":"Types-of-selection"},{"depth":2,"name":"Filter","link":"Filter"},{"depth":3,"name":"Drawbacks","link":"Drawbacks"},{"depth":2,"name":"Wrapper","link":"Wrapper"},{"depth":3,"name":"Drawbacks","link":"Drawbacks"},{"depth":2,"name":"Embedded","link":"Embedded"},{"depth":1,"name":"Conclusion","link":"Conclusion"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 # Large feature sets

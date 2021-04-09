@@ -1,7 +1,7 @@
 ---
 slug: /machine-learning/machine-learning
-tags: []
-lastModified: 2021-04-06
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-04-09
 created: 2021-03-20
 title: Machine Learning
 header: [{"depth":1,"name":"References","link":"References"}]

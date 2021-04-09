@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/hyperparameters
-tags: []
-lastModified: 2021-04-08
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-04-09
 created: 2021-04-08
 title: Hyperparameters
-header: [{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Tuning","link":"Tuning"}]
+header: [{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Tuning","link":"Tuning"},{"depth":2,"name":"Grid search","link":"Grid-search"},{"depth":2,"name":"Random search","link":"Random-search"},{"depth":2,"name":"Other","link":"Other"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 # Definition

@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/keywords
-tags: []
+tags: ["chalmers", "machine-learning", "keywords"]
 lastModified: 2021-04-09
 created: 2021-03-22
 title: Keywords
@@ -8,6 +8,7 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Stacking","l
 ---
 
 - generalization
+- generalization gap
 - prediction
 - training data
 - induction
@@ -69,6 +70,7 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Stacking","l
 - stacking
 - shallow decision tree
 - random forests
+- hypothesis space
 
 # Bias
 

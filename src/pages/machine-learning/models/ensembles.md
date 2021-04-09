@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/models/ensembles
-tags: []
+tags: ["chalmers", "machine-learning"]
 lastModified: 2021-04-09
 created: 2021-04-02
 title: Ensembles

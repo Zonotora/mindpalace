@@ -1,7 +1,7 @@
 ---
 slug: /math/keywords
-tags: []
-lastModified: 2021-04-08
+tags: ["keywords"]
+lastModified: 2021-04-09
 created: 2021-04-05
 title: Keywords
 header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"}]

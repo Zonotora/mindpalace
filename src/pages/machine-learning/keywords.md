@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/keywords
 tags: []
-lastModified: 2021-04-08
+lastModified: 2021-04-09
 created: 2021-03-22
 title: Keywords
-header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"}]
+header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"}]
 ---
 
 - generalization
@@ -32,6 +32,7 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Bagging","li
 - validation set
 - information gain
 - cross-validation
+- gini score
 - support vector
 - homogeneous
 - committee
@@ -65,15 +66,22 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Bagging","li
 - grid search
 - black box optimization
 - automated machine learning (AutoML)
+- stacking
+- shallow decision tree
+- random forests
 
 # Bias
+
+# Stacking
 
 # Bagging
 Is also called bootstrap aggregation. It is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models.
 
+# Spinning
+Based on the same idea as bagging and is also called feature bagging or random subspace learning.
+
 # Inductive bias
 The preference for one distinction over another. If the inductive bias is too far away from the concept that is being learned, the whole learning might fail.
-
 
 # Cross-validation
 Is sometimes called rotation estimation which by itself describes the behaviour very well. For example, if you break up your training data into 10 equally big partitions, you use the learning alogorithm on 9 of them and test on the remaining partition for 10 cycles. Thus, every partition will be the training set once. One disadvantage is that it is computationally expensive.

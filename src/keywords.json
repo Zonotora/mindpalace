@@ -1,6 +1,8 @@
 {
   "bias": "",
+  "stacking": "",
   "bagging": "Is also called bootstrap aggregation. It is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models.",
+  "spinning": "Based on the same idea as bagging and is also called feature bagging or random subspace learning.",
   "inductive-bias": "The preference for one distinction over another. If the inductive bias is too far away from the concept that is being learned, the whole learning might fail.",
   "cross-validation": "Is sometimes called rotation estimation which by itself describes the behaviour very well. For example, if you break up your training data into 10 equally big partitions, you use the learning alogorithm on 9 of them and test on the remaining partition for 10 cycles. Thus, every partition will be the training set once. One disadvantage is that it is computationally expensive.",
   "normalization": "Is a good way of keeping the data consistent. There are two basic types of normalization: example and feature normalization.",

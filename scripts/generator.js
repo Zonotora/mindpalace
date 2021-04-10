@@ -50,15 +50,17 @@ const getFrontmatter = (fileContent) => {
     .map((e, i) => `${i !== 0 ? "---\n" : ""}${e}`)
     .join("")}`;
 
-  frontmatterContent.split("\n").forEach((line) => {
-    if (line) {
-      // we dont care if each line has more than one ':'
-      const [key, value, ...rest] = line.split(":");
-      if (rest.length !== 0)
-        frontmatter[key] = [value, ...rest].join(":").trim();
-      else frontmatter[key] = value.trim();
-    }
-  });
+  if (frontmatterContent) {
+    frontmatterContent.split("\n").forEach((line) => {
+      if (line) {
+        // we dont care if each line has more than one ':'
+        const [key, value, ...rest] = line.split(":");
+        if (rest.length !== 0)
+          frontmatter[key] = [value, ...rest].join(":").trim();
+        else frontmatter[key] = value.trim();
+      }
+    });
+  }
 
   return [frontmatter, content];
 };
@@ -235,14 +237,16 @@ function getMetaInformation(url) {
     const fileContent = fs.readFileSync(file, { encoding: "utf8" });
     const [frontmatter] = getFrontmatter(fileContent);
 
-    for (const tag of JSON.parse(frontmatter["tags"])) {
-      if (tag in tags) tags[tag] += 1;
-      else tags[tag] = 1;
+    if ("tags" in frontmatter) {
+      for (const tag of JSON.parse(frontmatter["tags"])) {
+        if (tag in tags) tags[tag] += 1;
+        else tags[tag] = 1;
 
-      const id = path.basename(file, path.extname(file));
+        const id = path.basename(file, path.extname(file));
 
-      if (id in tagsInFiles) tagsInFiles[id] = [...tagsInFiles[id], tag];
-      else tagsInFiles[id] = [tag];
+        if (id in tagsInFiles) tagsInFiles[id] = [...tagsInFiles[id], tag];
+        else tagsInFiles[id] = [tag];
+      }
     }
   });
 

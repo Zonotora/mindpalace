@@ -87,9 +87,9 @@ const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["machine-learning","math","python","rust"], files: ["control-theory","latex"] };
-  const [numberOfFiles, numberOfDirs ] = [18, 5];
-  const [tags, tagsInFiles] = [{"chalmers":9,"machine-learning":10,"keywords":2,"python":5}, {"control-theory":["chalmers"],"machine-learning":["chalmers","machine-learning","keywords"],"math":["keywords"],"python":["python","machine-learning"]}];
+  const { url, dirs, files } = { url: "/rust", dirs: [], files: ["rust"] };
+  const [numberOfFiles, numberOfDirs ] = [1, 0];
+  const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/keywords
 tags: ["chalmers", "machine-learning", "keywords"]
-lastModified: 2021-04-09
+lastModified: 2021-04-11
 created: 2021-03-22
 title: Keywords
-header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"}]
+header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"}]
 ---
 
 - generalization
@@ -71,6 +71,10 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Stacking","l
 - shallow decision tree
 - random forests
 - hypothesis space
+- linear classifiers
+- linearly separable
+- least-square regression
+- widrow-hoff
 
 # Bias
 
@@ -120,3 +124,14 @@ Regularization methods or penalization methods introduce additional constraints 
 
 # Feature imputation
 It will try to fill any missing data. We could replace the missing value with a constant (e.g. the mean value), a random value or a prediction from the other values.
+
+# The Widrow-Hoff algorithm
+```python
+w = [0, ..., 0]
+for i in range(N): # N epochs
+    for (x[i], y[i]) in the training set
+        g = w * x[i]
+        error = g - y[i]
+        w = w - learning_rate * error * x[i]
+return w
+```

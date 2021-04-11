@@ -16,6 +16,7 @@
   "embedded-methods": "Embedded methods are used to learn which features best contribute to the learning of a model while it is being created. Common methods are regularization methods.",
   "regularization-methods": "Regularization methods or penalization methods introduce additional constraints which makes the model bias toward fewer constraints.",
   "feature-imputation": "It will try to fill any missing data. We could replace the missing value with a constant (e.g. the mean value), a random value or a prediction from the other values.",
+  "the-widrow-hoff-algorithm": "```pythonw = [0, ..., 0]for i in range(N): # N epochs    for (x[i], y[i]) in the training set        g = w * x[i]        error = g - y[i]        w = w - learning_rate * error * x[i]return w```",
   "null-hypothesis": "",
   "statistically-significant": "The result is probably not due to random luck."
 }

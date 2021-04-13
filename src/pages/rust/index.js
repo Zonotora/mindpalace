@@ -85,6 +85,43 @@ const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles }) => {
   );
 };
 
+const FileInformation = ({ numberOfDirs, numberOfFiles }) => {
+  return (
+    <div className="template-display-information">
+      <div>
+        <FaFolder />
+        <span>{numberOfDirs}</span>
+      </div>
+      <div>
+        <FaRegFile />
+        <span>{numberOfFiles}</span>
+      </div>
+    </div>
+  );
+};
+
+const TagInformation = ({ tags }) => {
+  if (Object.keys(tags).length === 0) return <></>;
+
+  return (
+    <div className="template-display-tags">
+      {Object.keys(tags).map((key) => (
+        <div
+          key={key}
+          style={{
+            color: paletteColor(key),
+            border: `solid 1px ${paletteColor(key)}`,
+          }}
+        >
+          <FaTag />
+          <span>{key}</span>
+          <span>{tags[key]}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "/rust", dirs: [], files: ["rust"] };
@@ -165,31 +202,11 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div className="template-display">
-          <div className="template-display-information">
-            <div>
-              <FaFolder />
-              <span>{numberOfDirs}</span>
-            </div>
-            <div>
-              <FaRegFile />
-              <span>{numberOfFiles}</span>
-            </div>
-          </div>
-          <div className="template-display-tags">
-            {Object.keys(tags).map((key) => (
-              <div
-                key={key}
-                style={{
-                  color: paletteColor(key),
-                  border: `solid 1px ${paletteColor(key)}`,
-                }}
-              >
-                <FaTag />
-                <span>{key}</span>
-                <span>{tags[key]}</span>
-              </div>
-            ))}
-          </div>
+          <FileInformation
+            numberOfDirs={numberOfDirs}
+            numberOfFiles={numberOfFiles}
+          />
+          <TagInformation tags={tags} />
         </div>
       </div>
     </Layout>

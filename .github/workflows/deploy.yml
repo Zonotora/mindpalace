@@ -8,8 +8,9 @@ on:
     branches:
       - main
     paths:
-      - 'src/**'
-      - '.github/workflows/**'
+      - "src/**"
+      - ".github/workflows/**"
+      - "plugins/**"
 
 jobs:
   build:

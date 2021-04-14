@@ -135,11 +135,11 @@ module.exports = ({ markdownAST }, options) => {
   let references = {};
 
   visit(markdownAST, "paragraph", (node) => {
-    keywordLinks(node);
     findReferences(node, references);
   });
 
   visit(markdownAST, "paragraph", (node) => {
+    keywordLinks(node);
     insertReferenceLinks(node, references);
   });
 

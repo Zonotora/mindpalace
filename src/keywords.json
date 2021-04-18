@@ -1,5 +1,6 @@
 {
   "bias": "",
+  "nonresponse-bias": "",
   "stacking": "",
   "bagging": "Is also called bootstrap aggregation. It is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models.",
   "spinning": "Based on the same idea as bagging and is also called feature bagging or random subspace learning.",
@@ -17,6 +18,7 @@
   "regularization-methods": "Regularization methods or penalization methods introduce additional constraints which makes the model bias toward fewer constraints.",
   "feature-imputation": "It will try to fill any missing data. We could replace the missing value with a constant (e.g. the mean value), a random value or a prediction from the other values.",
   "the-widrow-hoff-algorithm": "```pythonw = [0, ..., 0]for i in range(N): # N epochs    for (x[i], y[i]) in the training set        g = w * x[i]        error = g - y[i]        w = w - learning_rate * error * x[i]return w```",
+  "crowdsourcing": "A common technique for annotating data. It uses a large pool of non-expert annotators to annotate the data.",
   "null-hypothesis": "",
   "statistically-significant": "The result is probably not due to random luck."
 }

@@ -124,8 +124,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","preprocessing"] };
-  const [numberOfFiles, numberOfDirs ] = [9, 1];
+  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","preprocessing"] };
+  const [numberOfFiles, numberOfDirs ] = [10, 1];
   const [tags, tagsInFiles] = [{"chalmers":8,"machine-learning":8,"keywords":1}, {"feature-selection":["chalmers","machine-learning"],"hyperparameters":["chalmers","machine-learning"],"keywords":["chalmers","machine-learning","keywords"],"machine-learning":["chalmers","machine-learning"],"preprocessing":["chalmers","machine-learning"],"models":["chalmers","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 

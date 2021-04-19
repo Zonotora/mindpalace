@@ -12,7 +12,7 @@ export const ListButton = ({ onListClick, style }) => {
 
 export const BackButton = ({ parent, style }) => {
   return (
-    <div className="button-header" style={style}>
+    <div className="button-back" style={style}>
       <Link to={parent === "" ? "/" : parent}>
         <BsArrowReturnLeft size={20} />
       </Link>

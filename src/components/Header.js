@@ -26,7 +26,7 @@ export const FileHeader = ({ siteTitle, parent, onTreeViewClick }) => (
   </header>
 );
 
-export const DirectoryHeader = ({ parent, isRoot }) => {
+export const DirectoryHeader = () => {
   const [display, setDisplay] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
 
@@ -37,28 +37,12 @@ export const DirectoryHeader = ({ parent, isRoot }) => {
   return (
     <header>
       <div>
-        {!isRoot ? (
-          <BackButton parent={parent} style={{ left: "10px" }} />
-        ) : (
-          <></>
-        )}
-
         {display ? (
           <ListButton style={{ left: "auto", right: "10px" }} />
         ) : (
           <></>
         )}
         <div className="header-container">
-          {!display ? (
-            <div className="header-icon-buttons">
-              <IconButton />
-              <IconButton />
-              <IconButton />
-            </div>
-          ) : (
-            <></>
-          )}
-
           <Searchfield className="directory" />
 
           {!display ? (

@@ -4,6 +4,7 @@ import { FaRegFile, FaFolder, FaTag } from "react-icons/fa";
 
 import Layout from "components/Layout";
 import { DirectoryHeader } from "components/Header";
+import { BackButton } from "components/Button";
 import "templates/template.css";
 
 const formatDate = (currentDate, date) => {
@@ -162,15 +163,17 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <DirectoryHeader
-        parent={url.substring(0, url.lastIndexOf("/"))}
-        isRoot={siteTitle === "root"}
-      />
+      <DirectoryHeader />
 
       <div className="template-structure">
         <div className="template-filesystem">
           <div className="template-filesystem-container">
             <div className="template-filesystem-header">
+              {siteTitle !== "root" ? (
+                <BackButton parent={url.substring(0, url.lastIndexOf("/"))} />
+              ) : (
+                <></>
+              )}
               <div>{siteTitle}</div>
             </div>
 

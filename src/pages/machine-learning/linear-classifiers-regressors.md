@@ -1,7 +1,7 @@
 ---
 slug: /machine-learning/linear-classifiers-regressors
-tags: []
-lastModified: 2021-04-11
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-04-19
 created: 2021-04-11
 title: Linear Classifiers Regressors
 header: [{"depth":1,"name":"Binary linear classifier","link":"Binary-linear-classifier"},{"depth":1,"name":"Linear regression","link":"Linear-regression"},{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Different models","link":"Different-models"},{"depth":2,"name":"Classifiers","link":"Classifiers"},{"depth":2,"name":"Regressors","link":"Regressors"},{"depth":1,"name":"References","link":"References"}]

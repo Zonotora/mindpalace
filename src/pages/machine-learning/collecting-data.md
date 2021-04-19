@@ -1,7 +1,7 @@
 ---
 slug: /machine-learning/collecting-data
-tags: []
-lastModified: 2021-04-18
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-04-19
 created: 2021-04-17
 title: Collecting Data
 header: [{"depth":1,"name":"Overview","link":"Overview"},{"depth":1,"name":"Collecting","link":"Collecting"},{"depth":2,"name":"Stratification and weighting","link":"Stratification-and-weighting"},{"depth":2,"name":"Availability vs. representativity","link":"Availability-vs.-representativity"},{"depth":1,"name":"Annotating","link":"Annotating"},{"depth":2,"name":"Semi-automatic techniques","link":"Semi-automatic-techniques"},{"depth":2,"name":"Crowdsourcing","link":"Crowdsourcing"}]

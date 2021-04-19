@@ -124,9 +124,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","preprocessing"] };
-  const [numberOfFiles, numberOfDirs ] = [10, 1];
-  const [tags, tagsInFiles] = [{"chalmers":8,"machine-learning":8,"keywords":1}, {"feature-selection":["chalmers","machine-learning"],"hyperparameters":["chalmers","machine-learning"],"keywords":["chalmers","machine-learning","keywords"],"machine-learning":["chalmers","machine-learning"],"preprocessing":["chalmers","machine-learning"],"models":["chalmers","machine-learning"]}];
+  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","optimization","preprocessing"] };
+  const [numberOfFiles, numberOfDirs ] = [11, 1];
+  const [tags, tagsInFiles] = [{"chalmers":11,"machine-learning":11,"keywords":1}, {"collecting-data":["chalmers","machine-learning"],"feature-selection":["chalmers","machine-learning"],"hyperparameters":["chalmers","machine-learning"],"keywords":["chalmers","machine-learning","keywords"],"linear-classifiers-regressors":["chalmers","machine-learning"],"machine-learning":["chalmers","machine-learning"],"optimization":["chalmers","machine-learning"],"preprocessing":["chalmers","machine-learning"],"models":["chalmers","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

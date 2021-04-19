@@ -1,7 +1,7 @@
 ---
 slug: /math/keywords
 tags: ["keywords"]
-lastModified: 2021-04-09
+lastModified: 2021-04-19
 created: 2021-04-05
 title: Keywords
 header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"}]
@@ -16,7 +16,10 @@ header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":
 - gaussian distribution
 - confidence interval
 - chi squared test
-
+- convex
+- concave
+- gradient descent
+- gradient ascent
 
 # Null Hypothesis
 

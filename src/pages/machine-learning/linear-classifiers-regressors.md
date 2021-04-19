@@ -33,6 +33,38 @@ $$
 $$
 The error function finds the weight vector that minmizes the squared error over the training set. For each training instance we look at the predicted value and calculate the distance of it between the labeled value.
 
+However this could be quite expensive which is why stochastic gradient descent is often used in practice. In stochastic gradient descent we consider just a single instance
+$$
+f_i(\pmb w) = (\pmb w \cdot \pmb x_i - y_i) ^ 2
+$$
+
+Thus, the gradient of the least squared loss with respect to $ \pmb w $ is
+
+$$
+\nabla f_i (\pmb w) = 2 \cdot (\pmb w \cdot \pmb x_i - y_i) \cdot \pmb x_i
+$$
+
+# Keeping the model simple
+We can keep the model simple by adding a regularization term to the linear regression model. By adding this term we can keep the weights small. For example, by penalizing the squared length we achieve
+
+$$
+\| \pmb w \| ^ 2 = w_1 \cdot w_1 + \ldots + w_n \cdot w_n = \pmb w \cdot \pmb w
+$$
+
+which is called a $ L_2 $ @(regularizer)(regularizer). Another common regularizer is
+
+$$
+\| \pmb w \| = | w_1 | + \ldots + | w_n |
+$$
+
+which is aclled a $ L_1 $ regularizer.
+
+If we combine the loss function with the regularizer we get
+
+$$
+\frac{1}{N} \sum_{i=1}^{N} Loss(\pmb w, \pmb x_i, y_i) + \alpha \cdot Regularizer(\pmb w)
+$$
+
 
 # Bias
 
@@ -50,9 +82,9 @@ where $ b $ is the bias (often also called offset or intercept).
 - perceptron
 
 ## Regressors
-- linear regression @{linearreg}
-- ridge @{ridge}
-- lasso @{lasso}
+- linear regression @{linearreg} (no regularization)
+- ridge @{ridge} (the combination of least squares loss with $ L_2 $ regularization)
+- lasso @{lasso} (the combination of least squares loss with $ L_1 $ regularization)
 - linear SVR @{svr}
 
 # References

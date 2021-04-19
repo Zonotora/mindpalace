@@ -10,7 +10,7 @@ export const FileHeader = ({ siteTitle, parent, onTreeViewClick }) => (
   <header>
     <div>
       <ListButton onListClick={onTreeViewClick} style={{ left: "10px" }} />
-      <BackButton parent={parent} style={{ left: "50px" }} />
+      <BackButton parent={parent} style={{ left: "50px", top: "15px" }} />
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"

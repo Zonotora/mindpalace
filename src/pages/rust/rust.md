@@ -1,7 +1,7 @@
 ---
 slug: /rust/rust
 tags: []
-lastModified: 2021-04-10
+lastModified: 2021-04-26
 created: 2021-04-10
 title: Rust
 header: []
@@ -22,6 +22,7 @@ header: []
 - [reference][reference]
 - [nomicon - the dark arts of rust][nomicon]
 - [really unstable][unstable]
+- [sheet][sheet]
 
 
 [thebook]: https://doc.rust-lang.org/book/
@@ -39,3 +40,4 @@ header: []
 [reference]: https://doc.rust-lang.org/reference/index.html
 [nomicon]: https://doc.rust-lang.org/nomicon/index.html
 [unstable]: https://doc.rust-lang.org/nightly/unstable-book/index.html
+[sheet]: https://cheats.rs/

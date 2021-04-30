@@ -4,7 +4,7 @@ tags: ["chalmers", "machine-learning", "keywords"]
 lastModified: 2021-04-30
 created: 2021-03-22
 title: Keywords
-header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"}]
+header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"}]
 ---
 
 - generalization
@@ -121,6 +121,17 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
 - residual
 - learning rate
 - ensemble size
+- measure
+- downstream task
+- word error rate
+- BLEU
+- overlap-based metric
+- humans-in-the-loop
+- true positives
+- false positives
+- true negatives
+- false negatives
+- coefficient of determination
 
 # Bias
 
@@ -192,3 +203,9 @@ Deep learning is a neural network with many hidden layers. The universal approxi
 
 # Backpropagation
 Backpropagation is the trick of using the gradients of the weights of layers occuring later in the hierarchy to compute the gradient when using the chain rule.
+
+# Intrinsic evaluation
+Intrinsic evaluation is the performance measured in isolation using some metric computed automatically.
+
+# Extrinsic evaluation
+How does one change to the predictor affect the performance?

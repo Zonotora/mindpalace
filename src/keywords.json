@@ -21,6 +21,8 @@
   "crowdsourcing": "A common technique for annotating data. It uses a large pool of non-expert annotators to annotate the data.",
   "deep-learning": "Deep learning is a neural network with many hidden layers. The universal approximation theorem states that one hidden layers should be enough to approximate any function, but it is often more practical to stack many hidden layers on each other.",
   "backpropagation": "Backpropagation is the trick of using the gradients of the weights of layers occuring later in the hierarchy to compute the gradient when using the chain rule.",
+  "intrinsic-evaluation": "Intrinsic evaluation is the performance measured in isolation using some metric computed automatically.",
+  "extrinsic-evaluation": "How does one change to the predictor affect the performance?",
   "null-hypothesis": "",
   "statistically-significant": "The result is probably not due to random luck."
 }

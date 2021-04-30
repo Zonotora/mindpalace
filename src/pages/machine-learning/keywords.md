@@ -115,7 +115,12 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
     - RMSProp
 - dropout
 - data augmentation
-
+- AdaBoost
+- gradient boosting
+- pseudo-residual
+- residual
+- learning rate
+- ensemble size
 
 # Bias
 

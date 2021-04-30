@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/neural-networks
-tags: []
-lastModified: 2021-04-24
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-04-30
 created: 2021-04-24
 title: Neural Networks
-header: [{"depth":1,"name":"Pros","link":"Pros"},{"depth":1,"name":"Cons","link":"Cons"},{"depth":1,"name":"Linear model limitions","link":"Linear-model-limitions"},{"depth":1,"name":"Where neural networks enter the scene","link":"Where-neural-networks-enter-the-scene"},{"depth":1,"name":"Multilayered model","link":"Multilayered-model"}]
+header: [{"depth":1,"name":"Pros","link":"Pros"},{"depth":1,"name":"Cons","link":"Cons"},{"depth":1,"name":"Linear model limitions","link":"Linear-model-limitions"},{"depth":1,"name":"Where neural networks enter the scene","link":"Where-neural-networks-enter-the-scene"},{"depth":1,"name":"Multilayered model","link":"Multilayered-model"},{"depth":1,"name":"Training","link":"Training"}]
 ---
 
 Neural networks are systems that are very useful for automatic learning of abstractions. Before neural network models were popular there were complicated machine learning pipelines which needed complex preprocessing transformation steps.
@@ -41,3 +41,27 @@ y = f(\pmb w_o \cdot \pmb h)
 $$
 
 The function $ f $ is called the @(activation)(activation).
+
+A neural network learns the nonlinear transformation, and creates a new vector space where the classes are linearly separable. It is the hidden layers that accomplish this.
+
+# Training
+Training a neural network consists of finding the optimal weights of each layer, similarly like the linear models. The process consists of an objective function including a loss and possibly a regularizer as well and an optimization algorithm is applied to find the weights that minimizes the objective.
+
+If we have the simple neural network like follows
+
+$$
+h = f_1(w_1 \cdot x)
+$$
+$$
+\text{Loss} = f_2(w_2 \cdot h)
+$$
+
+we can compute the gradients with respect to $ w_1 $ and $ w_2 $ using the chain rule like
+
+$$
+\frac{\partial \text{Loss}}{\partial w_2} = f_2^{'}(w_2 \cdot h) \cdot h
+$$
+
+$$
+\frac{\partial \text{Loss}}{\partial w_1} = f_2^{'}(w_2 \cdot h) \cdot w_2 \cdot f_1^{'}(w_1 \cdot x) \cdot x
+$$

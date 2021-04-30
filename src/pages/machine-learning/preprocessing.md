@@ -1,7 +1,7 @@
 ---
 slug: /machine-learning/preprocessing
 tags: ["chalmers", "machine-learning"]
-lastModified: 2021-04-09
+lastModified: 2021-04-30
 created: 2021-04-02
 title: Preprocessing
 header: [{"depth":1,"name":"Feature preprocessing","link":"Feature-preprocessing"},{"depth":2,"name":"Pruning","link":"Pruning"},{"depth":1,"name":"Scaling and normalization","link":"Scaling-and-normalization"},{"depth":2,"name":"Min-Max scaling","link":"Min-Max-scaling"},{"depth":2,"name":"Standard scaling","link":"Standard-scaling"},{"depth":2,"name":"Length normalization","link":"Length-normalization"},{"depth":2,"name":"Other transformations","link":"Other-transformations"},{"depth":1,"name":"Missing values","link":"Missing-values"},{"depth":1,"name":"Evaluating","link":"Evaluating"},{"depth":1,"name":"Debugging","link":"Debugging"},{"depth":1,"name":"References","link":"References"}]
@@ -64,3 +64,9 @@ It is very fair to say that achieving a high accuracy for a model is you want in
 {sklearn}:
     title: Preprocessing data
     url: https://scikit-learn.org/stable/modules/preprocessing.html
+
+{stdscalar}:
+    url: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
+
+{minmaxscalar}:
+    url: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html

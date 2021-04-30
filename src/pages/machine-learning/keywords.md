@@ -50,7 +50,7 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
 - f-measure
 - sensitivity/specificity metric
 - ROC curve
-- AUC
+- AUC score
 - development data
 - jack-knifing
 - imbalanced data
@@ -132,6 +132,12 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
 - true negatives
 - false negatives
 - coefficient of determination
+- confidence score
+- search engine
+- ranking systems
+- precision at k
+- scorer
+- ranker
 
 # Bias
 

@@ -125,8 +125,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning/models", dirs: [], files: ["decision-tree","ensembles","random-forests","support-vector-machine"] };
-  const [numberOfFiles, numberOfDirs ] = [4, 0];
+  const { url, dirs, files } = { url: "/machine-learning/models", dirs: [], files: ["CNN","decision-tree","ensembles","random-forests","support-vector-machine"] };
+  const [numberOfFiles, numberOfDirs ] = [5, 0];
   const [tags, tagsInFiles] = [{"chalmers":4,"machine-learning":4}, {"decision-tree":["chalmers","machine-learning"],"ensembles":["chalmers","machine-learning"],"random-forests":["chalmers","machine-learning"],"support-vector-machine":["chalmers","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 

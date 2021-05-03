@@ -1,7 +1,7 @@
 ---
 slug: /machine-learning/evaluation
-tags: []
-lastModified: 2021-04-30
+tags: ["chalmers", "machine-learning"]
+lastModified: 2021-05-03
 created: 2021-04-30
 title: Evaluation
 header: [{"depth":1,"name":"Classifiers","link":"Classifiers"},{"depth":2,"name":"Confusion matrix","link":"Confusion-matrix"},{"depth":2,"name":"Precision and recall","link":"Precision-and-recall"},{"depth":2,"name":"F-score","link":"F-score"},{"depth":2,"name":"Sensitivity and specificity","link":"Sensitivity-and-specificity"},{"depth":2,"name":"True positive rate and false positive rate","link":"True-positive-rate-and-false-positive-rate"},{"depth":1,"name":"Regressors","link":"Regressors"},{"depth":2,"name":"Mean squared error","link":"Mean-squared-error"},{"depth":2,"name":"Mean absolute error","link":"Mean-absolute-error"},{"depth":2,"name":"Coefficient of determination","link":"Coefficient-of-determination"},{"depth":1,"name":"Loss versus quality metric","link":"Loss-versus-quality-metric"},{"depth":1,"name":"References","link":"References"}]

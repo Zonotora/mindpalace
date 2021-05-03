@@ -525,7 +525,7 @@ ul.content-ul .node.last .node-bar {
   height: 100%;
   border-top: 3px solid #303843;
   background-color: #1e2026;
-  margin-left: -11px;
+  margin-left: -12px;
 }
 
 ul.content-ul .node.root .node-bar {
@@ -540,14 +540,14 @@ ul.content-ul .node p {
 ul.content-ul .status {
   background-color: inherit;
   position: relative;
-  height: inherit;
+  height: 30px;
   width: 5px;
 }
 
 ul.content-ul .node .visibility-box {
   width: 40px;
   min-width: 40px;
-  height: inherit;
+  height: 30px;
   background-color: #303843;
   border-radius: inherit;
   border-top-right-radius: 0px;

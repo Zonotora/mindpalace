@@ -490,6 +490,7 @@ ul.content-ul li > a {
 
 ul.content-ul li > a > span {
   background-color: #282c34;
+  border: 1px solid #4d535c;
   height: 32px;
   border-radius: 5px;
   margin-left: -15px;

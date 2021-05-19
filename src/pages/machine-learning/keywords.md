@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/keywords
 tags: ["chalmers", "machine-learning", "keywords"]
-lastModified: 2021-05-04
+lastModified: 2021-05-19
 created: 2021-03-22
 title: Keywords
-header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"},{"depth":1,"name":"F-score","link":"F-score"},{"depth":1,"name":"K-means","link":"K-means"},{"depth":1,"name":"Lloyd's algorithm","link":"Lloyd's-algorithm"},{"depth":1,"name":"The elbow method","link":"The-elbow-method"}]
+header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"},{"depth":1,"name":"F-score","link":"F-score"},{"depth":1,"name":"K-means","link":"K-means"},{"depth":1,"name":"Lloyd's algorithm","link":"Lloyd's-algorithm"},{"depth":1,"name":"The elbow method","link":"The-elbow-method"},{"depth":1,"name":"Principle component analysis","link":"Principle-component-analysis"},{"depth":1,"name":"Singular value decomposition","link":"Singular-value-decomposition"},{"depth":1,"name":"Low-rank matrix factorization","link":"Low-rank-matrix-factorization"},{"depth":1,"name":"Cold start","link":"Cold-start"},{"depth":1,"name":"Word embeddings","link":"Word-embeddings"},{"depth":1,"name":"Word-word co-occurrence matrix","link":"Word-word-co-occurrence-matrix"}]
 ---
 
 - generalization
@@ -176,6 +176,8 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
 - density-based clustering methods
 - core point
 - noise point or outlier
+- matrix factorization
+- low rank matrix factorization
 
 
 
@@ -272,3 +274,22 @@ return [S_1...S_k]
 
 # The elbow method
 When we use k-means for some clustering problem and want to choose the number of clusters we wish the algorithm should find, the elbow method presumes that there are some natural cluster optima. The loss function will drop quickly until we reach this optima, but increasing the numbers more will have diminishing returns. If we plot the number of clusters and the loss, we know we can apply the elbow method if the curve looks like an elbow.
+
+# Principle component analysis
+Principle component analysis (PCA)
+
+
+# Singular value decomposition
+Singular value decomposition (SVD)
+
+# Low-rank matrix factorization
+A more space efficient technique for implementing PCA.
+
+# Cold start
+How to we handle new users and new items in colloborative filtering?
+
+# Word embeddings
+We represent words for NNs using a low-dimensional representation of real numbers.
+
+# Word-word co-occurrence matrix
+We count the occurrence of words occurring together.

@@ -125,9 +125,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","evaluation","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","neural-networks","optimization","paradigms","preprocessing"] };
-  const [numberOfFiles, numberOfDirs ] = [16, 1];
-  const [tags, tagsInFiles] = [{"chalmers":15,"machine-learning":15,"keywords":1}, {"collecting-data":["chalmers","machine-learning"],"evaluation":["chalmers","machine-learning"],"feature-selection":["chalmers","machine-learning"],"hyperparameters":["chalmers","machine-learning"],"keywords":["chalmers","machine-learning","keywords"],"linear-classifiers-regressors":["chalmers","machine-learning"],"machine-learning":["chalmers","machine-learning"],"neural-networks":["chalmers","machine-learning"],"optimization":["chalmers","machine-learning"],"paradigms":["chalmers","machine-learning"],"preprocessing":["chalmers","machine-learning"],"models":["chalmers","machine-learning"]}];
+  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","dimensionality-reduction","ethics","evaluation","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","neural-networks","optimization","paradigms","preprocessing"] };
+  const [numberOfFiles, numberOfDirs ] = [18, 1];
+  const [tags, tagsInFiles] = [{"chalmers":16,"machine-learning":16,"keywords":1}, {"collecting-data":["chalmers","machine-learning"],"dimensionality-reduction":["chalmers","machine-learning"],"evaluation":["chalmers","machine-learning"],"feature-selection":["chalmers","machine-learning"],"hyperparameters":["chalmers","machine-learning"],"keywords":["chalmers","machine-learning","keywords"],"linear-classifiers-regressors":["chalmers","machine-learning"],"machine-learning":["chalmers","machine-learning"],"neural-networks":["chalmers","machine-learning"],"optimization":["chalmers","machine-learning"],"paradigms":["chalmers","machine-learning"],"preprocessing":["chalmers","machine-learning"],"models":["chalmers","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

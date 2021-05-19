@@ -27,6 +27,12 @@
   "k-means": "K-means is probably the most popular technique for clustering and the idea behind it is to find a set of K clusters such that each data point is close to its centroid (mean vector).",
   "lloyd's-algorithm": "```pythonwhile clusters don't change:    insert x_i to cluster S_k    recompute cluster centroids for each S_kreturn [S_1...S_k]```",
   "the-elbow-method": "When we use k-means for some clustering problem and want to choose the number of clusters we wish the algorithm should find, the elbow method presumes that there are some natural cluster optima. The loss function will drop quickly until we reach this optima, but increasing the numbers more will have diminishing returns. If we plot the number of clusters and the loss, we know we can apply the elbow method if the curve looks like an elbow.",
+  "principle-component-analysis": "Principle component analysis (PCA)",
+  "singular-value-decomposition": "Singular value decomposition (SVD)",
+  "low-rank-matrix-factorization": "A more space efficient technique for implementing PCA.",
+  "cold-start": "How to we handle new users and new items in colloborative filtering?",
+  "word-embeddings": "We represent words for NNs using a low-dimensional representation of real numbers.",
+  "word-word-co-occurrence-matrix": "We count the occurrence of words occurring together.",
   "null-hypothesis": "",
   "statistically-significant": "The result is probably not due to random luck."
 }

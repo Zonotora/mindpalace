@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/keywords
-tags: ["chalmers", "machine-learning", "keywords"]
+tags: ["machine-learning", "keywords"]
 lastModified: 2021-05-19
 created: 2021-03-22
 title: Keywords

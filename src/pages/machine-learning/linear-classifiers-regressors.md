@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/linear-classifiers-regressors
-tags: ["chalmers", "machine-learning"]
+tags: ["machine-learning"]
 lastModified: 2021-04-20
 created: 2021-04-11
 title: Linear Classifiers Regressors

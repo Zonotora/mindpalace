@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/evaluation
-tags: ["chalmers", "machine-learning"]
+tags: ["machine-learning"]
 lastModified: 2021-05-03
 created: 2021-04-30
 title: Evaluation

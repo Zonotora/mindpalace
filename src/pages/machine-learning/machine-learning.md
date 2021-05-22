@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/machine-learning
-tags: ["chalmers", "machine-learning"]
+tags: ["machine-learning"]
 lastModified: 2021-04-09
 created: 2021-03-20
 title: Machine Learning

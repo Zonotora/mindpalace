@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/models/support-vector-machine
-tags: ["chalmers", "machine-learning"]
+tags: ["machine-learning"]
 lastModified: 2021-04-24
 created: 2021-04-20
 title: Support Vector Machine

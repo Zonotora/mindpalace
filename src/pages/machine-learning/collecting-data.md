@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/collecting-data
-tags: ["chalmers", "machine-learning"]
+tags: ["machine-learning"]
 lastModified: 2021-04-19
 created: 2021-04-17
 title: Collecting Data

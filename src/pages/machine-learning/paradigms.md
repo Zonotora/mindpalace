@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/paradigms
-tags: ["chalmers", "machine-learning"]
+tags: ["machine-learning"]
 lastModified: 2021-05-04
 created: 2021-05-03
 title: Paradigms

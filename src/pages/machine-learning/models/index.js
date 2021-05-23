@@ -127,7 +127,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "/machine-learning/models", dirs: [], files: ["CNN","LSTM","decision-tree","ensembles","random-forests","support-vector-machine"] };
   const [numberOfFiles, numberOfDirs ] = [6, 0];
-  const [tags, tagsInFiles] = [{"chalmers":4,"machine-learning":4}, {"decision-tree":["chalmers","machine-learning"],"ensembles":["chalmers","machine-learning"],"random-forests":["chalmers","machine-learning"],"support-vector-machine":["chalmers","machine-learning"]}];
+  const [tags, tagsInFiles] = [{"machine-learning":5}, {"LSTM":["machine-learning"],"decision-tree":["machine-learning"],"ensembles":["machine-learning"],"random-forests":["machine-learning"],"support-vector-machine":["machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

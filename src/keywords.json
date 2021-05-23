@@ -33,6 +33,12 @@
   "cold-start": "How to we handle new users and new items in colloborative filtering?",
   "word-embeddings": "We represent words for NNs using a low-dimensional representation of real numbers.",
   "word-word-co-occurrence-matrix": "We count the occurrence of words occurring together.",
+  "reduction": "Reduction in machine learning means that we convert a complictated problem into a bunch of simpler problems.",
+  "part-of-speech-tagging": "Input a sequence of word tokens and output a sequence of grammatical tags corresponding to each token.",
+  "imitation-learning": "A paradigm in machine learning where the model tries to imitate an \"expert\".",
+  "feedforward-neural-network": "Consists of connected layers of \"classifiers\" where intermediate classifiers are called hidden units and the final classifier is called output unit. Each hidden unit is computed by$$h_i = f(\\pmb w_{h_i} \\cdot \\pmb x)$$and the output is computed by$$y = f(\\pmb w_o \\cdot \\pmb h)$$$ f $ is the activation function.",
+  "multilayer-perceptron": "See [Feedforward neural network](#Feedforward-neural-network).",
+  "recurrent-neural-networks": "They use states to represent previous events. After each step the state vector is recalculated.",
   "null-hypothesis": "",
   "statistically-significant": "The result is probably not due to random luck."
 }

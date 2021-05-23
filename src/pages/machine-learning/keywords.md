@@ -1,10 +1,10 @@
 ---
 slug: /machine-learning/keywords
 tags: ["machine-learning", "keywords"]
-lastModified: 2021-05-19
+lastModified: 2021-05-23
 created: 2021-03-22
 title: Keywords
-header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"},{"depth":1,"name":"F-score","link":"F-score"},{"depth":1,"name":"K-means","link":"K-means"},{"depth":1,"name":"Lloyd's algorithm","link":"Lloyd's-algorithm"},{"depth":1,"name":"The elbow method","link":"The-elbow-method"},{"depth":1,"name":"Principle component analysis","link":"Principle-component-analysis"},{"depth":1,"name":"Singular value decomposition","link":"Singular-value-decomposition"},{"depth":1,"name":"Low-rank matrix factorization","link":"Low-rank-matrix-factorization"},{"depth":1,"name":"Cold start","link":"Cold-start"},{"depth":1,"name":"Word embeddings","link":"Word-embeddings"},{"depth":1,"name":"Word-word co-occurrence matrix","link":"Word-word-co-occurrence-matrix"}]
+header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"},{"depth":1,"name":"F-score","link":"F-score"},{"depth":1,"name":"K-means","link":"K-means"},{"depth":1,"name":"Lloyd's algorithm","link":"Lloyd's-algorithm"},{"depth":1,"name":"The elbow method","link":"The-elbow-method"},{"depth":1,"name":"Principle component analysis","link":"Principle-component-analysis"},{"depth":1,"name":"Singular value decomposition","link":"Singular-value-decomposition"},{"depth":1,"name":"Low-rank matrix factorization","link":"Low-rank-matrix-factorization"},{"depth":1,"name":"Cold start","link":"Cold-start"},{"depth":1,"name":"Word embeddings","link":"Word-embeddings"},{"depth":1,"name":"Word-word co-occurrence matrix","link":"Word-word-co-occurrence-matrix"},{"depth":1,"name":"Reduction","link":"Reduction"},{"depth":1,"name":"Part-of-speech tagging","link":"Part-of-speech-tagging"},{"depth":1,"name":"Imitation learning","link":"Imitation-learning"},{"depth":1,"name":"Feedforward neural network","link":"Feedforward-neural-network"},{"depth":1,"name":"Multilayer perceptron","link":"Multilayer-perceptron"},{"depth":1,"name":"Recurrent neural networks","link":"Recurrent-neural-networks"}]
 ---
 
 - generalization
@@ -102,8 +102,7 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
 - cross-entropy loss
 - margin
 - structural risk minimization theorem
-- feedforward neural network
-- multilayer perceptron
+
 - input units/nodes
 - hidden units/nodes
 - output units/nodes
@@ -178,6 +177,11 @@ header: [{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse 
 - noise point or outlier
 - matrix factorization
 - low rank matrix factorization
+- autoregressive model (time series)
+- exogenous (ARX)
+- sequence-to-sequence
+- attention model
+- transformer (the BERT model)
 
 
 
@@ -293,3 +297,33 @@ We represent words for NNs using a low-dimensional representation of real number
 
 # Word-word co-occurrence matrix
 We count the occurrence of words occurring together.
+
+# Reduction
+Reduction in machine learning means that we convert a complictated problem into a bunch of simpler problems.
+
+# Part-of-speech tagging
+Input a sequence of word tokens and output a sequence of grammatical tags corresponding to each token.
+
+# Imitation learning
+A paradigm in machine learning where the model tries to imitate an "expert".
+
+# Feedforward neural network
+Consists of connected layers of "classifiers" where intermediate classifiers are called hidden units and the final classifier is called output unit. Each hidden unit is computed by
+
+$$
+h_i = f(\pmb w_{h_i} \cdot \pmb x)
+$$
+
+and the output is computed by
+
+$$
+y = f(\pmb w_o \cdot \pmb h)
+$$
+
+$ f $ is the activation function.
+
+# Multilayer perceptron
+See [Feedforward neural network](#Feedforward-neural-network).
+
+# Recurrent neural networks
+They use states to represent previous events. After each step the state vector is recalculated.

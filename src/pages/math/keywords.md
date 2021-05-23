@@ -1,7 +1,7 @@
 ---
 slug: /math/keywords
 tags: ["keywords"]
-lastModified: 2021-04-19
+lastModified: 2021-05-23
 created: 2021-04-05
 title: Keywords
 header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"}]
@@ -20,6 +20,7 @@ header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":
 - concave
 - gradient descent
 - gradient ascent
+- time series analysis
 
 # Null Hypothesis
 

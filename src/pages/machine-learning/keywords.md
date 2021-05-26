@@ -4,7 +4,7 @@ tags: ["machine-learning", "keywords"]
 lastModified: 2021-05-26
 created: 2021-03-22
 title: Keywords
-header: [{"depth":1,"name":"Generalization","link":"Generalization"},{"depth":1,"name":"Generalization gap","link":"Generalization-gap"},{"depth":1,"name":"Prediction","link":"Prediction"},{"depth":1,"name":"Training data","link":"Training-data"},{"depth":1,"name":"Validation set","link":"Validation-set"},{"depth":1,"name":"Test set","link":"Test-set"},{"depth":1,"name":"Induction","link":"Induction"},{"depth":1,"name":"Regression","link":"Regression"},{"depth":1,"name":"Classification","link":"Classification"},{"depth":1,"name":"Ranking","link":"Ranking"},{"depth":1,"name":"Feature","link":"Feature"},{"depth":1,"name":"Label","link":"Label"},{"depth":1,"name":"Loss function","link":"Loss-function"},{"depth":1,"name":"Parity","link":"Parity"},{"depth":1,"name":"Noise","link":"Noise"},{"depth":1,"name":"Supervised learning","link":"Supervised-learning"},{"depth":1,"name":"Unsupervised learning","link":"Unsupervised-learning"},{"depth":1,"name":"Semi-supervised learning","link":"Semi-supervised-learning"},{"depth":1,"name":"Reinforcement learning","link":"Reinforcement-learning"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Decision tree","link":"Decision-tree"},{"depth":2,"name":"Entropy","link":"Entropy"},{"depth":2,"name":"Information gain","link":"Information-gain"},{"depth":2,"name":"Gini score","link":"Gini-score"},{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Stacking","link":"Stacking"},{"depth":1,"name":"Bagging","link":"Bagging"},{"depth":1,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"},{"depth":1,"name":"F-score","link":"F-score"},{"depth":1,"name":"K-means","link":"K-means"},{"depth":1,"name":"Lloyd's algorithm","link":"Lloyd's-algorithm"},{"depth":1,"name":"The elbow method","link":"The-elbow-method"},{"depth":1,"name":"Principle component analysis","link":"Principle-component-analysis"},{"depth":1,"name":"Singular value decomposition","link":"Singular-value-decomposition"},{"depth":1,"name":"Low-rank matrix factorization","link":"Low-rank-matrix-factorization"},{"depth":1,"name":"Cold start","link":"Cold-start"},{"depth":1,"name":"Word embeddings","link":"Word-embeddings"},{"depth":1,"name":"Word-word co-occurrence matrix","link":"Word-word-co-occurrence-matrix"},{"depth":1,"name":"Reduction","link":"Reduction"},{"depth":1,"name":"Part-of-speech tagging","link":"Part-of-speech-tagging"},{"depth":1,"name":"Imitation learning","link":"Imitation-learning"},{"depth":1,"name":"Feedforward neural network","link":"Feedforward-neural-network"},{"depth":1,"name":"Multilayer perceptron","link":"Multilayer-perceptron"},{"depth":1,"name":"Recurrent neural networks","link":"Recurrent-neural-networks"},{"depth":1,"name":"References","link":"References"}]
+header: [{"depth":1,"name":"Generalization","link":"Generalization"},{"depth":1,"name":"Generalization gap","link":"Generalization-gap"},{"depth":1,"name":"Prediction","link":"Prediction"},{"depth":1,"name":"Training data","link":"Training-data"},{"depth":1,"name":"Validation set","link":"Validation-set"},{"depth":1,"name":"Test set","link":"Test-set"},{"depth":1,"name":"Induction","link":"Induction"},{"depth":1,"name":"Regression","link":"Regression"},{"depth":1,"name":"Classification","link":"Classification"},{"depth":1,"name":"Ranking","link":"Ranking"},{"depth":1,"name":"Feature","link":"Feature"},{"depth":1,"name":"Label","link":"Label"},{"depth":1,"name":"Loss function","link":"Loss-function"},{"depth":1,"name":"Parity","link":"Parity"},{"depth":1,"name":"Noise","link":"Noise"},{"depth":1,"name":"Supervised learning","link":"Supervised-learning"},{"depth":1,"name":"Unsupervised learning","link":"Unsupervised-learning"},{"depth":1,"name":"Semi-supervised learning","link":"Semi-supervised-learning"},{"depth":1,"name":"Reinforcement learning","link":"Reinforcement-learning"},{"depth":1,"name":"Cross-validation","link":"Cross-validation"},{"depth":1,"name":"Decision tree","link":"Decision-tree"},{"depth":2,"name":"Entropy","link":"Entropy"},{"depth":2,"name":"Information gain","link":"Information-gain"},{"depth":2,"name":"Gini score","link":"Gini-score"},{"depth":1,"name":"Ensemble","link":"Ensemble"},{"depth":2,"name":"Boosting","link":"Boosting"},{"depth":3,"name":"AdaBoost","link":"AdaBoost"},{"depth":3,"name":"Gradient boosting","link":"Gradient-boosting"},{"depth":2,"name":"Stacking","link":"Stacking"},{"depth":2,"name":"Bagging","link":"Bagging"},{"depth":3,"name":"Random forest","link":"Random-forest"},{"depth":2,"name":"Spinning","link":"Spinning"},{"depth":1,"name":"Weak learner","link":"Weak-learner"},{"depth":1,"name":"Strong learner","link":"Strong-learner"},{"depth":1,"name":"Linear models","link":"Linear-models"},{"depth":2,"name":"Support vector machine","link":"Support-vector-machine"},{"depth":2,"name":"Linear classifiers","link":"Linear-classifiers"},{"depth":3,"name":"Logistic regression","link":"Logistic-regression"},{"depth":3,"name":"Lasso","link":"Lasso"},{"depth":3,"name":"Elastic net","link":"Elastic-net"},{"depth":3,"name":"Ridge regression","link":"Ridge-regression"},{"depth":1,"name":"Bias","link":"Bias"},{"depth":1,"name":"Nonresponse bias","link":"Nonresponse-bias"},{"depth":1,"name":"Inductive bias","link":"Inductive-bias"},{"depth":1,"name":"Normalization","link":"Normalization"},{"depth":2,"name":"Feature normalization","link":"Feature-normalization"},{"depth":2,"name":"Example normalization","link":"Example-normalization"},{"depth":1,"name":"Approximation error","link":"Approximation-error"},{"depth":1,"name":"Estimation error","link":"Estimation-error"},{"depth":1,"name":"Bias-variance trade-off","link":"Bias-variance-trade-off"},{"depth":1,"name":"Imbalanced data","link":"Imbalanced-data"},{"depth":1,"name":"Feature selection","link":"Feature-selection"},{"depth":1,"name":"Embedded methods","link":"Embedded-methods"},{"depth":1,"name":"Regularization methods","link":"Regularization-methods"},{"depth":1,"name":"Feature imputation","link":"Feature-imputation"},{"depth":1,"name":"The Widrow-Hoff algorithm","link":"The-Widrow-Hoff-algorithm"},{"depth":1,"name":"Crowdsourcing","link":"Crowdsourcing"},{"depth":1,"name":"Deep learning","link":"Deep-learning"},{"depth":1,"name":"Backpropagation","link":"Backpropagation"},{"depth":1,"name":"Intrinsic evaluation","link":"Intrinsic-evaluation"},{"depth":1,"name":"Extrinsic evaluation","link":"Extrinsic-evaluation"},{"depth":1,"name":"F-score","link":"F-score"},{"depth":1,"name":"K-means","link":"K-means"},{"depth":1,"name":"Lloyd's algorithm","link":"Lloyd's-algorithm"},{"depth":1,"name":"The elbow method","link":"The-elbow-method"},{"depth":1,"name":"Principle component analysis","link":"Principle-component-analysis"},{"depth":1,"name":"Singular value decomposition","link":"Singular-value-decomposition"},{"depth":1,"name":"Low-rank matrix factorization","link":"Low-rank-matrix-factorization"},{"depth":1,"name":"Cold start","link":"Cold-start"},{"depth":1,"name":"Word embeddings","link":"Word-embeddings"},{"depth":1,"name":"Word-word co-occurrence matrix","link":"Word-word-co-occurrence-matrix"},{"depth":1,"name":"Reduction","link":"Reduction"},{"depth":1,"name":"Part-of-speech tagging","link":"Part-of-speech-tagging"},{"depth":1,"name":"Imitation learning","link":"Imitation-learning"},{"depth":1,"name":"Feedforward neural network","link":"Feedforward-neural-network"},{"depth":1,"name":"Multilayer perceptron","link":"Multilayer-perceptron"},{"depth":1,"name":"Recurrent neural networks","link":"Recurrent-neural-networks"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 # Generalization
@@ -102,16 +102,57 @@ Gini \space score = 1 - \sum_{i=1}^n (p_i)^2
 $$
 
 # Ensemble
+An ensemble method take advantage of multiple learning algorithms to obtain a better predictive result that could not otherwise be obtained.
+
+## Boosting
+Boosting is an ensemble technique (meta-algorithm) that involves an incremental build of the ensemble model by training each new model instance in a fashion that will "correct" how earlier instances misclassified the data. Boosting has been shown to yield better results than bagging but also tends to overfit to a higher degree. It is used to reduce bias and variance. It converts weak learners to strong learners.
+
+### AdaBoost
+AdaBoost is short for Adaptive Boosting. It focuses on misclassified instances by previous classifiers and tweaks new weak learners to slightly better performance. As long as the performane of each weak learner is better than random guessing even by a little, the final model can be proven to converge to a strong learner. It has no loss function.
+
+### Gradient boosting
+Like any other boosting method gradient boosting builds the model by stage-wise improvements of weak learners, but generalizes the model with an arbitrary differentiable loss function. What differs the AdaBoost algorithm from gradient boosting is that is does not have a loss function.
+
+## Stacking
+Stacking is an ensemble technique (meta-algorithm) that combines several different learning algorithms to one united. Every other learning algorithm is trained on the available data, and then combined with a combiner algorithm to make the final prediction using the predictions of all the other algorithms as input.
+
+## Bagging
+Bagging or bootstrap aggregation is an ensemble technique (meta-algorithm) that promotes total model variance by having each submodel vote with equal weight. Thus, it is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models. Bagging trains each model in the ensemble with a randomly chosen subset of the training set. The samples in bagging are different from each other but replacements are allowed which means that one instance may occur in several samples or none at all.
+
+### Random forest
+Random forests are an ensemble learning algorithm based on bagging and decision trees. The performance of multiple decision trees are thus combined and usually gives a better performance than one decision tree alone.
+
+## Spinning
+Based on the same idea as bagging and is also called feature bagging or random subspace learning.
+
+# Weak learner
+A weak learner is a classifier that is only partially correlated with the true classification. It performs better than random guesses but not very much.
+
+# Strong learner
+A strong learner is a classifier that is very well correlated with the true classification.
+
+# Linear models
+Linear models base its prediction on linear functions as the name suggests.
+
+## Support vector machine
+
+## Linear classifiers
+
+### Logistic regression
+
+### Lasso
+
+### Elastic net
+
+### Ridge regression
 
 
-- support vector
 - committee
-- weak learners
-- boosting
 - patch representation
 - bag of words (text representation)
 - shape representation
 - meta features
+- meta algorithm
 - combinatorial transformations
 - logarithmic transformation
 - precision/recall metric
@@ -126,9 +167,6 @@ $$
 - induced distribution
 - feature selection https://en.wikipedia.org/wiki/Feature_selection
 - predictive model
-- LASSO
-- elastic net
-- ridge regression
 - one-hot encoding
 - TF-IDF
 - mutual information
@@ -136,14 +174,10 @@ $$
 - grid search
 - black box optimization
 - automated machine learning (AutoML)
-- stacking
 - shallow decision tree
-- random forests
 - hypothesis space
-- linear classifiers
 - linearly separable
 - least-square regression
-- widrow-hoff
 - inter-annotator agreement
 - chance-corrected agreement measure
 - chance agreement probability
@@ -170,7 +204,6 @@ $$
 - cross-entropy loss
 - margin
 - structural risk minimization theorem
-
 - input units/nodes
 - hidden units/nodes
 - output units/nodes
@@ -183,8 +216,6 @@ $$
     - RMSProp
 - dropout
 - data augmentation
-- AdaBoost
-- gradient boosting
 - pseudo-residual
 - residual
 - learning rate
@@ -256,19 +287,11 @@ $$
   - squared loss
   - absolute loss
   - zero/one loss
-
+- spinning
 
 # Bias
 
 # Nonresponse bias
-
-# Stacking
-
-# Bagging
-Is also called bootstrap aggregation. It is a technique for reducing variances for estimated prediction functions and does so by averaging a number of noisy but approximately unbiased models.
-
-# Spinning
-Based on the same idea as bagging and is also called feature bagging or random subspace learning.
 
 # Inductive bias
 The preference for one distinction over another. If the inductive bias is too far away from the concept that is being learned, the whole learning might fail.

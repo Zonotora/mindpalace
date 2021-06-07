@@ -40,6 +40,9 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-mindpalace-draw`,
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
@@ -113,7 +116,7 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-mindpalace`,
+            resolve: `gatsby-remark-mindpalace-references`,
           },
         ],
       },

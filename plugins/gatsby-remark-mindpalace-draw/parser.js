@@ -33,7 +33,7 @@ class Parser {
     return result;
   };
 
-  parse = () => {
+  parse = (condition) => {
     if (this.node.lang === "draw") {
       const ast = [];
 
@@ -43,11 +43,32 @@ class Parser {
         if (this.peek() === "<") {
           this.next();
 
+          if (this.peek() === "/") {
+            this.next();
+            const name = this.consume_while(
+              (c) => !isWhiteSpace(c) && c !== ">"
+            );
+            if (name !== condition) {
+              throw new Error(
+                "Invalid closing identifier: " +
+                  name +
+                  " expected: " +
+                  condition
+              );
+            }
+            this.next();
+            return ast;
+          }
+
           const name = this.consume_while((c) => !isWhiteSpace(c) && c !== ">");
 
           const attrMap = {};
 
-          while (this.pointer < this.chars.length && this.peek() !== ">") {
+          while (
+            this.pointer < this.chars.length &&
+            this.peek() !== ">" &&
+            this.peek() !== "/"
+          ) {
             this.consume_while(isWhiteSpace);
 
             const ident = this.consume_while((c) => c !== "=");
@@ -60,14 +81,24 @@ class Parser {
               value = this.consume_while((c) => c !== "}");
               this.next();
             } else {
-              value = this.consume_while((c) => !isWhiteSpace(c) && c !== ">");
+              value = this.consume_while(
+                (c) => !isWhiteSpace(c) && c !== "/" && c !== ">"
+              );
             }
 
             this.consume_while(isWhiteSpace);
 
             attrMap[ident] = value;
           }
-          this.next();
+          if (this.peek() === "/") {
+            this.next();
+            this.consume_while(isWhiteSpace);
+            this.next();
+          } else {
+            this.next();
+            const children = this.parse(name);
+            attrMap["children"] = children;
+          }
 
           ast.push({ type: name, ...attrMap });
         } else {

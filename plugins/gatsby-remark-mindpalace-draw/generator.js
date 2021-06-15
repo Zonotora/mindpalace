@@ -10,12 +10,11 @@ const definitions = {
     xmlns: "http://www.w3.org/2000/svg",
   },
   box: {
-    x: "center",
-    y: "center",
+    x: "0",
+    y: "0",
     w: "50",
     h: "50",
     align: "horizontal",
-    "align-type": "spaced",
   },
   rect: {
     x: "center",
@@ -38,14 +37,12 @@ const definitions = {
 };
 
 validAttributes = [
-  "pos",
   "x",
   "y",
   "cx",
   "cy",
   "w",
   "h",
-  "size",
   "fill",
   "stroke",
   "stroke-width",
@@ -54,9 +51,13 @@ validAttributes = [
   "xmlns",
   "to",
   "from",
-  "align",
-  "align-type",
+  "align", // horizontal, vertical
 ];
+
+const getSize = (key, element) => {
+  if (element["type"] === "circle") return 2 * parseInt(element["r"]);
+  return parseInt(element[key]);
+};
 
 const parseRadius = (attributes, key) => {
   switch (attributes.type) {
@@ -69,11 +70,13 @@ const parseRadius = (attributes, key) => {
   }
 };
 
+const parseCoord = (attributes, key) => {};
+
 const getSizeOfChildren = (type, children) => {
   let size = 0;
   for (const child of children) {
     if (type in child) size += parseInt(child[type]);
-    else if ("r" in child) size += parseInt(child["r"]);
+    else if ("r" in child) size += parseInt(child["r"]) * 2;
   }
   return size;
 };
@@ -97,10 +100,15 @@ const setSizesOfChildrenInBox = (box) => {
     mutatedChildren.push(attributes);
   }
 
-  // parseSize(mutatedBox["size"])
-  const type = mutatedBox["align"] === "vertical" ? "height" : "width";
-  const size = getSizeOfChildren(type, mutatedChildren);
-  const gapSize = (50 - size) / mutatedChildren.length;
+  const sizeType = mutatedBox["align"] === "horizontal" ? "w" : "h";
+  const coordType = mutatedBox["align"] === "horizontal" ? "x" : "y";
+  const size = getSizeOfChildren(sizeType, mutatedChildren);
+  const gapSize =
+    (parseInt(mutatedBox[sizeType]) - size) / (mutatedChildren.length - 1);
+
+  console.log(parseInt(mutatedBox[sizeType]));
+  console.log(size);
+  console.log(gapSize);
 
   if (gapSize < 0) {
     throw new Error(
@@ -108,25 +116,19 @@ const setSizesOfChildrenInBox = (box) => {
     );
   }
 
-  console.log(size + " " + gapSize);
-
-  for (let i = 0, accSize = 0; i < mutatedChildren.length; i++) {
+  for (
+    let i = 0, accCoord = parseInt(mutatedBox[coordType]);
+    i < mutatedChildren.length;
+    i++
+  ) {
     const child = mutatedChildren[i];
 
-    if (mutatedBox["align"] === "vertical") {
-      //
-      if (mutatedBox["align-type"] === "between") {
-      } else if (mutatedBox["align-type"] === "spaced") {
-        child["pos"] = `${50} ${accSize}`;
-      }
-    } else if (mutatedBox["align"] === "horizontal") {
-      if (mutatedBox["align-type"] === "between") {
-      } else if (mutatedBox["align-type"] === "spaced") {
-        child["pos"] = `${accSize} ${50}`;
-      }
-    }
+    if (child["type"] === "circle") {
+      const coordMapping = { x: "cx", y: "cy" };
+      child[coordMapping[coordType]] = accCoord + parseInt(child["r"]);
+    } else child[coordType] = accCoord;
 
-    accSize += child["size"] + gapSize;
+    accCoord += getSize(sizeType, child) + gapSize;
   }
 
   return mutatedChildren;
@@ -215,11 +217,11 @@ const generateWithoutSvg = (ast) => {
             ...pushedStyles,
           });
 
-          console.log({
-            ...redifinitions[element.type],
-            ...element,
-            ...pushedStyles,
-          });
+          // console.log({
+          //   ...redifinitions[element.type],
+          //   ...element,
+          //   ...pushedStyles,
+          // });
 
           html += `\t<${element.type} ${attributes} />\n`;
         } else {
@@ -242,11 +244,11 @@ const generate = (ast) => {
     svg = ast.shift();
   }
   const attributes = generateTag({ ...definitions["svg"], ...svg });
-  html += `<div style="text-align: center;"><svg ${attributes}>\n`;
+  html += `<div style="text-align: center;">\n<svg ${attributes}>\n`;
 
   html += generateWithoutSvg(ast);
 
-  html += "</svg></div>";
+  html += "</svg>\n</div>";
   return html;
 };
 

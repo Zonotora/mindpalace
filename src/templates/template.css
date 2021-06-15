@@ -371,8 +371,21 @@ input:focus {
   margin: 0 auto;
   width: calc(80% - 2px);
 }
+
+@media screen and (max-width: 760px) {
+  .content {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .content {
+    padding: 20px 120px;
+  }
+}
+
 .content {
-  padding: 20px;
+  font-family: georgia, serif;
   background-color: white;
   height: calc(100vh - var(--header-height));
   max-height: calc(100vh - var(--header-height));

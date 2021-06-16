@@ -70,7 +70,28 @@ const parseRadius = (attributes, key) => {
   }
 };
 
-const parseCoord = (attributes, key) => {};
+const parseCoord = (attributes, key, base) => {
+  if (attributes[key] === "center") {
+    let size = 0;
+    if (key === "x" || key === "y")
+      size =
+        key === "x"
+          ? parseInt(base["w"]) / 2 - parseInt(attributes["w"]) / 2
+          : parseInt(base["h"]) / 2 - parseInt(attributes["h"]) / 2;
+    else
+      size = key === "cx" ? parseInt(base["w"]) / 2 : parseInt(base["h"]) / 2;
+
+    return `${key}="${size}" `;
+  }
+
+  return `${key}="${attributes[key]}" `;
+};
+
+const parseColor = (attributes, key) => {
+  if (attributes["fill"] === "transparent")
+    return 'fill-opacity="0.0" fill="#000" ';
+  return `${key}="${attributes[key]}" `;
+};
 
 const getSizeOfChildren = (type, children) => {
   let size = 0;
@@ -106,10 +127,6 @@ const setSizesOfChildrenInBox = (box) => {
   const gapSize =
     (parseInt(mutatedBox[sizeType]) - size) / (mutatedChildren.length - 1);
 
-  console.log(parseInt(mutatedBox[sizeType]));
-  console.log(size);
-  console.log(gapSize);
-
   if (gapSize < 0) {
     throw new Error(
       "Children have combined size that is greater than box size"
@@ -134,9 +151,8 @@ const setSizesOfChildrenInBox = (box) => {
   return mutatedChildren;
 };
 
-const generateTag = (attributes) => {
+const generateTag = (attributes, base) => {
   let html = "";
-  // console.log(attributes);
   for (const key of validAttributes) {
     if (key in attributes) {
       switch (key) {
@@ -146,8 +162,17 @@ const generateTag = (attributes) => {
         case "h":
           html += `height="${attributes[key]}" `;
           break;
+        case "x":
+        case "y":
+        case "cx":
+        case "cy":
+          html += parseCoord(attributes, key, base);
+          break;
         case "r":
           html += parseRadius(attributes, key);
+          break;
+        case "fill":
+          html += parseColor(attributes, key);
           break;
         default:
           html += `${key}="${attributes[key]}" `;
@@ -158,7 +183,7 @@ const generateTag = (attributes) => {
   return html;
 };
 
-const generateWithoutSvg = (ast) => {
+const generateWithoutSvg = (ast, svg) => {
   let html = "";
 
   for (const element of ast) {
@@ -187,7 +212,7 @@ const generateWithoutSvg = (ast) => {
         localStyles.push(styles);
 
         if ("children" in element) {
-          html += generateWithoutSvg(element["children"]);
+          html += generateWithoutSvg(element["children"], svg);
         }
 
         localStyles.pop();
@@ -200,7 +225,7 @@ const generateWithoutSvg = (ast) => {
 
         if ("children" in element) {
           element["children"] = setSizesOfChildrenInBox(styles);
-          html += generateWithoutSvg(element["children"]);
+          html += generateWithoutSvg(element["children"], svg);
         }
 
         break;
@@ -211,17 +236,14 @@ const generateWithoutSvg = (ast) => {
           const pushedStyles =
             localStyles.length > 0 ? localStyles[localStyles.length - 1] : {};
 
-          const attributes = generateTag({
-            ...redifinitions[element.type],
-            ...element,
-            ...pushedStyles,
-          });
-
-          // console.log({
-          //   ...redifinitions[element.type],
-          //   ...element,
-          //   ...pushedStyles,
-          // });
+          const attributes = generateTag(
+            {
+              ...redifinitions[element.type],
+              ...element,
+              ...pushedStyles,
+            },
+            svg
+          );
 
           html += `\t<${element.type} ${attributes} />\n`;
         } else {
@@ -244,9 +266,10 @@ const generate = (ast) => {
     svg = ast.shift();
   }
   const attributes = generateTag({ ...definitions["svg"], ...svg });
+
   html += `<div style="text-align: center;">\n<svg ${attributes}>\n`;
 
-  html += generateWithoutSvg(ast);
+  html += generateWithoutSvg(ast, { ...definitions["svg"], ...svg });
 
   html += "</svg>\n</div>";
   return html;

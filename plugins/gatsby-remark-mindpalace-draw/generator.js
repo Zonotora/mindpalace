@@ -7,6 +7,7 @@ const definitions = {
     y: "0",
     w: "100",
     h: "100",
+    viewBox: "0 0 20 10",
     xmlns: "http://www.w3.org/2000/svg",
   },
   box: {
@@ -21,7 +22,7 @@ const definitions = {
     y: "center",
     w: "50",
     h: "50",
-    fill: "transparent",
+    fill: "none",
     stroke: "#000000",
     "stroke-width": "2",
     r: "10",
@@ -30,7 +31,20 @@ const definitions = {
     cx: "center",
     cy: "center",
     r: "25",
-    fill: "transparent",
+    fill: "none",
+    stroke: "#000000",
+    "stroke-width": "2",
+  },
+  path: {
+    fill: "none",
+    stroke: "#000000",
+    "stroke-width": "2",
+  },
+  // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d
+  arrow: {
+    from: "",
+    to: "",
+    path: "",
     stroke: "#000000",
     "stroke-width": "2",
   },
@@ -52,6 +66,8 @@ validAttributes = [
   "to",
   "from",
   "align", // horizontal, vertical
+  "d",
+  "viewBox",
 ];
 
 const getSize = (key, element) => {
@@ -84,12 +100,6 @@ const parseCoord = (attributes, key, base) => {
     return `${key}="${size}" `;
   }
 
-  return `${key}="${attributes[key]}" `;
-};
-
-const parseColor = (attributes, key) => {
-  if (attributes["fill"] === "transparent")
-    return 'fill-opacity="0.0" fill="#000" ';
   return `${key}="${attributes[key]}" `;
 };
 
@@ -170,9 +180,6 @@ const generateTag = (attributes, base) => {
           break;
         case "r":
           html += parseRadius(attributes, key);
-          break;
-        case "fill":
-          html += parseColor(attributes, key);
           break;
         default:
           html += `${key}="${attributes[key]}" `;

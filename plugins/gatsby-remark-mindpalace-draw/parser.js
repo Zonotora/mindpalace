@@ -15,7 +15,7 @@ class Parser {
     this.pointer++;
   };
 
-  peek = (c) => {
+  peek = () => {
     if (this.pointer < this.chars.length) {
       return this.chars[this.pointer];
     }
@@ -29,7 +29,8 @@ class Parser {
 
   consume_while = (func) => {
     let result = "";
-    while (func(this.peek())) result += this.consume();
+    const f = (c) => c && func(c);
+    while (f(this.peek())) result += this.consume();
     return result;
   };
 
@@ -76,9 +77,9 @@ class Parser {
             this.next();
 
             let value;
-            if (this.peek() === "{") {
+            if (this.peek() === '"') {
               this.next();
-              value = this.consume_while((c) => c !== "}");
+              value = this.consume_while((c) => c !== '"');
               this.next();
             } else {
               value = this.consume_while(

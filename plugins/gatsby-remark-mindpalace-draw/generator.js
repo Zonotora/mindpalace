@@ -5,9 +5,9 @@ const definitions = {
   svg: {
     x: "0",
     y: "0",
-    w: "100",
-    h: "100",
-    viewBox: "0 0 100 100",
+    w: "100%",
+    h: "200px",
+    viewBox: "0 0 1000 200",
     xmlns: "http://www.w3.org/2000/svg",
   },
   box: {

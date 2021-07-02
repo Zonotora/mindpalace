@@ -610,3 +610,7 @@ ul.content-ul .nested {
 ul.content-ul .active {
   display: block;
 }
+
+.svg-text {
+  font: 12px georgia, serif, sans-serif;
+}

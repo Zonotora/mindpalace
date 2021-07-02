@@ -55,9 +55,15 @@ const definitions = {
     stroke: "#000000",
     "stroke-width": "2",
   },
+  text: {
+    x: 0,
+    y: 0,
+    class: "svg-text",
+  },
 };
 
 validAttributes = [
+  "class",
   "x",
   "y",
   "cx",
@@ -258,13 +264,31 @@ const generateWithoutSvg = (ast, svg) => {
         for (const key in element) {
           styles[key] = element[key];
         }
-
         if ("children" in element) {
           element["children"] = setSizesOfChildrenInBox(styles);
           html += generateWithoutSvg(element["children"], svg);
         }
+        break;
+
+      case "text": {
+        const pushedStyles =
+          localStyles.length > 0 ? localStyles[localStyles.length - 1] : {};
+        const attributes = generateTag(
+          {
+            ...definitions[element.type],
+            ...element,
+            ...pushedStyles,
+          },
+          svg
+        );
+        html += `\t<${element.type} ${attributes}>\n`;
+        if ("children" in element) {
+          html += `\t\t${element["children"][0].value}\n`;
+        }
+        html += `\t</${element.type}>\n`;
 
         break;
+      }
 
       default:
         const redifinitions = { ...definitions, ...localDefinitions };

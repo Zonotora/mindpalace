@@ -103,7 +103,8 @@ class Parser {
 
           ast.push({ type: name, ...attrMap });
         } else {
-          this.next();
+          const text = this.consume_while((c) => !isWhiteSpace(c) && c !== "<");
+          ast.push({ type: "string", value: text });
         }
       }
 

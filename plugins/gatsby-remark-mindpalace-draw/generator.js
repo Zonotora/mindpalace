@@ -7,7 +7,7 @@ const definitions = {
     y: "0",
     w: "100",
     h: "100",
-    viewBox: "0 0 20 10",
+    viewBox: "0 0 100 100",
     xmlns: "http://www.w3.org/2000/svg",
   },
   box: {
@@ -35,6 +35,13 @@ const definitions = {
     stroke: "#000000",
     "stroke-width": "2",
   },
+  // d attribute
+  // MoveTo: M, m
+  // LineTo: L, l, H, h, V, v
+  // Cubic Bézier Curve: C, c, S, s
+  // Quadratic Bézier Curve: Q, q, T, t
+  // Elliptical Arc Curve: A, a
+  // ClosePath: Z, z
   path: {
     fill: "none",
     stroke: "#000000",
@@ -68,7 +75,23 @@ validAttributes = [
   "align", // horizontal, vertical
   "d",
   "viewBox",
+  "arrow",
+  "dashed",
 ];
+
+const parseArrow = (attribute) => {
+  let [position, size] = attribute.split("-");
+
+  size = size ? size : "small";
+
+  if (position === "start")
+    return `marker-start="url(#svg-arrow-start-${size})" `;
+  else if (position === "end")
+    return `marker-end="url(#svg-arrow-end-${size})" `;
+  else if (position === "both")
+    return `marker-start="url(#svg-arrow-start-${size})" marker-end="url(#svg-arrow-end-${size})" `;
+  return "";
+};
 
 const getSize = (key, element) => {
   if (element["type"] === "circle") return 2 * parseInt(element["r"]);
@@ -181,6 +204,12 @@ const generateTag = (attributes, base) => {
         case "r":
           html += parseRadius(attributes, key);
           break;
+        case "arrow":
+          html += parseArrow(attributes[key]);
+          break;
+        case "dashed":
+          html += `stroke-dasharray="${attributes[key]}" `;
+          break;
         default:
           html += `${key}="${attributes[key]}" `;
           break;
@@ -262,6 +291,27 @@ const generateWithoutSvg = (ast, svg) => {
   return html;
 };
 
+const preamble = () => {
+  return `    <defs>
+      <marker id='svg-arrow-start-small' orient='auto' markerWidth='10' markerHeight='10' refX='4' refY='2'>
+        <path d='M4,0 V4 L0,2 Z' fill='black' />
+      </marker>
+
+      <marker id='svg-arrow-end-small' orient='auto' markerWidth='10' markerHeight='10' refX='0' refY='2'>
+        <path d='M0,0 V4 L4,2 Z' fill='black' />
+      </marker>
+
+      <marker id="svg-arrow-start-big" orient="auto" markerWidth="14" markerHeight="14" refY="6" refX="8">
+        <path d="M 8,3 v 6 L 0, 6" fill="black"></path>
+      </marker>
+
+      <marker id="svg-arrow-end-big" orient="auto" markerWidth="14" markerHeight="14" refX="0" refY="6">
+        <path d="M0,3 v 6 L 8, 6" fill="black"></path>
+      </marker>
+    </defs>
+  `;
+};
+
 const generate = (ast) => {
   let html = "";
 
@@ -275,6 +325,8 @@ const generate = (ast) => {
   const attributes = generateTag({ ...definitions["svg"], ...svg });
 
   html += `<div style="text-align: center;">\n<svg ${attributes}>\n`;
+
+  html += preamble();
 
   html += generateWithoutSvg(ast, { ...definitions["svg"], ...svg });
 

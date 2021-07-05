@@ -125,8 +125,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/meta", dirs: [], files: [] };
-  const [numberOfFiles, numberOfDirs ] = [0, 0];
+  const { url, dirs, files } = { url: "/meta", dirs: [], files: ["structure"] };
+  const [numberOfFiles, numberOfDirs ] = [1, 0];
   const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
 

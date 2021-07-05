@@ -1,16 +1,16 @@
 ---
-slug: /structure
+slug: /meta/structure
 tags: []
 lastModified: 2021-07-05
 created: 2021-07-05
 title: Structure
 header: []
 ---
+
 <pre>
-root
+root 
 ├── control-theory
 ├── latex
-├── structure
 ├── test
 ├── machine-learning
 │   ├── collecting-data
@@ -37,6 +37,7 @@ root
 │   ├── keywords
 │   └── statistics
 ├── meta
+│   └── structure
 ├── networking
 │   ├── firewall
 │   ├── ip-address

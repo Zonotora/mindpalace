@@ -5,7 +5,7 @@ const { execSync } = require("child_process");
 const folderPath = "src/pages";
 const templatePath = "src/templates/folder.js";
 const keywordsPath = "src/keywords.json";
-const fileStructurePath = "src/pages/structure.md";
+const fileStructurePath = "src/pages/meta/structure.md";
 
 const activeFiles = execSync(
   `git diff --name-only ${folderPath}; git ls-files --others --exclude-standard`
@@ -244,7 +244,7 @@ const generateFileStructure = () => {
 
     fs.writeFileSync(
       fileStructurePath,
-      `---${frontmatter}---\n\n<pre>${structure}</pre>`
+      `---${frontmatter}---\n\n<pre>\n${structure}</pre>`
     );
   }
 };

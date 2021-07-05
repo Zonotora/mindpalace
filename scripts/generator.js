@@ -242,7 +242,10 @@ const generateFileStructure = () => {
 
     const structure = generateFileStructure_(folderPath, "", "", true);
 
-    fs.writeFileSync(fileStructurePath, `---${frontmatter}---\n\n${structure}`);
+    fs.writeFileSync(
+      fileStructurePath,
+      `---${frontmatter}---\n\n<pre>${structure}</pre>`
+    );
   }
 };
 

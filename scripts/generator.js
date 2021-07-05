@@ -5,6 +5,7 @@ const { execSync } = require("child_process");
 const folderPath = "src/pages";
 const templatePath = "src/templates/folder.js";
 const keywordsPath = "src/keywords.json";
+const fileStructurePath = "src/pages/structure.md";
 
 const activeFiles = execSync(
   `git diff --name-only ${folderPath}; git ls-files --others --exclude-standard`
@@ -205,6 +206,46 @@ function resolveAndGenerate(url) {
   });
 }
 
+const generateFileStructure_ = (url, indent, last, isRoot) => {
+  const dir = url.split("/");
+  let ret = `${indent}${isRoot ? "root" : last ? "└──" : "├──"} ${
+    isRoot ? "" : dir[dir.length - 1]
+  }\n`;
+  indent += isRoot ? "" : last ? "    " : "│   ";
+  const dirs = getFiles(url, isDirectory);
+  const files = getFiles(url, isMarkdownFile);
+
+  files.forEach((file, i) => {
+    const localIndent =
+      i === files.length - 1 && dirs.length === 0 ? "└──" : "├──";
+
+    ret += `${indent}${localIndent} ${path.basename(
+      file,
+      path.extname(file)
+    )}\n`;
+  });
+
+  dirs.forEach((dir, i) => {
+    ret += generateFileStructure_(dir, indent, i === dirs.length - 1, false);
+  });
+
+  return ret;
+};
+
+const generateFileStructure = () => {
+  if (fs.existsSync(fileStructurePath)) {
+    const fileContent = fs.readFileSync(fileStructurePath, {
+      encoding: "utf8",
+    });
+    const frontmatter = fileContent.split("---").filter((s) => s !== "")[0];
+    console.log(frontmatter);
+
+    const structure = generateFileStructure_(folderPath, "", "", true);
+
+    fs.writeFileSync(fileStructurePath, `---${frontmatter}---\n\n${structure}`);
+  }
+};
+
 function resolveKeywords(url) {
   const dirs = getFiles(url, isDirectory);
   const files = getFiles(url, isMarkdownFile);
@@ -284,6 +325,6 @@ function getMetaInformation(url) {
   const json = JSON.stringify(keywords);
   fs.writeFileSync(keywordsPath, json);
   execSync(`node_modules/prettier/bin-prettier.js --write ${keywordsPath}`);
-
   resolveAndGenerate(folderPath);
+  generateFileStructure();
 })();

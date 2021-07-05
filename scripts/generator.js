@@ -244,7 +244,7 @@ const generateFileStructure = () => {
 
     fs.writeFileSync(
       fileStructurePath,
-      `---${frontmatter}---\n\n<pre>\n${structure}</pre>`
+      `---${frontmatter}---\n\n<pre style="background-color: white;">\n${structure}</pre>`
     );
   }
 };

@@ -7,7 +7,7 @@ title: Structure
 header: []
 ---
 
-<pre>
+<pre style="background-color: white;">
 root 
 ├── control-theory
 ├── latex

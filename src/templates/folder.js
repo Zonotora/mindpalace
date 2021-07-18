@@ -5,6 +5,7 @@ import { FaRegFile, FaFolder, FaTag } from "react-icons/fa";
 import Layout from "components/Layout";
 import { DirectoryHeader } from "components/Header";
 import { BackButton } from "components/Button";
+import Searchfield from "components/Searchfield";
 import "templates/template.css";
 
 const formatDate = (currentDate, date) => {
@@ -88,7 +89,7 @@ const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles }) => {
 
 const FileInformation = ({ numberOfDirs, numberOfFiles }) => {
   return (
-    <div className="template-display-information">
+    <div className="template-filesystem-header-information">
       <div>
         <FaFolder />
         <span>{numberOfDirs}</span>
@@ -163,53 +164,46 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <DirectoryHeader />
-
       <div className="template-structure">
+        <Searchfield className="directory" />
         <div className="template-filesystem">
-          <div className="template-filesystem-container">
-            <div className="template-filesystem-header">
-              {siteTitle !== "root" ? (
-                <BackButton parent={url.substring(0, url.lastIndexOf("/"))} />
-              ) : (
-                <></>
-              )}
-              <div>{siteTitle}</div>
-            </div>
-
-            <div className="template-filesystem-directories">
-              {dirs.map((dir) => (
-                <Link key={dir} to={`${url}/${dir}`}>
-                  <FileSystemItem
-                    fileName={dir}
-                    fileType="folder"
-                    lastModified={lastModified}
-                    tagsInFiles={tagsInFiles}
-                  />
-                </Link>
-              ))}
-            </div>
-            <div className="template-filesystem-files">
-              {files.map((file) => (
-                <Link key={file} to={`${url}/${file}`}>
-                  <FileSystemItem
-                    fileName={file}
-                    fileType="file"
-                    lastModified={lastModified}
-                    tagsInFiles={tagsInFiles}
-                  />
-                </Link>
-              ))}
-            </div>
+          <div className="template-filesystem-header">
+            {siteTitle !== "root" ? (
+              <BackButton parent={url.substring(0, url.lastIndexOf("/"))} />
+            ) : (
+              <></>
+            )}
+            <div className="template-filesystem-header-title">{siteTitle}</div>
+            <FileInformation
+              numberOfDirs={numberOfDirs}
+              numberOfFiles={numberOfFiles}
+            />
           </div>
-        </div>
 
-        <div className="template-display">
-          <FileInformation
-            numberOfDirs={numberOfDirs}
-            numberOfFiles={numberOfFiles}
-          />
-          <TagInformation tags={tags} />
+          <div className="template-filesystem-directories">
+            {dirs.map((dir) => (
+              <Link key={dir} to={`${url}/${dir}`}>
+                <FileSystemItem
+                  fileName={dir}
+                  fileType="folder"
+                  lastModified={lastModified}
+                  tagsInFiles={tagsInFiles}
+                />
+              </Link>
+            ))}
+          </div>
+          <div className="template-filesystem-files">
+            {files.map((file) => (
+              <Link key={file} to={`${url}/${file}`}>
+                <FileSystemItem
+                  fileName={file}
+                  fileType="file"
+                  lastModified={lastModified}
+                  tagsInFiles={tagsInFiles}
+                />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>

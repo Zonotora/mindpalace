@@ -125,8 +125,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/networking", dirs: ["OSI-model"], files: ["firewall","ip-address","port","protocols"] };
-  const [numberOfFiles, numberOfDirs ] = [12, 1];
+  const { url, dirs, files } = { url: "/networking", dirs: [], files: ["firewall","ip-address","osi-model","port","protocols"] };
+  const [numberOfFiles, numberOfDirs ] = [5, 0];
   const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
 

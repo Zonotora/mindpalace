@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-07-05
+lastModified: 2021-07-18
 created: 2021-07-05
 title: Structure
 header: []
@@ -41,23 +41,17 @@ root
 ├── networking
 │   ├── firewall
 │   ├── ip-address
+│   ├── osi-model
 │   ├── port
-│   ├── protocols
-│   └── OSI-model
-│       ├── OSI-model
-│       ├── application
-│       ├── data-link
-│       ├── network
-│       ├── physical
-│       ├── presentation
-│       ├── session
-│       └── transport
+│   └── protocols
 ├── python
 │   ├── matplotlib
 │   ├── numpy
 │   ├── pandas
 │   ├── python
 │   └── scikit-learn
-└── rust
-    └── rust
+├── rust
+│   └── rust
+└── web
+    └── react
 </pre>

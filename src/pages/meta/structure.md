@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-07-18
+lastModified: 2021-07-22
 created: 2021-07-05
 title: Structure
 header: []
@@ -12,6 +12,8 @@ root
 ├── control-theory
 ├── latex
 ├── test
+├── art
+│   └── painters
 ├── machine-learning
 │   ├── collecting-data
 │   ├── dimensionality-reduction

@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-07-22
+lastModified: 2021-09-01
 created: 2021-07-05
 title: Structure
 header: []
@@ -37,6 +37,7 @@ root
 │       └── support-vector-machine
 ├── math
 │   ├── keywords
+│   ├── linear-algebra
 │   ├── nonlinear-optimization
 │   └── statistics
 ├── meta

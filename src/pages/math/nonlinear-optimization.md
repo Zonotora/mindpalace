@@ -4,8 +4,20 @@ tags: []
 lastModified: 2021-09-01
 created: 2021-09-01
 title: Nonlinear Optimization
-header: []
+header: [{"depth":1,"name":"General optimization problem definition","link":"General-optimization-problem-definition"},{"depth":1,"name":"Classification","link":"Classification"},{"depth":2,"name":"Linear programming (LP)","link":"Linear-programming-(LP)"},{"depth":2,"name":"Nonlinear programming (NLP)","link":"Nonlinear-programming-(NLP)"},{"depth":2,"name":"Unconstrained optimization","link":"Unconstrained-optimization"},{"depth":2,"name":"Constrained optimization","link":"Constrained-optimization"},{"depth":2,"name":"Integer programming (IP)","link":"Integer-programming-(IP)"},{"depth":2,"name":"Convex programming (CP)","link":"Convex-programming-(CP)"},{"depth":1,"name":"Modeling","link":"Modeling"},{"depth":2,"name":"Formulating the problem","link":"Formulating-the-problem"}]
 ---
+
+# General optimization problem definition
+$$
+\boxed{
+    \begin{aligned}
+    \qquad\underset{\bold x \in S}{\text{minimize}} \qquad & f(\bold x),  \\
+    \text{subject to} \qquad & g_i(\bold x) \leq 0, \qquad i \in \mathcal{I} \qquad \\
+    & g_i(\bold x) = 0, \qquad i \in \mathcal{E} \\
+    & \bold x \in \Chi
+    \end{aligned}
+}
+$$
 
 # Classification
 

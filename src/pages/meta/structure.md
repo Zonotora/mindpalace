@@ -37,6 +37,7 @@ root
 │       └── support-vector-machine
 ├── math
 │   ├── keywords
+│   ├── nonlinear-optimization
 │   └── statistics
 ├── meta
 │   └── structure

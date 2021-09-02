@@ -238,7 +238,6 @@ const generateFileStructure = () => {
       encoding: "utf8",
     });
     const frontmatter = fileContent.split("---").filter((s) => s !== "")[0];
-    console.log(frontmatter);
 
     const structure = generateFileStructure_(folderPath, "", "", true);
 

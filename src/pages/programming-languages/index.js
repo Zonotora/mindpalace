@@ -126,9 +126,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["art","machine-learning","math","meta","networking","os","programming-languages","web"], files: ["control-theory","latex","test"] };
-  const [numberOfFiles, numberOfDirs ] = [41, 11];
-  const [tags, tagsInFiles] = [{"machine-learning":20,"keywords":3,"python":5}, {"machine-learning":["machine-learning","keywords"],"math":["keywords"],"os":["keywords"],"programming-languages":["python","machine-learning"]}];
+  const { url, dirs, files } = { url: "/programming-languages", dirs: ["python","rust"], files: [] };
+  const [numberOfFiles, numberOfDirs ] = [6, 2];
+  const [tags, tagsInFiles] = [{"python":5,"machine-learning":2}, {"python":["python","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 
   useEffect(() => {

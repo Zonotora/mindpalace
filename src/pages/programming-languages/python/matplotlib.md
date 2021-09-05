@@ -1,7 +1,7 @@
 ---
-slug: /python/matplotlib
+slug: /programming-languages/python/matplotlib
 tags: ["python"]
-lastModified: 2021-04-09
+lastModified: 2021-09-05
 created: 2021-02-22
 title: Matplotlib
 header: [{"depth":1,"name":"Installation","link":"Installation"},{"depth":1,"name":"Usage","link":"Usage"},{"depth":1,"name":"Examples","link":"Examples"},{"depth":1,"name":"Prepare","link":"Prepare"},{"depth":1,"name":"Create","link":"Create"},{"depth":1,"name":"Customize","link":"Customize"},{"depth":2,"name":"Markers","link":"Markers"},{"depth":2,"name":"Linestyles","link":"Linestyles"},{"depth":1,"name":"Text","link":"Text"},{"depth":2,"name":"Legends","link":"Legends"},{"depth":2,"name":"Limits","link":"Limits"},{"depth":2,"name":"Ticks","link":"Ticks"}]

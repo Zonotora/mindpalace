@@ -78,5 +78,8 @@
   "recurrent-neural-networks": "They use states to represent previous events. After each step the state vector is recalculated.",
   "references": "{lossreg}:    url: https://medium.com/analytics-vidhya/a-comprehensive-guide-to-loss-functions-part-1-regression-ff8b847675d6{lossclass}:    url: https://medium.com/analytics-vidhya/common-loss-functions-in-machine-learning-for-classification-model-931cbf564d42{wikiinformationgain}:    url: https://en.wikipedia.org/wiki/Information_gain_in_decision_trees#Drawbacks",
   "null-hypothesis": "",
-  "statistically-significant": "The result is probably not due to random luck."
+  "statistically-significant": "The result is probably not due to random luck.",
+  "vector-norm": "The vector norm is denoted$$\\| \\bold x \\|$$and may represent any vector norm.",
+  "absolute-value-norm": "$$\\| \\bold x \\| = \\| \\bold x \\|_1 = \\sum_{j=1}^{n} | x_j |$$",
+  "euclidean-norm": "$$\\| \\bold x \\| = \\| \\bold x \\|_2 = \\sqrt{\\sum_{j=1}^{n} x_j^2}$$"
 }

@@ -1,10 +1,10 @@
 ---
 slug: /math/linear-algebra
 tags: []
-lastModified: 2021-09-01
+lastModified: 2021-09-05
 created: 2021-09-01
 title: Linear Algebra
-header: []
+header: [{"depth":1,"name":"Rank","link":"Rank"}]
 ---
 
 Elements $ \bold v \in \R^n $ are referred to as **vectors**
@@ -31,3 +31,6 @@ A **linear subspace** $ L \sube \R^n $ is a set that holds:
 
 An **affine subspace** $ A \sube \R^n $ is a set that is represented as:
 - $ \bold v + L = \{\bold v + \bold x | \bold x \in L\} $ for some vector $ \bold v \in \R^n $ and linear subspace $ L \sube \R^n $
+
+# Rank
+The rank of a matrix $ A $ is the dimension spanned by its columns. Thus, the maximal number of linearly independent columns in $ A $, which in turn, is equal to the dimension spanned by its rows. The column rank and the row rank are always equal.

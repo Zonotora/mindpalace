@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-09-01
+lastModified: 2021-09-05
 created: 2021-07-05
 title: Structure
 header: []
@@ -48,6 +48,8 @@ root
 │   ├── osi-model
 │   ├── port
 │   └── protocols
+├── os
+│   └── keywords
 ├── python
 │   ├── matplotlib
 │   ├── numpy

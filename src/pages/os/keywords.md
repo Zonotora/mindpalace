@@ -1,0 +1,121 @@
+---
+slug: /os/keywords
+tags: ["keywords"]
+lastModified: 2021-09-05
+created: 2021-09-05
+title: Keywords
+header: []
+---
+
+- shell
+- GUI (Graphical User Interface)
+- kernel mode / supervisor mode
+- user mode
+- SATA (Serial ATA)
+- disk driver
+- multiplexing
+- mainframes
+- batch system
+- multiprogramming
+- spooling (Simultaneous Peripheral Operation On Line)
+- timesharing
+- MULTICS
+- cloud computing
+- UNIX
+- UNIX-like
+- BSD (Berkeley Software Distribution)
+- POSIX
+- System V
+- MINIX
+- Linux
+- LSI (Large Scale Integration)
+- microcomputers
+- DOS (Disk Operating System)
+- network operating systems
+- distributed operating systems
+- X Window System (X11)
+- program counter
+- stack pointer
+- PSW (Program Status Word)
+- pipeline
+- superscalar CPU
+- system call
+- multithreading
+- hyperthreading (intel's name for multithreading)
+- cores
+- CPU (Graphical Processing Unit)
+- cache lines
+- cache hit
+- L1 cache
+- L2 cache
+- RAM (Random Access Memory)
+- core memory
+- ROM (Read Only Memory)
+- EEPROM (Electrically Erasable PROM)
+- flash memory
+- SSD (Solid State Disk)
+- virtual memory
+- MMU (Memory Management Unit)
+- context switch
+- device driver
+- I/O port space
+- busy waiting
+- interrupt
+- waiting (busy, blocking)
+- interrupt vector
+- DMA (Direct Memory Access)
+- PCI (Peripheral Component Interconnect Express)
+- ISA (Industry Standard Architecture)
+- shared bus architecture
+- serial bus architecture
+- DMI (Direct Media Interface)
+- USB (Univeral Serial Bus)
+- SCSI (Small Computer System Interface)
+- plug and play
+- BIOS (Basic Input Output System)
+- PDA (Personal Digital Assistent)
+- hard real-time system
+- soft real-time system
+- process
+- address space
+- process table
+- core image
+- command interpreter
+- child process
+- interprocess communication
+- UID (User IDentification)
+- GID (Group IDentification)
+- superuser
+- Administrator
+- directory
+- working directory
+- file descriptor
+- root file system
+- special file (UNIX)
+- block special file
+- character special file
+- pipe
+- rwx bits (read, write, execute)
+- prompt
+- PID (Process IDentifier)
+- UNIX system calls
+- text segment
+- data segment
+- stack segment
+- i-nodes
+- partitions
+- minor devices
+- API (Application Programming Interface)
+- shared libraries
+- DLL (Dynamic-Link Library)
+- monolithic system
+- microkernel
+- CMS (Conversational Monitor System)
+- shared hosting
+- type 1 hypervisor
+- type 2 hypervisor
+- host operating system
+- guset operating system
+- paravirtualization
+- JVM (Java Virtual Machine)
+- exokernel

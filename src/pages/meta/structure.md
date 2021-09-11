@@ -11,7 +11,6 @@ header: []
 root 
 ├── control-theory
 ├── latex
-├── test
 ├── art
 │   └── painters
 ├── machine-learning

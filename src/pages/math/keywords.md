@@ -1,7 +1,7 @@
 ---
 slug: /math/keywords
 tags: ["keywords"]
-lastModified: 2021-09-05
+lastModified: 2021-09-11
 created: 2021-04-05
 title: Keywords
 header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"},{"depth":1,"name":"Vector norm","link":"Vector-norm"},{"depth":2,"name":"Absolute-value norm","link":"Absolute-value-norm"},{"depth":2,"name":"Euclidean norm","link":"Euclidean-norm"}]
@@ -21,6 +21,8 @@ header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":
 - gradient descent
 - gradient ascent
 - time series analysis
+- hyperplane
+- half-space
 
 # Null Hypothesis
 

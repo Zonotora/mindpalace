@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-09-11
+lastModified: 2021-09-12
 created: 2021-07-05
 title: Structure
 header: []
@@ -35,6 +35,7 @@ root
 │       ├── random-forests
 │       └── support-vector-machine
 ├── math
+│   ├── calculus
 │   ├── keywords
 │   ├── linear-algebra
 │   ├── nonlinear-optimization

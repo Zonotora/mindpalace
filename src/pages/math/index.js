@@ -126,8 +126,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/math", dirs: [], files: ["keywords","linear-algebra","nonlinear-optimization","statistics"] };
-  const [numberOfFiles, numberOfDirs ] = [4, 0];
+  const { url, dirs, files } = { url: "/math", dirs: [], files: ["calculus","keywords","linear-algebra","nonlinear-optimization","statistics"] };
+  const [numberOfFiles, numberOfDirs ] = [5, 0];
   const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
 

@@ -1,7 +1,7 @@
 ---
-slug: /programming-languages/python/numpy
+slug: /programming/python/numpy
 tags: ["python"]
-lastModified: 2021-09-05
+lastModified: 2021-09-12
 created: 2021-02-22
 title: Numpy
 header: [{"depth":1,"name":"Installation","link":"Installation"},{"depth":1,"name":"Usage","link":"Usage"},{"depth":1,"name":"Input and output","link":"Input-and-output"},{"depth":2,"name":"Read","link":"Read"},{"depth":2,"name":"Write","link":"Write"},{"depth":1,"name":"Create arrays","link":"Create-arrays"},{"depth":2,"name":"Zeros","link":"Zeros"},{"depth":2,"name":"Ones","link":"Ones"},{"depth":2,"name":"Empty","link":"Empty"},{"depth":2,"name":"Arange","link":"Arange"},{"depth":2,"name":"Linspace","link":"Linspace"},{"depth":2,"name":"Full","link":"Full"},{"depth":2,"name":"Eye (identity)","link":"Eye-(identity)"},{"depth":1,"name":"Describe","link":"Describe"},{"depth":1,"name":"Common functions","link":"Common-functions"},{"depth":1,"name":"Manipulation","link":"Manipulation"},{"depth":2,"name":"Trasposing","link":"Trasposing"},{"depth":2,"name":"Adding or removing elements","link":"Adding-or-removing-elements"}]

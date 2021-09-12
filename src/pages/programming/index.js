@@ -126,7 +126,7 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/programming-languages", dirs: ["python","rust"], files: [] };
+  const { url, dirs, files } = { url: "/programming", dirs: ["python","rust"], files: [] };
   const [numberOfFiles, numberOfDirs ] = [6, 2];
   const [tags, tagsInFiles] = [{"python":5,"machine-learning":2}, {"python":["python","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});

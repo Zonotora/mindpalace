@@ -1,7 +1,7 @@
 ---
-slug: /programming-languages/python/pandas
+slug: /programming/python/pandas
 tags: ["python", "machine-learning"]
-lastModified: 2021-09-05
+lastModified: 2021-09-12
 created: 2021-02-22
 title: Pandas
 header: [{"depth":1,"name":"Installation","link":"Installation"},{"depth":1,"name":"Usage","link":"Usage"},{"depth":1,"name":"Input and output","link":"Input-and-output"},{"depth":2,"name":"Read","link":"Read"},{"depth":2,"name":"Write","link":"Write"},{"depth":1,"name":"Accessing rows and columns","link":"Accessing-rows-and-columns"},{"depth":1,"name":"Sorting and describing data","link":"Sorting-and-describing-data"},{"depth":1,"name":"Manipulate data","link":"Manipulate-data"},{"depth":1,"name":"Plotting","link":"Plotting"}]

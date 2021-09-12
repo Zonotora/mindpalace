@@ -1,7 +1,7 @@
 ---
-slug: /programming-languages/rust/rust
+slug: /programming/rust/rust
 tags: []
-lastModified: 2021-09-05
+lastModified: 2021-09-12
 created: 2021-04-10
 title: Rust
 header: []

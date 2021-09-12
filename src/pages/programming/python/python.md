@@ -1,7 +1,7 @@
 ---
-slug: /programming-languages/python/python
+slug: /programming/python/python
 tags: ["python"]
-lastModified: 2021-09-05
+lastModified: 2021-09-12
 created: 2021-02-22
 title: Python
 header: [{"depth":1,"name":"Enumerate","link":"Enumerate"},{"depth":1,"name":"Comprehension","link":"Comprehension"},{"depth":1,"name":"Generator","link":"Generator"},{"depth":1,"name":"Unpacking","link":"Unpacking"},{"depth":1,"name":"Swapping","link":"Swapping"},{"depth":1,"name":"Slices","link":"Slices"}]

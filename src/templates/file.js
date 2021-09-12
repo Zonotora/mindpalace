@@ -198,6 +198,40 @@ const onTreeViewClick = (e, posX, setPosX, isTabletOrMobile) => {
   }
 };
 
+const setupPreCopy = () => {
+  const pres = document.getElementsByTagName("pre");
+  for (const pre of pres) {
+    const copy = document.createElement("div");
+    copy.innerHTML = "Copy";
+    const code = pre.getElementsByTagName("code")[0];
+    copy.onclick = (e) => {
+      const text = code.textContent;
+
+      if (!navigator.clipboard) {
+        copy.innerHTML = "Unable to copy!";
+        copy.style.backgroundColor = "#db5454";
+        return;
+      }
+      navigator.clipboard.writeText(text).then(
+        () => {
+          copy.innerHTML = "Copied!";
+          copy.style.backgroundColor = "#98db54";
+        },
+        () => {
+          copy.innerHTML = "Unable to copy!";
+          copy.style.backgroundColor = "#db5454";
+        }
+      );
+    };
+
+    pre.onmouseleave = (e) => {
+      copy.innerHTML = "Copy";
+      copy.style.backgroundColor = "#ddd";
+    };
+    pre.appendChild(copy);
+  }
+};
+
 export default function Template({ data }) {
   const [posX, setPosX] = useState(0);
   const [header, setHeader] = useState([]);
@@ -205,6 +239,10 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
+  useEffect(() => {
+    setupPreCopy();
+  }, []);
 
   useEffect(() => {
     const elements = document.getElementsByClassName("keyword-link");

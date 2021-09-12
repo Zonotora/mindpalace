@@ -586,3 +586,23 @@ ul.content-ul .active {
 .svg-text {
   font: 12px georgia, serif, sans-serif;
 }
+
+pre {
+  position: relative;
+}
+
+pre div {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  background-color: #ddd;
+  color: #1e2026;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+pre:hover div {
+  visibility: visible;
+}

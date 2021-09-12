@@ -1,7 +1,7 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-09-05
+lastModified: 2021-09-11
 created: 2021-09-05
 title: Keywords
 header: []
@@ -82,7 +82,7 @@ header: []
 - core image
 - command interpreter
 - child process
-- interprocess communication
+- interprocess communication (IPC)
 - UID (User IDentification)
 - GID (Group IDentification)
 - superuser
@@ -119,3 +119,13 @@ header: []
 - paravirtualization
 - JVM (Java Virtual Machine)
 - exokernel
+- multiprocessor
+- pseudoparallelism
+- REF: multiprogramming
+- REF: daemons
+- process scheduler
+- process table
+- process control blocks (PCB)
+- REF: interrupt vector
+- short-term scheduler
+- long-term scheduler

@@ -52,6 +52,7 @@ root
 │   ├── keywords
 │   └── processes
 ├── programming
+│   ├── algorithms
 │   ├── python
 │   │   ├── matplotlib
 │   │   ├── numpy

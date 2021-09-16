@@ -1,7 +1,7 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-09-11
+lastModified: 2021-09-16
 created: 2021-09-05
 title: Keywords
 header: []
@@ -129,3 +129,7 @@ header: []
 - REF: interrupt vector
 - short-term scheduler
 - long-term scheduler
+- dispatcher
+- worker thread
+- REF: thread table
+- trap

@@ -126,7 +126,7 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/os", dirs: [], files: ["keywords","processes"] };
+  const { url, dirs, files } = { url: "/os", dirs: [], files: ["keywords","processes-and-threads"] };
   const [numberOfFiles, numberOfDirs ] = [2, 0];
   const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});

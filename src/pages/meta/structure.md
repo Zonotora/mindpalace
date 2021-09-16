@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-09-12
+lastModified: 2021-09-16
 created: 2021-07-05
 title: Structure
 header: []
@@ -50,7 +50,7 @@ root
 │   └── protocols
 ├── os
 │   ├── keywords
-│   └── processes
+│   └── processes-and-threads
 ├── programming
 │   ├── algorithms
 │   ├── python

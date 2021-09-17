@@ -137,4 +137,9 @@ header: []
 - jacket
 - REF: upcall
 - pop-up thread
-
+- scheduler
+- scheduling algorithms
+- REF: compute-bound (CPU-bound)
+- REF: I/O-bound
+- REF: nonpreemptive
+- REF: suspended

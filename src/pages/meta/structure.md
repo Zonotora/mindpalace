@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-09-16
+lastModified: 2021-09-17
 created: 2021-07-05
 title: Structure
 header: []

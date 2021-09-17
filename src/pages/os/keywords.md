@@ -1,7 +1,7 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-09-16
+lastModified: 2021-09-17
 created: 2021-09-05
 title: Keywords
 header: []
@@ -133,3 +133,8 @@ header: []
 - worker thread
 - REF: thread table
 - trap
+- wrapper
+- jacket
+- REF: upcall
+- pop-up thread
+

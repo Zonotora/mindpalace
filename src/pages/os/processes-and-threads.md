@@ -1,10 +1,10 @@
 ---
 slug: /os/processes-and-threads
 tags: []
-lastModified: 2021-09-17
+lastModified: 2021-09-23
 created: 2021-09-11
 title: Processes And Threads
-header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Amdahl's Law","link":"Amdahl's-Law"},{"depth":1,"name":"Processes","link":"Processes"},{"depth":2,"name":"The model","link":"The-model"},{"depth":2,"name":"Creation","link":"Creation"},{"depth":2,"name":"State","link":"State"},{"depth":2,"name":"Implementation","link":"Implementation"},{"depth":1,"name":"Threads","link":"Threads"},{"depth":2,"name":"Implicit threading","link":"Implicit-threading"},{"depth":2,"name":"POSIX threads","link":"POSIX-threads"},{"depth":2,"name":"Implementation user space","link":"Implementation-user-space"},{"depth":2,"name":"Implementation kernel","link":"Implementation-kernel"},{"depth":2,"name":"Scheduler activations","link":"Scheduler-activations"},{"depth":2,"name":"Pop-up thread","link":"Pop-up-thread"},{"depth":1,"name":"Processes and threads in Linux","link":"Processes-and-threads-in-Linux"},{"depth":1,"name":"Scheduling","link":"Scheduling"},{"depth":2,"name":"Process behaviour","link":"Process-behaviour"}]
+header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Amdahl's Law","link":"Amdahl's-Law"},{"depth":1,"name":"Processes","link":"Processes"},{"depth":2,"name":"The model","link":"The-model"},{"depth":2,"name":"Creation","link":"Creation"},{"depth":2,"name":"State","link":"State"},{"depth":2,"name":"Implementation","link":"Implementation"},{"depth":1,"name":"Threads","link":"Threads"},{"depth":2,"name":"Implicit threading","link":"Implicit-threading"},{"depth":2,"name":"POSIX threads","link":"POSIX-threads"},{"depth":2,"name":"Implementation user space","link":"Implementation-user-space"},{"depth":2,"name":"Implementation kernel","link":"Implementation-kernel"},{"depth":2,"name":"Scheduler activations","link":"Scheduler-activations"},{"depth":2,"name":"Pop-up thread","link":"Pop-up-thread"},{"depth":1,"name":"Processes and threads in Linux","link":"Processes-and-threads-in-Linux"},{"depth":1,"name":"Scheduling","link":"Scheduling"},{"depth":2,"name":"Process behaviour","link":"Process-behaviour"},{"depth":2,"name":"Categories of scheduling","link":"Categories-of-scheduling"},{"depth":2,"name":"Algorithms used in batch systems","link":"Algorithms-used-in-batch-systems"}]
 ---
 
 # Introduction
@@ -134,3 +134,34 @@ When a computer is constructed to allow multiple processes to run at the same ti
 
 ## Process behaviour
 To be able to construct a good scheduling algorithm one needs to analyze how different processes utilize the CPU. Some processes spend a considerable amount of time computing. These processes are called @(CPU-bound)(CPU-bound). Other processes are mostly waiting for I/O and they are called @(I/O-bound)(I/O-bound) processes. I/O-bound activity is defined as when a process enters blocked state while waiting for an external device to finish. One observation is that CPU-bound processes have long CPU bursts (occupies the CPU for longer period of time) while I/O-bound processes have short CPU bursts (occupies the CPU for shorter period of time). Thus, the principal idea is to let I/O-bound processes higher priority to run so that they can issue disk requests and keep the disk busy while the CPU is doing some other computation. If there are no available processes after a process exits, an idle process provided by the system is usually run. Scheduling algorithms can be divided into two different groups: @(nonpreemptive)(nonpreemptive) and @(preemptive)(preemptive) depending on how the deal with clock interrupts. A nonpreemptive scheduling algorihtm picks a process to run until it blocks. It could in fact run for several hours nonstop. A preemptive scheduling algorithm picks a process to run for a fixed amount of time. When that fixed period of time has finished the process is @(suspended)(suspended) and the algorithm picks another process to run instead.
+
+## Categories of scheduling
+There are three different environments worth distinguishing when talking about scheduling. These are
+1. Batch
+2. Interactive
+3. Real time
+
+In **batch** systems long waiting times are often acceptable, which means a nonpreemptive or a preemptive (with a long fixed duration) is suitable. They are applicable in corporate mainframes. When there are **interative** users involved in the system, preemption is necessary to keep one process from dominating the CPU usage. In **real time** systems there is often no need to have preemptive scheduling, because the processes run in such environment know that they are not going to use the compute resources for a long time and blocks quickly. Because there are different use cases, the goal of the scheduling algorithm differs as well.
+
+**General System**
+- Fairness
+- Policy enforcement
+- Balance
+
+**Batch**
+- Throughput
+- Turnaround time (time for a batch to finish)
+- CPU utilization
+
+**Interative**
+- Response time
+- User experience (proportionality)
+
+**Real time**
+- Deadlines
+- Predictability
+
+## Algorithms used in batch systems
+
+Nonpreemptive **first-come, first-served**. Here we have a single queue of ready processes. The first process that enters the queue may run for how much as it wants, then when terminated or blocked, the next process that started (the next process in the queue) gets to run. As more processes start they are put onto the end of the queue. When a blocked process becomes ready, it is also put onto the end of the queue. The disadvantages with this is that processes with short CPU time but that are I/O bound and placed after a long CPU bound process will have to wait until their turn, even though that could have run simultaneously with the long CPU bound process.
+

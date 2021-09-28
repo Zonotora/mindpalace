@@ -1,7 +1,7 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-09-17
+lastModified: 2021-09-28
 created: 2021-09-05
 title: Keywords
 header: []
@@ -57,6 +57,7 @@ header: []
 - virtual memory
 - MMU (Memory Management Unit)
 - context switch
+- process switch
 - device driver
 - I/O port space
 - busy waiting
@@ -143,3 +144,4 @@ header: []
 - REF: I/O-bound
 - REF: nonpreemptive
 - REF: suspended
+- REF: quantum

@@ -1,10 +1,10 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-09-28
+lastModified: 2021-10-04
 created: 2021-09-05
 title: Keywords
-header: []
+header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"}]
 ---
 
 - shell
@@ -145,3 +145,26 @@ header: []
 - REF: nonpreemptive
 - REF: suspended
 - REF: quantum
+- UMA (Uniform Memory Access)
+- NUMA (Nonuniform  Memory  Access)
+- cache line
+- cache-coherence protocol
+- crossbar switch
+- REF: mutual exclusion
+- REF:atomic
+- priority inversion problem
+- producer-consumer or bounded buffer problem
+- futex
+- condition variables
+- deadlocks
+- monitor (synchronization primitive)
+- message passing
+- barrier (synchronization mechanism)
+- RCU (Read-Copy-Update)
+
+
+# Spin lock
+A lock that uses busy waiting.
+
+# Synchronization
+To make sure that certain event chains do not occur.

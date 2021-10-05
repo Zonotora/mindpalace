@@ -1,10 +1,10 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-10-04
+lastModified: 2021-10-05
 created: 2021-09-05
 title: Keywords
-header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"}]
+header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"}]
 ---
 
 - shell
@@ -156,11 +156,11 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - producer-consumer or bounded buffer problem
 - futex
 - condition variables
-- deadlocks
 - monitor (synchronization primitive)
 - message passing
 - barrier (synchronization mechanism)
 - RCU (Read-Copy-Update)
+- banker’s algorithm
 
 
 # Spin lock
@@ -168,3 +168,18 @@ A lock that uses busy waiting.
 
 # Synchronization
 To make sure that certain event chains do not occur.
+
+# Livelock
+A situation where no process is blocked but events are happening with no progress.
+
+# Starvation
+A situation where a process run indefinitely but fail to make any progress due to unfairness.
+
+# Deadlock
+A situation where all processes are blocked waiting for each other and will remain in that state indefinitely.
+
+# Preemptable resource
+A resource that **can** be taken away from another process without any bad effects.
+
+# Nonpreemptable  resource
+A resource that **cannot** be taken away from another process without any bad effects.

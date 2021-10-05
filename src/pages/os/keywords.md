@@ -4,7 +4,7 @@ tags: ["keywords"]
 lastModified: 2021-10-05
 created: 2021-09-05
 title: Keywords
-header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"}]
+header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"},{"depth":1,"name":"Static relocation","link":"Static-relocation"},{"depth":1,"name":"Dynamic relocation","link":"Dynamic-relocation"},{"depth":1,"name":"Memory compaction","link":"Memory-compaction"}]
 ---
 
 - shell
@@ -101,7 +101,7 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - PID (Process IDentifier)
 - UNIX system calls
 - text segment
-- data segment
+- REF: data segment
 - stack segment
 - i-nodes
 - partitions
@@ -161,6 +161,12 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - barrier (synchronization mechanism)
 - RCU (Read-Copy-Update)
 - banker’s algorithm
+- memory hierarchy
+- memory manager
+- swapping
+- virtual memory
+- REF: free lists
+- REF: bitmaps
 
 
 # Spin lock
@@ -183,3 +189,12 @@ A resource that **can** be taken away from another process without any bad effec
 
 # Nonpreemptable  resource
 A resource that **cannot** be taken away from another process without any bad effects.
+
+# Static relocation
+A method for relocation every memory address during the load process with a constant, the constant being the first physical memory address the program was loaded into.
+
+# Dynamic relocation
+A method for mapping a process' address space onto different phsyical memory parts.
+
+# Memory compaction
+A technique to move all processes in memory down as far as possible to avoid memory holes.

@@ -1,7 +1,7 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-10-05
+lastModified: 2021-10-14
 created: 2021-09-05
 title: Keywords
 header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"},{"depth":1,"name":"Static relocation","link":"Static-relocation"},{"depth":1,"name":"Dynamic relocation","link":"Dynamic-relocation"},{"depth":1,"name":"Memory compaction","link":"Memory-compaction"}]
@@ -55,7 +55,7 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - flash memory
 - SSD (Solid State Disk)
 - virtual memory
-- MMU (Memory Management Unit)
+- REF: MMU (Memory Management Unit)
 - context switch
 - process switch
 - device driver
@@ -70,11 +70,11 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - shared bus architecture
 - serial bus architecture
 - DMI (Direct Media Interface)
-- USB (Univeral Serial Bus)
+- USB (Universal Serial Bus)
 - SCSI (Small Computer System Interface)
 - plug and play
 - BIOS (Basic Input Output System)
-- PDA (Personal Digital Assistent)
+- PDA (Personal Digital Assistant)
 - hard real-time system
 - soft real-time system
 - process
@@ -167,7 +167,20 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - virtual memory
 - REF: free lists
 - REF: bitmaps
-
+- REF: pages
+- REF: virtual address space
+- REF: page frames
+- REF: page table
+- dirty bit
+- REF: TLB (Translation Lookaside Buffer)
+- associative memory
+- page table walk
+- minor page fault
+- major page fault
+- segmentation  fault
+- multilevel page table
+- page  directory
+- inverted  page  tables
 
 # Spin lock
 A lock that uses busy waiting.

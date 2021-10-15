@@ -1,10 +1,10 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-10-14
+lastModified: 2021-10-15
 created: 2021-09-05
 title: Keywords
-header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"},{"depth":1,"name":"Static relocation","link":"Static-relocation"},{"depth":1,"name":"Dynamic relocation","link":"Dynamic-relocation"},{"depth":1,"name":"Memory compaction","link":"Memory-compaction"}]
+header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"},{"depth":1,"name":"Static relocation","link":"Static-relocation"},{"depth":1,"name":"Dynamic relocation","link":"Dynamic-relocation"},{"depth":1,"name":"Memory compaction","link":"Memory-compaction"},{"depth":1,"name":"Random-access files","link":"Random-access-files"}]
 ---
 
 - shell
@@ -181,6 +181,13 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - multilevel page table
 - page  directory
 - inverted  page  tables
+- FAT-16, FAT-32, exFAT
+- NTFS
+- magic number
+- sequential access
+- metadata
+- file descriptors
+
 
 # Spin lock
 A lock that uses busy waiting.
@@ -207,7 +214,10 @@ A resource that **cannot** be taken away from another process without any bad ef
 A method for relocation every memory address during the load process with a constant, the constant being the first physical memory address the program was loaded into.
 
 # Dynamic relocation
-A method for mapping a process' address space onto different phsyical memory parts.
+A method for mapping a process' address space onto different physical memory parts.
 
 # Memory compaction
 A technique to move all processes in memory down as far as possible to avoid memory holes.
+
+# Random-access files
+Files that can be read in any order.

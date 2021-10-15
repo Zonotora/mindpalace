@@ -84,6 +84,7 @@
   "preemptable-resource": "A resource that **can** be taken away from another process without any bad effects.",
   "nonpreemptable--resource": "A resource that **cannot** be taken away from another process without any bad effects.",
   "static-relocation": "A method for relocation every memory address during the load process with a constant, the constant being the first physical memory address the program was loaded into.",
-  "dynamic-relocation": "A method for mapping a process' address space onto different phsyical memory parts.",
-  "memory-compaction": "A technique to move all processes in memory down as far as possible to avoid memory holes."
+  "dynamic-relocation": "A method for mapping a process' address space onto different physical memory parts.",
+  "memory-compaction": "A technique to move all processes in memory down as far as possible to avoid memory holes.",
+  "random-access-files": "Files that can be read in any order."
 }

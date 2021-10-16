@@ -86,5 +86,6 @@
   "static-relocation": "A method for relocation every memory address during the load process with a constant, the constant being the first physical memory address the program was loaded into.",
   "dynamic-relocation": "A method for mapping a process' address space onto different physical memory parts.",
   "memory-compaction": "A technique to move all processes in memory down as far as possible to avoid memory holes.",
-  "random-access-files": "Files that can be read in any order."
+  "random-access-files": "Files that can be read in any order.",
+  "fat": "**FAT (File Allocation Table)**. A table in memory that keeps track of the pointers to all disk blocks in the same file."
 }

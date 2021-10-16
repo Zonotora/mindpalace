@@ -1,10 +1,10 @@
 ---
 slug: /os/keywords
 tags: ["keywords"]
-lastModified: 2021-10-15
+lastModified: 2021-10-16
 created: 2021-09-05
 title: Keywords
-header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"},{"depth":1,"name":"Static relocation","link":"Static-relocation"},{"depth":1,"name":"Dynamic relocation","link":"Dynamic-relocation"},{"depth":1,"name":"Memory compaction","link":"Memory-compaction"},{"depth":1,"name":"Random-access files","link":"Random-access-files"}]
+header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Synchronization","link":"Synchronization"},{"depth":1,"name":"Livelock","link":"Livelock"},{"depth":1,"name":"Starvation","link":"Starvation"},{"depth":1,"name":"Deadlock","link":"Deadlock"},{"depth":1,"name":"Preemptable resource","link":"Preemptable-resource"},{"depth":1,"name":"Nonpreemptable  resource","link":"Nonpreemptable--resource"},{"depth":1,"name":"Static relocation","link":"Static-relocation"},{"depth":1,"name":"Dynamic relocation","link":"Dynamic-relocation"},{"depth":1,"name":"Memory compaction","link":"Memory-compaction"},{"depth":1,"name":"Random-access files","link":"Random-access-files"},{"depth":1,"name":"FAT","link":"FAT"}]
 ---
 
 - shell
@@ -187,7 +187,17 @@ header: [{"depth":1,"name":"Spin lock","link":"Spin-lock"},{"depth":1,"name":"Sy
 - sequential access
 - metadata
 - file descriptors
-
+- working directory
+- relative path name
+- current directory
+- absolute path name
+- hard link
+- soft link
+- symbolic link
+- REF: MBR (Master Boot Record)
+- REF: boot block
+- superblock
+- UDF (Universal Disk Format)
 
 # Spin lock
 A lock that uses busy waiting.
@@ -221,3 +231,6 @@ A technique to move all processes in memory down as far as possible to avoid mem
 
 # Random-access files
 Files that can be read in any order.
+
+# FAT
+**FAT (File Allocation Table)**. A table in memory that keeps track of the pointers to all disk blocks in the same file.

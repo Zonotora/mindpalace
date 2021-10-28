@@ -1,10 +1,10 @@
 ---
 slug: /math/nonlinear-optimization
 tags: []
-lastModified: 2021-09-12
+lastModified: 2021-10-28
 created: 2021-09-01
 title: Nonlinear Optimization
-header: [{"depth":1,"name":"General optimization problem definition","link":"General-optimization-problem-definition"},{"depth":1,"name":"Classification","link":"Classification"},{"depth":2,"name":"Linear programming (LP)","link":"Linear-programming-(LP)"},{"depth":2,"name":"Nonlinear programming (NLP)","link":"Nonlinear-programming-(NLP)"},{"depth":2,"name":"Unconstrained optimization","link":"Unconstrained-optimization"},{"depth":2,"name":"Constrained optimization","link":"Constrained-optimization"},{"depth":2,"name":"Integer programming (IP)","link":"Integer-programming-(IP)"},{"depth":2,"name":"Convex programming (CP)","link":"Convex-programming-(CP)"},{"depth":1,"name":"Modeling","link":"Modeling"},{"depth":2,"name":"Formulating the problem","link":"Formulating-the-problem"},{"depth":1,"name":"Convexity","link":"Convexity"},{"depth":2,"name":"Convex set","link":"Convex-set"},{"depth":2,"name":"Affine hull","link":"Affine-hull"},{"depth":2,"name":"Convex hull","link":"Convex-hull"},{"depth":2,"name":"Affine combination","link":"Affine-combination"},{"depth":2,"name":"Convex combination","link":"Convex-combination"},{"depth":2,"name":"Polytype","link":"Polytype"},{"depth":2,"name":"Polyhedron","link":"Polyhedron"},{"depth":2,"name":"Cone","link":"Cone"},{"depth":2,"name":"Polyhedral cone","link":"Polyhedral-cone"},{"depth":2,"name":"Half space","link":"Half-space"},{"depth":2,"name":"Convex function","link":"Convex-function"},{"depth":2,"name":"Carathéodory's Theorem","link":"Carathéodory's-Theorem"},{"depth":2,"name":"Representation Theorem","link":"Representation-Theorem"},{"depth":2,"name":"Farkas' Lemma","link":"Farkas'-Lemma"},{"depth":1,"name":"Existence of optimal solutions","link":"Existence-of-optimal-solutions"},{"depth":2,"name":"Notation","link":"Notation"},{"depth":2,"name":"Definition","link":"Definition"},{"depth":3,"name":"Weakly coercive function","link":"Weakly-coercive-function"},{"depth":3,"name":"Lower semi-continuity","link":"Lower-semi-continuity"},{"depth":3,"name":"Feasible direction","link":"Feasible-direction"},{"depth":3,"name":"Descent direction","link":"Descent-direction"},{"depth":3,"name":"Normal cone","link":"Normal-cone"},{"depth":2,"name":"Weierstrass' Theorem","link":"Weierstrass'-Theorem"},{"depth":2,"name":"Optimality conditions (S equal R^n)","link":"Optimality-conditions-(S-equal-R^n)"},{"depth":3,"name":"Necessary condition for optimality 1","link":"Necessary-condition-for-optimality-1"},{"depth":3,"name":"Necessary condition for optimality 2","link":"Necessary-condition-for-optimality-2"},{"depth":3,"name":"Sufficient condition for optimality 2","link":"Sufficient-condition-for-optimality-2"},{"depth":3,"name":"Necessary and sufficient condition for optimality 1","link":"Necessary-and-sufficient-condition-for-optimality-1"},{"depth":2,"name":"Optimality conditions (S sub R^n)","link":"Optimality-conditions-(S-sub-R^n)"},{"depth":3,"name":"Necessary condition for optimality 1","link":"Necessary-condition-for-optimality-1"},{"depth":3,"name":"Neecssary and sufficient conditions for optimality 1","link":"Neecssary-and-sufficient-conditions-for-optimality-1"},{"depth":2,"name":"Stationary point in optimality condition","link":"Stationary-point-in-optimality-condition"}]
+header: [{"depth":1,"name":"General optimization problem definition","link":"General-optimization-problem-definition"},{"depth":1,"name":"Classification","link":"Classification"},{"depth":2,"name":"Linear programming (LP)","link":"Linear-programming-(LP)"},{"depth":2,"name":"Nonlinear programming (NLP)","link":"Nonlinear-programming-(NLP)"},{"depth":2,"name":"Unconstrained optimization","link":"Unconstrained-optimization"},{"depth":2,"name":"Constrained optimization","link":"Constrained-optimization"},{"depth":2,"name":"Integer programming (IP)","link":"Integer-programming-(IP)"},{"depth":2,"name":"Convex programming (CP)","link":"Convex-programming-(CP)"},{"depth":1,"name":"Modeling","link":"Modeling"},{"depth":2,"name":"Formulating the problem","link":"Formulating-the-problem"},{"depth":1,"name":"Convexity","link":"Convexity"},{"depth":2,"name":"Convex set","link":"Convex-set"},{"depth":2,"name":"Affine hull","link":"Affine-hull"},{"depth":2,"name":"Convex hull","link":"Convex-hull"},{"depth":2,"name":"Affine combination","link":"Affine-combination"},{"depth":2,"name":"Convex combination","link":"Convex-combination"},{"depth":2,"name":"Polytype","link":"Polytype"},{"depth":2,"name":"Polyhedron","link":"Polyhedron"},{"depth":2,"name":"Cone","link":"Cone"},{"depth":2,"name":"Polyhedral cone","link":"Polyhedral-cone"},{"depth":2,"name":"Half space","link":"Half-space"},{"depth":2,"name":"Convex function","link":"Convex-function"},{"depth":2,"name":"Carathéodory's Theorem","link":"Carathéodory's-Theorem"},{"depth":2,"name":"Representation Theorem","link":"Representation-Theorem"},{"depth":2,"name":"Farkas' Lemma","link":"Farkas'-Lemma"},{"depth":1,"name":"Existence of optimal solutions","link":"Existence-of-optimal-solutions"},{"depth":2,"name":"Notation","link":"Notation"},{"depth":2,"name":"Definition","link":"Definition"},{"depth":3,"name":"Weakly coercive function","link":"Weakly-coercive-function"},{"depth":3,"name":"Lower semi-continuity","link":"Lower-semi-continuity"},{"depth":3,"name":"Feasible direction","link":"Feasible-direction"},{"depth":3,"name":"Descent direction","link":"Descent-direction"},{"depth":3,"name":"Normal cone","link":"Normal-cone"},{"depth":2,"name":"Weierstrass' Theorem","link":"Weierstrass'-Theorem"},{"depth":2,"name":"Optimality conditions (S equal R^n)","link":"Optimality-conditions-(S-equal-R^n)"},{"depth":3,"name":"Necessary condition for optimality 1","link":"Necessary-condition-for-optimality-1"},{"depth":3,"name":"Necessary condition for optimality 2","link":"Necessary-condition-for-optimality-2"},{"depth":3,"name":"Sufficient condition for optimality 2","link":"Sufficient-condition-for-optimality-2"},{"depth":3,"name":"Necessary and sufficient condition for optimality 1","link":"Necessary-and-sufficient-condition-for-optimality-1"},{"depth":2,"name":"Optimality conditions (S sub R^n)","link":"Optimality-conditions-(S-sub-R^n)"},{"depth":3,"name":"Necessary condition for optimality 1","link":"Necessary-condition-for-optimality-1"},{"depth":3,"name":"Neecssary and sufficient conditions for optimality 1","link":"Neecssary-and-sufficient-conditions-for-optimality-1"},{"depth":2,"name":"Stationary point in optimality condition","link":"Stationary-point-in-optimality-condition"},{"depth":1,"name":"Unconstrained optimization","link":"Unconstrained-optimization"},{"depth":2,"name":"Steepest descent direction","link":"Steepest-descent-direction"},{"depth":2,"name":"Newton's search direction","link":"Newton's-search-direction"},{"depth":2,"name":"Lewenberg-Marquardt","link":"Lewenberg-Marquardt"},{"depth":2,"name":"Exact line search","link":"Exact-line-search"},{"depth":2,"name":"Newton's method","link":"Newton's-method"},{"depth":2,"name":"Armijo rule","link":"Armijo-rule"},{"depth":1,"name":"Different cone sets","link":"Different-cone-sets"},{"depth":2,"name":"Cone of feasible directions","link":"Cone-of-feasible-directions"},{"depth":2,"name":"Tangent cone","link":"Tangent-cone"},{"depth":2,"name":"Cone of descent directions","link":"Cone-of-descent-directions"},{"depth":2,"name":"Active constraints","link":"Active-constraints"},{"depth":2,"name":"Inner gradient cone","link":"Inner-gradient-cone"},{"depth":2,"name":"Gradient cone","link":"Gradient-cone"},{"depth":2,"name":"Nicely behaving set","link":"Nicely-behaving-set"},{"depth":1,"name":"Fritz John conditions","link":"Fritz-John-conditions"},{"depth":1,"name":"Constraint qualification (CQ)","link":"Constraint-qualification-(CQ)"},{"depth":2,"name":"Abadie's CQ","link":"Abadie's-CQ"},{"depth":2,"name":"Linear independence CQ (LICQ)","link":"Linear-independence-CQ-(LICQ)"},{"depth":2,"name":"Affine CQ","link":"Affine-CQ"},{"depth":2,"name":"Slater CQ","link":"Slater-CQ"},{"depth":1,"name":"Karush-Kuhn-Tucker conditions (KKT)","link":"Karush-Kuhn-Tucker-conditions-(KKT)"},{"depth":2,"name":"Sufficiency of KKT conditions","link":"Sufficiency-of-KKT-conditions"},{"depth":1,"name":"Lagrangian duality/relaxation","link":"Lagrangian-duality/relaxation"},{"depth":1,"name":"Relaxation Theorem","link":"Relaxation-Theorem"},{"depth":1,"name":"Lagrangian relaxation","link":"Lagrangian-relaxation"},{"depth":2,"name":"Lagrangian dual function","link":"Lagrangian-dual-function"},{"depth":2,"name":"Weak duality","link":"Weak-duality"},{"depth":2,"name":"Lagrangian dual problem","link":"Lagrangian-dual-problem"},{"depth":2,"name":"Lagrange multiplier","link":"Lagrange-multiplier"},{"depth":2,"name":"Strong duality","link":"Strong-duality"},{"depth":1,"name":"Linear programming (LP)","link":"Linear-programming-(LP)"},{"depth":2,"name":"Basic solution","link":"Basic-solution"},{"depth":2,"name":"Basic feasible solution (BFS)","link":"Basic-feasible-solution-(BFS)"},{"depth":2,"name":"Degenerate BFS","link":"Degenerate-BFS"},{"depth":2,"name":"Simplex method","link":"Simplex-method"}]
 ---
 
 # General optimization problem definition
@@ -133,14 +133,17 @@ The Representation Theorem states that every polyhedron that has at least one ex
 ## Farkas' Lemma
 Let $ \bold A \in \R^{m \times n} $ and $ \bold b \in \R^m $. Then exactly one of the systems has a feasible solution
 $$
-\bold A \bold x \leq \bold b
+\begin{aligned}
+\bold A \bold x &= \bold b \\
+\bold x &\geq 0
+\end{aligned}
+
 $$
 and
 $$
 \begin{aligned}
-\bold A^\mathsf{T} \bold \pi &= \bold 0^n \\
-\bold b^\mathsf{T} \bold \pi &< 0 \\
-\bold \pi &> \bold 0^m
+\bold A^\mathsf{T} \bold y &\leq 0  \\
+\bold b^\mathsf{T} \bold y &> 0 \\
 \end{aligned}
 $$
 and the other one is inconsistent.
@@ -288,3 +291,361 @@ $$
 $$
 
 where $ \text{Proj}_S $ is the projection onto the set $ S $, and $ N_s $ is the normal cone.
+
+
+
+# Unconstrained optimization
+
+1. Begin by finding a descent direction. The vector $ \bold p_k $ is a descent direction if $ f(\bold x_k + \alpha \bold p_k) < f(\bold x_k) $ for all $ \alpha \in [0, TODO] $ for some $ TODO > 0 $.
+
+## Steepest descent direction
+
+$$
+\bold p_k = - \nabla f(\bold x_k)
+$$
+
+## Newton's search direction
+
+$$
+\nabla^2 f(\bold x_k) \bold p_k = - \nabla f(\bold x_k)
+$$
+
+
+## Lewenberg-Marquardt
+
+$$
+[\nabla^2 f(\bold x_k) + \lambda I] \bold p_k = - \nabla f(\bold x_k)
+$$
+
+2. Then choose step length
+
+## Exact line search
+
+$$
+\begin{aligned}
+\text{min} & \qquad f(\bold x_k + \alpha \bold p_k)\\
+s.t. & \qquad \alpha > 0
+\end{aligned}
+$$
+
+## Newton's method
+
+$$
+\bold x_{k+1} = \bold x_k - \frac{TODO}{1}
+$$
+
+## Armijo rule
+
+$$
+f(\bold x_k + \alpha \bold p_k) \approx f(\bold x_k) + \alpha \nabla f(\bold x_k)^\mathsf{T} \bold p_k
+$$
+then keep decreasing $ \alpha = \alpha / 2 $ until the following holds
+
+$$
+f(\bold x_k + \alpha \bold p_k) - f(\bold x_k)  \leq  TODO \alpha \nabla f(\bold x_k)^\mathsf{T} \bold p_k
+$$
+
+3. Stop the algorithm when at least two of the following holds
+
+$$
+\begin{aligned}
+|| \nabla f(\bold x_k) || & \leq TODO (1 + f(\bold x_k)) \\
+f(\bold x_{k-1}) - f(\bold x_k) & \leq TODO (1 + f(\bold x_k)) \\
+|| \bold x_{k-1} - \bold x_k || & \leq TODO (1 + ||\bold x_k||) \\
+
+\end{aligned}
+
+$$
+
+
+# Different cone sets
+
+## Cone of feasible directions
+
+$$
+R_s(\bold x) = \{\bold p \in \R^n \,|\, \exists TODO > 0 , \bold x + \alpha \bold p \in S, TODO \alpha \in [0, TODO]\}
+$$
+
+## Tangent cone
+
+TODO
+$$
+T_s(\bold x) = \{\bold p \in \R^n \,|\, \exists  > 0 , \bold x + \alpha \bold p \in S, TODO \alpha \in [0, TODO]\}
+$$
+
+## Cone of descent directions
+
+$$
+F^o(\bold x) = \{\bold p \in \R^n \,|\, \nabla f(\bold x)^\mathsf{T} \bold p < 0\}
+$$
+
+## Active constraints
+
+$$
+I(\bold x ) = \{i \in 1,...,m \,|\, g_i(\bold x) = 0\}
+$$
+
+## Inner gradient cone
+
+$$
+G^o(\bold x) = \{\bold p \in \R^n \,|\, \nabla g_i(\bold x)^\mathsf{T} \bold p < 0, \forall i \in I(\bold x)\}
+$$
+
+## Gradient cone
+
+
+$$
+G(\bold x) = \{\bold p \in \R^n \,|\, \nabla g_i(\bold x)^\mathsf{T} \bold p \leq 0, \forall i \in I(\bold x)\}
+$$
+
+## Nicely behaving set
+
+$$
+G^o(\bold x) \sube R_s (\bold x) \sube T_s(\bold x) \sube G(\bold x)
+$$
+
+
+# Fritz John conditions
+
+$$
+x^* \, \text{local min} \implies F^o (\bold x) TODO G^o (\bold x) = \empty
+$$
+
+# Constraint qualification (CQ)
+
+Defines some regularity over the set
+
+## Abadie's CQ
+Holds at a point $ \bold x \in S $ if $ T_s(dsd\bold x) = G(\bold x) $
+
+## Linear independence CQ (LICQ)
+We say that LICQ holds at $ \bold x $ if the gradients $ \nabla g_i (\bold x), i \in I(\bold x) $ for the active constraints are linearly independent.
+
+## Affine CQ
+We say that the Affine CQ holds if all the constraints $ g_i $ are affine.
+
+## Slater CQ
+We say that Slater's CQ holds if all $ g_i $ are convex and an inner point exists.
+
+# Karush-Kuhn-Tucker conditions (KKT)
+Assume that Abadie's CQ holds at a point $ \bold x^* $ which is feasible in (P), then
+
+$$
+x^* \, \text{local min} \implies
+
+\begin{aligned}
+\nabla f(\bold x^*) 0 \sum_{i=1}^m TODO \nabla g_i (\bold x^*) &= \bold 0 \\
+TODO g_i(\bold x^*) &= 0, i=1,...,m \\
+TODO \geq 0
+\end{aligned}
+$$
+
+## Sufficiency of KKT conditions
+
+If the objective function $ f $ is convex and all constraint functions $ g_i $ are convex, the the following holds
+
+$$
+\bold x^* \, \text{KKT point} \implies \bold x^* \, \text{global optimum}
+$$
+
+# Lagrangian duality/relaxation
+
+A relaxation to
+$$
+\begin{aligned}
+\text{min} & \qquad f(\bold x) \\
+s.t. & \qquad \bold x \in S
+\end{aligned}
+$$
+
+is
+
+$$
+\begin{aligned}
+\text{min} & \qquad f_R(\bold x) \\
+s.t. & \qquad \bold x \in S_R
+\end{aligned}
+$$
+
+where $ S \sube S_R $ and $ f_R(\bold x) \leq f(\bold x), \,\, \forall \bold x \in S $
+
+# Relaxation Theorem
+
+$$
+\begin{aligned}
+a)& \, f_R^* \leq f^*\\
+b)& \, \text{If the relaxed problem is infeasible, the original is as well} \\
+c)& \, \text{If the relaxed problem has an optimal solution } \bold x_R^* \text{ for which it holds that } \bold x_R^* \in S \text{ and } f_R^*(\bold x_R^*) = f(\bold x_R^*) \text{ then } \bold x_R^* \text{ is also optimal in the original problem.}
+\end{aligned}
+$$
+
+# Lagrangian relaxation
+
+
+This is the primal problem
+$$
+\begin{aligned}
+\text{inf} \qquad & f(\bold x) \\
+\text{s.t.} \qquad & g_i(\bold x) \leq 0, \qquad i=1,...,m \\
+& \bold x \in X
+\end{aligned}
+$$
+
+and this is the dual problem
+
+## Lagrangian dual function
+
+$$
+\begin{aligned}
+\underset{\bold x \in X}{\text{min}} \, L(\bold x, \bold \mu) = q(\bold \mu) = \text{inf} \qquad & [f(\bold x + \sum_{i=1}^m \mu_i g_i (\bold x)) ] \\
+\text{s.t.} \qquad & \bold x \in X
+\end{aligned}
+$$
+
+## Weak duality
+For any $ \bold \mu \geq 0 $ and any feasible $ \bold x $ to the primal problem, it holds that
+$$
+q(\bold \mu) \leq f(\bold x)
+$$
+
+## Lagrangian dual problem
+
+The dual function $ q $ is concave and its effective domain is convex.
+
+$$
+\boxed{
+\begin{aligned}
+q^* = \text{sup} \qquad & q(\bold \mu) \\
+\text{s.t.} \qquad & \bold \mu \geq 0\\
+\end{aligned}
+}
+$$
+
+## Lagrange multiplier
+$ \bold \mu^* $ is a Lagrange multiplier if $ q(\bold \mu^*) = f^*$
+
+
+## Strong duality
+
+Assume that there exists a inner pint to the primal problem, and that $ f^* \geq - \inf $, that $ f $ is a convex function, that $ g_i, \,q i=1,...,m $ are convex functions and that $ X $ is a convex set. Then the following holds
+
+$$
+q^* = f^*
+$$
+
+# Linear programming (LP)
+For linear problems of the sort
+$$
+\begin{aligned}
+\text{min} \qquad & \bold c^\mathsf{T} \bold x \\
+\text{s.t.} \qquad & \bold x \in P \\
+\end{aligned}
+$$
+
+we can use the Simplex method to solve for an optimal solution. We first convert to standard form:
+
+$$
+\begin{aligned}
+\text{min} \qquad & \bold c^\mathsf{T} \bold x \\
+\text{s.t.} \qquad & A \bold x = \bold b \\
+& \bold x \geq 0
+\end{aligned}
+$$
+
+where $ \bold b \geq 0 $.
+
+
+## Basic solution
+A point $ \bold x $ is a basic solution if $ A \bold x = \bold b $ and the columns of A corresponding to non-zero elements of $ \bold x $ are linearly independent.
+
+
+## Basic feasible solution (BFS)
+A point $ \bold x $ is a BFS if $ \bold x \geq 0 $, $ A \bold x = \bold b $ and the columns of A corresponding to non-zero elements in $ \bold x $ are linearly independent.
+
+## Degenerate BFS
+Consider a BFS with $ \bold x = [\bold x_B \, \bold x_N]^\mathsf{T} $. By definition $ \bold x_N = \bold 0 $ and $ \bold x_B = B^{-1} \bold b $. If some elements of $ \bold x_B $ are zero the BFS is called degenerate.
+
+## Simplex method
+
+Consider
+
+$$
+\begin{aligned}
+\text{min} \qquad & \bold c^\mathsf{T} \bold x \\
+\text{s.t.} \qquad & \bold x \in P \\
+\end{aligned}
+$$
+
+Convert this problem to standard form. To find an initial BFS solve the Phase I problem. That is add as many artificial variables as you need to form the initial base vector as the identity matrix and consider minimizing the artificial variables. Use the Simplex method to move out all artificial variables from the base vector. When this is achieved we have solved the Phase I problem. If we can form the identity matrix without artificial variables go directly to the Phase II problem with this as the base. When we have an initial BFS we solve the Phase II problem, that is the original problem. For each iteration begin by determining $ \bold x_B = B^{-1} \bold b $ and $ \bold x_N = \bold 0 $, e.g. we could have $  \bold x_B = [x_1 \, x_2]^\mathsf{T} $ and $  \bold x_N = [s_1 \, s_2]^\mathsf{T} $. We also calculate $ B $ and $ N $ which corresponds to the same variables for the partition in $ A $, as well as $ \bold c_B $ and $ \bold c_N $ in a similar manner. Then we calculate the incoming variable (from $ N $) with the following formula:
+
+TODO
+$$
+\bold c_N^\mathsf{T} = \bold c_N^\mathsf{T} - \bold c_B^\mathsf{T} B^{-1} N
+$$
+
+Then we need to calculate the outgoing variable (from $ B $). We do this by
+
+$$
+\underset{k:(B^{-1}N_j)_k > 0}{\text{arg min}} = \frac{(B^{-1} \bold b)_k}{(B^{-1} N_j)_k}
+$$
+
+We update the variables and go back and start over. We need to check that $ B^{-1} \bold b \geq 0 $ for feasible solution, that $ B^{-1} N_j \geq 0 $ so that we do not have an unbounded solution. We terminate the algorithm when our cost vector $ c_N^\mathsf{T} \geq 0 $.
+
+# LP duality
+This problem is called the primal (P)
+$$
+\begin{aligned}
+z^* = \text{inf} \qquad & \bold c^\mathsf{T} \bold x \\
+\text{s.t.} \qquad & A \bold x = \bold b \\
+& \bold x \geq 0
+\end{aligned}
+$$
+
+and this is the corresponding dual problem (D)
+
+$$
+\begin{aligned}
+q^* = \text{sup} \qquad & \bold b^\mathsf{T} \bold y \\
+\text{s.t.} \qquad & A^\mathsf{T} \bold y \leq \bold c \\
+& \bold y \in \R^n
+\end{aligned}
+$$
+
+The following relation holds for the primal and dual
+
+| | Primal | | Dual |
+|-|-|-|-|
+| Objective | min | | max |
+| Variables | $ \geq 0 $ (canonical) | Constraints | $ \leq $ |
+| | $ \leq 0 $ (non-canonical) | | $ \geq $ |
+| | free | | $ = $ |
+| Constraints | $ \geq $ (canonical) | Variables | $ \geq 0 $ |
+| | $ \leq $ (non-canonical) | | $ \leq 0 $ |
+| | $ = $  | | free |
+
+## Weak duality theorem
+
+If $ \bold x $ is a feasible point in (P) and $ \bold y $ is a feasible point in (D) then
+
+$$
+\bold c^\mathsf{T} \bold x  \geq \bold b^\mathsf{T} \bold y
+$$
+
+## Strong duality theorem
+
+If both (P) and (D) are feasible then
+
+1. There exists $ \bold x^* $ optimal in (P) and $ \bold y^* $ optimal in (D)
+2. $ \bold c^\mathsf{T} \bold x^* = \bold b^\mathsf{T} \bold y^* $ (meaning $ z^* = q^* $)
+
+## Possibilities in (P) and (D)
+
+| P\D | Finite optima | Unbounded | Infeasible |
+|-|-|-|-|
+| Finite optima | X | | |
+| Unbounded | | | X |
+| Infeasible | | X | X |
+
+
+# Perturbation
+A perturbation is a small change to either $ A, \bold c  $ or $ \bold b $.

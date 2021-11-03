@@ -331,7 +331,7 @@ $$
 ## Newton's method
 
 $$
-\bold x_{k+1} = \bold x_k - \frac{\varphi ^{(1)} (\bold x_k)}{\varphi ^{(2)} (\bold x_k)}
+\bold x_{k+1} = \bold x_k - \frac{\varphi ' (\bold x_k)}{\varphi '' (\bold x_k)}
 $$
 
 ## Armijo rule

@@ -33,6 +33,11 @@ table tr:nth-child(even) {
   background-color: #21262d;
 }
 
+table tr:nth-child(even) code,
+table th:nth-child(even) code {
+  background-color: #30363d;
+}
+
 table tr:nth-child(odd) {
   background-color: #30363d;
 }

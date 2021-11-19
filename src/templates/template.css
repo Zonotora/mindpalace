@@ -598,7 +598,7 @@ pre div {
   position: absolute;
   top: 5px;
   right: 5px;
-  padding: 5px 15px 5px 15px;
+  padding: 6px 5px 0px 5px;
   border-radius: 5px;
   background-color: #ddd;
   color: #1e2026;

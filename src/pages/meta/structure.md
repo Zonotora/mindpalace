@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-09-17
+lastModified: 2021-11-19
 created: 2021-07-05
 title: Structure
 header: []
@@ -13,6 +13,9 @@ root
 ├── latex
 ├── art
 │   └── painters
+├── databases
+│   ├── databases
+│   └── sql
 ├── machine-learning
 │   ├── collecting-data
 │   ├── dimensionality-reduction
@@ -39,7 +42,8 @@ root
 │   ├── keywords
 │   ├── linear-algebra
 │   ├── nonlinear-optimization
-│   └── statistics
+│   ├── statistics
+│   └── stochastic-processes
 ├── meta
 │   └── structure
 ├── networking
@@ -49,8 +53,12 @@ root
 │   ├── port
 │   └── protocols
 ├── os
+│   ├── file-systems
+│   ├── interprocess-communication
 │   ├── keywords
-│   └── processes-and-threads
+│   ├── memory-management
+│   ├── processes-and-threads
+│   └── processors
 ├── programming
 │   ├── algorithms
 │   ├── python

@@ -6,7 +6,6 @@ created: 2021-11-04
 title: Stochastic Processes
 header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"}]
 ---
-
 # Markov chains
 
 ## Stationary distribution
@@ -14,6 +13,7 @@ A stationary distribution is such a distribution $ \pi $, that if the distributi
 $$
 \pi = \pi P
 $$
+
 ## Limiting distribution
 A limiting distribution is such a distribution $ \pi $ that no matter what the initial distribution is, the distribution over states converges to $ \pi $ as the number of steps goes to infinity:
 $$

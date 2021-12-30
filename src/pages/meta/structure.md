@@ -38,6 +38,7 @@ root
 │       ├── random-forests
 │       └── support-vector-machine
 ├── math
+│   ├── bayesian-inference
 │   ├── calculus
 │   ├── distributions
 │   ├── keywords

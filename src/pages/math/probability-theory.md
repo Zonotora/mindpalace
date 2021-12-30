@@ -11,6 +11,17 @@ header: [{"depth":1,"name":"Random variable","link":"Random-variable"},{"depth":
 # Random variable
 A random variable is a variable whose outcome depends on a random event. In probability theory a random variable is understood as a measurable function defined on the @(probability space)(probability-space). A random variable maps from the sample space to any measurable space with some probability.
 
+# Probability mass function
+The probability mass function, also known as the discrete density function, is a function that gives the exact probability of a discrete random variable to some value. It differs from the probability density function in that it is associated with discrete random variables instead of continuous random variables.
+
+# Probability density function
+The probability density function (PDF) must be integrated over an interval to yield the probability. It is defined as follows
+$$
+\Pr (a \leq X \leq b) = \int_a^b f_X (x) dx
+$$
+In the continuous case the probability of a point always gives the probability 0, $ \Pr(X = x) = 0 $, which is why we need to evaluate it over an interval instead.
+
+
 # Stochastic process
 A stochastic process is a random process that is usually defined as a family of random variables.
 Thus, each random variable takes the value from the same mathematical space known as the @(state space)(state-space).
@@ -102,8 +113,84 @@ p_{X_{1},\ldots ,X_{n}}(x_{1},\ldots ,x_{n})&=\mathrm {\Pr} (X_{1}=x_{1})\cdot \
 \end{aligned}}
 $$
 
+# Expectation
+Expectation is the expected value a distribution takes on, the most common outcome.
+
+## Discrete
+$$
+E[X] = \sum_x x \Pr (X = x)
+$$
+
+## Continuous
+$$
+E[X] = \int_x x \Pr (X = x) dx
+$$
+
+## Conditional discrete
+$$
+E[X \mid Y = y] = \sum_x x \Pr (X = x \mid y)
+$$
+
+## Conditional continuous
+$$
+E[X \mid Y = y] = \int_x x \Pr (X = x \mid y) dx
+$$
+
+## Total law of expectation discrete
+$$
+E[X] = \sum_y E[X \mid Y = y] \Pr(X = x)
+$$
+
+## Total law of expectation continuous
+$$
+E[X] = \int_y E[X \mid Y = y] \Pr(X = x) dy
+$$
+
+In both the discrete and the continuous case they could be written as
+
+$$
+E[X] = E[E[X \mid Y]]
+$$
+
+
+# Variance
+
+Variance is defined as
+$$
+\text{Var} (X) = E[X^2] - E[X]^2
+$$
+
+## Total law of variance
+$$
+\text{Var} (X) = E[\text{Var} (X \mid Y) ] + \text{Var} (E[X \mid Y])
+$$
+
+
+# Covariance
+Covariance is defined as
+
+$$
+ \begin{aligned}\operatorname {cov} (X,Y)&=\operatorname {E} \left[\left(X-\operatorname {E} \left[X\right]\right)\left(Y-\operatorname {E} \left[Y\right]\right)\right]\\&=\operatorname {E} \left[XY-X\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]Y+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\right]\\&=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\\&=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right],\end{aligned}
+$$
+
+However this is susceptible to catastrophic cancellation @{catastrophic}, which means that subtracting good approximations of two nearby numbers may yield a bad approximation to the difference of the original numbers.
+
+
+# Correlation
+Correlation is defined as
+
+$$
+ \rho _{X,Y}=\operatorname {corr} (X,Y)={\operatorname {cov} (X,Y) \over \sigma _{X}\sigma _{Y}}={\operatorname {E} [(X-\mu _{X})(Y-\mu _{Y})] \over \sigma _{X}\sigma _{Y}}
+$$
+
+where $ \mu_X = E[X] $, $ \mu_Y = E[Y] $, $ \sigma_X$ and $ \sigma_Y $ represents the standard deviation.
+
 
 # References
 {bernoulli}:
     title: Bernoulli process
     url: https://en.wikipedia.org/wiki/Bernoulli_process
+
+{catastrophic}:
+    title: Catastrophic cancellation
+    url: https://en.wikipedia.org/wiki/Catastrophic_cancellation

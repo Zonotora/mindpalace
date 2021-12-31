@@ -33,6 +33,13 @@ pre[class*="language-"] {
   overflow: auto;
 }
 
+pre[class*="language-sql"] {
+  margin: 0;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #6e7681;
+  border-bottom: none;
+}
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #21262d;

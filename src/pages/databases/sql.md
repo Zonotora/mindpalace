@@ -1,10 +1,10 @@
 ---
 slug: /databases/sql
 tags: []
-lastModified: 2021-11-19
+lastModified: 2021-12-31
 created: 2021-11-18
 title: Sql
-header: [{"depth":1,"name":"CREATE","link":"CREATE"},{"depth":1,"name":"DROP","link":"DROP"},{"depth":1,"name":"INSERT INTO","link":"INSERT-INTO"},{"depth":1,"name":"DELETE FROM","link":"DELETE-FROM"},{"depth":1,"name":"UPDATE","link":"UPDATE"},{"depth":1,"name":"ALTER TABLE","link":"ALTER-TABLE"},{"depth":2,"name":"ADD COLUMN","link":"ADD-COLUMN"},{"depth":2,"name":"DROP COLUMN","link":"DROP-COLUMN"},{"depth":1,"name":"SELECT","link":"SELECT"},{"depth":1,"name":"SELECT DISTINCT","link":"SELECT-DISTINCT"},{"depth":1,"name":"WHERE","link":"WHERE"}]
+header: [{"depth":1,"name":"CREATE","link":"CREATE"},{"depth":1,"name":"DROP","link":"DROP"},{"depth":1,"name":"INSERT INTO","link":"INSERT-INTO"},{"depth":1,"name":"DELETE FROM","link":"DELETE-FROM"},{"depth":1,"name":"UPDATE","link":"UPDATE"},{"depth":1,"name":"ALTER TABLE","link":"ALTER-TABLE"},{"depth":2,"name":"ADD COLUMN","link":"ADD-COLUMN"},{"depth":2,"name":"DROP COLUMN","link":"DROP-COLUMN"},{"depth":1,"name":"SELECT","link":"SELECT"},{"depth":1,"name":"SELECT DISTINCT","link":"SELECT-DISTINCT"},{"depth":1,"name":"WHERE","link":"WHERE"},{"depth":2,"name":"Equality","link":"Equality"},{"depth":2,"name":"Inequality","link":"Inequality"},{"depth":2,"name":"Expression","link":"Expression"},{"depth":2,"name":"Multiple","link":"Multiple"}]
 ---
 
 
@@ -163,7 +163,7 @@ SELECT DISTINCT currency FROM Countries;
 
 # WHERE
 
-Equality
+## Equality
 
 
 ```sql
@@ -175,7 +175,7 @@ SELECT * FROM Countries WHERE name = "Sweden";
 
 
 
-Inequality
+## Inequality
 ```sql
 SELECT * FROM Countries WHERE continent <> ’EU’;
 ```
@@ -184,7 +184,7 @@ SELECT * FROM Countries WHERE continent <> ’EU’;
 |Tanzania|945087|Dodoma|41892895|AF|TZS|
 |Peru|1285220|Lima|29907003|SA|PEN|
 
-Expression
+## Expression
 ```sql
 SELECT * FROM Countries WHERE population/area >= 80;
 ```
@@ -193,7 +193,7 @@ SELECT * FROM Countries WHERE population/area >= 80;
 |-|-|-|-|-|-|
 |Greece|131940|Athens|11000000|EU|EUR|
 
-Multiple
+## Multiple
 ```sql
 SELECT * FROM Countries WHERE continent = 'EU' AND
     NOT (currency = 'EUR');

@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2021-12-30
+lastModified: 2022-01-04
 created: 2021-07-05
 title: Structure
 header: []
@@ -44,6 +44,7 @@ root
 │   ├── keywords
 │   ├── linear-algebra
 │   ├── nonlinear-optimization
+│   ├── number-theory
 │   ├── probability-theory
 │   ├── statistics
 │   └── stochastic-processes

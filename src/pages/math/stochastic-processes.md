@@ -4,7 +4,7 @@ tags: []
 lastModified: 2022-01-04
 created: 2021-11-04
 title: Stochastic Processes
-header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stochastic matrix","link":"Stochastic-matrix"},{"depth":2,"name":"N-step transition matrix","link":"N-step-transition-matrix"},{"depth":2,"name":"Distribution of Markov chains","link":"Distribution-of-Markov-chains"},{"depth":2,"name":"Markov property","link":"Markov-property"},{"depth":2,"name":"Joint distribution","link":"Joint-distribution"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"},{"depth":1,"name":"Branching process","link":"Branching-process"},{"depth":2,"name":"Mean generation size","link":"Mean-generation-size"},{"depth":2,"name":"Variance of the generation size","link":"Variance-of-the-generation-size"},{"depth":2,"name":"Probability generating function","link":"Probability-generating-function"},{"depth":2,"name":"Sums of independent random variables","link":"Sums-of-independent-random-variables"},{"depth":2,"name":"Moments","link":"Moments"},{"depth":2,"name":"Extinction forever","link":"Extinction-forever"}]
+header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stochastic matrix","link":"Stochastic-matrix"},{"depth":2,"name":"N-step transition matrix","link":"N-step-transition-matrix"},{"depth":2,"name":"Distribution of Markov chains","link":"Distribution-of-Markov-chains"},{"depth":2,"name":"Markov property","link":"Markov-property"},{"depth":2,"name":"Joint distribution","link":"Joint-distribution"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"},{"depth":2,"name":"Positive matrix","link":"Positive-matrix"},{"depth":2,"name":"Regular transition matrix","link":"Regular-transition-matrix"},{"depth":2,"name":"Communication class","link":"Communication-class"},{"depth":2,"name":"Closed communication class","link":"Closed-communication-class"},{"depth":2,"name":"Irreducibility","link":"Irreducibility"},{"depth":2,"name":"Recurrent state","link":"Recurrent-state"},{"depth":2,"name":"Transient state","link":"Transient-state"},{"depth":2,"name":"Periodicity","link":"Periodicity"},{"depth":2,"name":"Aperiodic","link":"Aperiodic"},{"depth":2,"name":"Ergodic","link":"Ergodic"},{"depth":2,"name":"Time reversibility","link":"Time-reversibility"},{"depth":2,"name":"Absorbing chains","link":"Absorbing-chains"},{"depth":3,"name":"Fundamental matrix","link":"Fundamental-matrix"},{"depth":3,"name":"Absorption probability","link":"Absorption-probability"},{"depth":3,"name":"Absorption time","link":"Absorption-time"},{"depth":3,"name":"First hitting time for irreducible chain","link":"First-hitting-time-for-irreducible-chain"},{"depth":1,"name":"Branching process","link":"Branching-process"},{"depth":2,"name":"Mean generation size","link":"Mean-generation-size"},{"depth":2,"name":"Variance of the generation size","link":"Variance-of-the-generation-size"},{"depth":2,"name":"Probability generating function","link":"Probability-generating-function"},{"depth":2,"name":"Sums of independent random variables","link":"Sums-of-independent-random-variables"},{"depth":2,"name":"Moments","link":"Moments"},{"depth":2,"name":"Extinction forever","link":"Extinction-forever"}]
 ---
 
 
@@ -82,15 +82,94 @@ $$
 \pi = \pi P
 $$
 
+To find a stationary distribution, the above equation is redundant, and we must use the fact that $ \pi_1, \dots, \pi_n = 1 $. Then we are able to obtained the unique solution.
+
 ## Limiting distribution
 A limiting distribution is such a distribution $ \pi $ that no matter what the initial distribution is, the distribution over states converges to $ \pi $ as the number of steps goes to infinity:
 $$
 \lim_{k \to \infty} \pi^{(0)} P^k=\pi
 $$
-Also when a limiting distribution exists, it is always a stationary distribution. However, the converse is not true, a stationary distribution is not always a limiting distribution. Think of a state that is stationary but it is not certain that the chain converge to that state.
+Also when a limiting distribution exists, it is always a stationary distribution. However, the converse is not true, a stationary distribution is not always a limiting distribution. Think of a state that is stationary but it is not certain that the chain will converge to that state given some other initial distribution.
+
+
+## Positive matrix
+A matrix $ M $ is said to be **positive** if all the entries of the matrix is **positive**.
+
+## Regular transition matrix
+A transition matrix $ P $ is said to be **regular** if some power of $ P $ is **positive**.
+
+## Communication class
+If a Markov chain has exactly one communication class, all states communicate with each other. Think of it as if every state can eventually communicate with each other. If we have multiple communication classes one state may not be able to communicate with another state in $ n $ steps.
+
+## Closed communication class
+A communication class is closed if it consists of call recurrent states.
+
+## Irreducibility
+A Markov chain is called **irreducible** if it has exactly one communication class. Thus, if the matrix is regular we know it is also irreducible. Finite irreducible Markov chains have unique positive stationary distributions.
+
+## Recurrent state
+A recurrent state has the property that a Markov chain starting at this state eventually returns to that state.
+
+##  Transient state
+A transient state has the property that a Markov chain starting at this state has a positive probability of never returning to this state.
+
+## Periodicity
+The states of a communication class all have the same period. The period of a state is defined as
+$$
+d(i) = \gcd(n > 0 : P_{ij}^n > 0)
+$$
+Thus, if a Markov chain is irreducible and all states have a period greater to one, the Markov chain is **periodic**.
+
+## Aperiodic
+When the period is $ d(i) = 1 $ the state is said to be **aperiodic**. Thus, if a Markov chain is irreducible and all states have a period equal to one, the Markov chain is **aperiodic**.
+
+## Ergodic
+A Markov chain is said to be **ergodic** if it is irreducible, aperiodic and all states have finite expected return times. Ergodic Markov chains have positive limiting distributions. That is, let $ X_0, X_1, \dots $ be an ergodic Markov chain. Then there exists a unique positive stationary distribution which also is the limiting distribution for the Markov chain.
+
+## Time reversibility
+An irreducible Markov chain is said to be time reversible if
+$$
+\pi_i P_{ij} = \pi_j P_{ji} \qquad \text{ for all } i,j
+$$
+where $ \pi $ is a stationary distribution and $ P $ is the transition matrix.
+
+## Absorbing chains
+A Markov chain is called an absorbing chain if it has at least one absorbing state, that is, a state that is $ P_{ii} = 1 $. When dealing with absorbing Markov chains we usually split the matrix into different partitions and write it like
+$$
+P=
+\left({\begin{array}{c|c}
+Q & R\\
+\hline
+{\mathbf {0}} & I
+\end{array}}
+\right)
+$$
+where $ Q $ is a $ t \times t $ matrix, $ R $ is a $ t \times (k - t) $ matrix, $ \mathbf{0} $ is a $ (k - t) \times t $ matrix full of 0s, and $ I $ is a $ (k -t) \times (k - t) $ identity matrix.
+
+### Fundamental matrix
+The fundamental matrix of an absorbing Markov chain is
+$$
+F=\sum _{{k=0}}^{\infty }Q^{k}=(I-Q)^{{-1}},
+$$
+The fundamental matrix describes the expected number of visits from $ i $ to $ j $.
+
+### Absorption probability
+The probability that the Markov chain is absorbed in state $ j $ when starting in state $ i $ is given by
+$$
+(FR)_{ij}
+$$
+
+### Absorption time
+The expected number of steps until the Markov chain is absorbed in state $ j $ when starting in state $ i $ is given by
+$$
+(F1)_{ij}
+$$
+
+### First hitting time for irreducible chain
+First hitting time for irreducible chain is given by modifying the transition matrix $ P $ so that the we are interested in, is an absorbing state.
 
 # Branching process
-In a branching process all nonzero states are @(transient)(transient-state).
+In a branching process all nonzero states are transient.
 
 
 ## Mean generation size

@@ -1,10 +1,10 @@
 ---
 slug: /math/keywords
 tags: ["keywords"]
-lastModified: 2021-12-30
+lastModified: 2022-01-04
 created: 2021-04-05
 title: Keywords
-header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"},{"depth":1,"name":"Vector norm","link":"Vector-norm"},{"depth":2,"name":"Absolute-value norm","link":"Absolute-value-norm"},{"depth":2,"name":"Euclidean norm","link":"Euclidean-norm"},{"depth":1,"name":"Probability space","link":"Probability-space"},{"depth":1,"name":"Parametric family","link":"Parametric-family"}]
+header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"},{"depth":1,"name":"Vector norm","link":"Vector-norm"},{"depth":2,"name":"Absolute-value norm","link":"Absolute-value-norm"},{"depth":2,"name":"Euclidean norm","link":"Euclidean-norm"},{"depth":1,"name":"Probability space","link":"Probability-space"},{"depth":1,"name":"Parametric family","link":"Parametric-family"},{"depth":1,"name":"Transient state","link":"Transient-state"}]
 ---
 
 - hypothesis testing
@@ -52,3 +52,6 @@ The probability space consists of three elements: the sample space, the event sp
 
 # Parametric family
 A parametric family is a family whose differences only depend in the set of parameters used.
+
+# Transient state
+A transient state has the property that a Markov chain starting at this state only returns to it **finitely** often.

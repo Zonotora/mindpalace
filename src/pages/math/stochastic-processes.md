@@ -4,7 +4,7 @@ tags: []
 lastModified: 2022-01-05
 created: 2021-11-04
 title: Stochastic Processes
-header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stochastic matrix","link":"Stochastic-matrix"},{"depth":2,"name":"N-step transition matrix","link":"N-step-transition-matrix"},{"depth":2,"name":"Distribution of Markov chains","link":"Distribution-of-Markov-chains"},{"depth":2,"name":"Markov property","link":"Markov-property"},{"depth":2,"name":"Joint distribution","link":"Joint-distribution"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"},{"depth":2,"name":"Positive matrix","link":"Positive-matrix"},{"depth":2,"name":"Regular transition matrix","link":"Regular-transition-matrix"},{"depth":2,"name":"Limit theorem for regular Markov chains","link":"Limit-theorem-for-regular-Markov-chains"},{"depth":2,"name":"Communication class","link":"Communication-class"},{"depth":2,"name":"Closed communication class","link":"Closed-communication-class"},{"depth":2,"name":"Irreducibility","link":"Irreducibility"},{"depth":2,"name":"Limit theorem for finite irreducible Markov chains","link":"Limit-theorem-for-finite-irreducible-Markov-chains"},{"depth":2,"name":"Recurrent state","link":"Recurrent-state"},{"depth":2,"name":"Transient state","link":"Transient-state"},{"depth":2,"name":"Periodicity","link":"Periodicity"},{"depth":2,"name":"Aperiodic","link":"Aperiodic"},{"depth":2,"name":"Ergodic","link":"Ergodic"},{"depth":2,"name":"Fundamental limit theorem of ergodic Markov chains","link":"Fundamental-limit-theorem-of-ergodic-Markov-chains"},{"depth":2,"name":"Time reversibility","link":"Time-reversibility"},{"depth":2,"name":"Absorbing chains","link":"Absorbing-chains"},{"depth":3,"name":"Fundamental matrix","link":"Fundamental-matrix"},{"depth":3,"name":"Absorption probability","link":"Absorption-probability"},{"depth":3,"name":"Absorption time","link":"Absorption-time"},{"depth":3,"name":"First hitting time for irreducible chain","link":"First-hitting-time-for-irreducible-chain"},{"depth":1,"name":"Branching process","link":"Branching-process"},{"depth":2,"name":"Mean generation size","link":"Mean-generation-size"},{"depth":2,"name":"Variance of the generation size","link":"Variance-of-the-generation-size"},{"depth":2,"name":"Probability generating function","link":"Probability-generating-function"},{"depth":2,"name":"Sums of independent random variables","link":"Sums-of-independent-random-variables"},{"depth":2,"name":"Moments","link":"Moments"},{"depth":2,"name":"Extinction forever","link":"Extinction-forever"},{"depth":1,"name":"Markov chains Monte Carlo","link":"Markov-chains-Monte-Carlo"},{"depth":2,"name":"The law of large numbers","link":"The-law-of-large-numbers"},{"depth":2,"name":"Strong law of large numbers","link":"Strong-law-of-large-numbers"},{"depth":2,"name":"Metropolis-Hastings algorithm","link":"Metropolis-Hastings-algorithm"},{"depth":1,"name":"References","link":"References"}]
+header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stochastic matrix","link":"Stochastic-matrix"},{"depth":2,"name":"N-step transition matrix","link":"N-step-transition-matrix"},{"depth":2,"name":"Distribution of Markov chains","link":"Distribution-of-Markov-chains"},{"depth":2,"name":"Markov property","link":"Markov-property"},{"depth":2,"name":"Joint distribution","link":"Joint-distribution"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"},{"depth":2,"name":"Positive matrix","link":"Positive-matrix"},{"depth":2,"name":"Regular transition matrix","link":"Regular-transition-matrix"},{"depth":2,"name":"Limit theorem for regular Markov chains","link":"Limit-theorem-for-regular-Markov-chains"},{"depth":2,"name":"Communication class","link":"Communication-class"},{"depth":2,"name":"Closed communication class","link":"Closed-communication-class"},{"depth":2,"name":"Irreducibility","link":"Irreducibility"},{"depth":2,"name":"Limit theorem for finite irreducible Markov chains","link":"Limit-theorem-for-finite-irreducible-Markov-chains"},{"depth":2,"name":"Recurrent state","link":"Recurrent-state"},{"depth":2,"name":"Transient state","link":"Transient-state"},{"depth":2,"name":"Periodicity","link":"Periodicity"},{"depth":2,"name":"Aperiodic","link":"Aperiodic"},{"depth":2,"name":"Ergodic","link":"Ergodic"},{"depth":2,"name":"Fundamental limit theorem of ergodic Markov chains","link":"Fundamental-limit-theorem-of-ergodic-Markov-chains"},{"depth":2,"name":"Time reversibility","link":"Time-reversibility"},{"depth":2,"name":"Absorbing chains","link":"Absorbing-chains"},{"depth":3,"name":"Fundamental matrix","link":"Fundamental-matrix"},{"depth":3,"name":"Absorption probability","link":"Absorption-probability"},{"depth":3,"name":"Absorption time","link":"Absorption-time"},{"depth":3,"name":"First hitting time for irreducible chain","link":"First-hitting-time-for-irreducible-chain"},{"depth":1,"name":"Branching process","link":"Branching-process"},{"depth":2,"name":"Mean generation size","link":"Mean-generation-size"},{"depth":2,"name":"Variance of the generation size","link":"Variance-of-the-generation-size"},{"depth":2,"name":"Probability generating function","link":"Probability-generating-function"},{"depth":2,"name":"Sums of independent random variables","link":"Sums-of-independent-random-variables"},{"depth":2,"name":"Moments","link":"Moments"},{"depth":2,"name":"Extinction forever","link":"Extinction-forever"},{"depth":1,"name":"Markov chains Monte Carlo","link":"Markov-chains-Monte-Carlo"},{"depth":2,"name":"The law of large numbers","link":"The-law-of-large-numbers"},{"depth":2,"name":"Strong law of large numbers","link":"Strong-law-of-large-numbers"},{"depth":2,"name":"Metropolis-Hastings algorithm","link":"Metropolis-Hastings-algorithm"},{"depth":1,"name":"Poisson process","link":"Poisson-process"},{"depth":2,"name":"Counting process","link":"Counting-process"},{"depth":2,"name":"Definition","link":"Definition"},{"depth":2,"name":"Stationary increments","link":"Stationary-increments"},{"depth":2,"name":"Independent increments","link":"Independent-increments"},{"depth":2,"name":"First arrival times","link":"First-arrival-times"},{"depth":2,"name":"Nth arrival times","link":"Nth-arrival-times"},{"depth":2,"name":"Distribution of arrival times","link":"Distribution-of-arrival-times"},{"depth":2,"name":"Memorylessness","link":"Memorylessness"},{"depth":2,"name":"Thinning","link":"Thinning"},{"depth":2,"name":"Superposition process","link":"Superposition-process"},{"depth":2,"name":"Spatial Poisson process","link":"Spatial-Poisson-process"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 
@@ -315,6 +315,68 @@ where $ E(r(X)) = \sum_{j} r(j) \pi_j $. When using this in practice, we may ign
 
 ## Metropolis-Hastings algorithm
 MMetropolis-Hastings algorithm is one of the most common methods when using Markov chain Monte Carlo. It is a method for obtaining a sequence of random samples from a probability distribution where direct sampling is difficult @{metropolis}. The sequence is used to approximate the distribution. Metropolis-Hasting works quite well in with multidimensional data and there are other methods which is better when working with single-dimensional distributions. The algorithm constructs a reversible Markov chain whose distribution is $ \pi $, where $ \pi = (\pi_1, \pi_1, \dots ) $ is a discrete probability distribution.
+
+# Poisson process
+A Poisson process is a special type of counting process. Events arrive at specific time instants, starting at $ t = 0 $. The we count the number of arrivals that has occurred by the time $ t $.
+With Poisson processes we may focus on (i) the number of events that occurred between a fixed time interval, (ii) when events occurred, (iii) the behavior of individual events.
+
+
+## Counting process
+A counting process $ (N_t)_{t\geq 0} $ a collection of positive integer valued random variables such that $  0 \leq s \leq t \implies N_s \leq N_t $. Contrary to Markov chains, that operate with a sequence of random variables, a counting process is an uncountable collection indexed over a continuous time interval.
+
+## Definition
+A Poisson process is a counting process with the following definition: Let $ \lambda $ be the parameter of a Poisson process that is a counting process $ (N_t)_{t\geq 0} $ with the following properties
+1. $ N_0 = 0 $
+2. $ N_t $ has a Poisson distribution with parameter $ \lambda t $ for all $ t > 0 $
+3. $ N_{t+s} - N_s $ has the same distribution as $ N_t $ for $ s,t > 0 $.
+4. $ N_t - N_s $ and $ N_r - N_q $ are independent random variables for $ 0 \leq q < r \leq s < t $.
+
+## Stationary increments
+Stationary increments is the third rule in the definition above. The distribution of the number of arrivals in an interval only depends on the length of the interval.
+
+## Independent increments
+Independent increments is the fourth rule in the definition above. The number of arrivals on disjoint intervals are independent random variables.
+
+## First arrival times
+If we let $ X $ denote the first arrival time, then $ X > t $ if and only if there are no arrivals in the interval $ [0, t] $. We have
+$$
+\Pr(X > t) = \Pr(N_t = 0) = e^{-\lambda t}, \qquad t > 0
+$$
+We can see that $ X $ has an exponential distribution with parameters $ \lambda $.
+
+## Nth arrival times
+Let $ S_n $ be the time of the nth arrival in a Poisson process with parameter $ \lambda $, then $ S_n $ has a gamma distribution with parameters $ n $ and $ \lambda $ according to
+$$
+f_{S_n} = \frac{\lambda ^n t^{n-1} e^{-\lambda t}}{(n - 1)!}
+$$
+1. $ E[S_n] = \frac{n}{\lambda} $
+2. $ \text{Var} (S_n) = \frac{n}{\lambda^2} $
+
+## Distribution of arrival times
+Let $ S_1, S_2, \dots $ be the arrival times of a Poisson process with parameter $ \lambda $. The joint distribution of $ (S_1, \dots, S_n) $, conditional on $ N_t = n $, is the distribution of the order statistics of $ n $ independent and identically distributed random variables on $ [0, t] $. We have
+$$
+f(s_1, \dots, s_n) = \frac{n!}{t^n}
+$$
+If we have $ n $ uniformly distributed random variables that are independent and identically distributed on $ [0, t] $, conditional on $ N_t = n $, they have the same distribution as $ (S_1, \dots, S_n) $.
+
+## Memorylessness
+Memorylessness means that the waiting time distributions are the same for all observers, and all observers will wait, on average, the same amount of time. Formally, a random variable $ X $ is memoryless if
+$$
+\Pr(X > s + t \mid X > s) = \Pr(X > t)
+$$
+for all $ s,t > 0 $.
+
+
+## Thinning
+A thinned Poisson process is a kind of a subprocess to another Poisson process that is independent to another thinned process of the same parent process.
+
+## Superposition process
+If we have $ (N_t^{(1)})_{t\geq 0}, \dots, (N_t^{(n)})_{t\geq 0} $ independent Poisson processes with respective parameters $ \lambda_1, \dots, \lambda_n $, then let $ N_t = N_t^(1) + \dots + N_t^(n)$ for $ t \geq 0 $. $ (N_t)_{t\geq 0} $ is then a Poisson process with parameters $ \lambda = \lambda_1 + \dots + \lambda_n $.
+
+## Spatial Poisson process
+A spatial Poisson process is a collection of random variables $ (N_A)_{A\sube \R^d} $ with parameter $ \lambda $ if
+1. $ N_A $ has a Poisson distribution with parameter $ \lambda | A |  $ for each bounded set $ A \sube \R^d $.
+2. $ N_A $ and $ N_B $ are independent random variables if $ A $ and $ B $ are disjoint sets.
 
 
 # References

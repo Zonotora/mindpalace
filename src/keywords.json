@@ -78,6 +78,8 @@
   "euclidean-norm": "$$\\| \\bold x \\| = \\| \\bold x \\|_2 = \\sqrt{\\sum_{j=1}^{n} x_j^2}$$",
   "probability-space": "The probability space consists of three elements: the sample space, the event space and a probability function. The probability function assigns each event in the event space a probability between 0 and 1 where each event maps to a set of outcomes in the sample space.",
   "parametric-family": "A parametric family is a family whose differences only depend in the set of parameters used.",
+  "point-process": "A spatial Poisson process is a special case of a point process.",
+  "stochastic-calculus": "Stochastic calculus is a branch of mathematics that operates on stochastic processes.",
   "spin-lock": "A lock that uses busy waiting.",
   "synchronization": "To make sure that certain event chains do not occur.",
   "livelock": "A situation where no process is blocked but events are happening with no progress.",

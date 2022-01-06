@@ -33,7 +33,7 @@ P_{ij}^n = \Pr(X_n = j \mid X_0 = i), \qquad \text{for all} \,\, i, j
 $$
 
 ## Distribution of Markov chains
-The sequence of random variables $ X_0, X_1, \dots $ is generally not identically distributed random variables in the Markov chain. If our Markov chains has the transition matrix P and the initial distribution $ \alpha $, the distribution for $ X_n $ is
+The sequence of random variables $ X_0, X_1, \dots $ is generally not identically distributed random variables in the Markov chain. If our Markov chains has the transition matrix $ P $ and the initial distribution $ \alpha $, the distribution for $ X_n $ is
 $$
 \alpha P^n
 $$
@@ -174,9 +174,9 @@ $$
 $$
 
 ### Absorption time
-The expected number of steps until the Markov chain is absorbed in state $ j $ when starting in state $ i $ is given by
+The expected number of steps until the Markov chain is absorbed when starting in state $ i $ is given by
 $$
-(F1)_{ij}
+(F1)_i
 $$
 
 ### First hitting time for irreducible chain

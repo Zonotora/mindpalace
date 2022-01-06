@@ -1,10 +1,10 @@
 ---
 slug: /math/stochastic-processes
 tags: []
-lastModified: 2022-01-05
+lastModified: 2022-01-06
 created: 2021-11-04
 title: Stochastic Processes
-header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stochastic matrix","link":"Stochastic-matrix"},{"depth":2,"name":"N-step transition matrix","link":"N-step-transition-matrix"},{"depth":2,"name":"Distribution of Markov chains","link":"Distribution-of-Markov-chains"},{"depth":2,"name":"Markov property","link":"Markov-property"},{"depth":2,"name":"Joint distribution","link":"Joint-distribution"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"},{"depth":2,"name":"Positive matrix","link":"Positive-matrix"},{"depth":2,"name":"Regular transition matrix","link":"Regular-transition-matrix"},{"depth":2,"name":"Limit theorem for regular Markov chains","link":"Limit-theorem-for-regular-Markov-chains"},{"depth":2,"name":"Communication class","link":"Communication-class"},{"depth":2,"name":"Closed communication class","link":"Closed-communication-class"},{"depth":2,"name":"Irreducibility","link":"Irreducibility"},{"depth":2,"name":"Limit theorem for finite irreducible Markov chains","link":"Limit-theorem-for-finite-irreducible-Markov-chains"},{"depth":2,"name":"Recurrent state","link":"Recurrent-state"},{"depth":2,"name":"Transient state","link":"Transient-state"},{"depth":2,"name":"Periodicity","link":"Periodicity"},{"depth":2,"name":"Aperiodic","link":"Aperiodic"},{"depth":2,"name":"Ergodic","link":"Ergodic"},{"depth":2,"name":"Fundamental limit theorem of ergodic Markov chains","link":"Fundamental-limit-theorem-of-ergodic-Markov-chains"},{"depth":2,"name":"Time reversibility","link":"Time-reversibility"},{"depth":2,"name":"Absorbing chains","link":"Absorbing-chains"},{"depth":3,"name":"Fundamental matrix","link":"Fundamental-matrix"},{"depth":3,"name":"Absorption probability","link":"Absorption-probability"},{"depth":3,"name":"Absorption time","link":"Absorption-time"},{"depth":3,"name":"First hitting time for irreducible chain","link":"First-hitting-time-for-irreducible-chain"},{"depth":1,"name":"Branching process","link":"Branching-process"},{"depth":2,"name":"Mean generation size","link":"Mean-generation-size"},{"depth":2,"name":"Variance of the generation size","link":"Variance-of-the-generation-size"},{"depth":2,"name":"Probability generating function","link":"Probability-generating-function"},{"depth":2,"name":"Sums of independent random variables","link":"Sums-of-independent-random-variables"},{"depth":2,"name":"Moments","link":"Moments"},{"depth":2,"name":"Extinction forever","link":"Extinction-forever"},{"depth":1,"name":"Markov chains Monte Carlo","link":"Markov-chains-Monte-Carlo"},{"depth":2,"name":"The law of large numbers","link":"The-law-of-large-numbers"},{"depth":2,"name":"Strong law of large numbers","link":"Strong-law-of-large-numbers"},{"depth":2,"name":"Metropolis-Hastings algorithm","link":"Metropolis-Hastings-algorithm"},{"depth":1,"name":"Poisson process","link":"Poisson-process"},{"depth":2,"name":"Counting process","link":"Counting-process"},{"depth":2,"name":"Definition","link":"Definition"},{"depth":2,"name":"Stationary increments","link":"Stationary-increments"},{"depth":2,"name":"Independent increments","link":"Independent-increments"},{"depth":2,"name":"First arrival times","link":"First-arrival-times"},{"depth":2,"name":"Nth arrival times","link":"Nth-arrival-times"},{"depth":2,"name":"Distribution of arrival times","link":"Distribution-of-arrival-times"},{"depth":2,"name":"Memorylessness","link":"Memorylessness"},{"depth":2,"name":"Thinning","link":"Thinning"},{"depth":2,"name":"Superposition process","link":"Superposition-process"},{"depth":2,"name":"Spatial Poisson process","link":"Spatial-Poisson-process"},{"depth":1,"name":"References","link":"References"}]
+header: [{"depth":1,"name":"Markov chains","link":"Markov-chains"},{"depth":2,"name":"Stochastic matrix","link":"Stochastic-matrix"},{"depth":2,"name":"N-step transition matrix","link":"N-step-transition-matrix"},{"depth":2,"name":"Distribution of Markov chains","link":"Distribution-of-Markov-chains"},{"depth":2,"name":"Markov property","link":"Markov-property"},{"depth":2,"name":"Joint distribution","link":"Joint-distribution"},{"depth":2,"name":"Stationary distribution","link":"Stationary-distribution"},{"depth":2,"name":"Limiting distribution","link":"Limiting-distribution"},{"depth":2,"name":"Positive matrix","link":"Positive-matrix"},{"depth":2,"name":"Regular transition matrix","link":"Regular-transition-matrix"},{"depth":2,"name":"Limit theorem for regular Markov chains","link":"Limit-theorem-for-regular-Markov-chains"},{"depth":2,"name":"Communication class","link":"Communication-class"},{"depth":2,"name":"Closed communication class","link":"Closed-communication-class"},{"depth":2,"name":"Irreducibility","link":"Irreducibility"},{"depth":2,"name":"Limit theorem for finite irreducible Markov chains","link":"Limit-theorem-for-finite-irreducible-Markov-chains"},{"depth":2,"name":"Recurrent state","link":"Recurrent-state"},{"depth":2,"name":"Transient state","link":"Transient-state"},{"depth":2,"name":"Periodicity","link":"Periodicity"},{"depth":2,"name":"Aperiodic","link":"Aperiodic"},{"depth":2,"name":"Ergodic","link":"Ergodic"},{"depth":2,"name":"Fundamental limit theorem of ergodic Markov chains","link":"Fundamental-limit-theorem-of-ergodic-Markov-chains"},{"depth":2,"name":"Time reversibility","link":"Time-reversibility"},{"depth":2,"name":"Absorbing chains","link":"Absorbing-chains"},{"depth":3,"name":"Fundamental matrix","link":"Fundamental-matrix"},{"depth":3,"name":"Absorption probability","link":"Absorption-probability"},{"depth":3,"name":"Absorption time","link":"Absorption-time"},{"depth":3,"name":"First hitting time for irreducible chain","link":"First-hitting-time-for-irreducible-chain"},{"depth":1,"name":"Continuous Markov chains","link":"Continuous-Markov-chains"},{"depth":2,"name":"Markov Property","link":"Markov-Property"},{"depth":2,"name":"Transition function","link":"Transition-function"},{"depth":2,"name":"Champman-Kolmogorov Equations","link":"Champman-Kolmogorov-Equations"},{"depth":2,"name":"Holding times","link":"Holding-times"},{"depth":2,"name":"Absorbing state","link":"Absorbing-state"},{"depth":2,"name":"Explosive","link":"Explosive"},{"depth":2,"name":"Embedded chain","link":"Embedded-chain"},{"depth":2,"name":"Transition rates","link":"Transition-rates"},{"depth":1,"name":"Branching process","link":"Branching-process"},{"depth":2,"name":"Mean generation size","link":"Mean-generation-size"},{"depth":2,"name":"Variance of the generation size","link":"Variance-of-the-generation-size"},{"depth":2,"name":"Probability generating function","link":"Probability-generating-function"},{"depth":2,"name":"Sums of independent random variables","link":"Sums-of-independent-random-variables"},{"depth":2,"name":"Moments","link":"Moments"},{"depth":2,"name":"Extinction forever","link":"Extinction-forever"},{"depth":1,"name":"Markov chains Monte Carlo","link":"Markov-chains-Monte-Carlo"},{"depth":2,"name":"The law of large numbers","link":"The-law-of-large-numbers"},{"depth":2,"name":"Strong law of large numbers","link":"Strong-law-of-large-numbers"},{"depth":2,"name":"Metropolis-Hastings algorithm","link":"Metropolis-Hastings-algorithm"},{"depth":1,"name":"Poisson process","link":"Poisson-process"},{"depth":2,"name":"Counting process","link":"Counting-process"},{"depth":2,"name":"Definition","link":"Definition"},{"depth":2,"name":"Stationary increments","link":"Stationary-increments"},{"depth":2,"name":"Independent increments","link":"Independent-increments"},{"depth":2,"name":"First arrival times","link":"First-arrival-times"},{"depth":2,"name":"Nth arrival times","link":"Nth-arrival-times"},{"depth":2,"name":"Distribution of arrival times","link":"Distribution-of-arrival-times"},{"depth":2,"name":"Memorylessness","link":"Memorylessness"},{"depth":2,"name":"Thinning","link":"Thinning"},{"depth":2,"name":"Superposition process","link":"Superposition-process"},{"depth":2,"name":"Spatial Poisson process","link":"Spatial-Poisson-process"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 
@@ -181,6 +181,48 @@ $$
 
 ### First hitting time for irreducible chain
 First hitting time for irreducible chain is given by modifying the transition matrix $ P $ so that the we are interested in, is an absorbing state.
+
+# Continuous Markov chains
+
+
+## Markov Property
+A continuous-time stochastic process $ (X_t)_{t \geq 0} $ with discrete state space, $ S $, is a continuous-time Markov chain if
+$$
+\Pr(X_{t+s} = j \mid X_s = i, X_u = u, 0 \leq u < s) = \Pr(X_{t+s} = j \mid X_s = i)
+$$
+for all $ s,t \geq 0, i,j,x_u \in S, 0 \leq u < s$. If the process does not depend on $ s $ it is said to be **time-homogeneous**.
+$$
+\Pr(X_{t+s} = j \mid X_s = i) = \Pr(X_{t} = j \mid X_0 = i)
+$$
+for $ s \geq 0 $.
+
+## Transition function
+The transition probabilities can be arranged in a matrix function for each $ t \geq 0 $ that is called the transition function
+$$
+P_{ij} (t) = \Pr(X_t = j \mid X_0 = i)
+$$
+
+## Champman-Kolmogorov Equations
+For a continuous Markov chain $ (X_t)_{t \geq 0} $ with transition $ \bold P(t) $,
+$$
+\bold P(s + t) = \bold P(s) \bold P(t)
+$$
+for $ s,t \geq 0 $.
+
+## Holding times
+The holding time, $ T_i $ at a state $ i $ is the length of time that a continuous-time Markov chain stays in $ i $ before transitioning to a new state. $ T_i $ has an exponential distribution.
+
+## Absorbing state
+For each state $ i $, let $ q_i $ be the parameter of the exponential distribution for the holding time $ T_i  $. If $ q_i $ is defined to be in the interval $ (0, \infty) $, a continuous-time process with $ q_i = 0 $, $ i $ is said to be an **absorbing state**. This is because when the process visits state $ i $ it never leaves.
+
+## Explosive
+For each state $ i $, let $ q_i $ be the parameter of the exponential distribution for the holding time $ T_i  $. If $ q_i $ is defined to be in the interval $ (0, \infty) $, a continuous-time process with $ q_i = \infty $ is said to be an **explosive**. This is because the process may visit state $ i $ infinitely many times at one time instant.
+
+## Embedded chain
+The embedded chain in a continuous-time Markov chain is the discrete-time Markov chain with the transition probabilities for each state. The transition matrix $ \widetilde P $ for the embedded chain is a stochastic matrix with diagonal entries 0.
+
+## Transition rates
+The $ q_{ij} $ is called the transition rates for a continuous-time process. With the transition rates we may obtain the embedded chain transition probabilities and the holding time parameters.
 
 # Branching process
 In a branching process all nonzero states are transient.

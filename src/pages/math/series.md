@@ -1,7 +1,7 @@
 ---
 slug: /math/series
 tags: []
-lastModified: 2022-01-05
+lastModified: 2022-01-07
 created: 2022-01-05
 title: Series
 header: [{"depth":1,"name":"Arithmetic sum","link":"Arithmetic-sum"},{"depth":1,"name":"Geometric sum","link":"Geometric-sum"},{"depth":1,"name":"Geometric sum for probabilities","link":"Geometric-sum-for-probabilities"}]
@@ -23,6 +23,5 @@ $$
 # Geometric sum for probabilities
 When $ r $ is between $ [0,1] $ we can write the geometric sum as
 $$
-\sum _{k=0}^{\infty } ar^k
+\sum _{k=0}^{\infty } ar^k = \frac{a}{(1 - r)}
 $$
-and a closed form of the geometric series written as $ \frac{a}{(1 - r)}  $  within the range $ |r| < 1 $.

@@ -1,10 +1,10 @@
 ---
 slug: /math/probability-theory
 tags: []
-lastModified: 2022-01-05
+lastModified: 2022-01-07
 created: 2021-12-30
 title: Probability Theory
-header: [{"depth":1,"name":"Random variable","link":"Random-variable"},{"depth":1,"name":"Probability mass function","link":"Probability-mass-function"},{"depth":1,"name":"Probability density function","link":"Probability-density-function"},{"depth":1,"name":"Stochastic process","link":"Stochastic-process"},{"depth":1,"name":"Statistical inference","link":"Statistical-inference"},{"depth":2,"name":"Classical inference","link":"Classical-inference"},{"depth":2,"name":"Bayesian inference","link":"Bayesian-inference"},{"depth":1,"name":"Kolmogorov axioms","link":"Kolmogorov-axioms"},{"depth":2,"name":"First axiom","link":"First-axiom"},{"depth":2,"name":"Second axiom","link":"Second-axiom"},{"depth":2,"name":"Third axiom","link":"Third-axiom"},{"depth":1,"name":"Conditional probability","link":"Conditional-probability"},{"depth":1,"name":"Independent events","link":"Independent-events"},{"depth":1,"name":"Total law of probability","link":"Total-law-of-probability"},{"depth":1,"name":"Joint distributions","link":"Joint-distributions"},{"depth":1,"name":"Expectation","link":"Expectation"},{"depth":2,"name":"Discrete","link":"Discrete"},{"depth":2,"name":"Continuous","link":"Continuous"},{"depth":2,"name":"Conditional discrete","link":"Conditional-discrete"},{"depth":2,"name":"Conditional continuous","link":"Conditional-continuous"},{"depth":2,"name":"Total law of expectation discrete","link":"Total-law-of-expectation-discrete"},{"depth":2,"name":"Total law of expectation continuous","link":"Total-law-of-expectation-continuous"},{"depth":1,"name":"Variance","link":"Variance"},{"depth":2,"name":"Total law of variance","link":"Total-law-of-variance"},{"depth":1,"name":"Covariance","link":"Covariance"},{"depth":1,"name":"Correlation","link":"Correlation"},{"depth":1,"name":"Order statistics","link":"Order-statistics"},{"depth":1,"name":"References","link":"References"}]
+header: [{"depth":1,"name":"Random variable","link":"Random-variable"},{"depth":1,"name":"Probability mass function","link":"Probability-mass-function"},{"depth":1,"name":"Probability density function","link":"Probability-density-function"},{"depth":1,"name":"Stochastic process","link":"Stochastic-process"},{"depth":1,"name":"Statistical inference","link":"Statistical-inference"},{"depth":2,"name":"Classical inference","link":"Classical-inference"},{"depth":2,"name":"Bayesian inference","link":"Bayesian-inference"},{"depth":1,"name":"Kolmogorov axioms","link":"Kolmogorov-axioms"},{"depth":2,"name":"First axiom","link":"First-axiom"},{"depth":2,"name":"Second axiom","link":"Second-axiom"},{"depth":2,"name":"Third axiom","link":"Third-axiom"},{"depth":1,"name":"Conditional probability","link":"Conditional-probability"},{"depth":1,"name":"Independent events","link":"Independent-events"},{"depth":1,"name":"Total law of probability","link":"Total-law-of-probability"},{"depth":1,"name":"Joint distributions","link":"Joint-distributions"},{"depth":1,"name":"Chain rule","link":"Chain-rule"},{"depth":1,"name":"Expectation","link":"Expectation"},{"depth":2,"name":"Discrete","link":"Discrete"},{"depth":2,"name":"Continuous","link":"Continuous"},{"depth":2,"name":"Conditional discrete","link":"Conditional-discrete"},{"depth":2,"name":"Conditional continuous","link":"Conditional-continuous"},{"depth":2,"name":"Total law of expectation discrete","link":"Total-law-of-expectation-discrete"},{"depth":2,"name":"Total law of expectation continuous","link":"Total-law-of-expectation-continuous"},{"depth":1,"name":"Variance","link":"Variance"},{"depth":2,"name":"Total law of variance","link":"Total-law-of-variance"},{"depth":1,"name":"Covariance","link":"Covariance"},{"depth":1,"name":"Correlation","link":"Correlation"},{"depth":1,"name":"Order statistics","link":"Order-statistics"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 
@@ -109,6 +109,14 @@ p_{X_{1},\ldots ,X_{n}}(x_{1},\ldots ,x_{n})&=\mathrm {\Pr} (X_{1}=x_{1})\cdot \
 &\cdot \mathrm {\Pr} (X_{3}=x_{3}\mid X_{1}=x_{1},X_{2}=x_{2})\\
 &\dots\\
 &\cdot \Pr(X_{n}=x_{n}\mid X_{1}=x_{1},X_{2}=x_{2},\dots ,X_{n-1}=x_{n-1})
+\end{aligned}}
+$$
+
+# Chain rule
+The chain rule of probabilities can be described by the following example
+$$
+{\begin{aligned}
+\mathrm {Pr} (X_{4},X_{3},X_{2},X_{1})&=\mathrm {Pr} (X_{4}\mid X_{3},X_{2},X_{1})\cdot \mathrm {Pr} (X_{3},X_{2},X_{1})\\&=\mathrm {Pr} (X_{4}\mid X_{3},X_{2},X_{1})\cdot \mathrm {Pr} (X_{3}\mid X_{2},X_{1})\cdot \mathrm {Pr} (X_{2},X_{1})\\&=\mathrm {Pr} (X_{4}\mid X_{3},X_{2},X_{1})\cdot \mathrm {Pr} (X_{3}\mid X_{2},X_{1})\cdot \mathrm {Pr} (X_{2}\mid X_{1})\cdot \mathrm {Pr} (X_{1})
 \end{aligned}}
 $$
 

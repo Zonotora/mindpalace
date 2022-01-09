@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-01-05
+lastModified: 2022-01-09
 created: 2021-07-05
 title: Structure
 header: []
@@ -10,6 +10,7 @@ header: []
 <pre style="background-color: white;">
 root 
 ├── control-theory
+├── distributed-systems
 ├── latex
 ├── art
 │   └── painters

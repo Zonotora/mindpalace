@@ -174,6 +174,41 @@ In passive monitoring we use processes' local histories to construct consistent 
 # MapReduce
 https://en.wikipedia.org/wiki/MapReduce
 
+One could be tempted to use
+```python
+count_words(internet):
+    hash_map<string, int> word_count;
+    for each page in internet:
+        for each word in page:
+            word_count[word] += 1
+```
+to count all the words on the internet. However, there are around 20+ billion web pages. If we estimate each web page to be 20KB, that would result in 400+ billion KB just to save all the data. If one computer can read 30-40 MB/sec from disk it would take roughly four months to read the whole web. After reading we want to compute stuff as well with the data increasing the time further. This is where **MapReduce** comes in. It splits the extract phase and computation phase into two functions called `map` and `reduce`. These two algorithms is supposed to be run on thousands of machines. The two functions have the following general form
+```python
+map(in_key, in_value) -> list(out_key, intermediate_value)
+
+reduce(out_key, list(intermediate_value)) -> list(out_value)
+```
+The input to map is the data we are interested in running concurrently on multiple different machines. If we for example have as input a document we have the following map function
+```python
+map(string input_key, string input_value):
+    # key: document URL
+    # value: document text
+    for each word in input_value:
+        output_intermediate(word, “1”);
+```
+The intermediate output value is then passed to the reduce function that may be on another machine. The reduce function gets the the intermediate output value for a specific key and begin computations. If we want to calculate the word count in a document with the above `map` function we could have the following `reduce` function
+```python
+reduce(string key, list values):
+    # key: word, same for input and output
+    # values: list of counts
+    int sum = 0;
+    for each v in values:
+        sum += v;
+    output(sum);
+```
+So the `reduce` function gets the partial value for a specific key and process that value in some way. E.g. one reducer handles the keyword *key1* while another handles *key2*. MapReduce is fault tolerance, that is, if one/many of the machines the whole program should not fail. We often have a master worker that delegate work to other workers. If the master worker fails, we restart the master worker on a different machine. The master keeps track of bad input and asks the workers to skip that input.
+
+
 # Consistency and replication
 https://en.wikipedia.org/wiki/Replication_(computing)
 

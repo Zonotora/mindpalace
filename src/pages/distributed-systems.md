@@ -4,7 +4,7 @@ tags: []
 lastModified: 2022-01-10
 created: 2022-01-09
 title: Distributed Systems
-header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":1,"name":"Election","link":"Election"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency","link":"Consistency"},{"depth":1,"name":"Replication","link":"Replication"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
+header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":1,"name":"Election","link":"Election"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency","link":"Consistency"},{"depth":1,"name":"Replication","link":"Replication"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
 ---
 
 # Resources
@@ -57,6 +57,49 @@ Name spaces could be divided into three different layers:
 It could be convenient to look up entities based on their attributed than on their name, but this tends to be expensive by nature. However we could combine this with traditional structured naming to get better performance.
 
 # Architectures
+How to we organize our program? There are many different approaches:
+1. **System-oriented** (processes and threads $ \implies $ inter-process communication)
+2. **Object-based** architectures (problem-oriented)
+3. **Resource-based** architectures
+4. **Event-based** architectures
+
+Basically we can make a distinction between software and hardware architectures, the latter concerning how a distributed system should be placed on different machines while the former concerns the logical organization of the system. This could be how entities interact with each other, how they are structured, how they can be made independent etc.
+
+## Placement
+Placement is important for performance. If a data center is physically closer the performance will increase due to better delay, bandwidth etc. Placement maps entities to actual physical distributed infrastructures. It should be studied carefully depending on need of the application.
+
+## Communication paradigm
+Communication paradigms are different ways of communicating between entities to provide the requested service.
+
+### Middleware
+A middleware is a service (library) that sits on the client and the server to make all implementation details easier by abstracting away different concepts.
+
+### Indirect communication
+Indirect communication uses middleware to provide a **one-to-many** communication and to reduce the **space coupling** (we know in advance where the procedure is) as well as the **time coupling** (a process should be explicitly waiting to accept requests for procedure calls on the receiver). Different types of indirect communication is: **group communication**, **publish-subscribe** and **message queues**.
+
+## Client-server architecture
+An important class of organizations of distributed systems is how machines should be divided into clients and servers. A client is an entity that sends requests to a server and expects that the server will produce a result that is returned to the client. The functionality is split up into smaller modules, increasing modularity. Client-server architectures are often centralized. In cases we see a decentralized approach every entity acts both as a server and a client in different situations. There is an equal role between each entity. This is what constitute peer-to-peer systems.
+
+## Peer-to-peer (P2P)
+In peer-to-peer systems the processes are organized into an overlay network which is a logical network where every entity has a list of all the other entities in the network that it may communicate with.
+
+## Tiered architecture
+A tiered architecture is useful to organize the functionality of a service by placing it on different servers. A tiered architecture gives rise to a vertical splitting of services.
+
+## Layering
+By partitioning a complex system into different layers we may reduce the overall complexity (hides complexity) of the system making it easier to implement and maintain. A layered approach gives rise to a horizontal splitting of services. Upper layers utilize services of lower layers. Distributed systems can be divided into three different layers: **platform** (provides a common service for the higher layers), **middleware** (provides common models that the application programmer may take advantage of by abstracting away e.g. communication mechanisms) and **applications**.
+
+## Micro services
+## Docker
+The benefits of using docker is the following
+1. Local development environments can be set up that are exact replicas of a live environment/server.
+2. It simplifies collaboration by allowing anyone to work on the same project with the same settings, irrespective of the local host environment.
+3. Multiple development environments can be run from the same host each one having different configurations, operating systems, and software.
+4. Projects can be tested on different servers.
+5. It gives you instant application portability. Build, ship, and run any application as a portable container that can run almost anywhere.
+
+So it allows for **ease-of-use** (anyone can package their application on any device and be sure that will run unmodified anywhere else), **speed** (they run on the kernel in a sandboxed environment without simulating the whole operating system), **modularity** (it is easy to break up the application into smaller parts in individual containers) and **scalability** (it is easy to link these containers making it easy to scale and update components independently of each other).
+
 
 # Mutual exclusion
 

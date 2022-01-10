@@ -4,7 +4,7 @@ tags: []
 lastModified: 2022-01-10
 created: 2022-01-09
 title: Distributed Systems
-header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":2,"name":"Token ring","link":"Token-ring"},{"depth":1,"name":"Election","link":"Election"},{"depth":2,"name":"Bully algorithm","link":"Bully-algorithm"},{"depth":2,"name":"Ring algorithm","link":"Ring-algorithm"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency and replication","link":"Consistency-and-replication"},{"depth":2,"name":"Data-centric models","link":"Data-centric-models"},{"depth":2,"name":"Client-centric models","link":"Client-centric-models"},{"depth":2,"name":"Numerical deviation","link":"Numerical-deviation"},{"depth":2,"name":"Staleness deviation","link":"Staleness-deviation"},{"depth":2,"name":"Ordering deviation","link":"Ordering-deviation"},{"depth":2,"name":"Consistent ordering","link":"Consistent-ordering"},{"depth":3,"name":"Sequential ordering","link":"Sequential-ordering"},{"depth":3,"name":"Casual ordering","link":"Casual-ordering"},{"depth":2,"name":"Sequential consistency","link":"Sequential-consistency"},{"depth":3,"name":"Primary-based protocols","link":"Primary-based-protocols"},{"depth":3,"name":"Replicated-write protocols","link":"Replicated-write-protocols"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
+header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":2,"name":"Token ring","link":"Token-ring"},{"depth":1,"name":"Election","link":"Election"},{"depth":2,"name":"Bully algorithm","link":"Bully-algorithm"},{"depth":2,"name":"Ring algorithm","link":"Ring-algorithm"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency and replication","link":"Consistency-and-replication"},{"depth":2,"name":"Data-centric models","link":"Data-centric-models"},{"depth":2,"name":"Client-centric models","link":"Client-centric-models"},{"depth":2,"name":"Numerical deviation","link":"Numerical-deviation"},{"depth":2,"name":"Staleness deviation","link":"Staleness-deviation"},{"depth":2,"name":"Ordering deviation","link":"Ordering-deviation"},{"depth":2,"name":"Consistent ordering","link":"Consistent-ordering"},{"depth":3,"name":"Sequential ordering","link":"Sequential-ordering"},{"depth":3,"name":"Casual ordering","link":"Casual-ordering"},{"depth":2,"name":"Sequential consistency","link":"Sequential-consistency"},{"depth":3,"name":"Primary-based protocols","link":"Primary-based-protocols"},{"depth":3,"name":"Replicated-write protocols","link":"Replicated-write-protocols"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":2,"name":"Availability","link":"Availability"},{"depth":2,"name":"Reliability","link":"Reliability"},{"depth":2,"name":"Safety","link":"Safety"},{"depth":2,"name":"Maintainability","link":"Maintainability"},{"depth":2,"name":"Fault masking with redundancy","link":"Fault-masking-with-redundancy"},{"depth":2,"name":"Process resilience","link":"Process-resilience"},{"depth":3,"name":"Flat groups","link":"Flat-groups"},{"depth":3,"name":"Hierarchical groups","link":"Hierarchical-groups"},{"depth":3,"name":"K-fault-tolerant system","link":"K-fault-tolerant-system"},{"depth":2,"name":"Byzantine agreement problem","link":"Byzantine-agreement-problem"},{"depth":2,"name":"Process failure detection","link":"Process-failure-detection"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"ACID","link":"ACID"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
 ---
 
 # Resources
@@ -242,6 +242,205 @@ In replicated-write protocols we forward an update to several replicas at the sa
 # Fault tolerance
 https://en.wikipedia.org/wiki/Fault_tolerance
 
+Failures may occur at all times and can be due to, **hardware faults**, **software bugs**, **operator errors**, **network errors** and **power outage**. A fail is defined as when a system cannot meet its promises. In distributed system we may talk about partial failure, which happens when one component of the system fails that may or may not affect other components in the system. The goal of a fault-tolerant system is to enable the system to continue operating properly in case of failure. Thus, a system is said to be **fault-tolerant** if the system can provide its services even in the presence of **faults**. A robust fault tolerant system requires:
+1. No single point of failure.
+2. Fault isolation of the failing component.
+3. The ability to reverse the faulty instructions.
+
+## Availability
+A system is said to be highly available if it most likely works at any given time instant.
+
+## Reliability
+A system is said to be highly reliable if it most likely continue to work without interruption during a relatively long period of time.
+
+## Safety
+A system that temporarily fails to operate correctly should not result in catastrophic effects.
+
+## Maintainability
+A system that is easy to maintain.
+
+## Fault masking with redundancy
+A common way to make sure that a system operates correctly in the case of failure is to insert some redundancy into the system. If we are dealing with sending information we may add some extra bits to allow us to recover lost bits, in software we may have extra processes to allow tolerating failed processes, in hardware we may use extra equipment to allow for failed hardware components and in the case of time events we may perform an action twice or more if it is required.
+
+## Process resilience
+The key to tolerating a faulty process is to divide processes into groups based on similar behavior. If one of these processes fail, another in the same group may be able to take over. However, a process may be in multiple different groups at the same time and may come and go to different groups during runtime.
+
+### Flat groups
+1. Could be quorum-based
+2. (+) Symmetrical
+3. (+) No single point of failure
+4. (—) Decision making could be complicated
+
+### Hierarchical groups
+1. Could be active replication
+2. (+) Decision making is easy
+3. (—) Asymmetrical
+4. (—) Single point of failure
+
+### K-fault-tolerant system
+A system is said to be **k-fault-tolerant** if it can survive faults in $ k $ differnet components and still meet its specifications. To achieve a k-fault-tolerant system we must require an agreement protocol that is applied to a process group. Typically this means:
+1. Electing a coordinator.
+2. Deciding whether or not to commit a transaction.
+3. Dividing tasks between workers.
+4. Synchronization.
+
+There can be problems in reaching an agreement if communication between processes or processes themselves are not perfect. The goal is to reach consensus on some issue and establish that consensus within a finite number of steps for all non-faulty processes. Reaching an agreement is only possible in the following circumstances
+<table>
+ <thead>
+  <tr>
+    <th colspan="6">Message ordering</th>
+  </tr>
+  <tr>
+   <th colspan="1">Process behavior</th>
+   <th colspan="2">Unordered</th>
+   <th colspan="2">Ordered</th>
+   <th colspan="1">Communication delay</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Synchronous</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>Bounded</td>
+  </tr>
+  <tr>
+    <td>Synchronous</td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+    <td>Unbounded</td>
+  </tr>
+  <tr>
+    <td>Asynchronous</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td>Bounded</td>
+  </tr>
+  <tr>
+    <td>Asynchronous</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td>Unbounded</td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th></th>
+   <th>Unicast</th>
+   <th>Multicast</th>
+   <th>Unicast</th>
+   <th>Multicast</th>
+   <th></th>
+  </tr>
+  <tr>
+    <th colspan="6">Message transmission</th>
+  </tr>
+ </tfoot>
+</table>
+
+In practice many distributed systems assume that
+1. Processes are asynchronous
+2. Message transmission is unicast
+3. Communication delays are unbounded
+
+## Byzantine agreement problem
+- https://en.wikipedia.org/wiki/Quantum_Byzantine_agreement
+- https://en.wikipedia.org/wiki/Byzantine_fault
+
+In the byzantine agreement problem we assume that
+1. Processes are synchronous.
+2. Messages are unicast while preserving order.
+3. Communication delay is bounded.
+4. There are $ N $ processes where each process $ i $ will provide a value $ v_i $ to the others.
+5. There are at most $ k $ faulty processes.
+
+<table>
+ <thead>
+  <tr>
+    <th colspan="6">Message ordering</th>
+  </tr>
+  <tr>
+   <th colspan="1">Process behavior</th>
+   <th colspan="2">Unordered</th>
+   <th colspan="2">Ordered</th>
+   <th colspan="1">Communication delay</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Synchronous</td>
+    <td>X</td>
+    <td>X</td>
+    <td style="background-color: white; color: black">X</td>
+    <td>X</td>
+    <td>Bounded</td>
+  </tr>
+  <tr>
+    <td>Synchronous</td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+    <td>Unbounded</td>
+  </tr>
+  <tr>
+    <td>Asynchronous</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td>Bounded</td>
+  </tr>
+  <tr>
+    <td>Asynchronous</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td>Unbounded</td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th></th>
+   <th>Unicast</th>
+   <th>Multicast</th>
+   <th>Unicast</th>
+   <th>Multicast</th>
+   <th></th>
+  </tr>
+  <tr>
+    <th colspan="6">Message transmission</th>
+  </tr>
+ </tfoot>
+</table>
+
+The problem could be expresses as there are $ N $ generals that surround a city. They communicate by courier. Each has an opinion: "attack" or "wait (withdraw)".
+- In fact, an attack would succeed: the city will fall.
+- Waiting will succeed too: the city will surrender.
+- But if some attack and some wait, disaster ensues
+
+This implies that they must reach consensus. Some Generals (f of them) are traitors... It doesn’t matter if they attack or wait, but we must prevent them from disrupting the battle
+- Traitor can send different messages to each
+- Traitor can wait to see what others say
+- Traitor can't forge messages from other generals
+
+Traitors here are the faulty processes. The basic idea to solve the problem is a two step protocol
+1. Generals sends votes to each other.
+2. Exchange what each general got from the others after all votes have been received.
+By doing this we hope that we filter out the faulty processes.
+
+## Process failure detection
+In failure detection a **timeout mechanism** is usually involved, that after a specified period of time will trigger a timeout. However we must be careful to not state that a process has failed because it didn't return the ping within the timeout period, because it may very well be so that the network was very congested at the time being, but if we were to send the ping once again it may reach.
+
 # CAP theorem
 https://en.wikipedia.org/wiki/CAP_theorem
 
@@ -253,6 +452,15 @@ CAP theorem states that only two of the following three guarantees may hold in a
 For example, if a network partition failure happens, it must be decided whether to
 1. Cancel the operation and thus decrease the availability but ensure consistency.
 2. Proceed with the operation and thus provide availability but risk inconsistency.
+
+# ACID
+https://en.wikipedia.org/wiki/ACID
+
+ACID stands for **atomicity**, **consistency**, **isolation** and **durability**. Each of these mean the following
+1. **Atomicity**. Operations that are composed together are guaranteed to be executed as a single unit, which either fails completely or succeeds completely. If any of the operations in the composed unit fails the whole unit fails, and the system is rolled back if there were any side effects of the previous operations.
+2. **Consistency**. Ensures that operations bring the system from one valid state into another valid state, maintaining system invariants.
+3. **Isolation**. If operations are executed concurrently isolation ensures that result of the execution is the same as if the operations would have been sequentially. Isolation regulates concurrency control.
+4. **Durability**. Guarantees that once an operation has successfully been executed and committed in the system, it will remain committed even in case of a system failure.
 
 # The Eight Fallacies of Distributed Systems
 1. The network is reliable

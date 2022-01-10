@@ -4,11 +4,9 @@ tags: []
 lastModified: 2022-01-10
 created: 2022-01-09
 title: Distributed Systems
-header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":2,"name":"Token ring","link":"Token-ring"},{"depth":1,"name":"Election","link":"Election"},{"depth":2,"name":"Bully algorithm","link":"Bully-algorithm"},{"depth":2,"name":"Ring algorithm","link":"Ring-algorithm"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency and replication","link":"Consistency-and-replication"},{"depth":2,"name":"Data-centric models","link":"Data-centric-models"},{"depth":2,"name":"Client-centric models","link":"Client-centric-models"},{"depth":2,"name":"Numerical deviation","link":"Numerical-deviation"},{"depth":2,"name":"Staleness deviation","link":"Staleness-deviation"},{"depth":2,"name":"Ordering deviation","link":"Ordering-deviation"},{"depth":2,"name":"Consistent ordering","link":"Consistent-ordering"},{"depth":3,"name":"Sequential ordering","link":"Sequential-ordering"},{"depth":3,"name":"Casual ordering","link":"Casual-ordering"},{"depth":2,"name":"Sequential consistency","link":"Sequential-consistency"},{"depth":3,"name":"Primary-based protocols","link":"Primary-based-protocols"},{"depth":3,"name":"Replicated-write protocols","link":"Replicated-write-protocols"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":2,"name":"Availability","link":"Availability"},{"depth":2,"name":"Reliability","link":"Reliability"},{"depth":2,"name":"Safety","link":"Safety"},{"depth":2,"name":"Maintainability","link":"Maintainability"},{"depth":2,"name":"Fault masking with redundancy","link":"Fault-masking-with-redundancy"},{"depth":2,"name":"Process resilience","link":"Process-resilience"},{"depth":3,"name":"Flat groups","link":"Flat-groups"},{"depth":3,"name":"Hierarchical groups","link":"Hierarchical-groups"},{"depth":3,"name":"K-fault-tolerant system","link":"K-fault-tolerant-system"},{"depth":2,"name":"Byzantine agreement problem","link":"Byzantine-agreement-problem"},{"depth":2,"name":"Process failure detection","link":"Process-failure-detection"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"ACID","link":"ACID"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
+header: [{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":2,"name":"Token ring","link":"Token-ring"},{"depth":1,"name":"Election","link":"Election"},{"depth":2,"name":"Bully algorithm","link":"Bully-algorithm"},{"depth":2,"name":"Ring algorithm","link":"Ring-algorithm"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency and replication","link":"Consistency-and-replication"},{"depth":2,"name":"Strict consistency","link":"Strict-consistency"},{"depth":2,"name":"Loose consistency","link":"Loose-consistency"},{"depth":2,"name":"Data-centric models","link":"Data-centric-models"},{"depth":3,"name":"Consistency specification models","link":"Consistency-specification-models"},{"depth":3,"name":"Models for consistent ordering of operations","link":"Models-for-consistent-ordering-of-operations"},{"depth":2,"name":"Client-centric models","link":"Client-centric-models"},{"depth":3,"name":"Monotonic reads","link":"Monotonic-reads"},{"depth":3,"name":"Monotonic writes","link":"Monotonic-writes"},{"depth":3,"name":"Read your writes","link":"Read-your-writes"},{"depth":3,"name":"Write follow reads","link":"Write-follow-reads"},{"depth":2,"name":"Types of ordering","link":"Types-of-ordering"},{"depth":3,"name":"Total ordering","link":"Total-ordering"},{"depth":3,"name":"Sequential ordering","link":"Sequential-ordering"},{"depth":3,"name":"Casual ordering","link":"Casual-ordering"},{"depth":2,"name":"Sequential consistency","link":"Sequential-consistency"},{"depth":3,"name":"Primary-based protocols","link":"Primary-based-protocols"},{"depth":3,"name":"Replicated-write protocols","link":"Replicated-write-protocols"},{"depth":2,"name":"Causal consistency","link":"Causal-consistency"},{"depth":2,"name":"Eventual consistency","link":"Eventual-consistency"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":2,"name":"Availability","link":"Availability"},{"depth":2,"name":"Reliability","link":"Reliability"},{"depth":2,"name":"Safety","link":"Safety"},{"depth":2,"name":"Maintainability","link":"Maintainability"},{"depth":2,"name":"Fault masking with redundancy","link":"Fault-masking-with-redundancy"},{"depth":2,"name":"Process resilience","link":"Process-resilience"},{"depth":3,"name":"Flat groups","link":"Flat-groups"},{"depth":3,"name":"Hierarchical groups","link":"Hierarchical-groups"},{"depth":3,"name":"K-fault-tolerant system","link":"K-fault-tolerant-system"},{"depth":2,"name":"Byzantine agreement problem","link":"Byzantine-agreement-problem"},{"depth":2,"name":"Process failure detection","link":"Process-failure-detection"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"ACID","link":"ACID"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"},{"depth":1,"name":"Resources","link":"Resources"}]
 ---
 
-# Resources
-http://csis.pace.edu/~marchese/CS865/
 
 # Definition
 A distributed system is a computing environment in which multiple different components are spread out across multiple computers (computing devices) on a network. Together they split up the work, coordinating  the job to be more effectively executed than if it was to be executed on a single machine.
@@ -212,25 +210,76 @@ So the `reduce` function gets the partial value for a specific key and process t
 # Consistency and replication
 https://en.wikipedia.org/wiki/Replication_(computing)
 
-There are primarily two reasons for replication data, improving performance and improving reliability. However, replication introduces a consistency problem. Whenever a replica is updated it becomes different from every other replica. To keep replicas consistent updates need to be propagated to each replica in a way that temporary inconsistencies are not noticed. In large-scale distributed systems this can massively affect the performance of the system, which is why it is common to relax the constraint. There are multiple consistency models that have different pros and cons, and there is not a single model that works best in all different cases.
-Consistency protocols describe a specific implementation of a consistency model. Replication in computing involves sharing information to ensure consistency between redundant resources (software or hardware components) to improve reliability, fault-tolerance, or accessibility.
+There are primarily two reasons for replication data, improving performance and improving reliability. Replication is the process of maintaining the data at multiple different computers. However, replication introduces a consistency problem. Whenever a replica is updated it becomes different from every other replica. To keep replicas consistent updates need to be propagated to each replica in a way that temporary inconsistencies are not noticed. In large-scale distributed systems this can massively affect the performance of the system, which is why it is common to relax the constraint. There are multiple consistency models that have different pros and cons, and there is not a single model that works best in all different cases.
+Consistency protocols describe a specific implementation of a consistency model. Replication in computing involves sharing information to ensure consistency between redundant resources (software or hardware components) to improve reliability, performance (cache), scalability (can balance the load between the main server and replicated servers), fault-tolerance (if a minority of the servers are malicious, the non-malicious servers can outvote these servers providing security as well tolerance against faulty servers), or availability (accessibility, if one computer crashes then a replica of the data can still be accessed).
+
+## Strict consistency
+When using strict consistency the data is always fresh.
+1. After a write operation, the update is propagated to all other replicas.
+2. A read operation will result in reading the most recent write.
+
+In a system with many writes, this approach will have very poor performance.
+
+## Loose consistency
+When using loose consistency the data might be stale.
+1. After a write operation, we seldom propagate the update to all other replicas.
+2. A read operation may result in reading a value that was written a long time ago.
+3. Replicas are generally out-of-sync.
+
+The replicas may synchronize at a specific time, reducing overhead.
 
 ## Data-centric models
+These models define how updates of the data are propagated across all replicas to keep them consistent.
+
+### Consistency specification models
+Models that enable specifying the consistency levels that are tolerable for the application. There should be a mechanism to measure how inconsistent data might be on different replicas. A consistency specification model called continuous consistency model is used to measure inconsistencies and express what inconsistencies can be expected in the system. The level of inconsistency if defined over three different axis
+1. **Numerical deviation**. Deviation in numerical (how many units does a replica deviate from another) values.
+2. **Staleness deviation**. Deviation in the ordering (how many local updates were not propagated) of updates.
+3. **Ordering deviation**. Deviation in the staleness (time since last update) between replicas.
+To measure consistency we may use a **global observer** and a suitable metric given the use case.
+
+
+### Models for consistent ordering of operations
+Models that enable specifying the order in which the data updates are propagated to different replicas.
+
 ## Client-centric models
 Client-centric consistency models concentrate on the consistency of the individual client and not the fact that the data may be shared between multiple other clients. We assume here that a client may connect to different replicas during a fixed time interval but that the client should not notice that the replica has changed (transparency). When a client connects to a new replica, that replica is synchronized and updated with data that potentially had been modified by the client which possibly resided at another replica.
 
 When propagating updates different techniques are used depending on different scenarios, namely, **what** should be propagated, **where** should updates be propagated to, **whom** is responsible for the initiated propagation. We then propagate state, operations or notifications. Every replica does not need to be updated immediately and this all depends on the distribution protocol. A choice can be made to either push or pull updates to or from other replicas.
 
-## Numerical deviation
-## Staleness deviation
-## Ordering deviation
-## Consistent ordering
+Four types of client-centric consistency models are
+1. Monotonic reads
+2. Monotonic writes
+3. Read your writes
+4. Write follow reads
+
+### Monotonic reads
+If a client reads the value of data item $ x $, then when the client does it again, it should result in the same or a more recent value of $ x $.
+
+### Monotonic writes
+If a client writes to the data item $ x $, then any successive writes should be performed after the previous write operation has finished by the same process.
+
+### Read your writes
+The effect of a write operation on data item $ x $ will always be sent by a successive read operation on $ x $ by the same process.
+
+### Write follow reads
+A write operation on data item $ x $ following a previous read operation on $ x $ by the same process should take place on the same or a more recent value of $ x $.
+
+
+## Types of ordering
+Below are three different types of ordering of messages based on different needs.
+
+### Total ordering
+If a process $ P_i $ sends a message $ m_i $ and $ P_j $ send $ m_j $ and if one correct process delivers $ m_i $ before $ m_j $ then every correct process delivers $ m_i $ before $ m_j $.
+
 ### Sequential ordering
-Sequential ordering provides the semantics of dealing with sequential operations but in concurrent programming.
+
 ### Casual ordering
-Causal ordering reflects that operations potentially dependent on other operations are executed in consideration to this dependency.
+Causal ordering reflects that operations potentially dependent on other operations are executed in consideration to this dependency. If $ a $ and $ b $ are two events such that $ a $ happened before $ b $, denoted $ a \to b $. $ C_i(a) $ and $ C_i(b) $ is the logical time event $ a $ and $ b $ is received at process $ P_i $. Then we can deduce that $ a \to b $ by observing $ C_i(a) < C_i(b) $ that $ a $ and $ b $ is casually related. Vector clocks and logical clocks can implement causality. If process $ P_i $ sends message $ m_i $ and process $ P_j $ sends message $ m_j $, and $ m_i \to m_j $, then any correct process that delivers $ m_j $ will deliver $ m_i $ before $ m_j $.
+
+
 ## Sequential consistency
-We make a distinction between **primary-based** protocols and **replicated-write** protocols.
+Sequential consistency models ensures that updates are executed in sequential order. We make a distinction between **primary-based** protocols and **replicated-write** protocols.
 
 ### Primary-based protocols
 In primary-based protocols we forward all operations to a primary copy that ensures that the update is properly ordered and forwarded.
@@ -238,6 +287,11 @@ In primary-based protocols we forward all operations to a primary copy that ensu
 ### Replicated-write protocols
 In replicated-write protocols we forward an update to several replicas at the same time which makes ordering more difficult.
 
+## Causal consistency
+In causal consistency, writes that are casually related must be seen by all processes in the same order. However, concurrent messages may be seen in different order on different machines.
+
+## Eventual consistency
+Eventual consistency is a client centric consistency model. In eventual consistent data stores, data may be inconsistent between replicas at specific time instants, but will converge to the same ordering over time in the absence of updates. **Write-write** conflicts are unusual while **read-write** conflicts are more common.
 
 # Fault tolerance
 https://en.wikipedia.org/wiki/Fault_tolerance
@@ -459,7 +513,7 @@ https://en.wikipedia.org/wiki/ACID
 ACID stands for **atomicity**, **consistency**, **isolation** and **durability**. Each of these mean the following
 1. **Atomicity**. Operations that are composed together are guaranteed to be executed as a single unit, which either fails completely or succeeds completely. If any of the operations in the composed unit fails the whole unit fails, and the system is rolled back if there were any side effects of the previous operations.
 2. **Consistency**. Ensures that operations bring the system from one valid state into another valid state, maintaining system invariants.
-3. **Isolation**. If operations are executed concurrently isolation ensures that result of the execution is the same as if the operations would have been sequentially. Isolation regulates concurrency control.
+3. **Isolation**. If operations are executed concurrently isolation ensures that result of the execution is the same as if the operations would have been sequentially. Isolation regulates concurrency control. No operation can see the data from another operation in an 1intermediate state.
 4. **Durability**. Guarantees that once an operation has successfully been executed and committed in the system, it will remain committed even in case of a system failure.
 
 # The Eight Fallacies of Distributed Systems
@@ -471,3 +525,6 @@ ACID stands for **atomicity**, **consistency**, **isolation** and **durability**
 6. There is one administrator
 7. Transport cost is zero
 8. The network is homogeneous
+
+# Resources
+http://csis.pace.edu/~marchese/CS865/

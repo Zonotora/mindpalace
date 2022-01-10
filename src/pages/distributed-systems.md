@@ -4,7 +4,7 @@ tags: []
 lastModified: 2022-01-10
 created: 2022-01-09
 title: Distributed Systems
-header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":1,"name":"Election","link":"Election"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency","link":"Consistency"},{"depth":1,"name":"Replication","link":"Replication"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
+header: [{"depth":1,"name":"Resources","link":"Resources"},{"depth":1,"name":"Definition","link":"Definition"},{"depth":1,"name":"Naming","link":"Naming"},{"depth":2,"name":"Name resolution","link":"Name-resolution"},{"depth":3,"name":"Broadcasting","link":"Broadcasting"},{"depth":3,"name":"Forwarding pointers","link":"Forwarding-pointers"},{"depth":3,"name":"Home-based naming","link":"Home-based-naming"},{"depth":3,"name":"Distributed Hash Table (DHT)","link":"Distributed-Hash-Table-(DHT)"},{"depth":2,"name":"Flat naming","link":"Flat-naming"},{"depth":2,"name":"Structured naming","link":"Structured-naming"},{"depth":3,"name":"Name spaces","link":"Name-spaces"},{"depth":2,"name":"Attribute-based naming","link":"Attribute-based-naming"},{"depth":1,"name":"Architectures","link":"Architectures"},{"depth":2,"name":"Placement","link":"Placement"},{"depth":2,"name":"Communication paradigm","link":"Communication-paradigm"},{"depth":3,"name":"Middleware","link":"Middleware"},{"depth":3,"name":"Indirect communication","link":"Indirect-communication"},{"depth":2,"name":"Client-server architecture","link":"Client-server-architecture"},{"depth":2,"name":"Peer-to-peer (P2P)","link":"Peer-to-peer-(P2P)"},{"depth":2,"name":"Tiered architecture","link":"Tiered-architecture"},{"depth":2,"name":"Layering","link":"Layering"},{"depth":2,"name":"Micro services","link":"Micro-services"},{"depth":2,"name":"Docker","link":"Docker"},{"depth":1,"name":"Mutual exclusion","link":"Mutual-exclusion"},{"depth":2,"name":"Token ring","link":"Token-ring"},{"depth":1,"name":"Election","link":"Election"},{"depth":1,"name":"Clocks","link":"Clocks"},{"depth":2,"name":"Cristian's algorithm","link":"Cristian's-algorithm"},{"depth":2,"name":"Berkeley algorithm","link":"Berkeley-algorithm"},{"depth":2,"name":"Consistent cut","link":"Consistent-cut"},{"depth":2,"name":"Logical clocks","link":"Logical-clocks"},{"depth":2,"name":"Active monitoring","link":"Active-monitoring"},{"depth":2,"name":"Passive monitoring","link":"Passive-monitoring"},{"depth":1,"name":"MapReduce","link":"MapReduce"},{"depth":1,"name":"Consistency and replication","link":"Consistency-and-replication"},{"depth":2,"name":"Data-centric models","link":"Data-centric-models"},{"depth":2,"name":"Client-centric models","link":"Client-centric-models"},{"depth":2,"name":"Numerical deviation","link":"Numerical-deviation"},{"depth":2,"name":"Staleness deviation","link":"Staleness-deviation"},{"depth":2,"name":"Ordering deviation","link":"Ordering-deviation"},{"depth":2,"name":"Consistent ordering","link":"Consistent-ordering"},{"depth":3,"name":"Sequential ordering","link":"Sequential-ordering"},{"depth":3,"name":"Casual ordering","link":"Casual-ordering"},{"depth":2,"name":"Sequential consistency","link":"Sequential-consistency"},{"depth":3,"name":"Primary-based protocols","link":"Primary-based-protocols"},{"depth":3,"name":"Replicated-write protocols","link":"Replicated-write-protocols"},{"depth":1,"name":"Fault tolerance","link":"Fault-tolerance"},{"depth":1,"name":"CAP theorem","link":"CAP-theorem"},{"depth":1,"name":"The Eight Fallacies of Distributed Systems","link":"The-Eight-Fallacies-of-Distributed-Systems"}]
 ---
 
 # Resources
@@ -103,6 +103,10 @@ So it allows for **ease-of-use** (anyone can package their application on any de
 
 # Mutual exclusion
 
+## Token ring
+In the token ring algorithm each resource is associated with a token. The token is circulated between the processes. The process with the token may access the resource. The ring is a logical representing of a "circular linked list". When a process has finished accessing a resource or doesn't want to access the resource it passes the token forward to the next process in the ring. The advantages of the algorithm is that is provides a deterministic way of mutual exclusion and it avoids starvation. However it has high message overhead if no process wants to access the resource (each process keeps sending the token to the next process), in the case the token is lost it must be regenerated but it could be difficult to detect if the token is lost and dead process must be deleted from the ring because if one fails the whole rings fails.
+
+
 # Election
 
 # Clocks
@@ -140,16 +144,38 @@ Active monitoring or distributed snapshot is when a monitor $ p_0 $ requests a s
 ## Passive monitoring
 In passive monitoring we use processes' local histories to construct consistent global states (cuts).
 
-
 # MapReduce
 https://en.wikipedia.org/wiki/MapReduce
 
-# Consistency
-
-# Replication
+# Consistency and replication
 https://en.wikipedia.org/wiki/Replication_(computing)
 
-Replication in computing involves sharing information to ensure consistency between redundant resources (software or hardware components) to improve reliability, fault-tolerance, or accessibility.
+There are primarily two reasons for replication data, improving performance and improving reliability. However, replication introduces a consistency problem. Whenever a replica is updated it becomes different from every other replica. To keep replicas consistent updates need to be propagated to each replica in a way that temporary inconsistencies are not noticed. In large-scale distributed systems this can massively affect the performance of the system, which is why it is common to relax the constraint. There are multiple consistency models that have different pros and cons, and there is not a single model that works best in all different cases.
+Consistency protocols describe a specific implementation of a consistency model. Replication in computing involves sharing information to ensure consistency between redundant resources (software or hardware components) to improve reliability, fault-tolerance, or accessibility.
+
+## Data-centric models
+## Client-centric models
+Client-centric consistency models concentrate on the consistency of the individual client and not the fact that the data may be shared between multiple other clients. We assume here that a client may connect to different replicas during a fixed time interval but that the client should not notice that the replica has changed (transparency). When a client connects to a new replica, that replica is synchronized and updated with data that potentially had been modified by the client which possibly resided at another replica.
+
+When propagating updates different techniques are used depending on different scenarios, namely, **what** should be propagated, **where** should updates be propagated to, **whom** is responsible for the initiated propagation. We then propagate state, operations or notifications. Every replica does not need to be updated immediately and this all depends on the distribution protocol. A choice can be made to either push or pull updates to or from other replicas.
+
+## Numerical deviation
+## Staleness deviation
+## Ordering deviation
+## Consistent ordering
+### Sequential ordering
+Sequential ordering provides the semantics of dealing with sequential operations but in concurrent programming.
+### Casual ordering
+Causal ordering reflects that operations potentially dependent on other operations are executed in consideration to this dependency.
+## Sequential consistency
+We make a distinction between **primary-based** protocols and **replicated-write** protocols.
+
+### Primary-based protocols
+In primary-based protocols we forward all operations to a primary copy that ensures that the update is properly ordered and forwarded.
+
+### Replicated-write protocols
+In replicated-write protocols we forward an update to several replicas at the same time which makes ordering more difficult.
+
 
 # Fault tolerance
 https://en.wikipedia.org/wiki/Fault_tolerance

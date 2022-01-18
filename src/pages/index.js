@@ -126,8 +126,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["art","databases","machine-learning","math","meta","networking","os","programming","web"], files: ["control-theory","distributed-systems","latex"] };
-  const [numberOfFiles, numberOfDirs ] = [56, 12];
+  const { url, dirs, files } = { url: "", dirs: ["art","databases","machine-learning","math","meta","networking","os","programming","web"], files: ["control-theory","distributed-systems","image-analysis","latex"] };
+  const [numberOfFiles, numberOfDirs ] = [57, 12];
   const [tags, tagsInFiles] = [{"machine-learning":20,"keywords":3,"python":5}, {"machine-learning":["machine-learning","keywords"],"math":["keywords"],"os":["keywords"],"programming":["python","machine-learning"]}];
   const [lastModified, setLastModified] = useState({});
 

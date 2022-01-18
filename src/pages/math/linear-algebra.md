@@ -1,10 +1,10 @@
 ---
 slug: /math/linear-algebra
 tags: []
-lastModified: 2021-09-05
+lastModified: 2022-01-18
 created: 2021-09-01
 title: Linear Algebra
-header: [{"depth":1,"name":"Rank","link":"Rank"}]
+header: [{"depth":1,"name":"Rank","link":"Rank"},{"depth":1,"name":"Trace","link":"Trace"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 Elements $ \bold v \in \R^n $ are referred to as **vectors**
@@ -34,3 +34,17 @@ An **affine subspace** $ A \sube \R^n $ is a set that is represented as:
 
 # Rank
 The rank of a matrix $ A $ is the dimension spanned by its columns. Thus, the maximal number of linearly independent columns in $ A $, which in turn, is equal to the dimension spanned by its rows. The column rank and the row rank are always equal.
+
+# Trace
+
+
+The trace @{trace} of a square matrix $ A $, is the sum of the elements of the main diagonal, e.g. $ I^3 $ where $ I $ is the identity matrix with three dimension has the trace of $ 3 $.
+$$
+\text{tr}(I^3) = 3
+$$
+
+
+# References
+{trace}:
+    title: Trace
+    url: https://en.wikipedia.org/wiki/Trace_(linear_algebra)

@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-01-09
+lastModified: 2022-01-18
 created: 2021-07-05
 title: Structure
 header: []
@@ -11,6 +11,7 @@ header: []
 root 
 ├── control-theory
 ├── distributed-systems
+├── image-analysis
 ├── latex
 ├── art
 │   └── painters

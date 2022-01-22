@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-01-18
+lastModified: 2022-01-22
 created: 2021-07-05
 title: Structure
 header: []
@@ -13,6 +13,10 @@ root
 ├── distributed-systems
 ├── image-analysis
 ├── latex
+├── algorithms
+│   ├── algorithms
+│   ├── cheat-sheet
+│   └── problem-list
 ├── art
 │   └── painters
 ├── databases
@@ -67,7 +71,6 @@ root
 │   ├── processes-and-threads
 │   └── processors
 ├── programming
-│   ├── algorithms
 │   ├── python
 │   │   ├── matplotlib
 │   │   ├── numpy

@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-01-22
+lastModified: 2022-03-03
 created: 2021-07-05
 title: Structure
 header: []
@@ -16,6 +16,7 @@ root
 ├── algorithms
 │   ├── algorithms
 │   ├── cheat-sheet
+│   ├── keywords
 │   └── problem-list
 ├── art
 │   └── painters

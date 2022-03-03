@@ -1,13 +1,30 @@
 ---
 slug: /algorithms/algorithms
 tags: []
-lastModified: 2022-01-22
+lastModified: 2022-03-03
 created: 2021-09-12
 title: Algorithms
-header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Metrics","link":"Metrics"},{"depth":2,"name":"Definition of efficiency","link":"Definition-of-efficiency"},{"depth":2,"name":"Polynomial running time","link":"Polynomial-running-time"},{"depth":1,"name":"Asymptotic order of growth","link":"Asymptotic-order-of-growth"},{"depth":2,"name":"Asymptotic upper bound","link":"Asymptotic-upper-bound"},{"depth":2,"name":"Asymptotic lower bound","link":"Asymptotic-lower-bound"},{"depth":2,"name":"Asymptotic tight bound","link":"Asymptotic-tight-bound"},{"depth":2,"name":"Properties","link":"Properties"},{"depth":3,"name":"Transitivity","link":"Transitivity"},{"depth":3,"name":"Sum","link":"Sum"}]
+header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Techniques","link":"Techniques"},{"depth":3,"name":"Dynamic programming","link":"Dynamic-programming"},{"depth":3,"name":"Memoization","link":"Memoization"},{"depth":3,"name":"Divide-and-conquer","link":"Divide-and-conquer"},{"depth":2,"name":"Metrics","link":"Metrics"},{"depth":2,"name":"Definition of efficiency","link":"Definition-of-efficiency"},{"depth":2,"name":"Polynomial running time","link":"Polynomial-running-time"},{"depth":1,"name":"Asymptotic order of growth","link":"Asymptotic-order-of-growth"},{"depth":2,"name":"Asymptotic upper bound","link":"Asymptotic-upper-bound"},{"depth":2,"name":"Asymptotic lower bound","link":"Asymptotic-lower-bound"},{"depth":2,"name":"Asymptotic tight bound","link":"Asymptotic-tight-bound"},{"depth":2,"name":"Properties","link":"Properties"},{"depth":3,"name":"Transitivity","link":"Transitivity"},{"depth":3,"name":"Sum","link":"Sum"},{"depth":1,"name":"Types of algorithms","link":"Types-of-algorithms"},{"depth":1,"name":"Algorithm development strategies","link":"Algorithm-development-strategies"},{"depth":1,"name":"Recurrence","link":"Recurrence"},{"depth":2,"name":"Different cases","link":"Different-cases"}]
 ---
 
+
 # Introduction
+
+## Techniques
+
+### Dynamic programming
+We have to come up with smaller subproblems, and each of these smaller subproblems can be easily solved. The solution to the original problem can easily be deduced when we know the solution to each of the subproblems.
+We want that three conditions hold, namely
+
+1. There should be a polynomial number of subproblems.
+2. The solutions should yield a solution to the original problem.
+3. We should be able to build up solutions using a recurrence.
+
+
+### Memoization
+
+### Divide-and-conquer
+
 
 ## Metrics
 Worst-case running time is the largest possible running time an algorithm may have. In some cases it may not be a good measure for efficiency, e.g. if the algorithm runs well on 99.9 % of the input but very badly on 0.1 % of the input. We could make use of average-case running time instead in some cases but it depends. The goal when studying algorithms is thus to find the bound of the worst-case or average-case (or some other metric) running times to evaluate how performant the algorithm is.
@@ -45,3 +62,47 @@ $$
 
 ### Sum
 If $ f = O(h) $ and $ g = O(h) $ then $ f + g = O(h) $.
+
+# Types of algorithms
+1. Greedy
+    - greedy algorithm stays ahead
+    - exchange argument
+2. Dynamic programming
+    - Defining the objective value
+    - Computing the objective value
+
+# Algorithm development strategies
+1. **Brute force**. Some straightforward approach that tests all the possibilities.
+- **Smaller instances**. If we are able to solve smaller instances of the problem, can we use these to solve the overall problem?
+- **Greedy approaches**. Try different greedy approaches and find counter examples. Find valuable hints in the counter examples.
+
+
+# Recurrence
+If $ T(n) $ denotes the running time of an algorithm designed in a divide-and-conquer style, then $ T(n) $ will follow the recurrence relation
+
+$$
+T(n) \leq q T(n/2) + cn, \quad n > 2, T(2) \leq c
+$$
+where $ q $ is the recursive calls used.
+
+## Different cases
+
+We have different cases when $ q = 1, q = 2 $ and $ q > 2 $.
+
+When we have $ q > 2  $, then any function $ T(\cdot) $ that satisfies the above equation is bounded by
+
+$$
+O(n^{\log_2 q})
+$$
+
+When we have $ q = 1  $, then any function $ T(\cdot) $ that satisfies the above equation is bounded by
+
+$$
+O(n)
+$$
+
+When we have $ q = 2  $, then any function $ T(\cdot) $ that satisfies the above equation is bounded by
+
+$$
+O(n \log n)
+$$

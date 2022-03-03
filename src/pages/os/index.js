@@ -126,8 +126,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/os", dirs: [], files: ["interprocess-communication","keywords","memory-management","processes-and-threads","processors"] };
-  const [numberOfFiles, numberOfDirs ] = [5, 0];
+  const { url, dirs, files } = { url: "/os", dirs: [], files: ["file-systems","interprocess-communication","keywords","memory-management","processes-and-threads","processors"] };
+  const [numberOfFiles, numberOfDirs ] = [6, 0];
   const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
 

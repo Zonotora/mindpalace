@@ -4,11 +4,15 @@
  * @author Rose Pritchard
  */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ddd;
   background: none;
-  /* font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */
+  /* font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */ 
+  font-family: 'Roboto Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;

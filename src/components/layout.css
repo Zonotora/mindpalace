@@ -553,14 +553,6 @@ th {
   padding-left: 0.96667rem;
   padding-right: 0.96667rem;
 }
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);

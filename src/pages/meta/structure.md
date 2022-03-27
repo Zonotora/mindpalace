@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-03-03
+lastModified: 2022-03-27
 created: 2021-07-05
 title: Structure
 header: []
@@ -9,10 +9,12 @@ header: []
 
 <pre style="background-color: white;">
 root 
+├── bandits
 ├── control-theory
 ├── distributed-systems
 ├── image-analysis
 ├── latex
+├── network-security
 ├── algorithms
 │   ├── algorithms
 │   ├── cheat-sheet

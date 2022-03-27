@@ -1,10 +1,10 @@
 ---
 slug: /algorithms/algorithms
 tags: []
-lastModified: 2022-03-03
+lastModified: 2022-03-27
 created: 2021-09-12
 title: Algorithms
-header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Techniques","link":"Techniques"},{"depth":3,"name":"Dynamic programming","link":"Dynamic-programming"},{"depth":3,"name":"Memoization","link":"Memoization"},{"depth":3,"name":"Divide-and-conquer","link":"Divide-and-conquer"},{"depth":2,"name":"Metrics","link":"Metrics"},{"depth":2,"name":"Definition of efficiency","link":"Definition-of-efficiency"},{"depth":2,"name":"Polynomial running time","link":"Polynomial-running-time"},{"depth":1,"name":"Asymptotic order of growth","link":"Asymptotic-order-of-growth"},{"depth":2,"name":"Asymptotic upper bound","link":"Asymptotic-upper-bound"},{"depth":2,"name":"Asymptotic lower bound","link":"Asymptotic-lower-bound"},{"depth":2,"name":"Asymptotic tight bound","link":"Asymptotic-tight-bound"},{"depth":2,"name":"Properties","link":"Properties"},{"depth":3,"name":"Transitivity","link":"Transitivity"},{"depth":3,"name":"Sum","link":"Sum"},{"depth":1,"name":"Types of algorithms","link":"Types-of-algorithms"},{"depth":1,"name":"Algorithm development strategies","link":"Algorithm-development-strategies"},{"depth":1,"name":"Recurrence","link":"Recurrence"},{"depth":2,"name":"Different cases","link":"Different-cases"}]
+header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Techniques","link":"Techniques"},{"depth":3,"name":"Dynamic programming","link":"Dynamic-programming"},{"depth":3,"name":"Memoization","link":"Memoization"},{"depth":3,"name":"Divide-and-conquer","link":"Divide-and-conquer"},{"depth":2,"name":"Metrics","link":"Metrics"},{"depth":2,"name":"Definition of efficiency","link":"Definition-of-efficiency"},{"depth":2,"name":"Polynomial running time","link":"Polynomial-running-time"},{"depth":1,"name":"Asymptotic order of growth","link":"Asymptotic-order-of-growth"},{"depth":2,"name":"Asymptotic upper bound","link":"Asymptotic-upper-bound"},{"depth":2,"name":"Asymptotic lower bound","link":"Asymptotic-lower-bound"},{"depth":2,"name":"Asymptotic tight bound","link":"Asymptotic-tight-bound"},{"depth":2,"name":"Properties","link":"Properties"},{"depth":3,"name":"Transitivity","link":"Transitivity"},{"depth":3,"name":"Sum","link":"Sum"},{"depth":1,"name":"Types of algorithms","link":"Types-of-algorithms"},{"depth":1,"name":"Algorithm development strategies","link":"Algorithm-development-strategies"},{"depth":1,"name":"Recurrence","link":"Recurrence"},{"depth":2,"name":"Different cases","link":"Different-cases"},{"depth":1,"name":"NP","link":"NP"},{"depth":2,"name":"NP-complete","link":"NP-complete"}]
 ---
 
 
@@ -106,3 +106,14 @@ When we have $ q = 2  $, then any function $ T(\cdot) $ that satisfies the above
 $$
 O(n \log n)
 $$
+
+# NP
+
+NP (Nondeterministic polynomial) is a class of problems which we can denote as $ \mathcal{NP} $.
+NP is the class of all decision problems that easily can be verified in polynomial time given some advice in addition to the input. This advice is usually a solution. The verification does not solve the problem in polynomial time, just checks that in fact it is a valid solution to the problem.
+ We denote the class of all polynomial algorithms as $ \mathcal{P} $. We notice that $ \mathcal{P} \sube \mathcal{NP} $. One question we might ask ourselves is whether there exists a problem in $ \mathcal{NP} $ that does not belong to $ \mathcal{P} $. Does $ \mathcal{P} = \mathcal{NP} $?
+There is a general belief that this is not the case and regarded as a working hypothesis in the field. This question is regarded as one of the most famous problems in computer science.
+
+There is a contrast between finding a solution and checking if a solution is correct.
+
+## NP-complete

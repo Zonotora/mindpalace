@@ -1,4 +1,6 @@
 {
+  "sat": "Given a set of clauses $ C_1, \\dots, C_k $ over a set of variables $ X = \\{x_1, \\dots, x_n\\} $ does there exist a satisfying truth assignment?",
+  "3-sat": "Given a set of clauses $ C_1, \\dots, C_k $ each of length 3, over a set of variables$ X = \\{x_1, \\dots, x_n\\} $, does there exist a satisfying truth assignment?",
   "generalization": "In machine learning generalization refers to how well a trained model is to classify unseen data.",
   "generalization-gap": "Generalization gap is defined as the difference between the model's performance on training data versus unseen data from the same distribution.",
   "prediction": "Predictions are machine learning model's way of mapping an input to an output.",

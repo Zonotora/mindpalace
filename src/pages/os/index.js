@@ -102,6 +102,18 @@ const FileInformation = ({ numberOfDirs, numberOfFiles }) => {
   );
 };
 
+const SearchItem = ({ search }) => {
+  return (
+    <div className="template-filesystem-item">
+      <div className="template-filesystem-item-text-header">{search.ref}</div>
+      <div
+        className="template-filesystem-item-text"
+        dangerouslySetInnerHTML={{ __html: search.snapshot }}
+      />
+    </div>
+  );
+};
+
 const TagInformation = ({ tags }) => {
   if (Object.keys(tags).length === 0) return <></>;
 
@@ -130,6 +142,7 @@ const IndexPage = ({ data }) => {
   const [numberOfFiles, numberOfDirs ] = [6, 0];
   const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const nodes = data.allMarkdownRemark.edges
@@ -162,10 +175,52 @@ const IndexPage = ({ data }) => {
     setSiteTitle(title === "" ? "root" : title);
   }, [url]);
 
+  const searches = (
+    <div className="template-filesystem-searches">
+      {searchResults.map((search) => (
+        <Link key={search.ref} to={search.ref}>
+          <SearchItem search={search} />
+        </Link>
+      ))}
+    </div>
+  );
+
+  const filesystem = (
+    <>
+      <div className="template-filesystem-directories">
+        {dirs.map((dir) => (
+          <Link key={dir} to={`${url}/${dir}`}>
+            <FileSystemItem
+              fileName={dir}
+              fileType="folder"
+              lastModified={lastModified}
+              tagsInFiles={tagsInFiles}
+            />
+          </Link>
+        ))}
+      </div>
+      <div className="template-filesystem-files">
+        {files.map((file) => (
+          <Link key={file} to={`${url}/${file}`}>
+            <FileSystemItem
+              fileName={file}
+              fileType="file"
+              lastModified={lastModified}
+              tagsInFiles={tagsInFiles}
+            />
+          </Link>
+        ))}
+      </div>
+    </>
+  );
+
   return (
     <Layout>
       <div className="template-structure">
-        <Searchfield className="directory" />
+        <Searchfield
+          className="directory"
+          setSearchResults={setSearchResults}
+        />
         <div className="template-filesystem">
           <div className="template-filesystem-header">
             {siteTitle !== "root" ? (
@@ -180,30 +235,7 @@ const IndexPage = ({ data }) => {
             />
           </div>
 
-          <div className="template-filesystem-directories">
-            {dirs.map((dir) => (
-              <Link key={dir} to={`${url}/${dir}`}>
-                <FileSystemItem
-                  fileName={dir}
-                  fileType="folder"
-                  lastModified={lastModified}
-                  tagsInFiles={tagsInFiles}
-                />
-              </Link>
-            ))}
-          </div>
-          <div className="template-filesystem-files">
-            {files.map((file) => (
-              <Link key={file} to={`${url}/${file}`}>
-                <FileSystemItem
-                  fileName={file}
-                  fileType="file"
-                  lastModified={lastModified}
-                  tagsInFiles={tagsInFiles}
-                />
-              </Link>
-            ))}
-          </div>
+          {searchResults.length !== 0 ? searches : filesystem}
         </div>
       </div>
     </Layout>

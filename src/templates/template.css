@@ -167,11 +167,13 @@ input:focus {
   background-color: #282a31;
 }
 
-.template-filesystem-files a:last-child {
+.template-filesystem-files a:last-child,
+.template-filesystem-searches a:last-child {
   border-radius: 0px 0px 5px 5px;
 }
 
-.template-filesystem-files a:last-child .template-filesystem-item {
+.template-filesystem-files a:last-child .template-filesystem-item,
+.template-filesystem-searches a:last-child .template-filesystem-item {
   border-radius: inherit;
   border: 0px;
 }
@@ -211,7 +213,8 @@ input:focus {
 }
 
 .template-filesystem-directories a,
-.template-filesystem-files a {
+.template-filesystem-files a,
+.template-filesystem-searches a {
   color: white;
   background-color: #1e2026;
   text-decoration: none;
@@ -270,6 +273,28 @@ input:focus {
   position: relative;
   background-color: inherit;
   top: -2px;
+}
+
+.template-filesystem-searches {
+  height: calc(100vh - var(--file-header-height) - 70px - 20px);
+  overflow-y: scroll;
+}
+
+.template-filesystem-searches .template-filesystem-item {
+  display: block;
+}
+.template-filesystem-searches .template-filesystem-item-text-header {
+  text-decoration: underline;
+}
+.template-filesystem-searches .template-filesystem-item-text {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.template-filesystem-searches .template-filesystem-item-text-highlight {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
 }
 /* input.search {
   font-family: "Abel", sans-serif;

@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/evaluation
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-05-03
 created: 2021-04-30
 title: Evaluation

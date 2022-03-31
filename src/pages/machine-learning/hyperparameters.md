@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/hyperparameters
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-04-09
 created: 2021-04-08
 title: Hyperparameters

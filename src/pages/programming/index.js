@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "/programming", dirs: ["python","rust"], files: [] };
   const [numberOfFiles, numberOfDirs ] = [6, 2];
-  const [tags, tagsInFiles] = [{"python":5,"machine-learning":2}, {"python":["python","machine-learning"]}];
+  const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
 

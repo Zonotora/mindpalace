@@ -1,6 +1,6 @@
 ---
 slug: /programming/python/numpy
-tags: ["python"]
+tags: []
 lastModified: 2021-09-12
 created: 2021-02-22
 title: Numpy

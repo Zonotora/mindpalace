@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/models/random-forests
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-04-09
 created: 2021-04-02
 title: Random Forests

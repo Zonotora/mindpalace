@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/models/LSTM
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-05-23
 created: 2021-05-22
 title: LSTM

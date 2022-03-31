@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/neural-networks
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-04-30
 created: 2021-04-24
 title: Neural Networks

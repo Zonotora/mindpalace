@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/dimensionality-reduction
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-05-19
 created: 2021-05-16
 title: Dimensionality Reduction

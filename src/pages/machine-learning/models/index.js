@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "/machine-learning/models", dirs: [], files: ["CNN","LSTM","decision-tree","ensembles","random-forests","support-vector-machine"] };
   const [numberOfFiles, numberOfDirs ] = [6, 0];
-  const [tags, tagsInFiles] = [{"machine-learning":5}, {"LSTM":["machine-learning"],"decision-tree":["machine-learning"],"ensembles":["machine-learning"],"random-forests":["machine-learning"],"support-vector-machine":["machine-learning"]}];
+  const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
 

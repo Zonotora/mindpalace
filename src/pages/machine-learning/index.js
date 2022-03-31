@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","dimensionality-reduction","ethics","evaluation","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","neural-networks","optimization","paradigms","preprocessing"] };
   const [numberOfFiles, numberOfDirs ] = [19, 1];
-  const [tags, tagsInFiles] = [{"machine-learning":18,"keywords":1}, {"collecting-data":["machine-learning"],"dimensionality-reduction":["machine-learning"],"ethics":["machine-learning"],"evaluation":["machine-learning"],"feature-selection":["machine-learning"],"hyperparameters":["machine-learning"],"keywords":["machine-learning","keywords"],"linear-classifiers-regressors":["machine-learning"],"machine-learning":["machine-learning"],"neural-networks":["machine-learning"],"optimization":["machine-learning"],"paradigms":["machine-learning"],"preprocessing":["machine-learning"],"models":["machine-learning"]}];
+  const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
 

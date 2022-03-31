@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/keywords
-tags: ["machine-learning", "keywords"]
+tags: ["keywords"]
 lastModified: 2021-10-05
 created: 2021-03-22
 title: Keywords

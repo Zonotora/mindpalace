@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/paradigms
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-05-04
 created: 2021-05-03
 title: Paradigms

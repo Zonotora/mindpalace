@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/ethics
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-05-23
 created: 2021-05-16
 title: Ethics

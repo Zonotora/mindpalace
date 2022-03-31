@@ -1,6 +1,6 @@
 ---
 slug: /machine-learning/models/ensembles
-tags: ["machine-learning"]
+tags: []
 lastModified: 2021-04-30
 created: 2021-04-02
 title: Ensembles

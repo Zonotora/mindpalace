@@ -1,7 +1,7 @@
 ---
 slug: /os/processes-and-threads
 tags: []
-lastModified: 2021-09-28
+lastModified: 2022-03-31
 created: 2021-09-11
 title: Processes And Threads
 header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Amdahl's Law","link":"Amdahl's-Law"},{"depth":1,"name":"Processes","link":"Processes"},{"depth":2,"name":"The model","link":"The-model"},{"depth":2,"name":"Creation","link":"Creation"},{"depth":2,"name":"State","link":"State"},{"depth":2,"name":"Implementation","link":"Implementation"},{"depth":1,"name":"Threads","link":"Threads"},{"depth":2,"name":"Implicit threading","link":"Implicit-threading"},{"depth":2,"name":"POSIX threads","link":"POSIX-threads"},{"depth":2,"name":"Implementation user space","link":"Implementation-user-space"},{"depth":2,"name":"Implementation kernel","link":"Implementation-kernel"},{"depth":2,"name":"Scheduler activations","link":"Scheduler-activations"},{"depth":2,"name":"Pop-up thread","link":"Pop-up-thread"},{"depth":1,"name":"Processes and threads in Linux","link":"Processes-and-threads-in-Linux"},{"depth":1,"name":"Scheduling","link":"Scheduling"},{"depth":2,"name":"Process behaviour","link":"Process-behaviour"},{"depth":2,"name":"Categories of scheduling","link":"Categories-of-scheduling"},{"depth":2,"name":"Algorithms used in batch systems","link":"Algorithms-used-in-batch-systems"},{"depth":2,"name":"Algorithms used in interactive systems","link":"Algorithms-used-in-interactive-systems"},{"depth":2,"name":"Policy","link":"Policy"}]
@@ -38,7 +38,77 @@ Four main events can cause processes to be generated:
 3. A user request.
 4. Initiation of a batch job.
 
-When the operating system is booting a number of different processes are created. These could be foreground applications or background processes, also called @(daemons)(daemons). In UNIX(-like) there is only one system call to create a new process: `fork()`. This call duplicates the running process and the two processes will after the call, have the same memory image, environment, the same open files.
+When the operating system is booting a number of different processes are created. These could be foreground applications or background processes, also called @(daemons)(daemons). In UNIX(-like) there is only one system call to create a new process: `fork()`. This call duplicates the running process and the two processes will after the call, have the same memory image, environment, the same open files. To fork in C we do the following:
+
+```c
+int main() {
+    pid = fork()
+    // if pid=0 we are the child process
+    // else we are the parent process
+    if (pid == 0) {
+        // child
+    }
+    else {
+        // parent
+    }
+}
+
+```
+We need to wait for the child process to completely remove the process from memory once it has finished. We do this by the `waitpid` system call.
+A zombie process is a process which has finished, but not been successfully terminated from its parent (waited). A process will when it dies, send the `SIGCHLD` signal to its parent indicating that the parent can wait for the child process to exit it successfully.
+We can't kill zombie processes with the `SIGKILL` signal as zombie processes are already dead. Instead we have to send the `SIGCHLD` signal to the parent process. We can do this by the `kill` command as follows:
+```bash
+kill -s SIGCHILD pid
+```
+If the parent is not programmed to handle this signal, we have to kill the parent process. Zombie processes of a terminated process will be inherited by `init`, which will become the new parent. `init` is the first process started and has $ \text{pid} = 1 $. `init` will wait for each zombie child process periodically, making them exit gracefully.
+If we do not free up any zombie processes, they will start taking up a majority of the available pids on the system, which eventually will block us from creating new processes.
+
+
+```c
+// pid_t waitpid(pid_t pid, int *status, int options);
+// pid     0: Wait for any child process whose process
+//            group ID is equal to that of the calling process.
+//        -1: Wait for any child process.
+//       > 0: Wait for the child whose process ID is equal to
+//            the value of pid.
+//      < -1: Wait for any child process whose process group
+//            ID is equal to the absolute value of pid.
+waitpid(pid, &status, 0);
+```
+
+By default this system call is blocking. To prevent this we can pass the flag option `WNOHANG`. This tells `waitpid` to return immediately if there is no child processes ready to be noticed.
+```c
+// pid_t waitpid(pid_t pid, int *status, int options);
+// options    WNOHANG: Return immediately
+//          WUNTRACED: Additionally return if a child has
+//                     stopped.
+//         WCONTINUED: Additionally return if a stopped child
+//                     has been resumed by the signal SIGCONT
+waitpid(pid, &status, WNOHANG);
+```
+
+Here is an example of a signal handler that will take care of background child processes when they are finished:
+```c
+// handler for SIGCHLD, the signal that indicates that at
+// least one child process has been terminated
+void background_wait(int s) {
+    int wpid, status;
+    while (1) {
+        // check if there are some processes that have
+        // finished running and finish them then return
+        wpid = waitpid(-1, &status, WNOHANG);
+
+        // there are some processes that are not finished
+        // or no processes at all return
+        if (wpid <= 0)
+            return;
+    }
+}
+```
+
+The `SIGCHLD` handler must be set up before a child process is forked. We need to have a loop here because we don't know how many child processes that have exited.
+
+
 
 ## State
 A process may be in the following states:

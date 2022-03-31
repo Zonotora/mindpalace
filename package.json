@@ -42,7 +42,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "generate": "node scripts/generator.js"
+    "generate": "node scripts/generator.js && node scripts/search.js"
   },
   "repository": {
     "type": "git",

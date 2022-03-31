@@ -141,8 +141,19 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/networking", dirs: [], files: ["firewall","ip-address","network-security","osi-model","port","protocols"] };
-  const [numberOfFiles, numberOfDirs ] = [6, 0];
+  const { url, dirs, files } = {
+    url: "/networking",
+    dirs: [],
+    files: [
+      "firewall",
+      "ip-address",
+      "network-security",
+      "osi-model",
+      "port",
+      "protocols",
+    ],
+  };
+  const [numberOfFiles, numberOfDirs] = [6, 0];
   const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);

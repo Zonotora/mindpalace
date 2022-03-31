@@ -28,7 +28,6 @@ const traverse = (url) => {
       const [key, value] = line.split(":");
       if (key) header[key.trim()] = value.trim();
     }
-    // console.log(content);
 
     let isCode = false;
     let lastHeaderName = "";

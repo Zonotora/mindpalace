@@ -105,10 +105,13 @@ const FileInformation = ({ numberOfDirs, numberOfFiles }) => {
 const SearchItem = ({ search }) => {
   return (
     <div className="template-filesystem-item">
-      <div className="template-filesystem-item-text-header">{search.ref}</div>
+      <div
+        className="template-filesystem-item-text-header"
+        dangerouslySetInnerHTML={{ __html: search.snapshot.title }}
+      />
       <div
         className="template-filesystem-item-text"
-        dangerouslySetInnerHTML={{ __html: search.snapshot }}
+        dangerouslySetInnerHTML={{ __html: search.snapshot.body }}
       />
     </div>
   );

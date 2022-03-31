@@ -1,7 +1,7 @@
 ---
 slug: /os/interprocess-communication
 tags: []
-lastModified: 2021-10-05
+lastModified: 2022-03-31
 created: 2021-09-28
 title: Interprocess Communication
 header: [{"depth":1,"name":"Critical regions","link":"Critical-regions"},{"depth":1,"name":"Mutual exclusion with busy waiting","link":"Mutual-exclusion-with-busy-waiting"},{"depth":2,"name":"Hardware instructions","link":"Hardware-instructions"},{"depth":1,"name":"Mutual exclusion that blocks","link":"Mutual-exclusion-that-blocks"},{"depth":1,"name":"Semaphores","link":"Semaphores"},{"depth":1,"name":"Mutex","link":"Mutex"},{"depth":1,"name":"Avoid locks","link":"Avoid-locks"},{"depth":1,"name":"Deadlock","link":"Deadlock"}]
@@ -43,7 +43,7 @@ void leave_region(int process) /* process: who is leaving */
 
 ## Hardware instructions
 
-Many processors nowadays support intructions that are @(atomic)(atomic). This instruction is the TSL (Test and Set Lock). The instruction guarantees that no other process can access the memory word until the instruction has finished, so the instruction effectively blocks the memeory bus until it is finished to prohibit other processes to access it while it is active. XCHG is another such instruction which exchanges the contents of two locations in an atomic way.
+Many processors nowadays support instructions that are @(atomic)(atomic). This instruction is the TSL (Test and Set Lock). The instruction guarantees that no other process can access the memory word until the instruction has finished, so the instruction effectively blocks the memory bus until it is finished to prohibit other processes to access it while it is active. XCHG is another such instruction which exchanges the contents of two locations in an atomic way.
 
 # Mutual exclusion that blocks
 To avoid wasting CPU resources when a process is waiting for the lock we need to come up with another solution. A simple solution is to use `sleep()` and `wakeup()`
@@ -61,17 +61,17 @@ mutex_lock:
     JZE ok                  % if it was zero, mutex was unlocked, so return
     CALL thread_yield       % mutex is busy; schedule another thread
     JMP mutex_lock          % try again
-ok: RET                     % retur n to caller; critical region entered
+ok: RET                     % return to caller; critical region entered
 
 mutex_unlock:
     MOVE MUTEX,#0           % store a 0 in mutex
-    RET                     % retur n to caller
+    RET                     % return to caller
 
 ```
 We can see that if a process can not acquire the mutex, it will yield instead of busy waiting. This is especially important in user threads, because there is no clock that could stop threads that have run for too long. Thus a thread trying to acquire a lock by busy waiting will run forever and never acquire the lock, blocking other threads from being run.
 
 # Avoid locks
-We could let readers read the old or new version of the modified shared data while a writer writes to it, instead of a weird combiation.
+We could let readers read the old or new version of the modified shared data while a writer writes to it, instead of a weird combination.
 
 # Deadlock
 
@@ -89,4 +89,4 @@ There are in general four strategies for dealing with deadlocks:
 3. Careful resource allocation.
 4. Negating one of the conditions above.
 
-Lets take a closer look at the fourth stategy, negating on of the four conditions. Lets begin by negating the first condition **mutual exclusion**. To make a resource accessible to more than one process at a time would be to make the data read-only. The key insight here is to only assign a resource when absolutely necessary and keep as few processes as possible from accessing that resource. If we try to negate **hold-and-wait** instead we could for example let every process request all their resources from the start, if everything is available the process can proceed completing its execution, else the process will just wait. However it can be hard to know what resources a process needs and resources may not be used in an optimal manner. If we try to negate **no-preemption** we could forcibly take every needed resource, but this could be impossible at worst. To negate **circular wait** we could restrain each process to only hold a single resource at a time. Before requesting access to a new resource it must release the resource it is currently holding. This may be unacceptable if the second resource request depend on the resource the process is currently holding. We could introduce a global accessing table which tells the order a process may access resources. Thus every process that wants to request resource $ i $ must request resource $ i - 1 $ first.
+Lets take a closer look at the fourth strategy, negating on of the four conditions. Lets begin by negating the first condition **mutual exclusion**. To make a resource accessible to more than one process at a time would be to make the data read-only. The key insight here is to only assign a resource when absolutely necessary and keep as few processes as possible from accessing that resource. If we try to negate **hold-and-wait** instead we could for example let every process request all their resources from the start, if everything is available the process can proceed completing its execution, else the process will just wait. However it can be hard to know what resources a process needs and resources may not be used in an optimal manner. If we try to negate **no-preemption** we could forcibly take every needed resource, but this could be impossible at worst. To negate **circular wait** we could restrain each process to only hold a single resource at a time. Before requesting access to a new resource it must release the resource it is currently holding. This may be unacceptable if the second resource request depend on the resource the process is currently holding. We could introduce a global accessing table which tells the order a process may access resources. Thus every process that wants to request resource $ i $ must request resource $ i - 1 $ first.

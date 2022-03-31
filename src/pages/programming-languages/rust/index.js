@@ -141,8 +141,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/programming", dirs: ["python","rust"], files: [] };
-  const [numberOfFiles, numberOfDirs ] = [6, 2];
+  const { url, dirs, files } = { url: "/programming-languages/rust", dirs: [], files: ["rust"] };
+  const [numberOfFiles, numberOfDirs ] = [1, 0];
   const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);

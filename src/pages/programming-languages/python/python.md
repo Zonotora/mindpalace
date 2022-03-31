@@ -1,5 +1,5 @@
 ---
-slug: /programming/python/python
+slug: /programming-languages/python/python
 tags: []
 lastModified: 2021-09-12
 created: 2021-02-22

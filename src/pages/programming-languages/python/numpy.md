@@ -1,5 +1,5 @@
 ---
-slug: /programming/python/numpy
+slug: /programming-languages/python/numpy
 tags: []
 lastModified: 2021-09-12
 created: 2021-02-22

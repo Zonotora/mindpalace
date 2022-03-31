@@ -1,5 +1,5 @@
 ---
-slug: /programming/python/scikit-learn
+slug: /programming-languages/python/scikit-learn
 tags: []
 lastModified: 2021-09-12
 created: 2021-02-22

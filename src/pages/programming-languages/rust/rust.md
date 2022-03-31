@@ -1,5 +1,5 @@
 ---
-slug: /programming/rust/rust
+slug: /programming-languages/rust/rust
 tags: []
 lastModified: 2021-09-12
 created: 2021-04-10

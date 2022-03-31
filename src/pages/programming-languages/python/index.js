@@ -141,7 +141,7 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/programming/python", dirs: [], files: ["matplotlib","numpy","pandas","python","scikit-learn"] };
+  const { url, dirs, files } = { url: "/programming-languages/python", dirs: [], files: ["matplotlib","numpy","pandas","python","scikit-learn"] };
   const [numberOfFiles, numberOfDirs ] = [5, 0];
   const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});

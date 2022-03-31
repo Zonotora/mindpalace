@@ -1,5 +1,5 @@
 ---
-slug: /programming/python/matplotlib
+slug: /programming-languages/python/matplotlib
 tags: []
 lastModified: 2021-09-12
 created: 2021-02-22

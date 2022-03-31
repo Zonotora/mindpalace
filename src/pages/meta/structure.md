@@ -73,7 +73,7 @@ root
 │   ├── memory-management
 │   ├── processes-and-threads
 │   └── processors
-├── programming
+├── programming-languages
 │   ├── python
 │   │   ├── matplotlib
 │   │   ├── numpy

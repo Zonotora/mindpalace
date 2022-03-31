@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-03-27
+lastModified: 2022-03-31
 created: 2021-07-05
 title: Structure
 header: []
@@ -14,7 +14,6 @@ root
 ├── distributed-systems
 ├── image-analysis
 ├── latex
-├── network-security
 ├── algorithms
 │   ├── algorithms
 │   ├── cheat-sheet
@@ -63,6 +62,7 @@ root
 ├── networking
 │   ├── firewall
 │   ├── ip-address
+│   ├── network-security
 │   ├── osi-model
 │   ├── port
 │   └── protocols

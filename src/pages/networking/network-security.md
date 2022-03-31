@@ -1,5 +1,5 @@
 ---
-slug: /network-security
+slug: /networking/network-security
 tags: []
 lastModified: 2022-03-31
 created: 2022-03-25

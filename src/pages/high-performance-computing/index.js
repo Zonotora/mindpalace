@@ -141,9 +141,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["algorithms","art","databases","high-performance-computing","machine-learning","math","meta","networking","os","programming-languages","web"], files: ["bandits","control-theory","image-analysis","latex"] };
-  const [numberOfFiles, numberOfDirs ] = [62, 14];
-  const [tags, tagsInFiles] = [{"keywords":3}, {"machine-learning":["keywords"],"math":["keywords"],"os":["keywords"]}];
+  const { url, dirs, files } = { url: "/high-performance-computing", dirs: [], files: ["distributed-systems"] };
+  const [numberOfFiles, numberOfDirs ] = [1, 0];
+  const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
 

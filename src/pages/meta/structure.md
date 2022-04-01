@@ -11,7 +11,6 @@ header: []
 root 
 ├── bandits
 ├── control-theory
-├── distributed-systems
 ├── image-analysis
 ├── latex
 ├── algorithms
@@ -24,6 +23,8 @@ root
 ├── databases
 │   ├── databases
 │   └── sql
+├── high-performance-computing
+│   └── distributed-systems
 ├── machine-learning
 │   ├── collecting-data
 │   ├── dimensionality-reduction

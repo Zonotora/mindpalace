@@ -1,7 +1,7 @@
 ---
 slug: /image-analysis
-tags: []
-lastModified: 2022-03-03
+tags: ["wip"]
+lastModified: 2022-04-01
 created: 2022-01-18
 title: Image Analysis
 header: [{"depth":1,"name":"Image processing","link":"Image-processing"},{"depth":2,"name":"Linear filtering","link":"Linear-filtering"},{"depth":2,"name":"Non-linear filtering","link":"Non-linear-filtering"},{"depth":1,"name":"Feature detection","link":"Feature-detection"},{"depth":2,"name":"Feature detectors","link":"Feature-detectors"},{"depth":2,"name":"Feature descriptors","link":"Feature-descriptors"},{"depth":2,"name":"Verification of matches","link":"Verification-of-matches"},{"depth":2,"name":"Feature tracking","link":"Feature-tracking"},{"depth":1,"name":"Camera","link":"Camera"},{"depth":2,"name":"2D point","link":"2D-point"},{"depth":2,"name":"Homogeneous coordinates","link":"Homogeneous-coordinates"},{"depth":2,"name":"De-homogeneous coordinates","link":"De-homogeneous-coordinates"},{"depth":2,"name":"Basic set of 2D transformations","link":"Basic-set-of-2D-transformations"},{"depth":3,"name":"Translation + rotation","link":"Translation-+-rotation"},{"depth":3,"name":"Scaled rotation","link":"Scaled-rotation"},{"depth":3,"name":"Affine","link":"Affine"},{"depth":3,"name":"Projective","link":"Projective"},{"depth":2,"name":"Orthography","link":"Orthography"},{"depth":2,"name":"Homography","link":"Homography"},{"depth":2,"name":"General intrinsic camera calibration matrix","link":"General-intrinsic-camera-calibration-matrix"},{"depth":2,"name":"Relative pose estimation","link":"Relative-pose-estimation"},{"depth":3,"name":"Epipolar geometry","link":"Epipolar-geometry"},{"depth":4,"name":"The essential matrix","link":"The-essential-matrix"},{"depth":4,"name":"The fundamental matrix","link":"The-fundamental-matrix"}]

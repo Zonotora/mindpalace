@@ -1,7 +1,7 @@
 ---
 slug: /databases/databases
-tags: []
-lastModified: 2021-12-31
+tags: ["wip"]
+lastModified: 2022-04-01
 created: 2021-11-18
 title: Databases
 header: [{"depth":1,"name":"Database management system (DBMS)","link":"Database-management-system-(DBMS)"},{"depth":2,"name":"PostgreSQL","link":"PostgreSQL"},{"depth":1,"name":"Types","link":"Types"},{"depth":2,"name":"Relational databases","link":"Relational-databases"},{"depth":2,"name":"Semi-structured databases","link":"Semi-structured-databases"},{"depth":3,"name":"JSON","link":"JSON"},{"depth":4,"name":"JSON schemas","link":"JSON-schemas"},{"depth":4,"name":"JSON in PostgreSQL","link":"JSON-in-PostgreSQL"},{"depth":3,"name":"NoSQL","link":"NoSQL"},{"depth":1,"name":"SQL queries ?","link":"SQL-queries-?"},{"depth":1,"name":"Design using ER","link":"Design-using-ER"},{"depth":2,"name":"Weak entities","link":"Weak-entities"},{"depth":2,"name":"ISA-relationship","link":"ISA-relationship"},{"depth":1,"name":"Design using functional dependencies","link":"Design-using-functional-dependencies"},{"depth":2,"name":"Closure","link":"Closure"},{"depth":2,"name":"Boyce-Codd Normal Form (BCNF)","link":"Boyce-Codd-Normal-Form-(BCNF)"},{"depth":2,"name":"Multivalued dependency (MVD)","link":"Multivalued-dependency-(MVD)"},{"depth":2,"name":"1NF","link":"1NF"},{"depth":2,"name":"2NF","link":"2NF"},{"depth":2,"name":"3NF","link":"3NF"},{"depth":2,"name":"4NF","link":"4NF"},{"depth":1,"name":"Constraints","link":"Constraints"},{"depth":1,"name":"Triggers","link":"Triggers"},{"depth":1,"name":"Relational algebra","link":"Relational-algebra"},{"depth":1,"name":"Transactions","link":"Transactions"},{"depth":1,"name":"References","link":"References"}]

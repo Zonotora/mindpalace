@@ -1,7 +1,7 @@
 ---
 slug: /bandits
-tags: []
-lastModified: 2022-03-27
+tags: ["wip"]
+lastModified: 2022-04-01
 created: 2022-03-26
 title: Bandits
 header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Model","link":"Model"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":1,"name":"Hoeffding inequality","link":"Hoeffding-inequality"}]

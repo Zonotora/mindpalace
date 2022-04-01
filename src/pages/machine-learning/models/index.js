@@ -26,7 +26,7 @@ const paletteHash = (tag) => {
   for (let i = 0; i < tag.length; i++) {
     let chr = tag.charCodeAt(i);
     hash = (hash << 5) - hash + chr;
-    hash |= 0;
+    hash |= 1;
   }
   return Math.abs(hash);
 };

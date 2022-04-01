@@ -1,10 +1,10 @@
 ---
 slug: /latex
-tags: []
-lastModified: 2021-11-03
+tags: ["wip"]
+lastModified: 2022-04-01
 created: 2021-01-08
 title: Latex
-header: [{"depth":1,"name":"List to Katex supported","link":"List-to-Katex-supported"},{"depth":1,"name":"Symbols","link":"Symbols"},{"depth":1,"name":"Operators","link":"Operators"}]
+header: [{"depth":1,"name":"List to Katex supported","link":"List-to-Katex-supported"},{"depth":1,"name":"Symbols","link":"Symbols"}]
 ---
 
 # List to Katex supported

@@ -1,7 +1,7 @@
 ---
 slug: /networking/ip-address
-tags: []
-lastModified: 2021-07-05
+tags: ["wip"]
+lastModified: 2022-04-01
 created: 2021-07-04
 title: Ip Address
 header: [{"depth":1,"name":"References","link":"References"}]

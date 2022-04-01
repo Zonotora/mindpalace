@@ -26,7 +26,7 @@ const paletteHash = (tag) => {
   for (let i = 0; i < tag.length; i++) {
     let chr = tag.charCodeAt(i);
     hash = (hash << 5) - hash + chr;
-    hash |= 0;
+    hash |= 1;
   }
   return Math.abs(hash);
 };
@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "", dirs: ["algorithms","art","databases","high-performance-computing","machine-learning","math","meta","networking","os","programming-languages","web"], files: ["bandits","control-theory","image-analysis","latex"] };
   const [numberOfFiles, numberOfDirs ] = [62, 14];
-  const [tags, tagsInFiles] = [{"keywords":3}, {"machine-learning":["keywords"],"math":["keywords"],"os":["keywords"]}];
+  const [tags, tagsInFiles] = [{"wip":10,"keywords":3}, {"bandits":["wip"],"image-analysis":["wip"],"latex":["wip"],"algorithms":["wip"],"databases":["wip"],"machine-learning":["keywords"],"math":["keywords"],"networking":["wip"],"os":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
 

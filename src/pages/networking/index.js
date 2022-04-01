@@ -26,7 +26,7 @@ const paletteHash = (tag) => {
   for (let i = 0; i < tag.length; i++) {
     let chr = tag.charCodeAt(i);
     hash = (hash << 5) - hash + chr;
-    hash |= 0;
+    hash |= 1;
   }
   return Math.abs(hash);
 };
@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "/networking", dirs: [], files: ["firewall","ip-address","network-security","osi-model","port","protocols"] };
   const [numberOfFiles, numberOfDirs ] = [6, 0];
-  const [tags, tagsInFiles] = [{}, {}];
+  const [tags, tagsInFiles] = [{"wip":5}, {"firewall":["wip"],"ip-address":["wip"],"osi-model":["wip"],"port":["wip"],"protocols":["wip"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
 

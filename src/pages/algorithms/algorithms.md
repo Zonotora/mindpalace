@@ -1,7 +1,7 @@
 ---
 slug: /algorithms/algorithms
-tags: []
-lastModified: 2022-03-27
+tags: ["wip"]
+lastModified: 2022-04-01
 created: 2021-09-12
 title: Algorithms
 header: [{"depth":1,"name":"Introduction","link":"Introduction"},{"depth":2,"name":"Techniques","link":"Techniques"},{"depth":3,"name":"Dynamic programming","link":"Dynamic-programming"},{"depth":3,"name":"Memoization","link":"Memoization"},{"depth":3,"name":"Divide-and-conquer","link":"Divide-and-conquer"},{"depth":2,"name":"Metrics","link":"Metrics"},{"depth":2,"name":"Definition of efficiency","link":"Definition-of-efficiency"},{"depth":2,"name":"Polynomial running time","link":"Polynomial-running-time"},{"depth":1,"name":"Asymptotic order of growth","link":"Asymptotic-order-of-growth"},{"depth":2,"name":"Asymptotic upper bound","link":"Asymptotic-upper-bound"},{"depth":2,"name":"Asymptotic lower bound","link":"Asymptotic-lower-bound"},{"depth":2,"name":"Asymptotic tight bound","link":"Asymptotic-tight-bound"},{"depth":2,"name":"Properties","link":"Properties"},{"depth":3,"name":"Transitivity","link":"Transitivity"},{"depth":3,"name":"Sum","link":"Sum"},{"depth":1,"name":"Types of algorithms","link":"Types-of-algorithms"},{"depth":1,"name":"Algorithm development strategies","link":"Algorithm-development-strategies"},{"depth":1,"name":"Recurrence","link":"Recurrence"},{"depth":2,"name":"Different cases","link":"Different-cases"},{"depth":1,"name":"NP","link":"NP"},{"depth":2,"name":"NP-complete","link":"NP-complete"}]

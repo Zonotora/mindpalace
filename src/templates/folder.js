@@ -26,7 +26,7 @@ const paletteHash = (tag) => {
   for (let i = 0; i < tag.length; i++) {
     let chr = tag.charCodeAt(i);
     hash = (hash << 5) - hash + chr;
-    hash |= 0;
+    hash |= 1;
   }
   return Math.abs(hash);
 };
@@ -59,7 +59,7 @@ const paletteColor = (tag) => {
   return p[paletteHash(tag) % p.length];
 };
 
-const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles }) => {
+const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles, setTooltip }) => {
   return (
     <div className="template-filesystem-item">
       <div className="template-filesystem-item-icon">
@@ -72,7 +72,9 @@ const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles }) => {
           {tagsInFiles[fileName].map((tag, i) => (
             <FaTag
               key={tag}
-              style={{ color: paletteColor(tag), left: `${i * -6}px` }}
+              onMouseEnter={() => setTooltip(tag)}
+              onMouseLeave={() => setTooltip("")}
+              style={{ color: paletteColor(tag), left: `${i * -6}px`}}
             />
           ))}
         </div>
@@ -146,6 +148,7 @@ const IndexPage = ({ data }) => {
   const [tags, tagsInFiles] = [{}, {}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
+  const [tooltip, setTooltip] = useState("");
 
   useEffect(() => {
     const nodes = data.allMarkdownRemark.edges
@@ -198,6 +201,7 @@ const IndexPage = ({ data }) => {
               fileType="folder"
               lastModified={lastModified}
               tagsInFiles={tagsInFiles}
+              setTooltip={setTooltip}
             />
           </Link>
         ))}
@@ -210,6 +214,7 @@ const IndexPage = ({ data }) => {
               fileType="file"
               lastModified={lastModified}
               tagsInFiles={tagsInFiles}
+              setTooltip={setTooltip}
             />
           </Link>
         ))}
@@ -236,7 +241,13 @@ const IndexPage = ({ data }) => {
               numberOfDirs={numberOfDirs}
               numberOfFiles={numberOfFiles}
             />
+            {tooltip === "" ? (
+              <div className="template-filesystem-tooltip"></div>
+            ) : (
+              <div className="template-filesystem-tooltip active">{tooltip}</div>
+            )}
           </div>
+
 
           {searchResults.length !== 0 ? searches : filesystem}
         </div>

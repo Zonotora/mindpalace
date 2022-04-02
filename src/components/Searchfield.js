@@ -11,6 +11,7 @@ const getIntervals = (metadata) => {
   const intervals = { body: [], title: [] };
   for (const key in metadata) {
     const keyProperty = metadata[key].body !== undefined ? "body" : "title";
+    if (!metadata[key][keyProperty]) continue;
     const positions = metadata[key][keyProperty].position;
 
     if (!intervals[keyProperty]) intervals[keyProperty] = [];
@@ -69,8 +70,6 @@ const getResults = (searchValue) => {
   const results = idx.search(searchValue);
 
   if (results.length === 0) return [];
-
-  const searchTerm = searchValue.toLowerCase();
 
   for (const result of results) {
     const metadata = result.matchData.metadata;

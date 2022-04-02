@@ -42,6 +42,7 @@ const traverse = (url) => {
         pages.push({
           id: `${header.slug}#${lastHeaderName}`,
           title: `${header.slug}#${lastHeaderName}`,
+          tags: `${header.tags}#${lastHeaderName}`,
           body: subContent,
         });
 
@@ -57,6 +58,7 @@ const traverse = (url) => {
     pages.push({
       id: `${header.slug}#${lastHeaderName}`,
       title: `${header.slug}#${lastHeaderName}`,
+      tags: `${header.tags}#${lastHeaderName}`,
       body: subContent,
     });
   });
@@ -72,6 +74,7 @@ const idx = lunr(function () {
   this.ref("id");
   this.field("title");
   this.field("body");
+  this.field("tags");
   this.metadataWhitelist = ["position"];
 
   pages.forEach(function (page) {

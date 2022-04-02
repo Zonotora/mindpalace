@@ -59,7 +59,13 @@ const paletteColor = (tag) => {
   return p[paletteHash(tag) % p.length];
 };
 
-const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles, setTooltip }) => {
+const FileSystemItem = ({
+  fileName,
+  fileType,
+  lastModified,
+  tagsInFiles,
+  setTooltip,
+}) => {
   return (
     <div className="template-filesystem-item">
       <div className="template-filesystem-item-icon">
@@ -74,7 +80,7 @@ const FileSystemItem = ({ fileName, fileType, lastModified, tagsInFiles, setTool
               key={tag}
               onMouseEnter={() => setTooltip(tag)}
               onMouseLeave={() => setTooltip("")}
-              style={{ color: paletteColor(tag), left: `${i * -6}px`}}
+              style={{ color: paletteColor(tag), left: `${i * -6}px` }}
             />
           ))}
         </div>
@@ -228,6 +234,7 @@ const IndexPage = ({ data }) => {
         <Searchfield
           className="directory"
           setSearchResults={setSearchResults}
+          setTooltip={setTooltip}
         />
         <div className="template-filesystem">
           <div className="template-filesystem-header">
@@ -244,10 +251,11 @@ const IndexPage = ({ data }) => {
             {tooltip === "" ? (
               <div className="template-filesystem-tooltip"></div>
             ) : (
-              <div className="template-filesystem-tooltip active">{tooltip}</div>
+              <div className="template-filesystem-tooltip active">
+                {tooltip}
+              </div>
             )}
           </div>
-
 
           {searchResults.length !== 0 ? searches : filesystem}
         </div>

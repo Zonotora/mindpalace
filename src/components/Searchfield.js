@@ -83,7 +83,7 @@ const getResults = (searchValue) => {
   return results;
 };
 
-const Searchfield = ({ className, style, setSearchResults }) => {
+const Searchfield = ({ className, style, setSearchResults, setTooltip }) => {
   const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
@@ -91,12 +91,13 @@ const Searchfield = ({ className, style, setSearchResults }) => {
 
     if (searchValue === "") {
       setSearchResults([]);
+      setTooltip("");
       return;
     }
 
-    let results = [];
     try {
       const results = getResults(searchValue);
+      setTooltip(results.length);
       setSearchResults(results);
     } catch (e) {}
   }, [searchValue]);

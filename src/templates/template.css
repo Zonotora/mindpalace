@@ -292,7 +292,7 @@ input:focus {
 
 .template-filesystem-searches {
   max-height: calc(100vh - var(--file-header-height) - 70px - 20px);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .template-filesystem-searches .template-filesystem-item {

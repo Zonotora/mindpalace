@@ -24,9 +24,17 @@ table {
   color: white;
 }
 
-table a {
+table a,
+.content table a {
   color: white;
-  text-decoration: none;
+  border: none;
+  text-decoration: underline;
+}
+
+table.no-padding td,
+table.no-padding th {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 table tr:nth-child(even) {
@@ -218,7 +226,6 @@ input:focus {
 .template-filesystem-tooltip.active {
   visibility: visible;
 }
-
 
 .template-filesystem-directories,
 .template-filesystem-files {

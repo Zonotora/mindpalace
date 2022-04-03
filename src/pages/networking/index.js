@@ -149,9 +149,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/networking", dirs: [], files: ["firewall","ip-address","network-security","osi-model","port","protocols"] };
-  const [numberOfFiles, numberOfDirs ] = [6, 0];
-  const [tags, tagsInFiles] = [{"wip":5}, {"firewall":["wip"],"ip-address":["wip"],"osi-model":["wip"],"port":["wip"],"protocols":["wip"]}];
+  const { url, dirs, files } = { url: "/networking", dirs: [], files: ["cryptography","firewall","ip-address","keywords","network-security","osi-model","port","protocols"] };
+  const [numberOfFiles, numberOfDirs ] = [8, 0];
+  const [tags, tagsInFiles] = [{"wip":5,"keywords":1}, {"firewall":["wip"],"ip-address":["wip"],"keywords":["keywords"],"osi-model":["wip"],"port":["wip"],"protocols":["wip"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
   const [tooltip, setTooltip] = useState("");

@@ -1,26 +1,31 @@
 ---
 slug: /bandits
 tags: ["wip"]
-lastModified: 2022-04-01
+lastModified: 2022-04-05
 created: 2022-03-26
 title: Bandits
-header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Model","link":"Model"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":1,"name":"Hoeffding inequality","link":"Hoeffding-inequality"}]
+header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Stochastic bandits","link":"Stochastic-bandits"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Non-adaptive exploration","link":"Non-adaptive-exploration"},{"depth":3,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":3,"name":"Epsilon greedy","link":"Epsilon-greedy"},{"depth":2,"name":"Adaptive exploration","link":"Adaptive-exploration"},{"depth":3,"name":"Higher-confidence elimination","link":"Higher-confidence-elimination"},{"depth":3,"name":"Successive elimination","link":"Successive-elimination"},{"depth":3,"name":"Optimism under uncertainty","link":"Optimism-under-uncertainty"},{"depth":2,"name":"Regret bound terminology","link":"Regret-bound-terminology"},{"depth":1,"name":"Bayesian bandits","link":"Bayesian-bandits"}]
 ---
 
 # Notation
 | Definition | Description |
 |-| :---- |
 | $ \mathcal A $ | The action space. |
+| $ \mathcal A^+ = \{ a: \mu (a) < \mu(a^*) \} $ | All the arms that contribute to the regret. |
 | $ a $ | Arm/action. |
 | $ T $ | Total number of rounds. |
 | $ t $ | Each round. |
 | $ \mu (a) = \mathbb E[ \mathcal D_a] $ | The mean reward for the arm $ a $. |
 | $ \mu^* = \max_{a \in \mathcal A} \mu (a) $ | The optimal mean reward. |
-| $ \hat \mu $ | The average reward |
+| $ \bar \mu $ | The average reward |
 | $ \Delta (a) = \mu^* - \mu (a) $ | Describes how **bad** arm $ a $ is compared to the best arm. Called **gap**. |
 | $ R(T) = \mu^* \cdot T - \sum_{t=1}^T \mu(a_t) $ | The regret for an algorithm. |
+| $ r (a) = \sqrt{\frac{2 \log T}{N}}    $ | The confidence radius |
+| $ n_t(a) $ | The number of samples from arm $ a $ up to round $ t $ |
+| $ r_t (a) = \sqrt{\frac{2 \log T}{n_t (a)}}    $ | The confidence radius |
+| $ [ \mu_n - r_n, \mu_n + r_n ] $ | The confidence interval |
 
-# Model
+# Stochastic bandits
 
 Multi-armed bandits is a framework for algorithms that make decisions under uncertainty over time. At its core an algorithm has $ K $ different possible actions to choose from called **arms** in $ T $ rounds. The algorithm chooses an arm each round and retrieves a reward given the arm. The reward follows a distribution that only depends on the chosen arm. Typically, the algorithm only observes one arm each round and therefore needs to explore different arms to acquire new information. There is a tradeoff between exploration and exploitation. There are three different types of feedback that the algorithm receives after each round based on the reward given a certain arm. These are: **bandit feedback**, **partial feedback**, **full feedback**.
 
@@ -47,7 +52,12 @@ $$
 
 We note that $ R(T) $ is a stochastic variables as the arm $ a_t $ chosen at $ t $ is randomly sampled. We call it regret as the algorithm "regrets" not knowing the best arm.
 
-## Uniform exploration
+
+## Non-adaptive exploration
+There are two different ways we can explore, either based on the history of rewards or in some fixed way. When basing the exploration in some fixed way the exploration phase does not adapt during its execution and is therefore called **non-adaptive**.
+
+
+### Uniform exploration
 
 One way to choose arms is to pick them uniformly regardless of previous results. Then we pick the arms that empirically perform best for exploitation. The algorithm has the following structure:
 
@@ -60,12 +70,12 @@ Exploitation:
     play a* for the rest of the rounds
 ```
 
-The parameter $ N $ is fixed here, but we will see that we can pick a value that is dependent on $ T $ and $ K $ to minimize the regret. The average reward should be a good estimate of the true reward, $ | \hat \mu (a)  - \mu (a)|  $. By utilizing the Hoeffding inequality we can write
+The parameter $ N $ is fixed here, but we will see that we can pick a value that is dependent on $ T $ and $ K $ to minimize the regret. The average reward should be a good estimate of the true reward, $ | \bar \mu (a)  - \mu (a)|  $. By utilizing the @(Hoeffding inequality)(hoeffding's-inequality) we can write
 
 $$
-\Pr \{ | \hat \mu (a)  - \mu (a)| \leq r(a) \} \geq 1 - \frac{2}{T^4}
+\Pr \{ | \bar \mu (a)  - \mu (a)| \leq r(a) \} \geq 1 - \frac{2}{T^4}
 $$
-where we define $ r(a) = \sqrt{\frac{2 \log T}{N}} $. A **clean event** is the event where this equation holds for all arms simultaneously. A **bad event** is the complement of the clean event. If $ K = 2 $ and we have a clean event. Let $ a^* $ be the best arm. If the algorithm chooses the other arm $ a $ it must be because it has better average reward than $ a^* $. We have $ \hat \mu (a) > \hat \mu (a^*) $. We rearrange the equation according to the clean event equation we got from the Hoeffding inequality. Thus, we have:
+where we define $ r(a) = \sqrt{\frac{2 \log T}{N}} $. A **clean event** is the event where this equation holds for all arms simultaneously. A **bad event** is the complement of the clean event. If $ K = 2 $ and we have a clean event. Let $ a^* $ be the best arm. If the algorithm chooses the other arm $ a $ it must be because it has better average reward than $ a^* $. We have $ \bar \mu (a) > \bar \mu (a^*) $. We rearrange the equation according to the clean event equation we got from the Hoeffding inequality. Thus, we have:
 $$
 \mu (a^*) - \mu (a) \leq r(a) + r(a^*) = O(\sqrt{\frac{\log T}{N}})
 $$
@@ -91,6 +101,8 @@ $$
 $$
 
 When we have $ K > 2 $, we have the same argument but instead we get $ R(T) \leq NK + O(\sqrt{\frac{\log T}{N}} \times T ) $ . We can set $ N = (T/K)^{2/3} (\log T)^{1/3} $ to achieve the same result.
+
+### Epsilon greedy
 One drawback with this algorithm is that it has poor performance during the exploration phase. The $ \epsilon $-greedy algorithm does not have this issue:
 ```
 for each round t ∈ T:
@@ -100,14 +112,91 @@ for each round t ∈ T:
     else:
         exploit
 ```
+With the exploration probability of $ \epsilon_t  = t^{-1/3} \cdot (K \log t)^{1/3} $ we get the regret bound $ \mathbb E [ R(t) ] \leq t^{2/3} \cdot O(K \log t)^{1/3}$ for each round $ t $.
 However, both these algorithms do not depend on the history of the observed rewards in the exploration phase. We could do better.
 
-# Hoeffding inequality
-https://en.wikipedia.org/wiki/Hoeffding%27s_inequality
-
-Hoeffding inequality states an upper bound on the probability that the sum
+## Adaptive exploration
+We could react directly on the history of rewards to select more suitable candidates for exploration. This is called **adaptive** exploration. To define this framework of adaptive exploration we let $ n_t (a) $ be the number of samples from an arm $a$ in the rounds $ 1, \dots, t $. Here we let $ \bar{\mu_t} $ be the average reward of the arm $ a $ this far. Again with the help of the Hoeffding inequality we want to derive
 
 
 $$
-{\displaystyle {\begin{aligned}\operatorname {P} \left(S_{n}-\mathrm {E} \left[S_{n}\right]\geq t\right)&\leq \exp \left(-{\frac {2t^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right)\\\operatorname {P} \left(\left|S_{n}-\mathrm {E} \left[S_{n}\right]\right|\geq t\right)&\leq 2\exp \left(-{\frac {2t^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right)\end{aligned}}}
+\Pr \{ | \bar \mu_t (a)  - \mu (a)| \leq r_t (a) \} \geq 1 - \frac{2}{T^4}
 $$
+where we define $ r_t(a) = \sqrt{\frac{2 \log T}{n_t (a)}} $. Here $ r_t (a) $ is called the **confidence radius**. In the case $ n_t (a) $ is fixed we have the same scenario as in the uniform case, but $ n_t (a) $ is a random variable so it cannot be fixed. The samples from $ a $ is not completely independent either, because $ n_t $ may depend on previous rewards of $a$. To build a solid argumentation we introduce something called a **reward tape**, that is, a $ 1 \times T $ table where each cell is independently sampled from $ \mathcal D_a $. The $ j $th time an arm $ a $ is drawn the reward is taken from the $ j $th cell in the arm's reward tape. We let $ \bar v_j (a)$ be the average reward for arm $ a $ in the first $ j $ times that it is drawn. By the Hoeffding inequality we have
+
+$$
+\forall j \quad \Pr \{ | \bar v_j (a)  - \mu (a)| \leq r_t (a) \} \geq 1 - \frac{2}{T^4}
+$$
+
+
+With the help of the @(Boole's inequality)(boole's-inequality) we get
+
+$$
+\Pr \{ \forall a \forall j \quad  | \bar v_j (a)  - \mu (a)| \leq r_t (a) \} \geq 1 - \frac{2}{T^2}
+$$
+
+The following is implied and is the **clean event** in the following derivations
+
+$$
+\begin{aligned}
+\mathcal E &:= \{ \forall a \forall t \quad  | \bar v_j (a)  - \mu (a)| \leq r_t (a) \} \\
+\Pr[ \mathcal E ] &\geq 1 - \frac{2}{T^2}
+\end{aligned}
+$$
+The **Upper Confidence Bound (UCB)** is defined as
+$$
+\text{UCB}_t = \bar \mu_t (a) + r_t (a)
+$$
+
+The **Lower Confidence Bound (UCB)** is defined as
+$$
+\text{UCB}_t = \bar \mu_t (a) + r_t (a)
+$$
+
+for an arm $ a $ at the round $ t $. The **confidence interval** is given by $ [\text{LCB}_t, \text{UCB}_t (a)] $.
+
+### Higher-confidence elimination
+We can now introduce the first algorithm based on this framework. Namely the **higher-confidence elimination** algorithm. The idea here is that we alternate between arms until we find an arm that is much better than the other.
+
+```
+while alternating between arm a and a'
+    if UCB_t(a) < LCB_t(a') and round t is even
+        abandon arm a and use a' forever
+```
+
+Higher-confidence elimination has a regret of
+$$
+\mathbb E [R(t)] = O(\sqrt {t \log T}), \quad \forall t \leq T
+$$
+
+### Successive elimination
+The higher-confidence elimination algorithm operates on $ K = 2 $. **Successive elimination** generalizes to $ K > 2 $.
+
+```
+set all arms to active state
+    for each phase
+        try all active arms (multiple phases)
+        deactivate all arms a such that UCB_t(a) < LCB_t(a') for some a'
+```
+
+Successive elimination has a regret of
+$$
+\mathbb E [R(t)] = O(\sqrt {K t \log T}), \quad \forall t \leq T
+$$
+
+### Optimism under uncertainty
+An algorithm that picks the best possible observation this far is called **UCB1**. The arm chosen in each round is picked either because the average reward $ \bar \mu_t(a) $ for that arm is large or because the confidence interval $ r_t(a) $ is large (meaning that the arm has not been explored that much).
+
+```
+try each arm once
+    for each round t ∈ T
+        pick argmax_a∈A UCB_t(a)
+```
+where $ \text{UCB}_t = \bar \mu_t (a) + r_t (a) $
+
+##  Regret bound terminology
+If we have a regret bound on the form $ C \cdot f(T) $, where $ f(\cdot) $ does not depend on the mean rewards $ \mu $ and the constant $ C $ does not depend on $ T $ we call this regret bound **instance-dependent** if $ C $ does depend on $ \mu $ and **instance-independent** otherwise.
+
+
+
+# Bayesian bandits

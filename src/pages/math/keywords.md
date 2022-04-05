@@ -1,10 +1,10 @@
 ---
 slug: /math/keywords
 tags: ["keywords"]
-lastModified: 2022-01-05
+lastModified: 2022-04-05
 created: 2021-04-05
 title: Keywords
-header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"},{"depth":1,"name":"Vector norm","link":"Vector-norm"},{"depth":2,"name":"Absolute-value norm","link":"Absolute-value-norm"},{"depth":2,"name":"Euclidean norm","link":"Euclidean-norm"},{"depth":1,"name":"Probability space","link":"Probability-space"},{"depth":1,"name":"Parametric family","link":"Parametric-family"},{"depth":1,"name":"Point process","link":"Point-process"},{"depth":1,"name":"Stochastic calculus","link":"Stochastic-calculus"}]
+header: [{"depth":1,"name":"Null Hypothesis","link":"Null-Hypothesis"},{"depth":1,"name":"Statistically Significant","link":"Statistically-Significant"},{"depth":1,"name":"Vector norm","link":"Vector-norm"},{"depth":2,"name":"Absolute-value norm","link":"Absolute-value-norm"},{"depth":2,"name":"Euclidean norm","link":"Euclidean-norm"},{"depth":1,"name":"Probability space","link":"Probability-space"},{"depth":1,"name":"Parametric family","link":"Parametric-family"},{"depth":1,"name":"Point process","link":"Point-process"},{"depth":1,"name":"Stochastic calculus","link":"Stochastic-calculus"},{"depth":1,"name":"Hoeffding's inequality","link":"Hoeffding's-inequality"},{"depth":1,"name":"Boole's inequality","link":"Boole's-inequality"}]
 ---
 
 - hypothesis testing
@@ -58,3 +58,9 @@ A spatial Poisson process is a special case of a point process.
 
 # Stochastic calculus
 Stochastic calculus is a branch of mathematics that operates on stochastic processes.
+
+# Hoeffding's inequality
+Hoeffding's inequality is an upper bound on the probability that the sum of independent random variables differs by a certain amount with regards to its expected value.
+
+# Boole's inequality
+Boole's inequality is also known as the **union bound**. It states that for any finite set of events the probability that at least one of the events happens is no greater than the sum of the probabilities of the individual events.

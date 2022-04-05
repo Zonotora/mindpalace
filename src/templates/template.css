@@ -113,6 +113,7 @@ input:focus {
 }
 
 .keyword-popup {
+  text-align: left;
   color: white;
   border-radius: 10px;
   padding-top: 10px;

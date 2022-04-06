@@ -24,6 +24,7 @@ const generateTree = (
   while (header.length > 0) {
     const root = header.shift();
     const isRoot = root.depth === 1 ? "root" : "";
+    // console.log(JSON.parse(JSON.stringify(header)));
 
     // check if current node has a depth which is lesser than current recursion
     // if that is the case return recursion up to current depth
@@ -56,7 +57,10 @@ const generateTree = (
         `${text}${section}`
       );
       const isLast =
-        header.length > 0 && header[0].depth < root.depth ? "last" : "";
+        (header.length > 0 && header[0].depth < root.depth) ||
+        header[0] === undefined
+          ? "last"
+          : "";
 
       elements.push(
         <TreeHeader

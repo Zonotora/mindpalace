@@ -1,10 +1,10 @@
 ---
 slug: /math/calculus
 tags: []
-lastModified: 2021-09-17
+lastModified: 2022-04-06
 created: 2021-09-12
 title: Calculus
-header: [{"depth":1,"name":"Taylor expansion","link":"Taylor-expansion"},{"depth":1,"name":"Differentiability class","link":"Differentiability-class"},{"depth":1,"name":"Gradient","link":"Gradient"},{"depth":1,"name":"Hessian","link":"Hessian"},{"depth":1,"name":"Matrix calculus","link":"Matrix-calculus"},{"depth":1,"name":"References","link":"References"}]
+header: [{"depth":1,"name":"Taylor expansion","link":"Taylor-expansion"},{"depth":1,"name":"Differentiability class","link":"Differentiability-class"},{"depth":1,"name":"Gradient","link":"Gradient"},{"depth":1,"name":"Hessian","link":"Hessian"},{"depth":1,"name":"Matrix calculus","link":"Matrix-calculus"},{"depth":1,"name":"Jensen's inequality","link":"Jensen's-inequality"},{"depth":1,"name":"References","link":"References"}]
 ---
 
 # Taylor expansion
@@ -53,6 +53,18 @@ $$
 
 # Matrix calculus
 https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf
+
+# Jensen's inequality
+https://en.wikipedia.org/wiki/Jensen%27s_inequality
+
+$$
+f(tx_{1}+(1-t)x_{2})\leq tf(x_{1})+(1-t)f(x_{2}).
+$$
+
+$$
+\varphi (\operatorname {E} [X])\leq \operatorname {E} \left[\varphi (X)\right]
+$$
+
 
 
 # References

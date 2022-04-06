@@ -1,15 +1,16 @@
 ---
 slug: /bandits
 tags: ["wip"]
-lastModified: 2022-04-05
+lastModified: 2022-04-06
 created: 2022-03-26
 title: Bandits
-header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Stochastic bandits","link":"Stochastic-bandits"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Non-adaptive exploration","link":"Non-adaptive-exploration"},{"depth":3,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":3,"name":"Epsilon greedy","link":"Epsilon-greedy"},{"depth":2,"name":"Adaptive exploration","link":"Adaptive-exploration"},{"depth":3,"name":"Higher-confidence elimination","link":"Higher-confidence-elimination"},{"depth":3,"name":"Successive elimination","link":"Successive-elimination"},{"depth":3,"name":"Optimism under uncertainty","link":"Optimism-under-uncertainty"},{"depth":2,"name":"Regret bound terminology","link":"Regret-bound-terminology"},{"depth":1,"name":"Bayesian bandits","link":"Bayesian-bandits"}]
+header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Stochastic bandits","link":"Stochastic-bandits"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Non-adaptive exploration","link":"Non-adaptive-exploration"},{"depth":3,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":3,"name":"Epsilon greedy","link":"Epsilon-greedy"},{"depth":2,"name":"Adaptive exploration","link":"Adaptive-exploration"},{"depth":3,"name":"Higher-confidence elimination","link":"Higher-confidence-elimination"},{"depth":3,"name":"Successive elimination","link":"Successive-elimination"},{"depth":3,"name":"Optimism under uncertainty","link":"Optimism-under-uncertainty"},{"depth":1,"name":"Bayesian bandits","link":"Bayesian-bandits"},{"depth":2,"name":"Thompson sampling","link":"Thompson-sampling"},{"depth":2,"name":"Thompson sampling independent priors","link":"Thompson-sampling-independent-priors"}]
 ---
 
 # Notation
 | Definition | Description |
 |-| :---- |
+| $ \mathcal I $ | Problem instance |
 | $ \mathcal A $ | The action space. |
 | $ \mathcal A^+ = \{ a: \mu (a) < \mu(a^*) \} $ | All the arms that contribute to the regret. |
 | $ a $ | Arm/action. |
@@ -24,6 +25,8 @@ header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Stoc
 | $ n_t(a) $ | The number of samples from arm $ a $ up to round $ t $ |
 | $ r_t (a) = \sqrt{\frac{2 \log T}{n_t (a)}}    $ | The confidence radius |
 | $ [ \mu_n - r_n, \mu_n + r_n ] $ | The confidence interval |
+| $ H_t = ((a_1,r_1),\dots, (a_t,r_t)) \in (\mathcal A \times \mathbb R)^t $ | The t-history |
+| $ H = ((a_1',r_1'),\dots, (a_t',r_t')) \in (\mathcal A \times \mathbb R)^t $ | The feasible t-history |
 
 # Stochastic bandits
 
@@ -51,6 +54,7 @@ R(T) = \mu^* \cdot T - \sum_{t=1}^T \mu(a_t)
 $$
 
 We note that $ R(T) $ is a stochastic variables as the arm $ a_t $ chosen at $ t $ is randomly sampled. We call it regret as the algorithm "regrets" not knowing the best arm.
+If we have a regret bound on the form $ C \cdot f(T) $, where $ f(\cdot) $ does not depend on the mean rewards $ \mu $ and the constant $ C $ does not depend on $ T $ we call this regret bound **instance-dependent** if $ C $ does depend on $ \mu $ and **instance-independent** otherwise.
 
 
 ## Non-adaptive exploration
@@ -194,9 +198,45 @@ try each arm once
 ```
 where $ \text{UCB}_t = \bar \mu_t (a) + r_t (a) $
 
-##  Regret bound terminology
-If we have a regret bound on the form $ C \cdot f(T) $, where $ f(\cdot) $ does not depend on the mean rewards $ \mu $ and the constant $ C $ does not depend on $ T $ we call this regret bound **instance-dependent** if $ C $ does depend on $ \mu $ and **instance-independent** otherwise.
-
-
 
 # Bayesian bandits
+Bayesian bandits have like stochastic bandits, $ K $ arms and $ T $ rounds. Additionally, we introduce the **Bayesian assumption**, that is, the problem instance $ \mathcal I $ is drawn from some known distribution $ \mathcal P $. The problem instance is specified by the mean reward vector $ \mu $ with the reward distribution $ \mathcal D_a $ when we are fixing $ K $ and $ T $. The known distribution $ \mathcal P $ is called the **prior distribution** or the **Bayesian prior**. We want to optimize **Bayesian regret**, that is, the expected regret for a specific problem instance $ \mathcal I $ in expectation over all the instances like follows
+
+$$
+\text{BR} (T) := \underset{\mathcal I \sim \mathcal P}{\mathbb E} [ \mathbb E [R(T) \mid \mathcal I]] = \underset{\mathcal I \sim \mathcal P}{\mathbb E} \bigg [ \mu^* \cdot T - \sum_{t \in [T]} \mu(a_t) \bigg]
+$$
+
+The **t-history** is a random variable that depends on the reward vector $ \mu $. The following denotes the t-history
+
+$$
+H_t = ((a_1,r_1),\dots, (a_t,r_t)) \in (\mathcal A \times \mathbb R)^t
+$$
+
+The following denotes the **feasible t-history** if for some bandit algorithm it satisfies $ \Pr [H_t = H] > 0 $
+$$
+H = ((a_1',r_1'),\dots, (a_t',r_t')) \in (\mathcal A \times \mathbb R)^t
+$$
+
+If it exists we call such an algorithm to be **H-consistent**.
+
+## Thompson sampling
+
+```
+for each round t ∈ T
+    observe H_{t-1} = H for some feasible (t-1)-history H
+    draw arm a_t independently from p_t(·| H)
+```
+
+where $ p_t(a \mid H ) := \Pr [a^* = a \mid H_{t-1} = H] $ for each arm $ a $.
+
+
+## Thompson sampling independent priors
+When we have independent priors we can simplify the Thompson sampling algorithm to
+
+```
+for each round t ∈ T
+    observe H_{t-1} = H for some feasible (t-1)-history H
+    for each arm a, sample mean reward mu_t(a) independently from P_H^a
+    choose the arm with the largest mu_t(a)
+```
+

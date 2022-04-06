@@ -1,7 +1,7 @@
 ---
 slug: /math/probability-theory
 tags: []
-lastModified: 2022-04-05
+lastModified: 2022-04-06
 created: 2021-12-30
 title: Probability Theory
 header: [{"depth":1,"name":"Random variable","link":"Random-variable"},{"depth":1,"name":"Probability mass function","link":"Probability-mass-function"},{"depth":1,"name":"Probability density function","link":"Probability-density-function"},{"depth":1,"name":"Stochastic process","link":"Stochastic-process"},{"depth":1,"name":"Statistical inference","link":"Statistical-inference"},{"depth":2,"name":"Classical inference","link":"Classical-inference"},{"depth":2,"name":"Bayesian inference","link":"Bayesian-inference"},{"depth":1,"name":"Kolmogorov axioms","link":"Kolmogorov-axioms"},{"depth":2,"name":"First axiom","link":"First-axiom"},{"depth":2,"name":"Second axiom","link":"Second-axiom"},{"depth":2,"name":"Third axiom","link":"Third-axiom"},{"depth":1,"name":"Conditional probability","link":"Conditional-probability"},{"depth":1,"name":"Independent events","link":"Independent-events"},{"depth":1,"name":"Total law of probability","link":"Total-law-of-probability"},{"depth":1,"name":"Joint distributions","link":"Joint-distributions"},{"depth":1,"name":"Chain rule","link":"Chain-rule"},{"depth":1,"name":"Expectation","link":"Expectation"},{"depth":2,"name":"Discrete","link":"Discrete"},{"depth":2,"name":"Continuous","link":"Continuous"},{"depth":2,"name":"Conditional discrete","link":"Conditional-discrete"},{"depth":2,"name":"Conditional continuous","link":"Conditional-continuous"},{"depth":2,"name":"Total law of expectation discrete","link":"Total-law-of-expectation-discrete"},{"depth":2,"name":"Total law of expectation continuous","link":"Total-law-of-expectation-continuous"},{"depth":1,"name":"Variance","link":"Variance"},{"depth":2,"name":"Total law of variance","link":"Total-law-of-variance"},{"depth":1,"name":"Covariance","link":"Covariance"},{"depth":1,"name":"Correlation","link":"Correlation"},{"depth":1,"name":"Order statistics","link":"Order-statistics"},{"depth":1,"name":"Hoeffding inequality","link":"Hoeffding-inequality"},{"depth":1,"name":"Boole's inequality","link":"Boole's-inequality"},{"depth":1,"name":"References","link":"References"}]
@@ -208,6 +208,8 @@ $$
 $$
 
 # Boole's inequality
+https://en.wikipedia.org/wiki/Boole%27s_inequality
+
 Boole's inequality is also known as the **union bound**. It states that for any finite set of events the probability that at least one of the events happens is no greater than the sum of the probabilities of the individual events.
 
 $$

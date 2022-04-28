@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-04-03
+lastModified: 2022-04-28
 created: 2021-07-05
 title: Structure
 header: []
@@ -13,6 +13,7 @@ root
 ├── control-theory
 ├── image-analysis
 ├── latex
+├── reinforcement-learning
 ├── algorithms
 │   ├── algorithms
 │   ├── cheat-sheet
@@ -24,7 +25,9 @@ root
 │   ├── databases
 │   └── sql
 ├── high-performance-computing
-│   └── distributed-systems
+│   ├── distributed-systems
+│   ├── keywords
+│   └── map-reduce
 ├── machine-learning
 │   ├── collecting-data
 │   ├── dimensionality-reduction

@@ -1,7 +1,7 @@
 ---
 slug: /math/linear-algebra
-tags: []
-lastModified: 2022-01-18
+tags: ["wip"]
+lastModified: 2022-04-28
 created: 2021-09-01
 title: Linear Algebra
 header: [{"depth":1,"name":"Rank","link":"Rank"},{"depth":1,"name":"Trace","link":"Trace"},{"depth":1,"name":"References","link":"References"}]

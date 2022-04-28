@@ -149,9 +149,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["algorithms","art","databases","high-performance-computing","machine-learning","math","meta","networking","os","programming-languages","web"], files: ["bandits","control-theory","image-analysis","latex"] };
-  const [numberOfFiles, numberOfDirs ] = [64, 14];
-  const [tags, tagsInFiles] = [{"wip":10,"keywords":4}, {"bandits":["wip"],"image-analysis":["wip"],"latex":["wip"],"algorithms":["wip"],"databases":["wip"],"machine-learning":["keywords"],"math":["keywords"],"networking":["wip","keywords"],"os":["keywords"]}];
+  const { url, dirs, files } = { url: "", dirs: ["algorithms","art","databases","high-performance-computing","machine-learning","math","meta","networking","os","programming-languages","web"], files: ["bandits","control-theory","image-analysis","latex","reinforcement-learning"] };
+  const [numberOfFiles, numberOfDirs ] = [67, 14];
+  const [tags, tagsInFiles] = [{"wip":11,"keywords":5}, {"bandits":["wip"],"image-analysis":["wip"],"latex":["wip"],"algorithms":["wip"],"databases":["wip"],"high-performance-computing":["keywords"],"machine-learning":["keywords"],"math":["keywords","wip"],"networking":["wip","keywords"],"os":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
   const [tooltip, setTooltip] = useState("");

@@ -1,10 +1,10 @@
 ---
 slug: /networking/keywords
 tags: ["keywords"]
-lastModified: 2022-04-03
+lastModified: 2022-05-02
 created: 2022-04-03
 title: Keywords
-header: [{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"TTP","link":"TTP"},{"depth":1,"name":"Roaming","link":"Roaming"},{"depth":1,"name":"Octet","link":"Octet"},{"depth":1,"name":"Ciphers","link":"Ciphers"},{"depth":1,"name":"DES","link":"DES"},{"depth":1,"name":"3-DES","link":"3-DES"},{"depth":1,"name":"AES","link":"AES"},{"depth":1,"name":"RC4","link":"RC4"},{"depth":1,"name":"ECB","link":"ECB"},{"depth":1,"name":"CBC","link":"CBC"},{"depth":1,"name":"CTR","link":"CTR"},{"depth":1,"name":"Asymmetric key encryption","link":"Asymmetric-key-encryption"},{"depth":1,"name":"RSA","link":"RSA"},{"depth":1,"name":"ECC","link":"ECC"},{"depth":1,"name":"McEliece","link":"McEliece"},{"depth":1,"name":"Lattice-based cryptography","link":"Lattice-based-cryptography"},{"depth":1,"name":"MD5","link":"MD5"},{"depth":1,"name":"SHA-1","link":"SHA-1"},{"depth":1,"name":"SHA-2","link":"SHA-2"},{"depth":1,"name":"SHA-3","link":"SHA-3"},{"depth":1,"name":"HMAC","link":"HMAC"},{"depth":1,"name":"CBC MAC","link":"CBC-MAC"},{"depth":1,"name":"Diffie-Hellman Key Agreement","link":"Diffie-Hellman-Key-Agreement"},{"depth":1,"name":"TLS","link":"TLS"},{"depth":1,"name":"SSH","link":"SSH"},{"depth":1,"name":"IPSec","link":"IPSec"},{"depth":1,"name":"CA","link":"CA"},{"depth":1,"name":"PKI","link":"PKI"},{"depth":1,"name":"CRL","link":"CRL"},{"depth":1,"name":"OCSP","link":"OCSP"},{"depth":1,"name":"MITM","link":"MITM"},{"depth":1,"name":"DOS","link":"DOS"},{"depth":1,"name":"DDOS","link":"DDOS"},{"depth":1,"name":"Ingress filtering","link":"Ingress-filtering"},{"depth":1,"name":"Egress filtering","link":"Egress-filtering"},{"depth":1,"name":"ICMP","link":"ICMP"},{"depth":1,"name":"NAT","link":"NAT"},{"depth":1,"name":"LSR","link":"LSR"},{"depth":1,"name":"SSR","link":"SSR"},{"depth":1,"name":"IDS","link":"IDS"},{"depth":1,"name":"SYN","link":"SYN"},{"depth":1,"name":"ACK","link":"ACK"},{"depth":1,"name":"RST","link":"RST"},{"depth":1,"name":"RFC","link":"RFC"}]
+header: [{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"TTP","link":"TTP"},{"depth":1,"name":"Roaming","link":"Roaming"},{"depth":1,"name":"Octet","link":"Octet"},{"depth":1,"name":"Ciphers","link":"Ciphers"},{"depth":1,"name":"DES","link":"DES"},{"depth":1,"name":"3-DES","link":"3-DES"},{"depth":1,"name":"AES","link":"AES"},{"depth":1,"name":"RC4","link":"RC4"},{"depth":1,"name":"ECB","link":"ECB"},{"depth":1,"name":"CBC","link":"CBC"},{"depth":1,"name":"CTR","link":"CTR"},{"depth":1,"name":"Asymmetric key encryption","link":"Asymmetric-key-encryption"},{"depth":1,"name":"RSA","link":"RSA"},{"depth":1,"name":"ECC","link":"ECC"},{"depth":1,"name":"McEliece","link":"McEliece"},{"depth":1,"name":"Lattice-based cryptography","link":"Lattice-based-cryptography"},{"depth":1,"name":"MD5","link":"MD5"},{"depth":1,"name":"SHA-1","link":"SHA-1"},{"depth":1,"name":"SHA-2","link":"SHA-2"},{"depth":1,"name":"SHA-3","link":"SHA-3"},{"depth":1,"name":"HMAC","link":"HMAC"},{"depth":1,"name":"CBC MAC","link":"CBC-MAC"},{"depth":1,"name":"Diffie-Hellman Key Agreement","link":"Diffie-Hellman-Key-Agreement"},{"depth":1,"name":"TLS","link":"TLS"},{"depth":1,"name":"SSH","link":"SSH"},{"depth":1,"name":"IPSec","link":"IPSec"},{"depth":1,"name":"CA","link":"CA"},{"depth":1,"name":"PKI","link":"PKI"},{"depth":1,"name":"CRL","link":"CRL"},{"depth":1,"name":"OCSP","link":"OCSP"},{"depth":1,"name":"MITM","link":"MITM"},{"depth":1,"name":"DoS","link":"DoS"},{"depth":1,"name":"DDoS","link":"DDoS"},{"depth":1,"name":"Ingress filtering","link":"Ingress-filtering"},{"depth":1,"name":"Egress filtering","link":"Egress-filtering"},{"depth":1,"name":"ICMP","link":"ICMP"},{"depth":1,"name":"NAT","link":"NAT"},{"depth":1,"name":"LSR","link":"LSR"},{"depth":1,"name":"SSR","link":"SSR"},{"depth":1,"name":"IDS","link":"IDS"},{"depth":1,"name":"SYN","link":"SYN"},{"depth":1,"name":"ACK","link":"ACK"},{"depth":1,"name":"RST","link":"RST"},{"depth":1,"name":"RFC","link":"RFC"},{"depth":1,"name":"DMZ","link":"DMZ"},{"depth":1,"name":"Stateless firewalls","link":"Stateless-firewalls"},{"depth":1,"name":"Stateful firewalls","link":"Stateful-firewalls"},{"depth":1,"name":"Proxy server","link":"Proxy-server"},{"depth":1,"name":"Screening router","link":"Screening-router"},{"depth":1,"name":"ISP","link":"ISP"}]
 ---
 
 # UDP
@@ -110,10 +110,10 @@ Online Certificate Status Protocol.
 # MITM
 Man in the Middle.
 
-# DOS
+# DoS
 Denial of Service.
 
-# DDOS
+# DDoS
 Distributed Denial of Service.
 
 # Ingress filtering
@@ -148,3 +148,21 @@ Reset flag in TCP segment. Used to control whenever a segment arrives that does 
 
 # RFC
 Requests for Comments.
+
+# DMZ
+Demilitarized zone.
+
+# Stateless firewalls
+Stateless firewalls do not inspect traffic or an entire packet. They only filter packets based on specific rules.
+
+# Stateful firewalls
+Stateful firewalls keep track of the state of active network connections while analyzing the traffic looking for malicious activity.
+
+# Proxy server
+A proxy server is a server that acts as an intermediary between a client and a server. The request from the client is directed toward the proxy which evaluates the request and passes it forwards. This has benefits like load balancing, privacy and security.
+
+# Screening router
+Often used as a perimeter protection for an internal network and performs basic packet filtering.
+
+# ISP
+Internet Service Provider.

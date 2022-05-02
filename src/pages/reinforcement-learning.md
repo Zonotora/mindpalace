@@ -1,7 +1,7 @@
 ---
 slug: /reinforcement-learning
-tags: []
-lastModified: 2022-04-28
+tags: ["wip"]
+lastModified: 2022-05-02
 created: 2022-04-28
 title: Reinforcement Learning
 header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Finite Markov Decision Processes","link":"Finite-Markov-Decision-Processes"},{"depth":2,"name":"Rewards","link":"Rewards"}]

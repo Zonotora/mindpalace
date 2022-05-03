@@ -1,7 +1,7 @@
 ---
-slug: /bandits
+slug: /reinforcement-learning/bandits
 tags: ["wip"]
-lastModified: 2022-04-28
+lastModified: 2022-05-03
 created: 2022-03-26
 title: Bandits
 header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Stochastic bandits","link":"Stochastic-bandits"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Non-adaptive exploration","link":"Non-adaptive-exploration"},{"depth":3,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":3,"name":"Epsilon greedy","link":"Epsilon-greedy"},{"depth":2,"name":"Adaptive exploration","link":"Adaptive-exploration"},{"depth":3,"name":"Higher-confidence elimination","link":"Higher-confidence-elimination"},{"depth":3,"name":"Successive elimination","link":"Successive-elimination"},{"depth":3,"name":"Optimism under uncertainty","link":"Optimism-under-uncertainty"},{"depth":1,"name":"Bayesian bandits","link":"Bayesian-bandits"},{"depth":2,"name":"Thompson sampling","link":"Thompson-sampling"},{"depth":2,"name":"Thompson sampling independent priors","link":"Thompson-sampling-independent-priors"}]

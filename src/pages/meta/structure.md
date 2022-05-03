@@ -9,11 +9,9 @@ header: []
 
 <pre style="background-color: white;">
 root 
-├── bandits
 ├── control-theory
 ├── image-analysis
 ├── latex
-├── reinforcement-learning
 ├── algorithms
 │   ├── algorithms
 │   ├── cheat-sheet
@@ -88,6 +86,9 @@ root
 │   │   └── scikit-learn
 │   └── rust
 │       └── rust
+├── reinforcement-learning
+│   ├── bandits
+│   └── reinforcement-learning
 └── web
     └── react
 </pre>

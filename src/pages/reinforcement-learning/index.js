@@ -149,9 +149,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "", dirs: ["algorithms","art","databases","high-performance-computing","machine-learning","math","meta","networking","os","programming-languages","reinforcement-learning","web"], files: ["control-theory","image-analysis","latex"] };
-  const [numberOfFiles, numberOfDirs ] = [67, 15];
-  const [tags, tagsInFiles] = [{"wip":12,"keywords":5}, {"image-analysis":["wip"],"latex":["wip"],"algorithms":["wip"],"databases":["wip"],"high-performance-computing":["keywords"],"machine-learning":["keywords"],"math":["keywords","wip"],"networking":["wip","keywords"],"os":["keywords"],"reinforcement-learning":["wip"]}];
+  const { url, dirs, files } = { url: "/reinforcement-learning", dirs: [], files: ["bandits","reinforcement-learning"] };
+  const [numberOfFiles, numberOfDirs ] = [2, 0];
+  const [tags, tagsInFiles] = [{"wip":2}, {"bandits":["wip"],"reinforcement-learning":["wip"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
   const [tooltip, setTooltip] = useState("");

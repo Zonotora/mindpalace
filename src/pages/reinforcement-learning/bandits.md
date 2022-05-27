@@ -1,7 +1,7 @@
 ---
 slug: /reinforcement-learning/bandits
 tags: ["wip"]
-lastModified: 2022-05-03
+lastModified: 2022-05-27
 created: 2022-03-26
 title: Bandits
 header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Stochastic bandits","link":"Stochastic-bandits"},{"depth":2,"name":"IID rewards","link":"IID-rewards"},{"depth":2,"name":"Regret","link":"Regret"},{"depth":2,"name":"Non-adaptive exploration","link":"Non-adaptive-exploration"},{"depth":3,"name":"Uniform exploration","link":"Uniform-exploration"},{"depth":3,"name":"Epsilon greedy","link":"Epsilon-greedy"},{"depth":2,"name":"Adaptive exploration","link":"Adaptive-exploration"},{"depth":3,"name":"Higher-confidence elimination","link":"Higher-confidence-elimination"},{"depth":3,"name":"Successive elimination","link":"Successive-elimination"},{"depth":3,"name":"Optimism under uncertainty","link":"Optimism-under-uncertainty"},{"depth":1,"name":"Bayesian bandits","link":"Bayesian-bandits"},{"depth":2,"name":"Thompson sampling","link":"Thompson-sampling"},{"depth":2,"name":"Thompson sampling independent priors","link":"Thompson-sampling-independent-priors"}]
@@ -154,7 +154,7 @@ $$
 
 The **Lower Confidence Bound (UCB)** is defined as
 $$
-\text{UCB}_t = \bar \mu_t (a) + r_t (a)
+\text{LCB}_t = \bar \mu_t (a) + r_t (a)
 $$
 
 for an arm $ a $ at the round $ t $. The **confidence interval** is given by $ [\text{LCB}_t, \text{UCB}_t (a)] $.

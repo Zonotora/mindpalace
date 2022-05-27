@@ -137,6 +137,7 @@
   "proxy-server": "A proxy server is a server that acts as an intermediary between a client and a server. The request from the client is directed toward the proxy which evaluates the request and passes it forwards. This has benefits like load balancing, privacy and security.",
   "screening-router": "Often used as a perimeter protection for an internal network and performs basic packet filtering.",
   "isp": "Internet Service Provider.",
+  "nonce": "A nonce is a number that can only be used once in a cryptographic setting. This is to prevent replay attacks. They are often random or pseudo-random numbers.",
   "spin-lock": "A lock that uses busy waiting.",
   "synchronization": "To make sure that certain event chains do not occur.",
   "livelock": "A situation where no process is blocked but events are happening with no progress.",

@@ -1,10 +1,10 @@
 ---
 slug: /networking/protocols
 tags: ["wip"]
-lastModified: 2022-04-03
+lastModified: 2022-05-27
 created: 2021-07-04
 title: Protocols
-header: [{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"IPv4","link":"IPv4"},{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"}]
+header: [{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"IPv4","link":"IPv4"},{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"Ethernet frame","link":"Ethernet-frame"}]
 ---
 
 1. DNS
@@ -466,3 +466,50 @@ Transmission Control Protocol.
     </tr>
   </tbody>
 </table>
+
+
+# Ethernet frame
+https://en.wikipedia.org/wiki/Ethernet_frame
+
+
+<table class="no-padding" >
+<caption>802.3 Ethernet packet and frame structure
+</caption>
+<tbody><tr>
+<th>Layer</th>
+<th>Preamble</th>
+<th>Start frame delimiter</th>
+<th>MAC destination</th>
+<th>MAC source</th>
+<th>802.1Q tag (optional)</th>
+<th>Ethertype (Ethernet&nbsp;II) or&nbsp;length (IEEE&nbsp;802.3)</th>
+<th>Payload</th>
+<th>Frame check sequence (32‑bit CRC)</th>
+<th>Interpacket&nbsp;gap
+</th></tr>
+<tr>
+<td>
+</td>
+<td>7 octets</td>
+<td>1 octet</td>
+<td>6 octets</td>
+<td>6&nbsp;octets</td>
+<td>(4 octets)</td>
+<td>2 octets</td>
+<td>46-1500 octets</td>
+<td><span class="nowrap">4 octets</span></td>
+<td>12 octets
+</td></tr>
+<tr>
+<td>Layer 2 Ethernet frame
+</td>
+<td colspan="2"></td>
+<td colspan="6" style="background: rgb(255, 221, 221) none repeat scroll 0% 0%; --darkreader-inline-bgcolor: #3a100e; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""><span class="nowrap">← 64–1522 octets →</span></td>
+<td>
+</td></tr>
+<tr>
+<td>Layer 1 Ethernet packet &amp; IPG
+</td>
+<td colspan="8" style="background: rgb(255, 221, 221) none repeat scroll 0% 0%; --darkreader-inline-bgcolor: #3a100e; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""><span class="nowrap">← 72–1530 octets →</span></td>
+<td style="background: rgb(255, 221, 221) none repeat scroll 0% 0%; --darkreader-inline-bgcolor: #3a100e; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="">← 12 octets&nbsp;→
+</td></tr></tbody></table>

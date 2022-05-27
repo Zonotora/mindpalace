@@ -1,10 +1,10 @@
 ---
 slug: /reinforcement-learning/reinforcement-learning
 tags: ["wip"]
-lastModified: 2022-05-03
+lastModified: 2022-05-27
 created: 2022-04-28
 title: Reinforcement Learning
-header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Finite Markov Decision Processes","link":"Finite-Markov-Decision-Processes"},{"depth":2,"name":"Rewards","link":"Rewards"},{"depth":2,"name":"Policy","link":"Policy"},{"depth":2,"name":"Value function","link":"Value-function"},{"depth":2,"name":"Bellman equation","link":"Bellman-equation"},{"depth":2,"name":"Optimality","link":"Optimality"},{"depth":3,"name":"Bellman optimality equation","link":"Bellman-optimality-equation"}]
+header: [{"depth":1,"name":"Notation","link":"Notation"},{"depth":1,"name":"Finite Markov Decision Processes","link":"Finite-Markov-Decision-Processes"},{"depth":2,"name":"Rewards","link":"Rewards"},{"depth":2,"name":"Policy","link":"Policy"},{"depth":2,"name":"Value function","link":"Value-function"},{"depth":2,"name":"Bellman equation","link":"Bellman-equation"},{"depth":2,"name":"Optimality","link":"Optimality"},{"depth":3,"name":"Bellman optimality equation","link":"Bellman-optimality-equation"},{"depth":1,"name":"Dynamic programming","link":"Dynamic-programming"}]
 ---
 
 # Notation
@@ -151,3 +151,22 @@ q_* (s,a) &= \mathbb E[R_{t+1} + \gamma \underset{a'}{\max} \,\, q_*(S_{t+1}, a'
 \end{aligned}
 $$
 These equations are in principal solvable by any methods for solving nonlinear equations as we have $ n $ equations and $ n $ unknown and we know the dynamics of the environment. With an optimal $ v_* $ we can relatively easily deduce an optimal policy. For each state $ s $ we choose the action that maximizes the Bellman optimality equation. A policy that assigns nonzero probabilities to these actions is optimal. With $ q_* $ the agent does not have to search ahead for the optimal action, but can immediately pick the action that maximizes $ q_*(s,a) $.
+
+# Dynamic programming
+Dynamic programming algorithms are obtained by turning the Bellman equation into update rules to improve the value functions.
+The problem of computing the state-value function  $ v_\pi $ for a policy $ \pi $ is called **policy evaluation** or the **prediction problem**.
+
+$$
+\begin{aligned}
+v_\pi (s) &= \mathbb E_\pi [ G_t \mid S_t = s] \\
+&= \sum_a \pi (a\mid s)  \sum_{s',r} p(s', r \mid s, a) \bigg [r + \gamma v_\pi (s') \bigg] \quad \forall s \in \mathcal S \\
+\end{aligned}
+$$
+If we know the dynamics of the environment we can solve the equation above as a system of simultaneous linear equations. An iterative solution method is the following
+
+$$
+\begin{aligned}
+v_\pi (s) &= \mathbb E_\pi [R_{t+1} + \gamma v_k (S_{t+1}) \mid S_t = s] \\
+&= \sum_a \pi (a\mid s)  \sum_{s',r} p(s', r \mid s, a) \bigg [r + \gamma v_\pi (s') \bigg] \\
+\end{aligned}
+$$

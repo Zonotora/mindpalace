@@ -10,7 +10,8 @@ body {
   font-family: "Titillium Web", sans-serif;
   margin: 0px;
   padding: 0px;
-  overflow: hidden;
+  background-color: #1e2026;
+  overflow-x: hidden;
 }
 
 header {
@@ -145,7 +146,6 @@ input:focus {
 
 .template-structure {
   height: 100vh;
-  background-color: #1e2026;
 }
 
 .template-filesystem {

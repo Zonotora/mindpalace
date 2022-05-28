@@ -1,7 +1,7 @@
 ---
 slug: /networking/protocols
 tags: ["wip"]
-lastModified: 2022-05-27
+lastModified: 2022-05-28
 created: 2021-07-04
 title: Protocols
 header: [{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"IPv4","link":"IPv4"},{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"Ethernet frame","link":"Ethernet-frame"}]
@@ -15,6 +15,11 @@ header: [{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"IPv4","l
 - CHAP
 - LDAP
 - ICMP
+- DHCP
+- EAP
+- 802.*
+- RIP
+- BGF
 
 # RADIUS
 Remote Authentication Dial In User Service.

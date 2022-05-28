@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-05-27
+lastModified: 2022-05-28
 created: 2021-07-05
 title: Structure
 header: []
@@ -9,6 +9,7 @@ header: []
 
 <pre style="background-color: white;">
 root 
+├── academia-profiles
 ├── control-theory
 ├── image-analysis
 ├── latex

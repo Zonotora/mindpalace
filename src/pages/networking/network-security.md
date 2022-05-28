@@ -1,10 +1,10 @@
 ---
 slug: /networking/network-security
 tags: []
-lastModified: 2022-05-27
+lastModified: 2022-05-28
 created: 2022-03-25
 title: Network Security
-header: [{"depth":1,"name":"Definitions","link":"Definitions"},{"depth":1,"name":"User authentication","link":"User-authentication"},{"depth":2,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"Cryptography","link":"Cryptography"},{"depth":1,"name":"Attack methods","link":"Attack-methods"},{"depth":1,"name":"Network layer security","link":"Network-layer-security"},{"depth":1,"name":"Transport layer security","link":"Transport-layer-security"},{"depth":1,"name":"Firewalls","link":"Firewalls"},{"depth":1,"name":"SSL and TLS","link":"SSL-and-TLS"},{"depth":1,"name":"WLAN security","link":"WLAN-security"},{"depth":1,"name":"Common security protocols","link":"Common-security-protocols"},{"depth":1,"name":"Link level security","link":"Link-level-security"},{"depth":2,"name":"Switch","link":"Switch"},{"depth":2,"name":"VLAN","link":"VLAN"},{"depth":2,"name":"Threats","link":"Threats"},{"depth":3,"name":"Unauthorized joins","link":"Unauthorized-joins"},{"depth":3,"name":"Unauthorized expansion of the network","link":"Unauthorized-expansion-of-the-network"},{"depth":3,"name":"VLAN join","link":"VLAN-join"},{"depth":3,"name":"VLAN tagging and hopping","link":"VLAN-tagging-and-hopping"},{"depth":3,"name":"Remote access to the LAN","link":"Remote-access-to-the-LAN"},{"depth":3,"name":"Topology and vulnerability discovery","link":"Topology-and-vulnerability-discovery"},{"depth":3,"name":"Switch control","link":"Switch-control"},{"depth":3,"name":"Passive eavesdropping by link","link":"Passive-eavesdropping-by-link"},{"depth":3,"name":"MAC flooding","link":"MAC-flooding"},{"depth":3,"name":"MAC spoofing","link":"MAC-spoofing"},{"depth":3,"name":"ARP and DHCP poisoning","link":"ARP-and-DHCP-poisoning"},{"depth":4,"name":"ARP spoofing","link":"ARP-spoofing"},{"depth":4,"name":"DHCP spoofing","link":"DHCP-spoofing"},{"depth":3,"name":"Man in the middle","link":"Man-in-the-middle"},{"depth":3,"name":"Session hijacking","link":"Session-hijacking"},{"depth":3,"name":"Replay","link":"Replay"},{"depth":3,"name":"DoS","link":"DoS"},{"depth":3,"name":"System implementation and configuration","link":"System-implementation-and-configuration"},{"depth":2,"name":"Security solutions","link":"Security-solutions"},{"depth":1,"name":"VPN and remote access","link":"VPN-and-remote-access"},{"depth":1,"name":"List of useful resources","link":"List-of-useful-resources"}]
+header: [{"depth":1,"name":"Definitions","link":"Definitions"},{"depth":1,"name":"User authentication","link":"User-authentication"},{"depth":2,"name":"RADIUS","link":"RADIUS"},{"depth":2,"name":"Kerberos","link":"Kerberos"},{"depth":3,"name":"Issues","link":"Issues"},{"depth":1,"name":"Cryptography","link":"Cryptography"},{"depth":1,"name":"Attack methods","link":"Attack-methods"},{"depth":1,"name":"Network layer security","link":"Network-layer-security"},{"depth":1,"name":"Transport layer security","link":"Transport-layer-security"},{"depth":1,"name":"Firewalls","link":"Firewalls"},{"depth":1,"name":"SSL and TLS","link":"SSL-and-TLS"},{"depth":1,"name":"WLAN security","link":"WLAN-security"},{"depth":1,"name":"Common security protocols","link":"Common-security-protocols"},{"depth":1,"name":"Link level security","link":"Link-level-security"},{"depth":2,"name":"Switch","link":"Switch"},{"depth":2,"name":"VLAN","link":"VLAN"},{"depth":2,"name":"Threats","link":"Threats"},{"depth":3,"name":"Unauthorized joins","link":"Unauthorized-joins"},{"depth":3,"name":"Unauthorized expansion of the network","link":"Unauthorized-expansion-of-the-network"},{"depth":3,"name":"VLAN join","link":"VLAN-join"},{"depth":3,"name":"VLAN tagging and hopping","link":"VLAN-tagging-and-hopping"},{"depth":3,"name":"Remote access to the LAN","link":"Remote-access-to-the-LAN"},{"depth":3,"name":"Topology and vulnerability discovery","link":"Topology-and-vulnerability-discovery"},{"depth":3,"name":"Switch control","link":"Switch-control"},{"depth":3,"name":"Passive eavesdropping by link","link":"Passive-eavesdropping-by-link"},{"depth":3,"name":"MAC flooding","link":"MAC-flooding"},{"depth":3,"name":"MAC spoofing","link":"MAC-spoofing"},{"depth":3,"name":"ARP and DHCP poisoning","link":"ARP-and-DHCP-poisoning"},{"depth":4,"name":"ARP spoofing","link":"ARP-spoofing"},{"depth":4,"name":"DHCP spoofing","link":"DHCP-spoofing"},{"depth":3,"name":"Man in the middle","link":"Man-in-the-middle"},{"depth":3,"name":"Session hijacking","link":"Session-hijacking"},{"depth":3,"name":"Replay","link":"Replay"},{"depth":3,"name":"DoS","link":"DoS"},{"depth":3,"name":"System implementation and configuration","link":"System-implementation-and-configuration"},{"depth":2,"name":"Security solutions","link":"Security-solutions"},{"depth":1,"name":"VPN and remote access","link":"VPN-and-remote-access"},{"depth":1,"name":"List of useful resources","link":"List-of-useful-resources"}]
 ---
 
 # Definitions
@@ -40,6 +40,33 @@ RADIUS has a couple of issues (as of 2001):
 7. **DOS Arising from the Prediction of the Request Authenticator**.
 8. **Shared Secret Hygiene**. The same Shared Secret could be used for multiple clients which is bad since any flawed client can be used to compromise several machines. Only ASCII is allowed and many implementations limits the secret to 16 characters or less.
 
+## Kerberos
+https://en.wikipedia.org/wiki/Kerberos_(protocol)
+
+Kerberos was designed to be secure, reliable, transparent and scalable. It is suited for large environments. It is the default authentication system in Window. Kerberos consists of a Key Distribution Center (KDC) which consists of:
+
+1. Authentication server (AS)
+- Ticket-granting server (TGS)
+
+There are two types of tickets:
+1. Ticket Granting Ticket (TGT)
+2. Service Granting Ticket (SGT)
+
+A service needs to be registered in Kerberos upon it receives a secret key. To authenticate a service:
+1. The client sends a plaintext message of the user ID to the AS requesting a TGT.
+2. The AS checks whether the user is stored in the database. If the user is found a secret key is generated by hashing the password of the user found in the database. A TGT and a session key are created and encrypted with the secret. The result is sent back to the client.
+3. The client is prompted for a password to decrypt the message received from the AS. If successful the client sends TGT and authenticator (client name, network address, time) to TGS.
+4. The TGS decrypts the ticket and authenticator and verifies the request. If successful a SGT which is sent back.
+5. The client sends the SGT and authenticator to the server.
+6. If the SGT and authenticator match, the client is granted access to the service.
+
+
+
+### Issues
+1. Applications must be "Kerberized", that is, they must support tickets.
+2. It is possible to fake a request for a ticket for another user, but only the correct user may decrypt and use the ticket.
+3. The clocks of the involved hosts must be synchronized.
+
 
 # Cryptography
 
@@ -49,6 +76,8 @@ RADIUS has a couple of issues (as of 2001):
 - Replay
 - Systems security
 - DoS and DDoS
+- Spoofing
+- Sniffing
 
 
 # Network layer security

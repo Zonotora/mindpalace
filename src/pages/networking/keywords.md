@@ -1,10 +1,10 @@
 ---
 slug: /networking/keywords
 tags: ["keywords"]
-lastModified: 2022-05-28
+lastModified: 2022-05-30
 created: 2022-04-03
 title: Keywords
-header: [{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"TTP","link":"TTP"},{"depth":1,"name":"Roaming","link":"Roaming"},{"depth":1,"name":"Octet","link":"Octet"},{"depth":1,"name":"Ciphers","link":"Ciphers"},{"depth":1,"name":"DES","link":"DES"},{"depth":1,"name":"3-DES","link":"3-DES"},{"depth":1,"name":"AES","link":"AES"},{"depth":1,"name":"RC4","link":"RC4"},{"depth":1,"name":"ECB","link":"ECB"},{"depth":1,"name":"CBC","link":"CBC"},{"depth":1,"name":"CTR","link":"CTR"},{"depth":1,"name":"Asymmetric key encryption","link":"Asymmetric-key-encryption"},{"depth":1,"name":"RSA","link":"RSA"},{"depth":1,"name":"ECC","link":"ECC"},{"depth":1,"name":"McEliece","link":"McEliece"},{"depth":1,"name":"Lattice-based cryptography","link":"Lattice-based-cryptography"},{"depth":1,"name":"MD5","link":"MD5"},{"depth":1,"name":"SHA-1","link":"SHA-1"},{"depth":1,"name":"SHA-2","link":"SHA-2"},{"depth":1,"name":"SHA-3","link":"SHA-3"},{"depth":1,"name":"HMAC","link":"HMAC"},{"depth":1,"name":"CBC MAC","link":"CBC-MAC"},{"depth":1,"name":"Diffie-Hellman Key Agreement","link":"Diffie-Hellman-Key-Agreement"},{"depth":1,"name":"TLS","link":"TLS"},{"depth":1,"name":"SSH","link":"SSH"},{"depth":1,"name":"IPSec","link":"IPSec"},{"depth":1,"name":"CA","link":"CA"},{"depth":1,"name":"PKI","link":"PKI"},{"depth":1,"name":"CRL","link":"CRL"},{"depth":1,"name":"OCSP","link":"OCSP"},{"depth":1,"name":"MITM","link":"MITM"},{"depth":1,"name":"DoS","link":"DoS"},{"depth":1,"name":"DDoS","link":"DDoS"},{"depth":1,"name":"Ingress filtering","link":"Ingress-filtering"},{"depth":1,"name":"Egress filtering","link":"Egress-filtering"},{"depth":1,"name":"ICMP","link":"ICMP"},{"depth":1,"name":"NAT","link":"NAT"},{"depth":1,"name":"LSR","link":"LSR"},{"depth":1,"name":"SSR","link":"SSR"},{"depth":1,"name":"IDS","link":"IDS"},{"depth":1,"name":"SYN","link":"SYN"},{"depth":1,"name":"ACK","link":"ACK"},{"depth":1,"name":"RST","link":"RST"},{"depth":1,"name":"RFC","link":"RFC"},{"depth":1,"name":"DMZ","link":"DMZ"},{"depth":1,"name":"Stateless firewalls","link":"Stateless-firewalls"},{"depth":1,"name":"Stateful firewalls","link":"Stateful-firewalls"},{"depth":1,"name":"Proxy server","link":"Proxy-server"},{"depth":1,"name":"Screening router","link":"Screening-router"},{"depth":1,"name":"ISP","link":"ISP"},{"depth":1,"name":"Nonce","link":"Nonce"},{"depth":1,"name":"DMZ","link":"DMZ"},{"depth":1,"name":"Spoofing","link":"Spoofing"},{"depth":1,"name":"NAC","link":"NAC"},{"depth":1,"name":"DHCP","link":"DHCP"},{"depth":1,"name":"Port knocking","link":"Port-knocking"},{"depth":1,"name":"De-perimeterisation","link":"De-perimeterisation"},{"depth":1,"name":"The Jericho approach","link":"The-Jericho-approach"},{"depth":1,"name":"RIP","link":"RIP"},{"depth":1,"name":"BGF","link":"BGF"},{"depth":1,"name":"Clogging","link":"Clogging"},{"depth":1,"name":"HMAC","link":"HMAC"},{"depth":1,"name":"NAT","link":"NAT"},{"depth":1,"name":"AP","link":"AP"},{"depth":1,"name":"WAP","link":"WAP"},{"depth":1,"name":"SSID","link":"SSID"},{"depth":1,"name":"BSSID","link":"BSSID"},{"depth":1,"name":"ESSID","link":"ESSID"},{"depth":1,"name":"BAN logic","link":"BAN-logic"}]
+header: [{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"TTP","link":"TTP"},{"depth":1,"name":"Roaming","link":"Roaming"},{"depth":1,"name":"Octet","link":"Octet"},{"depth":1,"name":"Ciphers","link":"Ciphers"},{"depth":1,"name":"Stream ciphers","link":"Stream-ciphers"},{"depth":1,"name":"DES","link":"DES"},{"depth":1,"name":"3-DES","link":"3-DES"},{"depth":1,"name":"AES","link":"AES"},{"depth":1,"name":"RC4","link":"RC4"},{"depth":1,"name":"ECB","link":"ECB"},{"depth":1,"name":"CBC","link":"CBC"},{"depth":1,"name":"IV","link":"IV"},{"depth":1,"name":"CTR","link":"CTR"},{"depth":1,"name":"Asymmetric key encryption","link":"Asymmetric-key-encryption"},{"depth":1,"name":"RSA","link":"RSA"},{"depth":1,"name":"ECC","link":"ECC"},{"depth":1,"name":"McEliece","link":"McEliece"},{"depth":1,"name":"Lattice-based cryptography","link":"Lattice-based-cryptography"},{"depth":1,"name":"MD5","link":"MD5"},{"depth":1,"name":"SHA-1","link":"SHA-1"},{"depth":1,"name":"SHA-2","link":"SHA-2"},{"depth":1,"name":"SHA-3","link":"SHA-3"},{"depth":1,"name":"HMAC","link":"HMAC"},{"depth":1,"name":"CBC MAC","link":"CBC-MAC"},{"depth":1,"name":"Diffie-Hellman Key Agreement","link":"Diffie-Hellman-Key-Agreement"},{"depth":1,"name":"TLS","link":"TLS"},{"depth":1,"name":"SSH","link":"SSH"},{"depth":1,"name":"IPSec","link":"IPSec"},{"depth":1,"name":"CA","link":"CA"},{"depth":1,"name":"PKI","link":"PKI"},{"depth":1,"name":"CRL","link":"CRL"},{"depth":1,"name":"OCSP","link":"OCSP"},{"depth":1,"name":"MITM","link":"MITM"},{"depth":1,"name":"DoS","link":"DoS"},{"depth":1,"name":"DDoS","link":"DDoS"},{"depth":1,"name":"Ingress filtering","link":"Ingress-filtering"},{"depth":1,"name":"Egress filtering","link":"Egress-filtering"},{"depth":1,"name":"ICMP","link":"ICMP"},{"depth":1,"name":"NAT","link":"NAT"},{"depth":1,"name":"LSR","link":"LSR"},{"depth":1,"name":"SSR","link":"SSR"},{"depth":1,"name":"IDS","link":"IDS"},{"depth":1,"name":"SYN","link":"SYN"},{"depth":1,"name":"ACK","link":"ACK"},{"depth":1,"name":"RST","link":"RST"},{"depth":1,"name":"RFC","link":"RFC"},{"depth":1,"name":"DMZ","link":"DMZ"},{"depth":1,"name":"Stateless firewalls","link":"Stateless-firewalls"},{"depth":1,"name":"Stateful firewalls","link":"Stateful-firewalls"},{"depth":1,"name":"Proxy server","link":"Proxy-server"},{"depth":1,"name":"Screening router","link":"Screening-router"},{"depth":1,"name":"ISP","link":"ISP"},{"depth":1,"name":"Nonce","link":"Nonce"},{"depth":1,"name":"DMZ","link":"DMZ"},{"depth":1,"name":"Spoofing","link":"Spoofing"},{"depth":1,"name":"NAC","link":"NAC"},{"depth":1,"name":"DHCP","link":"DHCP"},{"depth":1,"name":"Port knocking","link":"Port-knocking"},{"depth":1,"name":"De-perimeterisation","link":"De-perimeterisation"},{"depth":1,"name":"The Jericho approach","link":"The-Jericho-approach"},{"depth":1,"name":"RIP","link":"RIP"},{"depth":1,"name":"BGF","link":"BGF"},{"depth":1,"name":"Clogging","link":"Clogging"},{"depth":1,"name":"NAT","link":"NAT"},{"depth":1,"name":"AP","link":"AP"},{"depth":1,"name":"WAP","link":"WAP"},{"depth":1,"name":"SSID","link":"SSID"},{"depth":1,"name":"BSSID","link":"BSSID"},{"depth":1,"name":"ESSID","link":"ESSID"},{"depth":1,"name":"BAN logic","link":"BAN-logic"}]
 ---
 
 # UDP
@@ -28,6 +28,8 @@ The sequence of 8 bits are called an **octet**. A byte may vary depending on the
 # Ciphers
 An algorithm to hide information from unauthorized or verify that the information is correctly transmitted.
 
+# Stream ciphers
+Stream ciphers operates on one bit at a time. The output is a PRNG. The output stream is XOR:ed with the data to encrypt. Often weak.
 
 # DES
 Data Encryption Standard.
@@ -46,6 +48,9 @@ Electronic Code-Book mode.
 
 # CBC
 Cipher Block Chaining mode.
+
+# IV
+Initialization vector.
 
 # CTR
 Counter mode.
@@ -79,6 +84,7 @@ The next generation of hash functions.
 
 # HMAC
 Keyed-Hashing for Message Authentication. A standard for message authentication with MAC.
+It involves a cryptographic hash function and a secret cryptographic key to verify the integrity and authenticity of a message simultaneously.
 
 # CBC MAC
 Cipher Block Chaining MAC.
@@ -200,8 +206,7 @@ Border Gateway Protocol (BGF) is the protocol underlying the global routing syst
 # Clogging
 Is a type of DoS attack where an attacker establishes many thousands of connections to a specific host, making them unavailable for other users.
 
-# HMAC
-Keyed-hash message authentication code or hash-based message authentication code (HMAC) is a type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key to verify the integrity and authenticity of a message simultaneously.
+
 
 # NAT
 Network Address Translation (NAT)

@@ -1,7 +1,7 @@
 ---
 slug: /networking/protocols
 tags: ["wip"]
-lastModified: 2022-05-28
+lastModified: 2022-05-30
 created: 2021-07-04
 title: Protocols
 header: [{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"IPv4","link":"IPv4"},{"depth":1,"name":"UDP","link":"UDP"},{"depth":1,"name":"TCP","link":"TCP"},{"depth":1,"name":"Ethernet frame","link":"Ethernet-frame"}]
@@ -20,6 +20,7 @@ header: [{"depth":1,"name":"RADIUS","link":"RADIUS"},{"depth":1,"name":"IPv4","l
 - 802.*
 - RIP
 - BGF
+- OCSP
 
 # RADIUS
 Remote Authentication Dial In User Service.

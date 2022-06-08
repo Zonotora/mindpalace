@@ -149,9 +149,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/math", dirs: [], files: ["bayesian-inference","calculus","distributions","keywords","linear-algebra","nonlinear-optimization","number-theory","probability-theory","series","statistics","stochastic-processes"] };
-  const [numberOfFiles, numberOfDirs ] = [11, 0];
-  const [tags, tagsInFiles] = [{"keywords":1,"wip":1}, {"keywords":["keywords"],"linear-algebra":["wip"]}];
+  const { url, dirs, files } = { url: "/math", dirs: [], files: ["bayesian-inference","calculus","distributions","keywords","linear-algebra","mathematical-models","nonlinear-optimization","number-theory","probability-theory","series","statistics","stochastic-processes"] };
+  const [numberOfFiles, numberOfDirs ] = [12, 0];
+  const [tags, tagsInFiles] = [{"keywords":1,"wip":2}, {"keywords":["keywords"],"linear-algebra":["wip"],"mathematical-models":["wip"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
   const [tooltip, setTooltip] = useState("");

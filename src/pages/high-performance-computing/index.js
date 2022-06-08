@@ -149,9 +149,9 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/high-performance-computing", dirs: [], files: ["distributed-systems","keywords","map-reduce"] };
+  const { url, dirs, files } = { url: "/high-performance-computing", dirs: [], files: ["computational-techniques","distributed-systems","keywords"] };
   const [numberOfFiles, numberOfDirs ] = [3, 0];
-  const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
+  const [tags, tagsInFiles] = [{"wip":1,"keywords":1}, {"computational-techniques":["wip"],"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
   const [tooltip, setTooltip] = useState("");

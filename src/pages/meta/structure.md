@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-05-28
+lastModified: 2022-06-08
 created: 2021-07-05
 title: Structure
 header: []
@@ -24,9 +24,9 @@ root
 │   ├── databases
 │   └── sql
 ├── high-performance-computing
+│   ├── computational-techniques
 │   ├── distributed-systems
-│   ├── keywords
-│   └── map-reduce
+│   └── keywords
 ├── machine-learning
 │   ├── collecting-data
 │   ├── dimensionality-reduction
@@ -54,6 +54,7 @@ root
 │   ├── distributions
 │   ├── keywords
 │   ├── linear-algebra
+│   ├── mathematical-models
 │   ├── nonlinear-optimization
 │   ├── number-theory
 │   ├── probability-theory

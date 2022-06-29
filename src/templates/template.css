@@ -409,7 +409,7 @@ input:focus {
 
 .content {
   font-family: georgia, serif;
-  background-color: white;
+  background-color: #fffaf2;
   height: calc(100vh - var(--file-header-height));
   max-height: calc(100vh - var(--file-header-height));
   overflow-y: auto;

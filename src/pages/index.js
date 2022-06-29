@@ -150,7 +150,7 @@ const TagInformation = ({ tags }) => {
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
   const { url, dirs, files } = { url: "", dirs: ["algorithms","art","databases","high-performance-computing","machine-learning","math","meta","networking","os","programming-languages","reinforcement-learning","web"], files: ["academia-profiles","control-theory","image-analysis","latex"] };
-  const [numberOfFiles, numberOfDirs ] = [69, 15];
+  const [numberOfFiles, numberOfDirs ] = [59, 15];
   const [tags, tagsInFiles] = [{"wip":14,"keywords":5}, {"image-analysis":["wip"],"latex":["wip"],"algorithms":["wip"],"databases":["wip"],"high-performance-computing":["wip","keywords"],"machine-learning":["keywords"],"math":["keywords","wip"],"networking":["wip","keywords"],"os":["keywords"],"reinforcement-learning":["wip"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);

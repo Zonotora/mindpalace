@@ -1,7 +1,7 @@
 ---
 slug: /meta/structure
 tags: []
-lastModified: 2022-06-08
+lastModified: 2022-06-10
 created: 2021-07-05
 title: Structure
 header: []
@@ -28,19 +28,11 @@ root
 │   ├── distributed-systems
 │   └── keywords
 ├── machine-learning
-│   ├── collecting-data
-│   ├── dimensionality-reduction
-│   ├── ethics
-│   ├── evaluation
-│   ├── feature-selection
-│   ├── hyperparameters
 │   ├── keywords
 │   ├── linear-classifiers-regressors
 │   ├── machine-learning
-│   ├── neural-networks
 │   ├── optimization
 │   ├── paradigms
-│   ├── preprocessing
 │   └── models
 │       ├── CNN
 │       ├── LSTM
@@ -66,11 +58,9 @@ root
 ├── networking
 │   ├── cryptography
 │   ├── firewall
-│   ├── ip-address
 │   ├── keywords
 │   ├── network-security
 │   ├── osi-model
-│   ├── port
 │   └── protocols
 ├── os
 │   ├── file-systems

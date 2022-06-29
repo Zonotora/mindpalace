@@ -149,8 +149,8 @@ const TagInformation = ({ tags }) => {
 
 const IndexPage = ({ data }) => {
   const [siteTitle, setSiteTitle] = useState("");
-  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["collecting-data","dimensionality-reduction","ethics","evaluation","feature-selection","hyperparameters","keywords","linear-classifiers-regressors","machine-learning","neural-networks","optimization","paradigms","preprocessing"] };
-  const [numberOfFiles, numberOfDirs ] = [19, 1];
+  const { url, dirs, files } = { url: "/machine-learning", dirs: ["models"], files: ["keywords","linear-classifiers-regressors","machine-learning","optimization","paradigms"] };
+  const [numberOfFiles, numberOfDirs ] = [11, 1];
   const [tags, tagsInFiles] = [{"keywords":1}, {"keywords":["keywords"]}];
   const [lastModified, setLastModified] = useState({});
   const [searchResults, setSearchResults] = useState([]);
